@@ -49,7 +49,7 @@ class Elementor_Widget_Test extends Widget_Base
                 [
                     'type'            => Controls_Manager::RAW_HTML,
                     'raw'             => __('<strong>WooCommerce</strong> is not installed/activated on your site. Please install and activate <a href="plugin-install.php?s=woocommerce&tab=search&type=term" target="_blank">WooCommerce</a> first.', 'digitalshop'),
-                    'content_classes' => 'eael-warning',
+                    'content_classes' => 'digitalshop-warning',
                 ]
             );
         }
@@ -103,7 +103,7 @@ class Elementor_Widget_Test extends Widget_Base
 
 
         $this->add_control(
-            'eael_product_grid_categories',
+            'digitalshop_product_grid_categories',
             [
                 'label'       => esc_html__( 'Product Categories', 'digitalshop' ),
                 'type'        => Controls_Manager::SELECT2,
@@ -553,18 +553,18 @@ class Elementor_Widget_Test extends Widget_Base
             'offset'         => $settings['product_offset'],
         ];
 
-        if (!empty($settings['eael_product_grid_categories'])) {
+        if (!empty($settings['digitalshop_product_grid_categories'])) {
             $args['tax_query'] = [
                 [
                     'taxonomy' => 'product_cat',
                     'field'    => 'slug',
-                    'terms'    => $settings['eael_product_grid_categories'],
+                    'terms'    => $settings['digitalshop_product_grid_categories'],
                     'operator' => 'IN',
                 ],
             ];
         }
 
-        if ($settings['eael_product_grid_product_filter'] == 'featured-products') {
+        if ($settings['digitalshop_product_grid_product_filter'] == 'featured-products') {
             $args['tax_query'] = [
                 'relation' => 'AND',
                 [
@@ -574,19 +574,19 @@ class Elementor_Widget_Test extends Widget_Base
                 ],
             ];
 
-            if ($settings['eael_product_grid_categories']) {
+            if ($settings['digitalshop_product_grid_categories']) {
                 $args['tax_query'][] = [
                     'taxonomy' => 'product_cat',
                     'field'    => 'slug',
-                    'terms'    => $settings['eael_product_grid_categories'],
+                    'terms'    => $settings['digitalshop_product_grid_categories'],
                 ];
             }
 
-        } else if ($settings['eael_product_grid_product_filter'] == 'best-selling-products') {
+        } else if ($settings['digitalshop_product_grid_product_filter'] == 'best-selling-products') {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
-        } else if ($settings['eael_product_grid_product_filter'] == 'sale-products') {
+        } else if ($settings['digitalshop_product_grid_product_filter'] == 'sale-products') {
             $args['meta_query'] = [
                 'relation' => 'OR',
                 [
@@ -601,21 +601,21 @@ class Elementor_Widget_Test extends Widget_Base
                     'type'    => 'numeric',
                 ],
             ];
-        } else if ($settings['eael_product_grid_product_filter'] == 'top-products') {
+        } else if ($settings['digitalshop_product_grid_product_filter'] == 'top-products') {
             $args['meta_key'] = '_wc_average_rating';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
         }
 
         $settings = [
-            'eael_product_grid_style_preset' => $settings['eael_product_grid_style_preset'],
-            'eael_product_grid_rating'       => $settings['eael_product_grid_rating'],
-            'eael_product_grid_column'       => $settings['eael_product_grid_column'],
+            'digitalshop_product_grid_style_preset' => $settings['digitalshop_product_grid_style_preset'],
+            'digitalshop_product_grid_rating'       => $settings['digitalshop_product_grid_rating'],
+            'digitalshop_product_grid_column'       => $settings['digitalshop_product_grid_column'],
             'show_load_more'                 => $settings['show_load_more'],
             'show_load_more_text'            => $settings['show_load_more_text'],
         ];
 
-        $html = '<div class="eael-product-grid ' . $settings['eael_product_grid_style_preset'] . '">';
+        $html = '<div class="digitalshop-product-grid d-flex' . $settings['digitalshop_product_grid_style_preset'] . '">';
         $html .= '<div class="woocommerce">';
 
         $html .= '<ul class="products">
@@ -624,9 +624,9 @@ class Elementor_Widget_Test extends Widget_Base
 
         if ('true' == $settings['show_load_more']) {
             if ($args['posts_per_page'] != '-1') {
-                $html .= '<div class="eael-load-more-button-wrap">
-                            <button class="eael-load-more-button" id="eael-load-more-btn-' . $this->get_id() . '" data-widget="' . $this->get_id() . '" data-class="' . get_class($this) . '" data-args="' . http_build_query($args) . '" data-settings="' . http_build_query($settings) . '" data-layout="masonry" data-page="1">
-                                <div class="eael-btn-loader button__loader"></div>
+                $html .= '<div class="digitalshop-load-more-button-wrap">
+                            <button class="digitalshop-load-more-button" id="digitalshop-load-more-btn-' . $this->get_id() . '" data-widget="' . $this->get_id() . '" data-class="' . get_class($this) . '" data-args="' . http_build_query($args) . '" data-settings="' . http_build_query($settings) . '" data-layout="masonry" data-page="1">
+                                <div class="digitalshop-btn-loader button__loader"></div>
                                 <span>' . esc_html__($settings['show_load_more_text'], 'digitalshop') . '</span>
                             </button>
                         </div>';

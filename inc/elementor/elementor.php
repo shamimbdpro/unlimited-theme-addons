@@ -25,6 +25,12 @@ function digitalshop_add_elementor_widget_categories( $elements_manager ) {
 }
 add_action( 'elementor/elements/categories_registered', 'digitalshop_add_elementor_widget_categories' );
 
+   function load_css_and_js(){
+    wp_enqueue_style( 'digitalshop-product-gird', plugin_dir_url( __FILE__ ) . '/assets/frontend/product-grid.css' );
+   }
+
+   add_action( 'wp_enqueue_scripts', 'load_css_and_js' );
+
 //Elementor init
 
 class digitalshop_ElementorCustomElement {
