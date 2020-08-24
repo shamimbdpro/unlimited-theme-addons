@@ -1,7 +1,7 @@
 <?php 
 namespace Elementor;
 
-trait Digitalshop_Helper
+trait Codepopular_theme_helper
 {
     
     /**

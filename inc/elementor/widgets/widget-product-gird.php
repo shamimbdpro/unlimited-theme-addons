@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
 
 class Elementor_Widget_Test extends Widget_Base
 {
-    use Digitalshop_Helper, Product_Grid;
+    use Codepopular_theme_helper, Product_Grid;
 
     public function get_name()
     {

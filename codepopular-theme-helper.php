@@ -1,12 +1,12 @@
 <?php
 /**
-* Plugin Name: Digitalshop Core
+* Plugin Name: Codepopular Theme Helper
 * Plugin URI: https://github.com/programmershamim/digitalshop-core
 * Description: After install the DigitalShop WordPress Theme, you must need to install this "DigitalShop Core" first to get all functions of DigitalShop WP Theme.
 * Version: 1.0.0
 * Author: codepopular
 * Author URI: https://www.codepopular.com
-* Text Domain: digitalshop
+* Text Domain: cpthelper
 * License: GPL/GNU.
 * Domain Path: /languages
 */
@@ -19,3 +19,6 @@ include_once(dirname( __FILE__ ). '/inc/elementor/elementor.php');
 include_once(dirname( __FILE__ ). '/inc/social-share.php');
 include_once(dirname( __FILE__ ). '/inc/widget-download-filters.php');
 include_once(dirname( __FILE__ ). '/inc/widget-recent-posts.php');
+
+
+ ?>
