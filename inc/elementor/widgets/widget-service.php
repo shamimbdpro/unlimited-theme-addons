@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class digitalshop_Widget_Service extends Widget_Base {
+class cpthelper_Widget_Service extends Widget_Base {
  
    public function get_name() {
       return 'service_item';
    }
  
    public function get_title() {
-      return esc_html__( 'Service Item', 'digitalshop' );
+      return esc_html__( 'Service Item', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -18,20 +18,20 @@ class digitalshop_Widget_Service extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Service Item', 'digitalshop' ),
+            'label' => esc_html__( 'Service Item', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'digitalshop' ),
+            'label' => __( 'Icon', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa-rocket',
          ]     
@@ -40,17 +40,17 @@ class digitalshop_Widget_Service extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'digitalshop' ),
+            'label' => __( 'Title', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Design','digitalshop'),
+            'default' => __('Design','cpthelper'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'digitalshop' ),
+            'label' => __( 'Text', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','digitalshop'),
+            'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','cpthelper'),
          ]
       );
       
@@ -76,4 +76,4 @@ class digitalshop_Widget_Service extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Service );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Service );

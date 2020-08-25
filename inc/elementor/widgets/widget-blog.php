@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class digitalshop_Widget_Blog extends Widget_Base {
+class cpthelper_Widget_Blog extends Widget_Base {
  
    public function get_name() {
       return 'blog';
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'digitalshop' );
+      return esc_html__( 'Latest Blog', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -18,25 +18,25 @@ class digitalshop_Widget_Blog extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'blog_section',
          [
-            'label' => esc_html__( 'Blog', 'digitalshop' ),
+            'label' => esc_html__( 'Blog', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-            'label' => __( 'Order', 'digitalshop' ),
+            'label' => __( 'Order', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'ASC',
             'options' => [
-               'ASC'  => __( 'Ascending', 'digitalshop' ),
-               'DESC' => __( 'Descending', 'digitalshop' )
+               'ASC'  => __( 'Ascending', 'cpthelper' ),
+               'DESC' => __( 'Descending', 'cpthelper' )
             ],
          ]
       );
@@ -66,7 +66,7 @@ class digitalshop_Widget_Blog extends Widget_Base {
                      <div class="blog-item-img">
                         <?php if ( has_post_thumbnail() ): ?>
                            <a href="<?php the_permalink(); ?>">
-                              <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'digitalshop-360-200'); ?>" alt="<?php the_title() ?>">
+                              <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'cpthelper-360-200'); ?>" alt="<?php the_title() ?>">
                            </a>
                            <span><?php the_category( ',' ) ?></span>
                         <?php endif ?>
@@ -96,4 +96,4 @@ class digitalshop_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Blog );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Blog );

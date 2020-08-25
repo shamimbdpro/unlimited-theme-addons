@@ -1,6 +1,6 @@
 <?php 
 
-function digitalshop_social_share() {?>
+function cpthelper_social_share() {?>
 
 	<div class="social-share">
         <ul class="list-inline">

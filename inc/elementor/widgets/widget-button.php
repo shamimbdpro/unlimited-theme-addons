@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Button
-class digitalshop_Widget_Button extends Widget_Base {
+class cpthelper_Widget_Button extends Widget_Base {
  
    public function get_name() {
       return 'button';
    }
  
    public function get_title() {
-      return esc_html__( 'Button', 'digitalshop' );
+      return esc_html__( 'Button', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class digitalshop_Widget_Button extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,26 +27,26 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->start_controls_section(
          'button_section',
          [
-            'label' => esc_html__( 'Button', 'digitalshop' ),
+            'label' => esc_html__( 'Button', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'button_text', [
-            'label' => __( 'Button Text', 'digitalshop' ),
+            'label' => __( 'Button Text', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Raed More', 'digitalshop' )
+            'default' => __( 'Raed More', 'cpthelper' )
          ]
       );
 
       $this->add_control(
          'button_icon',
          [
-            'label' => __( 'Icon', 'digitalshop' ),
+            'label' => __( 'Icon', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'digitalshop' ),
-            'label_off' => __( 'No', 'digitalshop' ),
+            'label_on' => __( 'Yes', 'cpthelper' ),
+            'label_off' => __( 'No', 'cpthelper' ),
             'return_value' => 'yes',
             'default' => 'no'
          ]
@@ -55,7 +55,7 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Choose Icon', 'digitalshop' ),
+            'label' => __( 'Choose Icon', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-play',
             'condition' => ['button_icon' => 'yes']
@@ -64,7 +64,7 @@ class digitalshop_Widget_Button extends Widget_Base {
 
       $this->add_control(
          'button_url', [
-            'label' => __( 'Button URL', 'digitalshop' ),
+            'label' => __( 'Button URL', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
          ]
@@ -73,10 +73,10 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->add_control(
          'popup',
          [
-            'label' => __( 'Popup Video', 'digitalshop' ),
+            'label' => __( 'Popup Video', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'digitalshop' ),
-            'label_off' => __( 'No', 'digitalshop' ),
+            'label_on' => __( 'Yes', 'cpthelper' ),
+            'label_off' => __( 'No', 'cpthelper' ),
             'return_value' => 'yes',
             'default' => 'no'
          ]
@@ -85,19 +85,19 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->add_control(
          'align',
          [
-            'label' => __( 'Alignment', 'digitalshop' ),
+            'label' => __( 'Alignment', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::CHOOSE,
             'options' => [
                'left' => [
-                  'title' => __( 'Left', 'digitalshop' ),
+                  'title' => __( 'Left', 'cpthelper' ),
                   'icon' => 'fa fa-align-left',
                ],
                'center' => [
-                  'title' => __( 'Center', 'digitalshop' ),
+                  'title' => __( 'Center', 'cpthelper' ),
                   'icon' => 'fa fa-align-center',
                ],
                'right' => [
-                  'title' => __( 'Right', 'digitalshop' ),
+                  'title' => __( 'Right', 'cpthelper' ),
                   'icon' => 'fa fa-align-right',
                ],
             ],
@@ -109,10 +109,10 @@ class digitalshop_Widget_Button extends Widget_Base {
        $this->add_control(
          'drop_shadow',
          [
-            'label' => __( 'Drop Shadow', 'digitalshop' ),
+            'label' => __( 'Drop Shadow', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Show', 'digitalshop' ),
-            'label_off' => __( 'Hide', 'digitalshop' ),
+            'label_on' => __( 'Show', 'cpthelper' ),
+            'label_off' => __( 'Hide', 'cpthelper' ),
             'return_value' => 'yes',
             'default' => 'yes'
          ]
@@ -121,10 +121,10 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->add_control(
          'bordered',
          [
-            'label' => __( 'Bordered', 'digitalshop' ),
+            'label' => __( 'Bordered', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'digitalshop' ),
-            'label_off' => __( 'No', 'digitalshop' ),
+            'label_on' => __( 'Yes', 'cpthelper' ),
+            'label_off' => __( 'No', 'cpthelper' ),
             'return_value' => 'yes',
             'default' => 'no'
          ]
@@ -133,7 +133,7 @@ class digitalshop_Widget_Button extends Widget_Base {
       $this->add_control(
          'button_radius',
          [
-            'label' => __( 'Button Radius', 'digitalshop' ),
+            'label' => __( 'Button Radius', 'cpthelper' ),
             'type' => Controls_Manager::SLIDER,
             'size_units' => [ 'px', '%' ],
             'range' => [
@@ -165,7 +165,7 @@ class digitalshop_Widget_Button extends Widget_Base {
       ?>
 
       <div style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
-         <a class="digitalshop-btn <?php if( 'yes' == $settings['bordered'] ){ echo'bordered'; } ?> elementor-inline-editing <?php if( 'yes' == $settings['drop_shadow'] ){ echo'shadow'; } ?> <?php if( 'yes' == $settings['popup'] ){ echo'digitalshop-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.$settings['icon'].'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+         <a class="cpthelper-btn <?php if( 'yes' == $settings['bordered'] ){ echo'bordered'; } ?> elementor-inline-editing <?php if( 'yes' == $settings['drop_shadow'] ){ echo'shadow'; } ?> <?php if( 'yes' == $settings['popup'] ){ echo'cpthelper-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.$settings['icon'].'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
       </div>
 
       <?php
@@ -173,4 +173,4 @@ class digitalshop_Widget_Button extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Button );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Button );

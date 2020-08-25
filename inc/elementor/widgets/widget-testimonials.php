@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class digitalshop_Widget_Testimonials extends Widget_Base {
+class cpthelper_Widget_Testimonials extends Widget_Base {
  
    public function get_name() {
       return 'testimonials';
    }
  
    public function get_title() {
-      return esc_html__( 'Testimonials', 'digitalshop' );
+      return esc_html__( 'Testimonials', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $this->start_controls_section(
          'testimonials_section',
          [
-            'label' => esc_html__( 'Testimonials', 'digitalshop' ),
+            'label' => esc_html__( 'Testimonials', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -37,7 +37,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'digitalshop' ),
+            'label' => __( 'Choose Photo', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -48,7 +48,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'name',
          [
-            'label' => __( 'Name', 'digitalshop' ),
+            'label' => __( 'Name', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             
          ]
@@ -57,7 +57,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'digitalshop' ),
+            'label' => __( 'Designation', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -65,7 +65,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'testimonial',
          [
-            'label' => __( 'Testimonial', 'digitalshop' ),
+            'label' => __( 'Testimonial', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -73,7 +73,7 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'testimonial_list',
          [
-            'label' => __( 'Testimonial List', 'digitalshop' ),
+            'label' => __( 'Testimonial List', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => '{{{name}}}',
@@ -116,4 +116,4 @@ class digitalshop_Widget_Testimonials extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Testimonials );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Testimonials );

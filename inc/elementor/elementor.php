@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // get posts dropdown
-function digitalshop_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
+function cpthelper_get_portfolio_dropdown_array($args = [], $key = 'ID', $value = 'post_title') {
   $options = [];
   $posts = get_posts($args);
   foreach ((array) $posts as $term) {
@@ -12,28 +12,31 @@ function digitalshop_get_portfolio_dropdown_array($args = [], $key = 'ID', $valu
   return $options;
 }
 
-function digitalshop_add_elementor_widget_categories( $elements_manager ) {
+function cpthelper_add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
-		'digitalshop-elements',
+		'cpthelper-elements',
 		[
-			'title' => esc_html__( 'digitalshop Elements', 'digitalshop' ),
+			'title' => esc_html__( 'cpthelper Elements', 'cpthelper' ),
 			'icon' => 'fa fa-plug',
 		]
 	);
 
 }
-add_action( 'elementor/elements/categories_registered', 'digitalshop_add_elementor_widget_categories' );
+add_action( 'elementor/elements/categories_registered', 'cpthelper_add_elementor_widget_categories' );
 
    function load_css_and_js(){
-    wp_enqueue_style( 'digitalshop-product-gird', plugin_dir_url( __FILE__ ) . '/assets/frontend/product-grid.css' );
+    
+    wp_enqueue_style( 'cpthelper-product-gird', plugin_dir_url( __FILE__ ) . '/assets/frontend/css/product-grid.css' );
+    wp_enqueue_style( 'cpthelper-load-more', plugin_dir_url( __FILE__ ) . '/assets/frontend/css/load-more.css' );
+    wp_enqueue_style( 'cpthelper-blog', plugin_dir_url( __FILE__ ) . '/assets/frontend/css/post.css' );
    }
 
    add_action( 'wp_enqueue_scripts', 'load_css_and_js' );
 
 //Elementor init
 
-class digitalshop_ElementorCustomElement {
+class cpthelper_ElementorCustomElement {
  
    private static $instance = null;
  
@@ -72,4 +75,4 @@ class digitalshop_ElementorCustomElement {
 
 }
  
-digitalshop_ElementorCustomElement::get_instance()->init();
+cpthelper_ElementorCustomElement::get_instance()->init();

@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Pricing
-class digitalshop_Widget_Pricing extends Widget_Base {
+class cpthelper_Widget_Pricing extends Widget_Base {
  
    public function get_name() {
       return 'pricing';
    }
  
    public function get_title() {
-      return esc_html__( 'Pricing', 'digitalshop' );
+      return esc_html__( 'Pricing', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->start_controls_section(
          'pricing_section',
          [
-            'label' => esc_html__( 'Pricing', 'digitalshop' ),
+            'label' => esc_html__( 'Pricing', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'title', 'digitalshop' ),
+            'label' => __( 'title', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Standard Plan'
          ]
@@ -44,7 +44,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'price',
          [
-            'label' => __( 'Price', 'digitalshop' ),
+            'label' => __( 'Price', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '70'
          ]
@@ -53,24 +53,24 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'currency',
          [
-            'label' => __( 'Currency', 'digitalshop' ),
+            'label' => __( 'Currency', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( '$', 'digitalshop' ),
+            'default' => __( '$', 'cpthelper' ),
          ]
       );
       
       $this->add_control(
          'package',
          [
-            'label' => __( 'Package', 'digitalshop' ),
+            'label' => __( 'Package', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SELECT,
             'default' => 'Yealry',
             'options' => [
-               'Daily'  => __( 'Daily', 'digitalshop' ),
-               'Weekly'  => __( 'Weekly', 'digitalshop' ),
-               'Monthly' => __( 'Monthly', 'digitalshop' ),
-               'Yealry' => __( 'Yealry', 'digitalshop' ),
-               'none' => __( 'None', 'digitalshop' )
+               'Daily'  => __( 'Daily', 'cpthelper' ),
+               'Weekly'  => __( 'Weekly', 'cpthelper' ),
+               'Monthly' => __( 'Monthly', 'cpthelper' ),
+               'Yealry' => __( 'Yealry', 'cpthelper' ),
+               'none' => __( 'None', 'cpthelper' )
             ],
          ]
       );
@@ -80,33 +80,33 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $feature->add_control(
          'feature',
          [
-            'label' => __( 'Feature', 'digitalshop' ),
+            'label' => __( 'Feature', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'digitalshop' )
+            'default' => __( '10 Free Domain Names', 'cpthelper' )
          ]
       );
 
       $this->add_control(
          'feature_list',
          [
-            'label' => __( 'Feature List', 'digitalshop' ),
+            'label' => __( 'Feature List', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $feature->get_controls(),
             'default' => [
                [
-                  'feature' => __( '5GB Storage Space', 'digitalshop' )
+                  'feature' => __( '5GB Storage Space', 'cpthelper' )
                ],
                [
-                  'feature' => __( '20GB Monthly Bandwidth', 'digitalshop' )
+                  'feature' => __( '20GB Monthly Bandwidth', 'cpthelper' )
                ],
                [
-                  'feature' => __( 'My SQL Databases', 'digitalshop' )
+                  'feature' => __( 'My SQL Databases', 'cpthelper' )
                ],
                [
-                  'feature' => __( '100 Email Account', 'digitalshop' )
+                  'feature' => __( '100 Email Account', 'cpthelper' )
                ],
                [
-                  'feature' => __( '10 Free Domain Names', 'digitalshop' )
+                  'feature' => __( '10 Free Domain Names', 'cpthelper' )
                ]
             ],
             'title_field' => '{{{ feature }}}'
@@ -116,7 +116,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_text',
          [
-            'label' => __( 'button text', 'digitalshop' ),
+            'label' => __( 'button text', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 'Select Plan'
          ]
@@ -125,7 +125,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'btn_url',
          [
-            'label' => __( 'button URL', 'digitalshop' ),
+            'label' => __( 'button URL', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#'
          ]
@@ -134,10 +134,10 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_control(
          'recommended',
          [
-            'label' => __( 'Recommended', 'digitalshop' ),
+            'label' => __( 'Recommended', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'digitalshop' ),
-            'label_off' => __( 'Off', 'digitalshop' ),
+            'label_on' => __( 'On', 'cpthelper' ),
+            'label_off' => __( 'Off', 'cpthelper' ),
             'return_value' => 'on',
             'default' => 'off',
          ]
@@ -159,9 +159,9 @@ class digitalshop_Widget_Pricing extends Widget_Base {
       $this->add_inline_editing_attributes( 'btn_text', 'basic' );
       ?>
 
-      <div class="digitalshop-pricing-table <?php if ( 'on' == $settings['recommended'] ){ echo"recommended"; }?>">
+      <div class="cpthelper-pricing-table <?php if ( 'on' == $settings['recommended'] ){ echo"recommended"; }?>">
          <h6 class="type elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html( $settings['title'] ); ?></h6>
-         <h1 class="digitalshop-price elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'price' ); ?>><span class="digitalshop-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
+         <h1 class="cpthelper-price elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'price' ); ?>><span class="cpthelper-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
          </h1>
 
          <?php if ( 'none' !== $settings['package'] ): ?>
@@ -178,7 +178,7 @@ class digitalshop_Widget_Pricing extends Widget_Base {
             <?php
             } ?>
          </ul>
-         <a class="elementor-inline-editing digitalshop-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo $this->get_render_attribute_string( 'btn_text' ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
+         <a class="elementor-inline-editing cpthelper-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo $this->get_render_attribute_string( 'btn_text' ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
       </div>
 
       <?php
@@ -186,4 +186,4 @@ class digitalshop_Widget_Pricing extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Pricing );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Pricing );

@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-"Project-Id-Version: digitalshop Core\n"
+"Project-Id-Version: cpthelper Core\n"
 "POT-Creation-Date: 2020-02-12 19:24+0600\n"
 "PO-Revision-Date: 2020-02-12 19:24+0600\n"
 "Last-Translator: \n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
 #: inc/elementor/elementor.php:20
-msgid "digitalshop Elements"
+msgid "cpthelper Elements"
 msgstr ""
 
 #: inc/elementor/widgets/widget-accordion.php:14
@@ -78,7 +78,7 @@ msgid "Accordion list"
 msgstr ""
 
 #: inc/elementor/widgets/widget-accordion.php:99
-msgid "How can i get help by digitalshop?"
+msgid "How can i get help by cpthelper?"
 msgstr ""
 
 #: inc/elementor/widgets/widget-accordion.php:100
@@ -516,7 +516,7 @@ msgid "Displays download item filters. Used in Download Category Sidebar"
 msgstr ""
 
 #: inc/widget-download-filters.php:16
-msgid "digitalshop : Download Filters"
+msgid "cpthelper : Download Filters"
 msgstr ""
 
 #: inc/widget-download-filters.php:43
@@ -532,11 +532,11 @@ msgid "Best Selling"
 msgstr ""
 
 #: inc/widget-recent-posts.php:14
-msgid "digitalshop blog recent post here"
+msgid "cpthelper blog recent post here"
 msgstr ""
 
 #: inc/widget-recent-posts.php:18
-msgid "digitalshop : Recent Post"
+msgid "cpthelper : Recent Post"
 msgstr ""
 
 #: inc/widget-recent-posts.php:37
@@ -552,17 +552,17 @@ msgid "No. of Item of posts to show:"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "digitalshop Core"
+msgid "cpthelper Core"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://github.com/farhan01617/digitalshop-core"
+msgid "https://github.com/farhan01617/cpthelper-core"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"After install the digitalshop WordPress Theme, you must need to install this "
-"\"digitalshop Core\" first to get all functions of digitalshop WP Theme."
+"After install the cpthelper WordPress Theme, you must need to install this "
+"\"cpthelper Core\" first to get all functions of cpthelper WP Theme."
 msgstr ""
 
 #. Author of the plugin/theme

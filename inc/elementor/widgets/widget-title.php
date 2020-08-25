@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class digitalshop_Widget_Title extends Widget_Base {
+class cpthelper_Widget_Title extends Widget_Base {
  
    public function get_name() {
       return 'title';
    }
  
    public function get_title() {
-      return esc_html__( 'Title', 'digitalshop' );
+      return esc_html__( 'Title', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class digitalshop_Widget_Title extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class digitalshop_Widget_Title extends Widget_Base {
       $this->start_controls_section(
          'title_section',
          [
-            'label' => esc_html__( 'Title', 'digitalshop' ),
+            'label' => esc_html__( 'Title', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,9 +35,9 @@ class digitalshop_Widget_Title extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'digitalshop' ),
+            'label' => __( 'Title', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Latest portfolio','digitalshop')
+            'default' => __('Latest portfolio','cpthelper')
          ]
       );
 
@@ -45,28 +45,28 @@ class digitalshop_Widget_Title extends Widget_Base {
       $this->add_control(
          'sub-title',
          [
-            'label' => __( 'Sub Title', 'digitalshop' ),
+            'label' => __( 'Sub Title', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Nemo enim ipsam voluptatem quia voluptas aspernatur','digitalshop')
+            'default' => __('Nemo enim ipsam voluptatem quia voluptas aspernatur','cpthelper')
          ]
       );
 
       $this->add_control(
          'align',
          [
-            'label' => __( 'Alignment', 'digitalshop' ),
+            'label' => __( 'Alignment', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::CHOOSE,
             'options' => [
                'left' => [
-                  'title' => __( 'Left', 'digitalshop' ),
+                  'title' => __( 'Left', 'cpthelper' ),
                   'icon' => 'fa fa-align-left',
                ],
                'center' => [
-                  'title' => __( 'Center', 'digitalshop' ),
+                  'title' => __( 'Center', 'cpthelper' ),
                   'icon' => 'fa fa-align-center',
                ],
                'right' => [
-                  'title' => __( 'Right', 'digitalshop' ),
+                  'title' => __( 'Right', 'cpthelper' ),
                   'icon' => 'fa fa-align-right',
                ],
             ],
@@ -100,4 +100,4 @@ class digitalshop_Widget_Title extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Title );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Title );

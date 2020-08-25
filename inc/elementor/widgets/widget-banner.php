@@ -4,14 +4,14 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Banner
-class digitalshop_Widget_Banner extends Widget_Base {
+class cpthelper_Widget_Banner extends Widget_Base {
  
    public function get_name() {
       return 'banner';
    }
  
    public function get_title() {
-      return esc_html__( 'Banner', 'digitalshop' );
+      return esc_html__( 'Banner', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -19,7 +19,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
 
    protected function _register_controls() {
@@ -27,7 +27,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->start_controls_section(
          'banner_section',
          [
-            'label' => esc_html__( 'Banner', 'digitalshop' ),
+            'label' => esc_html__( 'Banner', 'cpthelper' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -35,7 +35,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'digitalshop' ),
+            'label' => __( 'Title', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -43,7 +43,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'description',
          [
-            'label' => __( 'Description', 'digitalshop' ),
+            'label' => __( 'Description', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -51,10 +51,10 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'search',
          [
-            'label' => __( 'Search', 'digitalshop' ),
+            'label' => __( 'Search', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'digitalshop' ),
-            'label_off' => __( 'Off', 'digitalshop' ),
+            'label_on' => __( 'On', 'cpthelper' ),
+            'label_off' => __( 'Off', 'cpthelper' ),
             'return_value' => 'on',
             'default' => 'on',
          ]
@@ -63,9 +63,9 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'searchtext',
          [
-            'label' => __( 'Search Text', 'digitalshop' ),
+            'label' => __( 'Search Text', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Search Product','digitalshop' ),
+            'default' => __('Search Product','cpthelper' ),
             'condition' => ['search' => 'on' ]
          ]
       );
@@ -73,10 +73,10 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'products',
          [
-            'label' => __( 'Products', 'digitalshop' ),
+            'label' => __( 'Products', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'digitalshop' ),
-            'label_off' => __( 'Off', 'digitalshop' ),
+            'label_on' => __( 'On', 'cpthelper' ),
+            'label_off' => __( 'Off', 'cpthelper' ),
             'return_value' => 'on',
             'default' => 'on',
          ]
@@ -85,10 +85,10 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'counter',
          [
-            'label' => __( 'Counter', 'digitalshop' ),
+            'label' => __( 'Counter', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'digitalshop' ),
-            'label_off' => __( 'Off', 'digitalshop' ),
+            'label_on' => __( 'On', 'cpthelper' ),
+            'label_off' => __( 'Off', 'cpthelper' ),
             'return_value' => 'on',
             'default' => 'off',
          ]
@@ -97,7 +97,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'experience',
          [
-            'label' => __( 'Years of experience', 'digitalshop' ),
+            'label' => __( 'Years of experience', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => 2014,
             'condition' => ['counter' => 'on' ]
@@ -108,10 +108,10 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'button_display',
          [
-            'label' => __( 'Button', 'digitalshop' ),
+            'label' => __( 'Button', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'digitalshop' ),
-            'label_off' => __( 'Off', 'digitalshop' ),
+            'label_on' => __( 'On', 'cpthelper' ),
+            'label_off' => __( 'Off', 'cpthelper' ),
             'return_value' => 'on',
             'default' => 'off',
          ]
@@ -122,16 +122,16 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $button->add_control(
          'button',
          [
-            'label' => __( 'Button Text', 'digitalshop' ),
+            'label' => __( 'Button Text', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Learn More', 'digitalshop' )
+            'default' => __( 'Learn More', 'cpthelper' )
          ]
       );
 
       $button->add_control(
          'button_url',
          [
-            'label' => __( 'Button URL', 'digitalshop' ),
+            'label' => __( 'Button URL', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#'
          ]
@@ -140,16 +140,16 @@ class digitalshop_Widget_Banner extends Widget_Base {
       $this->add_control(
          'button_list',
          [
-            'label' => __( 'Button List', 'digitalshop' ),
+            'label' => __( 'Button List', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $button->get_controls(),
             'default' => [
                [
-                  'button' => __( 'Shop Now', 'digitalshop' ),
+                  'button' => __( 'Shop Now', 'cpthelper' ),
                   'button_url' => '#',
                ],
                [
-                  'button' => __( 'Learn More', 'digitalshop' ),
+                  'button' => __( 'Learn More', 'cpthelper' ),
                   'button_url' => '#',
                ],
             ],
@@ -171,8 +171,8 @@ class digitalshop_Widget_Banner extends Widget_Base {
             'value' => \Elementor\Scheme_Color::COLOR_1,
           ],
           'selectors' => [
-            '{{WRAPPER}} h1, {{WRAPPER}} h5, {{WRAPPER}} p, {{WRAPPER}} span, {{WRAPPER}} .digitalshop-product-search-form select, {{WRAPPER}} .digitalshop-product-search-form input[type="text"], {{WRAPPER}} .digitalshop-search-btn,
-            {{WRAPPER}} input[type="submit"], {{WRAPPER}} .digitalshop-search-btn:after, {{WRAPPER}} ::placeholder' => 'color: {{VALUE}}',
+            '{{WRAPPER}} h1, {{WRAPPER}} h5, {{WRAPPER}} p, {{WRAPPER}} span, {{WRAPPER}} .cpthelper-product-search-form select, {{WRAPPER}} .cpthelper-product-search-form input[type="text"], {{WRAPPER}} .cpthelper-search-btn,
+            {{WRAPPER}} input[type="submit"], {{WRAPPER}} .cpthelper-search-btn:after, {{WRAPPER}} ::placeholder' => 'color: {{VALUE}}',
           ]
         ]
       );
@@ -200,11 +200,11 @@ class digitalshop_Widget_Banner extends Widget_Base {
                   <h1 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html( $settings['title'] ); ?></h1>
                   <p <?php echo $this->get_render_attribute_string( 'description' ); ?>><?php echo esc_html( $settings['description'] ); ?></p>  
                   <?php if ( true == $settings['search'] ): ?>
-                  <div class="digitalshop-product-search-form">
+                  <div class="cpthelper-product-search-form">
                     <form method="GET" action="<?php echo home_url(); ?>">
-                      <div class="digitalshop-download-cat-filter">
+                      <div class="cpthelper-download-cat-filter">
                         <?php wp_dropdown_categories( array(
-                          'show_option_all' => esc_html__('All Categories','digitalshop'),
+                          'show_option_all' => esc_html__('All Categories','cpthelper'),
                           'orderby' => 'name',
                           'order' => 'ASC',
                           'echo' => 1,
@@ -214,14 +214,14 @@ class digitalshop_Widget_Banner extends Widget_Base {
                           'name' => 'download_cat',
                           'hierarchical'  => 1,
                           'value_field' => 'name',
-                          'class' => 'digitalshop-download-cat-filter',
+                          'class' => 'cpthelper-download-cat-filter',
                           'taxonomy' => 'download_category'
                         ) ); ?>
                       </div>
-                      <div class="digitalshop-search-fields">
+                      <div class="cpthelper-search-fields">
                         <input name="s" value="<?php echo ( isset($_GET['s']) ) ? $_GET['s']: null; ?>" type="text" placeholder="<?php echo esc_attr( $settings['searchtext'] ); ?>">
                         <input type="hidden" name="post_type" value="download">
-                        <span class="digitalshop-search-btn"><input type="submit"></span>
+                        <span class="cpthelper-search-btn"><input type="submit"></span>
                       </div>
                     </form>
                   </div>
@@ -241,7 +241,7 @@ class digitalshop_Widget_Banner extends Widget_Base {
                     echo esc_html( $customer->count() );
                     ?>
                   </span>
-                  <h5><?php echo esc_html__( 'Customers' , 'digitalshop' ) ?></h5>
+                  <h5><?php echo esc_html__( 'Customers' , 'cpthelper' ) ?></h5>
                 </div>
               </div>
 
@@ -250,23 +250,23 @@ class digitalshop_Widget_Banner extends Widget_Base {
                   <span class="counter">
                     <?php echo wp_count_posts( 'download' )->publish; ?>
                     </span>
-                  <h5><?php echo esc_html__( 'Items' , 'digitalshop' ) ?></h5>
+                  <h5><?php echo esc_html__( 'Items' , 'cpthelper' ) ?></h5>
                 </div>
               </div>
 
               <div class="col-sm-3">
                 <div class="counter-item">
                   <span class="counter">
-                    <?php echo digitalshop_edd_count_total('sale'); ?>
+                    <?php echo cpthelper_edd_count_total('sale'); ?>
                     </span>
-                  <h5><?php echo esc_html__( 'Sales' , 'digitalshop' ) ?></h5>
+                  <h5><?php echo esc_html__( 'Sales' , 'cpthelper' ) ?></h5>
                 </div>
               </div>
 
               <div class="col-sm-3">
                 <div class="counter-item">
                   <span class="counter"><?php echo date("Y") - esc_html( $settings['experience'] ); ?></span>
-                  <h5><?php echo esc_html__( 'Years of experience' , 'digitalshop' ) ?></h5>
+                  <h5><?php echo esc_html__( 'Years of experience' , 'cpthelper' ) ?></h5>
                 </div>
               </div>
             </div>
@@ -318,4 +318,4 @@ class digitalshop_Widget_Banner extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Banner );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Banner );

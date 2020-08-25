@@ -1,21 +1,21 @@
 <?php
 /**
  * Adds Recent post Widget.
- * @package digitalshop
+ * @package cpthelper
  */
-if( !class_exists('digitalshop_Recent_Post') ){
-	class digitalshop_Recent_Post extends WP_Widget{
+if( !class_exists('cpthelper_Recent_Post') ){
+	class cpthelper_Recent_Post extends WP_Widget{
 		/**
 		 * Register widget with WordPress.
 		 */
 		function __construct(){
 
 			$widget_options = array(
-				'description' 					=> esc_html__('Digitalshop blog recent post here', 'digitalshop'), 
+				'description' 					=> esc_html__('cpthelper blog recent post here', 'cpthelper'), 
 				'customize_selective_refresh' 	=> true,
 			);
 
-			parent:: __construct('digitalshop_Recent_Post', esc_html__( 'Digitalshop : Recent Post', 'digitalshop'), $widget_options );
+			parent:: __construct('cpthelper_Recent_Post', esc_html__( 'cpthelper : Recent Post', 'cpthelper'), $widget_options );
 
 		}
 		/**
@@ -34,20 +34,14 @@ if( !class_exists('digitalshop_Recent_Post') ){
 
 		}
 		
-		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','digitalshop' );
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : esc_html__( 'Recent Posts','cpthelper' );
 		
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
 		$show_item = ( ! empty( $instance['show_item'] ) ) ? absint( $instance['show_item'] ) : 3;
 
-
-			echo $args['before_widget']; 
-			if ( $title ): 
-		    echo $args['before_title'];  
 			echo esc_attr( $title );  
-		 	echo $args['after_title']; 
-			endif;
-
+		
 				$posts = new WP_Query(array(
 					'post_type'      => 'post',
 					'posts_per_page' => $show_item,
@@ -72,7 +66,7 @@ if( !class_exists('digitalshop_Recent_Post') ){
 							<div class="row<?php if ( !has_post_thumbnail() ) { echo' no-thumbnail'; } ?>">
 								<?php if (has_post_thumbnail()): ?>
 								<div class="col-lg-4">
-									<?php the_post_thumbnail( 'digitalshop-80x80' ); ?>
+									<?php the_post_thumbnail( 'cpthelper-80x80' ); ?>
 								</div>
 								<?php endif ?>
 								<div class="col-lg-<?php if ( has_post_thumbnail() ) { echo'8'; } else { echo'12'; } ?>">
@@ -90,7 +84,7 @@ if( !class_exists('digitalshop_Recent_Post') ){
 			               	<?php if (has_post_thumbnail()): ?>
 			                  <div class="blog-thumb">
 			                     <a href="<?php the_permalink(); ?>">
-			                        <?php the_post_thumbnail( 'digitalshop-360x260' ); ?>
+			                        <?php the_post_thumbnail( 'cpthelper-360x260' ); ?>
 			                     </a>
 			                  </div>
 			                <?php endif ?>
@@ -104,16 +98,10 @@ if( !class_exists('digitalshop_Recent_Post') ){
 			                  </div>
 			               </div>
 			            </div>
-
-
-
-
-
 						<?php endwhile; ?>
 					</div>
 				</div>
 
-			<?php echo $args['after_widget']; ?>
 			
 			<?php wp_reset_postdata();
 		}
@@ -145,12 +133,12 @@ if( !class_exists('digitalshop_Recent_Post') ){
 		public function form( $instance ) {
 		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
 		$show_item    = isset( $instance['show_item'] ) ? absint( $instance['show_item'] ) : 5; ?>
-		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','digitalshop' ); ?></label>
+		<p><label for="<?php echo esc_attr($this->get_field_id( 'title' )); ?>"><?php echo esc_html__( 'Title:','cpthelper' ); ?></label>
 		<input class="widefat" id="<?php echo esc_attr($this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr($this->get_field_name( 'title' )); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 		
 		
 		<p>
-			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','digitalshop' ); ?></label>
+			<label for="<?php echo esc_attr($this->get_field_id( 'show_item' )); ?>"><?php echo esc_html__( 'No. of Item of posts to show:','cpthelper' ); ?></label>
 			<input class="tiny-text" id="<?php echo esc_attr(esc_attr($this->get_field_id( 'show_item' ))); ?>" name="<?php echo esc_attr($this->get_field_name( 'show_item' )); ?>" type="number" step="1" min="1" value="<?php echo esc_attr($show_item); ?>" size="3" />
 		</p>
 
@@ -162,7 +150,7 @@ if( !class_exists('digitalshop_Recent_Post') ){
 
 
 // register Contact  Widget widget
-function digitalshop_Recent_Post(){
-	register_widget('digitalshop_Recent_Post');
+function cpthelper_Recent_Post(){
+	register_widget('cpthelper_Recent_Post');
 }
-add_action('widgets_init','digitalshop_Recent_Post');
+add_action('widgets_init','cpthelper_Recent_Post');

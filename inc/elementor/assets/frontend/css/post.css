@@ -1,0 +1,42 @@
+
+/*Blog*/
+.blog-item {
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(97, 105, 140, 0.1);
+}
+
+.blog-thumb {
+    overflow: hidden;
+}
+
+.blog-thumb img {
+    width: 100%;
+    transform: scale(1);
+    transition: 1s linear;
+}
+
+.blog-item:hover .blog-thumb img {
+    transform: scale(1.1);
+}
+
+.blog-meta span {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.blog-content {
+    padding: 40px 30px;
+}
+
+.blog-content h4 {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+}
+
+.blog-content p {
+    margin-bottom: 0;
+}

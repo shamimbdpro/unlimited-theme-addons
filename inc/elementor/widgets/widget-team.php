@@ -3,14 +3,14 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // team
-class digitalshop_Widget_Team extends Widget_Base {
+class cpthelper_Widget_Team extends Widget_Base {
  
    public function get_name() {
       return 'team';
    }
  
    public function get_title() {
-      return esc_html__( 'Team', 'digitalshop' );
+      return esc_html__( 'Team', 'cpthelper' );
    }
  
    public function get_icon() { 
@@ -18,13 +18,13 @@ class digitalshop_Widget_Team extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'digitalshop-elements' ];
+      return [ 'cpthelper-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
          'team_section',
          [
-            'label' => esc_html__( 'team', 'digitalshop' ),
+            'label' => esc_html__( 'team', 'cpthelper' ),
             'type' => Controls_Manager::SECTION
          ]
       );
@@ -32,7 +32,7 @@ class digitalshop_Widget_Team extends Widget_Base {
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose photo', 'digitalshop' ),
+            'label' => __( 'Choose photo', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -43,17 +43,17 @@ class digitalshop_Widget_Team extends Widget_Base {
       $this->add_control(
          'name',
          [
-            'label' => __( 'Name', 'digitalshop' ),
+            'label' => __( 'Name', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'John Doe', 'digitalshop' ),
+            'default' => __( 'John Doe', 'cpthelper' ),
          ]
       );
       $this->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'digitalshop' ),
+            'label' => __( 'Designation', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'App Developer', 'digitalshop' ),
+            'default' => __( 'App Developer', 'cpthelper' ),
          ]
       );
       
@@ -61,7 +61,7 @@ class digitalshop_Widget_Team extends Widget_Base {
 
       $social->add_control(
          'social_icon', [
-            'label' => __( 'Social Icon', 'digitalshop' ),
+            'label' => __( 'Social Icon', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::ICON,
             'default' => 'fa fa-facebook',
          ]
@@ -69,7 +69,7 @@ class digitalshop_Widget_Team extends Widget_Base {
 
       $social->add_control(
          'social_url', [
-            'label' => __( 'Socia URL', 'digitalshop' ),
+            'label' => __( 'Socia URL', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             'default' => '#',
          ]
@@ -78,7 +78,7 @@ class digitalshop_Widget_Team extends Widget_Base {
       $this->add_control(
          'social_media',
          [
-            'label' => __( 'social profile', 'digitalshop' ),
+            'label' => __( 'social profile', 'cpthelper' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $social->get_controls(),
             'title_field' => 'Social Item',
@@ -113,8 +113,8 @@ class digitalshop_Widget_Team extends Widget_Base {
       $this->add_inline_editing_attributes( 'designation', 'basic' );
       ?>
 
-      <div class="digitalshop-team">
-         <?php echo wp_get_attachment_image( $settings['image']['id'], 'digitalshop-400x400' ); ?>
+      <div class="cpthelper-team">
+         <?php echo wp_get_attachment_image( $settings['image']['id'], 'cpthelper-400x400' ); ?>
          <h4 <?php echo $this->get_render_attribute_string( 'name' ); ?>><?php echo esc_html( $settings['name'] ); ?></h4>
          <span <?php echo $this->get_render_attribute_string( 'designation' ); ?>><?php echo esc_html( $settings['designation'] ); ?></span>
          <ul class="list-inline">
@@ -129,4 +129,4 @@ class digitalshop_Widget_Team extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new digitalshop_Widget_Team );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Team );
