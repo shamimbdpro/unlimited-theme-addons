@@ -10,7 +10,7 @@ class cpthelper_Widget_Blog extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Latest Blog', 'cpthelper' );
+      return esc_html__( 'Codepopular Latest Blog', 'cpthelper' );
    }
  
    public function get_icon() { 
