@@ -11,7 +11,7 @@ class cpthelper_Widget_Pricing extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Pricing', 'cpthelper' );
+      return esc_html__( 'UTA Pricing', 'cpthelper' );
    }
  
    public function get_icon() { 

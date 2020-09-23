@@ -11,7 +11,7 @@ class cpthelper_Widget_Title extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Title', 'cpthelper' );
+      return esc_html__( 'UTA Title', 'cpthelper' );
    }
  
    public function get_icon() { 

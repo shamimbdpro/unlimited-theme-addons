@@ -11,7 +11,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Testimonials', 'cpthelper' );
+      return esc_html__( 'UTA Testimonials', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -27,7 +27,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $this->start_controls_section(
          'testimonials_section',
          [
-            'label' => esc_html__( 'Testimonials', 'cpthelper' ),
+            'label' => esc_html__( 'Testimonials', 'unlimited-theme-addons' ),
             'type' => Controls_Manager::SECTION,
          ]
       );
@@ -37,7 +37,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'cpthelper' ),
+            'label' => __( 'Choose Photo', 'unlimited-theme-addons' ),
             'type' => \Elementor\Controls_Manager::MEDIA,
             'default' => [
                'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -48,7 +48,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'name',
          [
-            'label' => __( 'Name', 'cpthelper' ),
+            'label' => __( 'Name', 'unlimited-theme-addons' ),
             'type' => \Elementor\Controls_Manager::TEXT,
             
          ]
@@ -57,7 +57,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'cpthelper' ),
+            'label' => __( 'Designation', 'unlimited-theme-addons' ),
             'type' => \Elementor\Controls_Manager::TEXT
          ]
       );
@@ -65,7 +65,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $repeater->add_control(
          'testimonial',
          [
-            'label' => __( 'Testimonial', 'cpthelper' ),
+            'label' => __( 'Testimonial', 'unlimited-theme-addons' ),
             'type' => \Elementor\Controls_Manager::TEXTAREA
          ]
       );
@@ -73,7 +73,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
       $this->add_control(
          'testimonial_list',
          [
-            'label' => __( 'Testimonial List', 'cpthelper' ),
+            'label' => __( 'Testimonial List', 'unlimited-theme-addons' ),
             'type' => \Elementor\Controls_Manager::REPEATER,
             'fields' => $repeater->get_controls(),
             'title_field' => '{{{name}}}',

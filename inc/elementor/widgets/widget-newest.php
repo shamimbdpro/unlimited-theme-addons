@@ -11,7 +11,7 @@ class cpthelper_Widget_Newest extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Newest', 'cpthelper' );
+      return esc_html__( 'UTA Newest', 'cpthelper' );
    }
  
    public function get_icon() { 

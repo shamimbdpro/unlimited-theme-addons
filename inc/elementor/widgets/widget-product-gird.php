@@ -19,7 +19,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
     public function get_title()
     {
-        return __('Codepopular Product', 'cpthelper');
+        return __('UTA Prodduct', 'cpthelper');
     }
 
     public function get_icon()

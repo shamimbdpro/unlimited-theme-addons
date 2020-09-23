@@ -10,7 +10,7 @@ class cpthelper_Widget_Video extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'Video', 'cpthelper' );
+      return esc_html__( 'UTA Video', 'cpthelper' );
    }
  
    public function get_icon() { 
