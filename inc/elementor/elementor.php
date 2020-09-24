@@ -29,13 +29,16 @@ add_action( 'elementor/elements/categories_registered', 'cpthelper_add_elementor
    $plugin_dir_url = plugin_dir_url( __FILE__ );
 
     // load css
-    wp_enqueue_style( 'uta-product-gird', $plugin_dir_url . '/assets/frontend/css/product-grid.css', array(), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_style( 'uta-load-more', $plugin_dir_url . '/assets/frontend/css/load-more.css', array(), wp_get_theme()->get( 'Version' ) );
-    wp_enqueue_style( 'uta-blog', $plugin_dir_url . '/assets/frontend/css/post.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'uta-magnific-popup',  $plugin_dir_url . '/assets/frontend/css/magnific-popup.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'uta-imagetooltip', $plugin_dir_url . '/assets/frontend/css/imagetooltip.min.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'uta-slick', $plugin_dir_url . '/assets/frontend/css/slick.css', array(), wp_get_theme()->get( 'Version' ) );
     wp_enqueue_style( 'uta-slick-theme', $plugin_dir_url . '/assets/frontend/css/slick-theme.css', array(), wp_get_theme()->get( 'Version' ) );
+
+    wp_enqueue_style( 'uta-product-gird', $plugin_dir_url . '/assets/frontend/css/product-grid.css', array(), wp_get_theme()->get( 'Version' ) );
+    wp_enqueue_style( 'uta-load-more', $plugin_dir_url . '/assets/frontend/css/load-more.css', array(), wp_get_theme()->get( 'Version' ) );
+    wp_enqueue_style( 'uta-blog', $plugin_dir_url . '/assets/frontend/css/post.css', array(), wp_get_theme()->get( 'Version' ) );
+    wp_enqueue_style( 'uta-testimonial', $plugin_dir_url . '/assets/frontend/css/testimonial.css', array(), wp_get_theme()->get( 'Version' ) );
+   
 
 
     // Load Js
