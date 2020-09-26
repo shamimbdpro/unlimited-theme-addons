@@ -11,7 +11,7 @@ class cpthelper_Widget_Pricing extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Pricing', 'cpthelper' );
+      return esc_html__( 'UTA Pricing', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -27,51 +27,51 @@ class cpthelper_Widget_Pricing extends Widget_Base {
       $this->start_controls_section(
          'pricing_section',
          [
-            'label' => esc_html__( 'Pricing', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Pricing', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'title',
          [
-            'label' => __( 'title', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => 'Standard Plan'
+			 'label' => __( 'title', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => 'Standard Plan',
          ]
       );
 
       $this->add_control(
          'price',
          [
-            'label' => __( 'Price', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '70'
+			 'label' => __( 'Price', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => '70',
          ]
       );
       
       $this->add_control(
          'currency',
          [
-            'label' => __( 'Currency', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( '$', 'cpthelper' ),
+			 'label' => __( 'Currency', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => __( '$', 'unlimited-theme-addons' ),
          ]
       );
       
       $this->add_control(
          'package',
          [
-            'label' => __( 'Package', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SELECT,
-            'default' => 'Yealry',
-            'options' => [
-               'Daily'  => __( 'Daily', 'cpthelper' ),
-               'Weekly'  => __( 'Weekly', 'cpthelper' ),
-               'Monthly' => __( 'Monthly', 'cpthelper' ),
-               'Yealry' => __( 'Yealry', 'cpthelper' ),
-               'none' => __( 'None', 'cpthelper' )
-            ],
+			 'label' => __( 'Package', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SELECT,
+			 'default' => 'Yealry',
+			 'options' => [
+				 'Daily'  => __( 'Daily', 'unlimited-theme-addons' ),
+				 'Weekly'  => __( 'Weekly', 'unlimited-theme-addons' ),
+				 'Monthly' => __( 'Monthly', 'unlimited-theme-addons' ),
+				 'Yealry' => __( 'Yealry', 'unlimited-theme-addons' ),
+				 'none' => __( 'None', 'unlimited-theme-addons' ),
+			 ],
          ]
       );
 
@@ -80,66 +80,66 @@ class cpthelper_Widget_Pricing extends Widget_Base {
       $feature->add_control(
          'feature',
          [
-            'label' => __( 'Feature', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __( '10 Free Domain Names', 'cpthelper' )
+			 'label' => __( 'Feature', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXTAREA,
+			 'default' => __( '10 Free Domain Names', 'unlimited-theme-addons' ),
          ]
       );
 
       $this->add_control(
          'feature_list',
          [
-            'label' => __( 'Feature List', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $feature->get_controls(),
-            'default' => [
-               [
-                  'feature' => __( '5GB Storage Space', 'cpthelper' )
-               ],
-               [
-                  'feature' => __( '20GB Monthly Bandwidth', 'cpthelper' )
-               ],
-               [
-                  'feature' => __( 'My SQL Databases', 'cpthelper' )
-               ],
-               [
-                  'feature' => __( '100 Email Account', 'cpthelper' )
-               ],
-               [
-                  'feature' => __( '10 Free Domain Names', 'cpthelper' )
-               ]
-            ],
-            'title_field' => '{{{ feature }}}'
+			 'label' => __( 'Feature List', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::REPEATER,
+			 'fields' => $feature->get_controls(),
+			 'default' => [
+				 [
+					 'feature' => __( '5GB Storage Space', 'unlimited-theme-addons' ),
+				 ],
+				 [
+					 'feature' => __( '20GB Monthly Bandwidth', 'unlimited-theme-addons' ),
+				 ],
+				 [
+					 'feature' => __( 'My SQL Databases', 'unlimited-theme-addons' ),
+				 ],
+				 [
+					 'feature' => __( '100 Email Account', 'unlimited-theme-addons' ),
+				 ],
+				 [
+					 'feature' => __( '10 Free Domain Names', 'unlimited-theme-addons' ),
+				 ],
+			 ],
+			 'title_field' => '{{{ feature }}}',
          ]
       );
 
       $this->add_control(
          'btn_text',
          [
-            'label' => __( 'button text', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => 'Select Plan'
+			 'label' => __( 'button text', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => 'Select Plan',
          ]
       );
 
       $this->add_control(
          'btn_url',
          [
-            'label' => __( 'button URL', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '#'
+			 'label' => __( 'button URL', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => '#',
          ]
       );
 
       $this->add_control(
          'recommended',
          [
-            'label' => __( 'Recommended', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'On', 'cpthelper' ),
-            'label_off' => __( 'Off', 'cpthelper' ),
-            'return_value' => 'on',
-            'default' => 'off',
+			 'label' => __( 'Recommended', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on' => __( 'On', 'unlimited-theme-addons' ),
+			 'label_off' => __( 'Off', 'unlimited-theme-addons' ),
+			 'return_value' => 'on',
+			 'default' => 'off',
          ]
       );
 
@@ -159,26 +159,26 @@ class cpthelper_Widget_Pricing extends Widget_Base {
       $this->add_inline_editing_attributes( 'btn_text', 'basic' );
       ?>
 
-      <div class="cpthelper-pricing-table <?php if ( 'on' == $settings['recommended'] ){ echo"recommended"; }?>">
-         <h6 class="type elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html( $settings['title'] ); ?></h6>
-         <h1 class="cpthelper-price elementor-inline-editing" <?php echo $this->get_render_attribute_string( 'price' ); ?>><span class="cpthelper-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
+      <div class="cpthelper-pricing-table <?php if ( 'on' == $settings['recommended'] ) { echo"recommended"; }?>">
+         <h6 class="type elementor-inline-editing" <?php echo esc_html( $this->get_render_attribute_string( 'title' ) ); ?>><?php echo esc_html( $settings['title'] ); ?></h6>
+         <h1 class="cpthelper-price elementor-inline-editing" <?php echo esc_html( $this->get_render_attribute_string( 'price' ) ); ?>><span class="cpthelper-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
          </h1>
 
-         <?php if ( 'none' !== $settings['package'] ): ?>
-            <span <?php echo $this->get_render_attribute_string( 'package' ); ?>><?php echo esc_html( $settings['package'] ); ?></span>
+         <?php if ( 'none' !== $settings['package'] ) : ?>
+            <span <?php echo esc_html( $this->get_render_attribute_string( 'package' ) ); ?>><?php echo esc_html( $settings['package'] ); ?></span>
          <?php endif ?>
          
          <ul>
             <?php 
-               foreach (  $settings['feature_list'] as $index => $feature ) { 
+               foreach ( $settings['feature_list'] as $index => $feature ) { 
                $feature_inline = $this->get_repeater_setting_key( 'feature','feature_list',$index);
                $this->add_inline_editing_attributes( $feature_inline, 'basic' );
             ?>
-               <li <?php echo $this->get_render_attribute_string( $feature_inline ); ?>><?php echo esc_html( $feature['feature'] ) ?></li>
+               <li <?php echo esc_html( $this->get_render_attribute_string( $feature_inline ) ); ?>><?php echo esc_html( $feature['feature'] ) ?></li>
             <?php
             } ?>
          </ul>
-         <a class="elementor-inline-editing cpthelper-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo $this->get_render_attribute_string( 'btn_text' ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
+         <a class="elementor-inline-editing cpthelper-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo esc_html( $this->get_render_attribute_string( 'btn_text' ) ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
       </div>
 
       <?php
@@ -186,4 +186,4 @@ class cpthelper_Widget_Pricing extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Pricing );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Pricing() );

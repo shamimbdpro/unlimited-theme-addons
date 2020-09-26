@@ -10,7 +10,7 @@ class cpthelper_Widget_Team extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Team', 'cpthelper' );
+      return esc_html__( 'UTA Team', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -24,36 +24,36 @@ class cpthelper_Widget_Team extends Widget_Base {
       $this->start_controls_section(
          'team_section',
          [
-            'label' => esc_html__( 'team', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION
+			 'label' => esc_html__( 'team', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
       
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose photo', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src(),
-            ],
+			 'label' => __( 'Choose photo', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::MEDIA,
+			 'default' => [
+				 'url' => \Elementor\Utils::get_placeholder_image_src(),
+			 ],
          ]
       );
       
       $this->add_control(
          'name',
          [
-            'label' => __( 'Name', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'John Doe', 'cpthelper' ),
+			 'label' => __( 'Name', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => __( 'John Doe', 'unlimited-theme-addons' ),
          ]
       );
       $this->add_control(
          'designation',
          [
-            'label' => __( 'Designation', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'App Developer', 'cpthelper' ),
+			 'label' => __( 'Designation', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => __( 'App Developer', 'unlimited-theme-addons' ),
          ]
       );
       
@@ -61,42 +61,42 @@ class cpthelper_Widget_Team extends Widget_Base {
 
       $social->add_control(
          'social_icon', [
-            'label' => __( 'Social Icon', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::ICON,
-            'default' => 'fa fa-facebook',
+			 'label' => __( 'Social Icon', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::ICON,
+			 'default' => 'fa fa-facebook',
          ]
       );
 
       $social->add_control(
          'social_url', [
-            'label' => __( 'Socia URL', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '#',
+			 'label' => __( 'Socia URL', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => '#',
          ]
       );
 
       $this->add_control(
          'social_media',
          [
-            'label' => __( 'social profile', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::REPEATER,
-            'fields' => $social->get_controls(),
-            'title_field' => 'Social Item',
-            'default' => [
-               [
-                  'social_icon' => 'fa fa-facebook',
-                  'social_url' => '#'
-               ],
-               [
-                  'social_icon' => 'fa fa-twitter',
-                  'social_url' => '#'
-               ],
-               [
-                  'social_icon' => 'fa fa-linkedin',
-                  'social_url' => '#'
-               ]
-            ],
-            'title_field' => '{{{ social_icon }}}',
+			 'label' => __( 'social profile', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::REPEATER,
+			 'fields' => $social->get_controls(),
+			 'title_field' => 'Social Item',
+			 'default' => [
+				 [
+					 'social_icon' => 'fa fa-facebook',
+					 'social_url' => '#',
+				 ],
+				 [
+					 'social_icon' => 'fa fa-twitter',
+					 'social_url' => '#',
+				 ],
+				 [
+					 'social_icon' => 'fa fa-linkedin',
+					 'social_url' => '#',
+				 ],
+			 ],
+			 'title_field' => '{{{ social_icon }}}',
          ]
       );
       
@@ -115,8 +115,8 @@ class cpthelper_Widget_Team extends Widget_Base {
 
       <div class="cpthelper-team">
          <?php echo wp_get_attachment_image( $settings['image']['id'], 'cpthelper-400x400' ); ?>
-         <h4 <?php echo $this->get_render_attribute_string( 'name' ); ?>><?php echo esc_html( $settings['name'] ); ?></h4>
-         <span <?php echo $this->get_render_attribute_string( 'designation' ); ?>><?php echo esc_html( $settings['designation'] ); ?></span>
+         <h4 <?php echo esc_html(  $this->get_render_attribute_string( 'name' ) ); ?>><?php echo esc_html( $settings['name'] ); ?></h4>
+         <span <?php echo esc_html( $this->get_render_attribute_string( 'designation' ) ); ?>><?php echo esc_html( $settings['designation'] ); ?></span>
          <ul class="list-inline">
             <?php 
             foreach ( $settings['social_media'] as $single_social ) { ?>
@@ -129,4 +129,4 @@ class cpthelper_Widget_Team extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Team );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Team() );

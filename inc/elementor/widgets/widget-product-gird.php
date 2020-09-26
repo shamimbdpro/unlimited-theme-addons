@@ -1,7 +1,7 @@
 <?php
 namespace Elementor;
 
-if (!defined('ABSPATH')) {
+if ( ! defined('ABSPATH') ) {
     exit;
 }
 // Exit if accessed directly
@@ -12,34 +12,29 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 {
     use Codepopular_theme_helper, Product_Grid;
 
-    public function get_name()
-    {
+    public function get_name() {
         return 'cpthelper-product';
     }
 
-    public function get_title()
-    {
-        return __('UTA Prodduct', 'cpthelper');
+    public function get_title() {
+        return __('UTA Prodduct', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'fa fa-th';
     }
 
-    public function get_categories()
-    {
-        return ['cpthelper-elements'];
+    public function get_categories() {
+        return [ 'cpthelper-elements' ];
     }
 
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
 
         // Content Controls
         $this->start_controls_section(
             'cpthelper_section_product_grid_settings',
             [
-                'label' => esc_html__('Product Settings', 'cpthelper'),
+                'label' => esc_html__('Product Settings', 'unlimited-theme-addons'),
             ]
         );
 
@@ -48,7 +43,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                 'cpthelper_product_grid_woo_required',
                 [
                     'type'            => Controls_Manager::RAW_HTML,
-                    'raw'             => __('<strong>WooCommerce</strong> is not installed/activated on your site. Please install and activate <a href="plugin-install.php?s=woocommerce&tab=search&type=term" target="_blank">WooCommerce</a> first.', 'cpthelper'),
+                    'raw'             => __('<strong>WooCommerce</strong> is not installed/activated on your site. Please install and activate <a href="plugin-install.php?s=woocommerce&tab=search&type=term" target="_blank">WooCommerce</a> first.', 'unlimited-theme-addons'),
                     'content_classes' => 'cpthelper-warning',
                 ]
             );
@@ -57,15 +52,15 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_filter',
             [
-                'label'   => esc_html__('Filter By', 'cpthelper'),
+                'label'   => esc_html__('Filter By', 'unlimited-theme-addons'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'recent-products',
                 'options' => [
-                    'recent-products'       => esc_html__('Recent Products', 'cpthelper'),
-                    'featured-products'     => esc_html__('Featured Products', 'cpthelper'),
-                    'best-selling-products' => esc_html__('Best Selling Products', 'cpthelper'),
-                    'sale-products'         => esc_html__('Sale Products', 'cpthelper'),
-                    'top-products'          => esc_html__('Top Rated Products', 'cpthelper'),
+                    'recent-products'       => esc_html__('Recent Products', 'unlimited-theme-addons'),
+                    'featured-products'     => esc_html__('Featured Products', 'unlimited-theme-addons'),
+                    'best-selling-products' => esc_html__('Best Selling Products', 'unlimited-theme-addons'),
+                    'sale-products'         => esc_html__('Sale Products', 'unlimited-theme-addons'),
+                    'top-products'          => esc_html__('Top Rated Products', 'unlimited-theme-addons'),
                 ],
             ]
         );
@@ -73,16 +68,16 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_responsive_control(
             'cpthelper_product_grid_column',
             [
-                'label'        => esc_html__('Columns', 'cpthelper'),
+                'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
                 'type'         => Controls_Manager::SELECT,
                 'default'      => '4',
                 'options'      => [
-                    '1' => esc_html__('1', 'cpthelper'),
-                    '2' => esc_html__('2', 'cpthelper'),
-                    '3' => esc_html__('3', 'cpthelper'),
-                    '4' => esc_html__('4', 'cpthelper'),
-                    '5' => esc_html__('5', 'cpthelper'),
-                    '6' => esc_html__('6', 'cpthelper'),
+                    '1' => esc_html__('1', 'unlimited-theme-addons'),
+                    '2' => esc_html__('2', 'unlimited-theme-addons'),
+                    '3' => esc_html__('3', 'unlimited-theme-addons'),
+                    '4' => esc_html__('4', 'unlimited-theme-addons'),
+                    '5' => esc_html__('5', 'unlimited-theme-addons'),
+                    '6' => esc_html__('6', 'unlimited-theme-addons'),
                 ],
                 'toggle'       => true,
                 'prefix_class' => 'cpthelper-product-grid-column%s-',
@@ -92,7 +87,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_products_count',
             [
-                'label'   => __('Products Count', 'cpthelper'),
+                'label'   => __('Products Count', 'unlimited-theme-addons'),
                 'type'    => Controls_Manager::NUMBER,
                 'default' => 4,
                 'min'     => 1,
@@ -105,7 +100,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_categories',
             [
-                'label'       => esc_html__( 'Product Categories', 'cpthelper' ),
+                'label'       => esc_html__( 'Product Categories', 'unlimited-theme-addons' ),
                 'type'        => Controls_Manager::SELECT2,
                 'label_block' => true,
                 'multiple'    => true,
@@ -116,7 +111,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'product_offset',
             [
-                'label'   => __('Offset', 'cpthelper'),
+                'label'   => __('Offset', 'unlimited-theme-addons'),
                 'type'    => Controls_Manager::NUMBER,
                 'default' => 0,
             ]
@@ -125,14 +120,14 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_style_preset',
             [
-                'label'   => esc_html__('Style Preset', 'cpthelper'),
+                'label'   => esc_html__('Style Preset', 'unlimited-theme-addons'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'cpthelper-product-simple',
                 'options' => [
-                    'cpthelper-product-default' => esc_html__('Default', 'cpthelper'),
-                    'cpthelper-product-simple'  => esc_html__('Simple Style', 'cpthelper'),
-                    'cpthelper-product-reveal'  => esc_html__('Reveal Style', 'cpthelper'),
-                    'cpthelper-product-overlay' => esc_html__('Overlay Style', 'cpthelper'),
+                    'cpthelper-product-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'cpthelper-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons'),
+                    'cpthelper-product-reveal'  => esc_html__('Reveal Style', 'unlimited-theme-addons'),
+                    'cpthelper-product-overlay' => esc_html__('Overlay Style', 'unlimited-theme-addons'),
                 ],
             ]
         );
@@ -140,7 +135,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_rating',
             [
-                'label'        => esc_html__('Show Product Rating?', 'cpthelper'),
+                'label'        => esc_html__('Show Product Rating?', 'unlimited-theme-addons'),
                 'type'         => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'default'      => 'yes',
@@ -157,17 +152,17 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'cpthelper_product_grid_load_more_section',
             [
-                'label' => esc_html__('Load More', 'cpthelper'),
+                'label' => esc_html__('Load More', 'unlimited-theme-addons'),
             ]
         );
 
         $this->add_control(
             'show_load_more',
             [
-                'label'        => __('Show Load More', 'cpthelper'),
+                'label'        => __('Show Load More', 'unlimited-theme-addons'),
                 'type'         => Controls_Manager::SWITCHER,
-                'label_on'     => __('Show', 'cpthelper'),
-                'label_off'    => __('Hide', 'cpthelper'),
+                'label_on'     => __('Show', 'unlimited-theme-addons'),
+                'label_off'    => __('Hide', 'unlimited-theme-addons'),
                 'return_value' => 'true',
                 'default'      => '',
             ]
@@ -176,10 +171,10 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'show_load_more_text',
             [
-                'label'       => esc_html__('Label Text', 'cpthelper'),
+                'label'       => esc_html__('Label Text', 'unlimited-theme-addons'),
                 'type'        => Controls_Manager::TEXT,
                 'label_block' => false,
-                'default'     => esc_html__('Load More', 'cpthelper'),
+                'default'     => esc_html__('Load More', 'unlimited-theme-addons'),
                 'condition'   => [
                     'show_load_more' => 'true',
                 ],
@@ -191,7 +186,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'cpthelper_product_grid_styles',
             [
-                'label' => esc_html__('Products Styles', 'cpthelper'),
+                'label' => esc_html__('Products Styles', 'unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -199,7 +194,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_background_color',
             [
-                'label'     => esc_html__('Content Background Color', 'cpthelper'),
+                'label'     => esc_html__('Content Background Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -231,7 +226,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                 ],
                 'selector'       => '{{WRAPPER}} .cpthelper-product-grid .woocommerce ul.products li.product',
                 'condition'      => [
-                    'cpthelper_product_grid_style_preset' => ['cpthelper-product-default', 'cpthelper-product-simple', 'cpthelper-product-overlay'],
+                    'cpthelper_product_grid_style_preset' => [ 'cpthelper-product-default', 'cpthelper-product-simple', 'cpthelper-product-overlay' ],
                 ],
             ]
         );
@@ -239,7 +234,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_peoduct_grid_border_radius',
             [
-                'label'     => esc_html__('Border Radius', 'cpthelper'),
+                'label'     => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::DIMENSIONS,
                 'selectors' => [
                     '{{WRAPPER}} .cpthelper-product-grid .woocommerce ul.products li.product' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -252,7 +247,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'cpthelper_section_product_grid_typography',
             [
-                'label' => esc_html__('Color &amp; Typography', 'cpthelper'),
+                'label' => esc_html__('Color &amp; Typography', 'unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -260,7 +255,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_title_heading',
             [
-                'label' => __('Product Title', 'cpthelper'),
+                'label' => __('Product Title', 'unlimited-theme-addons'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -268,7 +263,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_title_color',
             [
-                'label'     => esc_html__('Product Title Color', 'cpthelper'),
+                'label'     => esc_html__('Product Title Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#272727',
                 'selectors' => [
@@ -288,7 +283,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_price_heading',
             [
-                'label' => __('Product Price', 'cpthelper'),
+                'label' => __('Product Price', 'unlimited-theme-addons'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -296,7 +291,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_price_color',
             [
-                'label'     => esc_html__('Product Price Color', 'cpthelper'),
+                'label'     => esc_html__('Product Price Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#272727',
                 'selectors' => [
@@ -316,7 +311,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_rating_heading',
             [
-                'label' => __('Star Rating', 'cpthelper'),
+                'label' => __('Star Rating', 'unlimited-theme-addons'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -324,7 +319,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_product_rating_color',
             [
-                'label'     => esc_html__('Rating Color', 'cpthelper'),
+                'label'     => esc_html__('Rating Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#f2b01e',
                 'selectors' => [
@@ -345,7 +340,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_sale_badge_heading',
             [
-                'label' => __('Sale Badge', 'cpthelper'),
+                'label' => __('Sale Badge', 'unlimited-theme-addons'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -353,7 +348,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_sale_badge_color',
             [
-                'label'     => esc_html__('Sale Badge Color', 'cpthelper'),
+                'label'     => esc_html__('Sale Badge Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -365,7 +360,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_sale_badge_background',
             [
-                'label'     => esc_html__('Sale Badge Background', 'cpthelper'),
+                'label'     => esc_html__('Sale Badge Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#ff2a13',
                 'selectors' => [
@@ -386,7 +381,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_stock_out_badge_heading',
             [
-                'label' => __('Stock Out Badge', 'cpthelper'),
+                'label' => __('Stock Out Badge', 'unlimited-theme-addons'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -394,7 +389,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_stock_out_badge_color',
             [
-                'label'     => esc_html__('Stock Out Badge Color', 'cpthelper'),
+                'label'     => esc_html__('Stock Out Badge Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -406,7 +401,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_stock_out_badge_background',
             [
-                'label'     => esc_html__('Stock Out Badge Background', 'cpthelper'),
+                'label'     => esc_html__('Stock Out Badge Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#ff2a13',
                 'selectors' => [
@@ -428,19 +423,19 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'cpthelper_section_product_grid_add_to_cart_styles',
             [
-                'label' => esc_html__('Add to Cart Button Styles', 'cpthelper'),
+                'label' => esc_html__('Add to Cart Button Styles', 'unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
 
         $this->start_controls_tabs('cpthelper_product_grid_add_to_cart_style_tabs');
 
-        $this->start_controls_tab('normal', ['label' => esc_html__('Normal', 'cpthelper')]);
+        $this->start_controls_tab('normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons') ]);
 
         $this->add_control(
             'cpthelper_product_grid_add_to_cart_color',
             [
-                'label'     => esc_html__('Button Color', 'cpthelper'),
+                'label'     => esc_html__('Button Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -454,7 +449,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_add_to_cart_background',
             [
-                'label'     => esc_html__('Button Background Color', 'cpthelper'),
+                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#333',
                 'selectors' => [
@@ -479,19 +474,19 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                 'name'      => 'cpthelper_product_grid_add_to_cart_typography',
                 'selector'  => '{{WRAPPER}} .cpthelper-product-grid .woocommerce li.product .button.add_to_cart_button',
                 'condition' => [
-                    'cpthelper_product_grid_style_preset' => ['cpthelper-product-default', 'cpthelper-product-simple'],
+                    'cpthelper_product_grid_style_preset' => [ 'cpthelper-product-default', 'cpthelper-product-simple' ],
                 ],
             ]
         );
 
         $this->end_controls_tab();
 
-        $this->start_controls_tab('cpthelper_product_grid_add_to_cart_hover_styles', ['label' => esc_html__('Hover', 'cpthelper')]);
+        $this->start_controls_tab('cpthelper_product_grid_add_to_cart_hover_styles', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons') ]);
 
         $this->add_control(
             'cpthelper_product_grid_add_to_cart_hover_color',
             [
-                'label'     => esc_html__('Button Color', 'cpthelper'),
+                'label'     => esc_html__('Button Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -505,7 +500,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_add_to_cart_hover_background',
             [
-                'label'     => esc_html__('Button Background Color', 'cpthelper'),
+                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#333',
                 'selectors' => [
@@ -519,7 +514,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'cpthelper_product_grid_add_to_cart_hover_border_color',
             [
-                'label'     => esc_html__('Border Color', 'cpthelper'),
+                'label'     => esc_html__('Border Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '',
                 'selectors' => [
@@ -543,8 +538,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
     }
 
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
 
        if ( ! class_exists( 'WooCommerce' ) ) {
@@ -553,12 +547,12 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
         $args = [
             'post_type'      => 'product',
-            'posts_per_page' => $settings['cpthelper_product_grid_products_count'] ?: 4,
+            'posts_per_page' => '' != $settings['cpthelper_product_grid_products_count'] ? $settings['cpthelper_product_grid_products_count'] : 4,
             'order'          => 'DESC',
             'offset'         => $settings['product_offset'],
         ];
 
-        if (!empty($settings['cpthelper_product_grid_categories'])) {
+        if ( ! empty($settings['cpthelper_product_grid_categories']) ) {
             $args['tax_query'] = [
                 [
                     'taxonomy' => 'product_cat',
@@ -569,7 +563,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
             ];
         }
 
-        if ($settings['cpthelper_product_grid_product_filter'] == 'featured-products') {
+        if ( 'featured-products' == $settings['cpthelper_product_grid_product_filter'] ) {
             $args['tax_query'] = [
                 'relation' => 'AND',
                 [
@@ -579,19 +573,18 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                 ],
             ];
 
-            if ($settings['cpthelper_product_grid_categories']) {
+            if ( $settings['cpthelper_product_grid_categories'] ) {
                 $args['tax_query'][] = [
                     'taxonomy' => 'product_cat',
                     'field'    => 'slug',
                     'terms'    => $settings['cpthelper_product_grid_categories'],
                 ];
-            }
-
-        } else if ($settings['cpthelper_product_grid_product_filter'] == 'best-selling-products') {
+            }        
+} else if ( 'best-selling-products' == $settings['cpthelper_product_grid_product_filter'] ) {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
-        } else if ($settings['cpthelper_product_grid_product_filter'] == 'sale-products') {
+        } else if ( 'sale-products' == $settings['cpthelper_product_grid_product_filter'] ) {
             $args['meta_query'] = [
                 'relation' => 'OR',
                 [
@@ -599,14 +592,15 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                     'value'   => 0,
                     'compare' => '>',
                     'type'    => 'numeric',
-                ], [
-                    'key'     => '_min_variation_sale_price',
-                    'value'   => 0,
-                    'compare' => '>',
-                    'type'    => 'numeric',
                 ],
+				[
+					'key'     => '_min_variation_sale_price',
+					'value'   => 0,
+					'compare' => '>',
+					'type'    => 'numeric',
+				],
             ];
-        } else if ($settings['cpthelper_product_grid_product_filter'] == 'top-products') {
+        } else if ( 'top-products' == $settings['cpthelper_product_grid_product_filter'] ) {
             $args['meta_key'] = '_wc_average_rating';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
@@ -627,12 +621,12 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                     ' . self::render_template($args, $settings) . '
                 </ul>';
 
-        if ('true' == $settings['show_load_more']) {
-            if ($args['posts_per_page'] != '-1') {
+        if ( 'true' == $settings['show_load_more'] ) {
+            if ( '-1' != $args['posts_per_page'] ) {
                 $html .= '<div class="cpthelper-load-more-button-wrap">
                             <button class="cpthelper-load-more-button" id="cpthelper-load-more-btn-' . $this->get_id() . '" data-widget="' . $this->get_id() . '" data-class="' . get_class($this) . '" data-args="' . http_build_query($args) . '" data-settings="' . http_build_query($settings) . '" data-layout="masonry" data-page="1">
                                 <div class="cpthelper-btn-loader button__loader"></div>
-                                <span>' . esc_html__($settings['show_load_more_text'], 'cpthelper') . '</span>
+                                <span>' . esc_html__($settings['show_load_more_text'], 'unlimited-theme-addons') . '</span>
                             </button>
                         </div>';
             }
@@ -646,4 +640,4 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type(new Elementor_Widget_Product_Grid);
+Plugin::instance()->widgets_manager->register_widget_type(new Elementor_Widget_Product_Grid());

@@ -11,7 +11,7 @@ class cpthelper_Widget_Newest extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Newest', 'cpthelper' );
+      return esc_html__( 'UTA Newest', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -27,26 +27,26 @@ class cpthelper_Widget_Newest extends Widget_Base {
       $this->start_controls_section(
          'newest_section',
          [
-            'label' => esc_html__( 'Newest', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Newest', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'ppp',
          [
-            'label' => __( 'Number of Items', 'cpthelper' ),
-            'type' => Controls_Manager::SLIDER,
-            'range' => [
-               'no' => [
-                  'min' => 0,
-                  'max' => 100,
-                  'step' => 1,
-               ],
-            ],
-            'default' => [
-               'size' => 40,
-            ]
+			 'label' => __( 'Number of Items', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SLIDER,
+			 'range' => [
+				 'no' => [
+					 'min' => 0,
+					 'max' => 100,
+					 'step' => 1,
+				 ],
+			 ],
+			 'default' => [
+				 'size' => 40,
+			 ],
          ]
       );
 
@@ -63,11 +63,11 @@ class cpthelper_Widget_Newest extends Widget_Base {
       <div class="container">
          <div class="newest-filter">
             <ul class="list-inline">
-               <li class="select-cat list-inline-item" data-filter="*"><?php echo esc_html__( 'All Items', 'cpthelper' ) ?></li>
+               <li class="select-cat list-inline-item" data-filter="*"><?php echo esc_html__( 'All Items', 'unlimited-theme-addons' ) ?></li>
                <?php $newest_menu_terms = get_terms( array(
-                   'taxonomy' => 'download_category',
-                   'hide_empty' => false,  
-               ) ); 
+	'taxonomy' => 'download_category',
+	'hide_empty' => false,  
+) ); 
                
                foreach ( $newest_menu_terms as $newest_menu_term ) { ?>
                <li class="list-inline-item" data-filter=".<?php echo esc_attr( $newest_menu_term->slug ) ?>"><?php echo esc_html( $newest_menu_term->name ) ?></li>
@@ -78,8 +78,8 @@ class cpthelper_Widget_Newest extends Widget_Base {
             <?php
 
             $download = new \WP_Query( array( 
-               'post_type' => 'download',
-               'posts_per_page' => $settings['ppp']['size']
+				'post_type' => 'download',
+				'posts_per_page' => $settings['ppp']['size'],
             ));
 
             /* Start the Loop */
@@ -92,7 +92,7 @@ class cpthelper_Widget_Newest extends Widget_Base {
                <div class="dm-col-10 <?php foreach ( $download_terms as $download_term ) { echo esc_attr( $download_term->slug ).' '; } ?>">
 
                   <a class="sit-preview" href="<?php the_permalink(); ?>">
-                     <img src="<?php if ( $thumbnail ) { echo esc_url( $thumbnail ); } else { the_post_thumbnail_url( 'cpthelper-80x80' ); } ?>" data-preview-url="<?php the_post_thumbnail_url(); ?>" data-item-cost="<?php if ( edd_get_download_price( get_the_ID() ) == 0 ){ echo esc_html__( 'Free', 'cpthelper' ); } else { echo edd_currency_filter().edd_get_download_price(get_the_ID() ); } ?>" data-item-category="<?php foreach ( $download_terms as $download_term ) { echo esc_attr( $download_term->name ); } ?>" data-item-author="<?php the_author(); ?>" alt="<?php the_title_attribute(); if ( get_post_meta( get_the_ID(), 'subheading', true ) ) { echo " - "; echo get_post_meta( get_the_ID(), 'subheading', true ); } ?>" >
+                     <img src="<?php if ( $thumbnail ) { echo esc_url( $thumbnail ); } else { the_post_thumbnail_url( 'cpthelper-80x80' ); } ?>" data-preview-url="<?php the_post_thumbnail_url(); ?>" data-item-cost="<?php if ( edd_get_download_price( get_the_ID() ) == 0 ) { echo esc_html__( 'Free', 'unlimited-theme-addons' ); } else { echo edd_currency_filter().edd_get_download_price(get_the_ID() ); } ?>" data-item-category="<?php foreach ( $download_terms as $download_term ) { echo esc_attr( $download_term->name ); } ?>" data-item-author="<?php the_author(); ?>" alt="<?php the_title_attribute(); if ( get_post_meta( get_the_ID(), 'subheading', true ) ) { echo " - "; echo get_post_meta( get_the_ID(), 'subheading', true ); } ?>" >
                   </a>
                </div>
 
@@ -108,4 +108,4 @@ class cpthelper_Widget_Newest extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Newest );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Newest() );

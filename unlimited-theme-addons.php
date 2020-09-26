@@ -19,4 +19,4 @@ include_once(dirname( __FILE__ ). '/inc/elementor/elementor.php');
 include_once(dirname( __FILE__ ). '/inc/social-share.php');
 include_once(dirname( __FILE__ ). '/inc/widget-download-filters.php');
 
- ?>
+ 

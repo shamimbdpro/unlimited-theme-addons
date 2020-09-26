@@ -10,7 +10,7 @@ class cpthelper_Widget_Service extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Service Item', 'cpthelper' );
+      return esc_html__( 'UTA Service Item', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -24,33 +24,33 @@ class cpthelper_Widget_Service extends Widget_Base {
       $this->start_controls_section(
          'service_section',
          [
-            'label' => esc_html__( 'Service Item', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Service Item', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Icon', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::ICON,
-            'default' => 'fa-rocket',
+			 'label' => __( 'Icon', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::ICON,
+			 'default' => 'fa-rocket',
          ]     
       );
 
       $this->add_control(
          'title',
          [
-            'label' => __( 'Title', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __('Design','cpthelper'),
+			 'label' => __( 'Title', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => __('Design','unlimited-theme-addons'),
          ]
       );
       $this->add_control(
          'text',
          [
-            'label' => __( 'Text', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','cpthelper'),
+			 'label' => __( 'Text', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXTAREA,
+			 'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','unlimited-theme-addons'),
          ]
       );
       
@@ -68,12 +68,12 @@ class cpthelper_Widget_Service extends Widget_Base {
  
       <div class="service-item text-center">
          <i class="fa fa-fw fa-2x <?php echo esc_html( $settings['icon'] ); ?>"></i>
-         <h4 <?php echo $this->get_render_attribute_string( 'title' ); ?>><?php echo esc_html( $settings['title'] ); ?></h4>
-         <p <?php echo $this->get_render_attribute_string( 'text' ); ?>><?php echo esc_html( $settings['text'] ); ?></p>
+         <h4 <?php echo esc_html( $this->get_render_attribute_string( 'title' ) ); ?>><?php echo esc_html( $settings['title'] ); ?></h4>
+         <p <?php echo esc_html( $this->get_render_attribute_string( 'text' ) ); ?>><?php echo esc_html( $settings['text'] ); ?></p>
       </div>
 
       <?php
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Service );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Service() );

@@ -10,7 +10,7 @@ class cpthelper_Widget_Blog extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Blog', 'cpthelper' );
+      return esc_html__( 'UTA Blog', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -24,20 +24,20 @@ class cpthelper_Widget_Blog extends Widget_Base {
       $this->start_controls_section(
          'blog_section',
          [
-            'label' => esc_html__( 'Blog', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Blog', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-            'label' => __( 'Order', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SELECT,
-            'default' => 'ASC',
-            'options' => [
-               'ASC'  => __( 'Ascending', 'cpthelper' ),
-               'DESC' => __( 'Descending', 'cpthelper' )
-            ],
+			 'label' => __( 'Order', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SELECT,
+			 'default' => 'ASC',
+			 'options' => [
+				 'ASC'  => __( 'Ascending', 'unlimited-theme-addons' ),
+				 'DESC' => __( 'Descending', 'unlimited-theme-addons' ),
+			 ],
          ]
       );
       $this->end_controls_section();
@@ -53,10 +53,10 @@ class cpthelper_Widget_Blog extends Widget_Base {
          <div class="row justify-content-center">
                <?php
                $blog = new \WP_Query( array( 
-                  'post_type' => 'post',
-                  'posts_per_page' => 3,
-                  'ignore_sticky_posts' => true,
-                  'order' => $settings['order'],
+				   'post_type' => 'post',
+				   'posts_per_page' => 3,
+				   'ignore_sticky_posts' => true,
+				   'order' => $settings['order'],
                ));
                /* Start the Loop */
                while ( $blog->have_posts() ) : $blog->the_post(); ?>
@@ -64,9 +64,9 @@ class cpthelper_Widget_Blog extends Widget_Base {
                <div class="col-lg-4 col-sm-6">
                   <div class="blog-item">
                      <div class="blog-item-img">
-                        <?php if ( has_post_thumbnail() ): ?>
+                        <?php if ( has_post_thumbnail() ) : ?>
                            <a href="<?php the_permalink(); ?>">
-                              <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(),'cpthelper-360-200'); ?>" alt="<?php the_title() ?>">
+                              <img src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(),'cpthelper-360-200') ); ?>" alt="<?php the_title() ?>">
                            </a>
                            <span><?php the_category( ',' ) ?></span>
                         <?php endif ?>
@@ -96,4 +96,4 @@ class cpthelper_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Blog );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Blog() );

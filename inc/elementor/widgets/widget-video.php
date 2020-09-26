@@ -10,7 +10,7 @@ class cpthelper_Widget_Video extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Video', 'cpthelper' );
+      return esc_html__( 'UTA Video', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -26,36 +26,36 @@ class cpthelper_Widget_Video extends Widget_Base {
       $this->start_controls_section(
          'video_section',
          [
-            'label' => esc_html__( 'Video Image', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Video Image', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'image',
          [
-            'label' => __( 'Choose Photo', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src(),
-            ],
+			 'label' => __( 'Choose Photo', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::MEDIA,
+			 'default' => [
+				 'url' => \Elementor\Utils::get_placeholder_image_src(),
+			 ],
          ]
       );
 
       $this->add_control(
          'overlay',
          [
-            'label' => __( 'Overlay', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::COLOR,
-            'default' => '#',
+			 'label' => __( 'Overlay', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::COLOR,
+			 'default' => '#',
          ]
       );
 
       $this->add_control(
          'play_button',
          [
-            'label' => __( 'Play Button URL', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT
+			 'label' => __( 'Play Button URL', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
          ]
       );
 
@@ -78,4 +78,4 @@ class cpthelper_Widget_Video extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Video );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Video() );

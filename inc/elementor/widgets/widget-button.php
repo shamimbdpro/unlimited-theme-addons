@@ -11,7 +11,7 @@ class cpthelper_Widget_Button extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Button', 'cpthelper' );
+      return esc_html__( 'UTA Button', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -27,126 +27,126 @@ class cpthelper_Widget_Button extends Widget_Base {
       $this->start_controls_section(
          'button_section',
          [
-            'label' => esc_html__( 'Button', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Button', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'button_text', [
-            'label' => __( 'Button Text', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => __( 'Raed More', 'cpthelper' )
+			 'label' => __( 'Button Text', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => __( 'Raed More', 'unlimited-theme-addons' ),
          ]
       );
 
       $this->add_control(
          'button_icon',
          [
-            'label' => __( 'Icon', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'cpthelper' ),
-            'label_off' => __( 'No', 'cpthelper' ),
-            'return_value' => 'yes',
-            'default' => 'no'
+			 'label' => __( 'Icon', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'return_value' => 'yes',
+			 'default' => 'no',
          ]
       );
 
       $this->add_control(
          'icon',
          [
-            'label' => __( 'Choose Icon', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::ICON,
-            'default' => 'fa fa-play',
-            'condition' => ['button_icon' => 'yes']
+			 'label' => __( 'Choose Icon', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::ICON,
+			 'default' => 'fa fa-play',
+			 'condition' => [ 'button_icon' => 'yes' ],
          ]
       );
 
       $this->add_control(
          'button_url', [
-            'label' => __( 'Button URL', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::TEXT,
-            'default' => '#',
+			 'label' => __( 'Button URL', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'default' => '#',
          ]
       );      
 
       $this->add_control(
          'popup',
          [
-            'label' => __( 'Popup Video', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'cpthelper' ),
-            'label_off' => __( 'No', 'cpthelper' ),
-            'return_value' => 'yes',
-            'default' => 'no'
+			 'label' => __( 'Popup Video', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'return_value' => 'yes',
+			 'default' => 'no',
          ]
       );
 
       $this->add_control(
          'align',
          [
-            'label' => __( 'Alignment', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::CHOOSE,
-            'options' => [
-               'left' => [
-                  'title' => __( 'Left', 'cpthelper' ),
-                  'icon' => 'fa fa-align-left',
-               ],
-               'center' => [
-                  'title' => __( 'Center', 'cpthelper' ),
-                  'icon' => 'fa fa-align-center',
-               ],
-               'right' => [
-                  'title' => __( 'Right', 'cpthelper' ),
-                  'icon' => 'fa fa-align-right',
-               ],
-            ],
-            'default' => 'left',
-            'toggle' => true
+			 'label' => __( 'Alignment', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::CHOOSE,
+			 'options' => [
+				 'left' => [
+					 'title' => __( 'Left', 'unlimited-theme-addons' ),
+					 'icon' => 'fa fa-align-left',
+				 ],
+				 'center' => [
+					 'title' => __( 'Center', 'unlimited-theme-addons' ),
+					 'icon' => 'fa fa-align-center',
+				 ],
+				 'right' => [
+					 'title' => __( 'Right', 'unlimited-theme-addons' ),
+					 'icon' => 'fa fa-align-right',
+				 ],
+			 ],
+			 'default' => 'left',
+			 'toggle' => true,
          ]
       );
 
        $this->add_control(
          'drop_shadow',
          [
-            'label' => __( 'Drop Shadow', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Show', 'cpthelper' ),
-            'label_off' => __( 'Hide', 'cpthelper' ),
-            'return_value' => 'yes',
-            'default' => 'yes'
+			 'label' => __( 'Drop Shadow', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on' => __( 'Show', 'unlimited-theme-addons' ),
+			 'label_off' => __( 'Hide', 'unlimited-theme-addons' ),
+			 'return_value' => 'yes',
+			 'default' => 'yes',
          ]
       );
 
       $this->add_control(
          'bordered',
          [
-            'label' => __( 'Bordered', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SWITCHER,
-            'label_on' => __( 'Yes', 'cpthelper' ),
-            'label_off' => __( 'No', 'cpthelper' ),
-            'return_value' => 'yes',
-            'default' => 'no'
+			 'label' => __( 'Bordered', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'return_value' => 'yes',
+			 'default' => 'no',
          ]
       );
 
       $this->add_control(
          'button_radius',
          [
-            'label' => __( 'Button Radius', 'cpthelper' ),
-            'type' => Controls_Manager::SLIDER,
-            'size_units' => [ 'px', '%' ],
-            'range' => [
-               'px' => [
-                  'min' => 0,
-                  'max' => 50,
-                  'step' => 1,
-               ]
-            ],
-            'default' => [
-               'unit' => 'px',
-               'size' => 0,
-            ]
+			 'label' => __( 'Button Radius', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SLIDER,
+			 'size_units' => [ 'px', '%' ],
+			 'range' => [
+				 'px' => [
+					 'min' => 0,
+					 'max' => 50,
+					 'step' => 1,
+				 ],
+			 ],
+			 'default' => [
+				 'unit' => 'px',
+				 'size' => 0,
+			 ],
          ]
       );
 
@@ -165,7 +165,7 @@ class cpthelper_Widget_Button extends Widget_Base {
       ?>
 
       <div style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
-         <a class="cpthelper-btn <?php if( 'yes' == $settings['bordered'] ){ echo'bordered'; } ?> elementor-inline-editing <?php if( 'yes' == $settings['drop_shadow'] ){ echo'shadow'; } ?> <?php if( 'yes' == $settings['popup'] ){ echo'cpthelper-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.$settings['icon'].'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+         <a class="cpthelper-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'cpthelper-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo esc_html( $this->get_render_attribute_string( 'button_text' ) ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.esc_attr( $settings['icon'] ).'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
       </div>
 
       <?php
@@ -173,4 +173,4 @@ class cpthelper_Widget_Button extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Button );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Button() );

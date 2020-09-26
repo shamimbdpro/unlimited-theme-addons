@@ -11,7 +11,7 @@ class cpthelper_Widget_download extends Widget_Base {
    }
  
    public function get_title() {
-      return esc_html__( 'UTA Download', 'cpthelper' );
+      return esc_html__( 'UTA Download', 'unlimited-theme-addons' );
    }
  
    public function get_icon() { 
@@ -27,39 +27,39 @@ class cpthelper_Widget_download extends Widget_Base {
       $this->start_controls_section(
          'download_section',
          [
-            'label' => esc_html__( 'Download', 'cpthelper' ),
-            'type' => Controls_Manager::SECTION,
+			 'label' => esc_html__( 'Download', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'ppp',
          [
-            'label' => __( 'Number of Items', 'cpthelper' ),
-            'type' => Controls_Manager::SLIDER,
-            'range' => [
-               'no' => [
-                  'min' => 0,
-                  'max' => 100,
-                  'step' => 1,
-               ],
-            ],
-            'default' => [
-               'size' => 9,
-            ]
+			 'label' => __( 'Number of Items', 'unlimited-theme-addons' ),
+			 'type' => Controls_Manager::SLIDER,
+			 'range' => [
+				 'no' => [
+					 'min' => 0,
+					 'max' => 100,
+					 'step' => 1,
+				 ],
+			 ],
+			 'default' => [
+				 'size' => 9,
+			 ],
          ]
       );
 
       $this->add_control(
          'order',
          [
-            'label' => __( 'order', 'cpthelper' ),
-            'type' => \Elementor\Controls_Manager::SELECT,
-            'default' => 'ASC',
-            'options' => [
-               'ASC'  => __( 'Ascending', 'cpthelper' ),
-               'DESC' => __( 'Descending', 'cpthelper' )
-            ],
+			 'label' => __( 'order', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::SELECT,
+			 'default' => 'ASC',
+			 'options' => [
+				 'ASC'  => __( 'Ascending', 'unlimited-theme-addons' ),
+				 'DESC' => __( 'Descending', 'unlimited-theme-addons' ),
+			 ],
          ]
       );
 
@@ -76,10 +76,10 @@ class cpthelper_Widget_download extends Widget_Base {
       <div class="container">
          <div class="download-filter">
             <ul class="list-inline">
-               <li class="select-cat list-inline-item" data-filter="*"><?php echo esc_html__( 'All Items', 'cpthelper' ) ?></li>
+               <li class="select-cat list-inline-item" data-filter="*"><?php echo esc_html__( 'All Items', 'unlimited-theme-addons' ) ?></li>
                <?php  $download_menu_terms = get_terms( array(
-                   'taxonomy' => 'download_category',
-                   'hide_empty' => false,  
+               	'taxonomy' => 'download_category',
+               	'hide_empty' => false,  
                ) ); 
                
                foreach ( $download_menu_terms as $download_menu_term ) { ?>
@@ -91,9 +91,9 @@ class cpthelper_Widget_download extends Widget_Base {
             <?php
 
             $download = new \WP_Query( array( 
-               'post_type' => 'download',
-               'posts_per_page' => $settings['ppp']['size'],
-               'order' => $settings['order'],
+   				'post_type' => 'download',
+   				'posts_per_page' => $settings['ppp']['size'],
+   				'order' => $settings['order'],
             ));
 
             /* Start the Loop */
@@ -101,7 +101,7 @@ class cpthelper_Widget_download extends Widget_Base {
 
             global $cpthelper_opt;
 
-            $cpthelper_product_hover_button = !empty( $cpthelper_opt['cpthelper_product_hover_button'] ) ? $cpthelper_opt['cpthelper_product_hover_button'] : '';
+            $cpthelper_product_hover_button = ! empty( $cpthelper_opt['cpthelper_product_hover_button'] ) ? $cpthelper_opt['cpthelper_product_hover_button'] : '';
 
             $download_terms = get_the_terms( get_the_ID() , 'download_category' );
             $download_tag = get_post_meta( get_the_ID(), 'download_tag', true )
@@ -138,29 +138,29 @@ class cpthelper_Widget_download extends Widget_Base {
                         <ul class="list-inline">
                            <li class="list-inline-item">
                               <b>
-                                 <?php if ( edd_get_download_price( get_the_ID() ) == 0 ){ ?>
-                                    <span><?php echo esc_html__( 'Free', 'cpthelper' ) ?></span>
+                                 <?php if ( edd_get_download_price( get_the_ID() ) == 0 ) { ?>
+                                    <span><?php echo esc_html__( 'Free', 'unlimited-theme-addons' ) ?></span>
                                  <?php } else { ?>
                                     <span><?php echo edd_currency_filter().edd_get_download_price(get_the_ID() ); ?></span>
                               <?php } ?>
                               </b>
                            </li>
-                           <?php if ( class_exists( 'EDD_Reviews' ) ): ?>
+                           <?php if ( class_exists( 'EDD_Reviews' ) ) : ?>
                               <li class="list-inline-item float-right"><?php cpthelper_edd_rating() ?></li>
                            <?php endif ?>
                         </ul>
-                        <?php if ( true == $cpthelper_product_hover_button ): ?>
+                        <?php if ( true == $cpthelper_product_hover_button ) : ?>
                         <ul class="list-inline text-center download-item-button">
                            <li class="list-inline-item">
-                              <a href="<?php the_permalink(); ?>"><i class="fa fa-info-circle"></i><?php echo esc_html__( 'Details' , 'cpthelper' ) ?></a>
+                              <a href="<?php the_permalink(); ?>"><i class="fa fa-info-circle"></i><?php echo esc_html__( 'Details' , 'unlimited-theme-addons' ) ?></a>
                            </li>
-                           <?php if ( get_post_meta( get_the_ID(), 'type', true ) == 'theme' ): ?>
+                           <?php if ( get_post_meta( get_the_ID(), 'type', true ) == 'theme' ) : ?>
                            <li class="list-inline-item">
-                              <a href="<?php echo get_post_meta( get_the_ID(), 'preview_url', true ); ?>"><i class="fa fa-eye"></i><?php echo esc_html__( 'Demo' , 'cpthelper' ) ?></a>
+                              <a href="<?php echo get_post_meta( get_the_ID(), 'preview_url', true ); ?>"><i class="fa fa-eye"></i><?php echo esc_html__( 'Demo' , 'unlimited-theme-addons' ) ?></a>
                            </li>
                            <?php endif ?>                           
                            <li class="list-inline-item">
-                              <a href="<?php echo esc_url( home_url( '/' ) ); ?>checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><i class="fa fa-shopping-cart"></i><?php echo esc_html__( 'Download' , 'cpthelper' ) ?></a>
+                              <a href="<?php echo esc_url( home_url( '/' ) ); ?>checkout?edd_action=add_to_cart&download_id=<?php echo get_the_ID(); ?>"><i class="fa fa-shopping-cart"></i><?php echo esc_html__( 'Download' , 'unlimited-theme-addons' ) ?></a>
                            </li>
                         </ul>
                         <?php endif ?>
@@ -180,4 +180,4 @@ class cpthelper_Widget_download extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_download );
+Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_download() );
