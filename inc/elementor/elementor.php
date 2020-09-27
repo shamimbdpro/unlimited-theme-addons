@@ -80,8 +80,6 @@ class Uta_ElementorCustomElement {
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-banner.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-blog.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-button.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-download.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-newest.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/Trait/Codepopular_theme_helper.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/template/Product_Grid.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-product-gird.php');
