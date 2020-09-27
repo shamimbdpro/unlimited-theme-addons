@@ -77,7 +77,6 @@ class Uta_ElementorCustomElement {
     // We check if the Elementor plugin has been installed / activated.
     if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {      
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-accordion.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-banner.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-blog.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-button.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/Trait/Codepopular_theme_helper.php');
