@@ -99,8 +99,8 @@
     }); // window load end 
 
     //Accordion
-    $('.themeplace-accordion-item:first-child').addClass('active');
-    $('.themeplace-accordion-item:first-child .collapse').addClass('show');
+    $('.uta-accordion-item:first-child').addClass('active');
+    $('.uta-accordion-item:first-child .collapse').addClass('show');
     $('.collapse').on('shown.bs.collapse', function() {
         $(this).parent().addClass('active');
     });
@@ -112,7 +112,7 @@
   
 
     // Popup Video
-    $('.themeplace-popup-video,.themeplace-popup-url').magnificPopup({
+    $('.uta-popup-video,.uta-popup-url').magnificPopup({
         disableOn: 700,
         type: 'iframe',
         mainClass: 'mfp-fade',
@@ -184,5 +184,45 @@
             });
         });
     });
+
+
+
+
+
+
+/* jQuery
+================================================== */
+$(function() {
+  $('.acc__title').click(function(j) {
+    
+    var dropDown = $(this).closest('.acc__card').find('.acc__panel');
+    $(this).closest('.acc').find('.acc__panel').not(dropDown).slideUp();
+    
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+    } else {
+      $(this).closest('.acc').find('.acc__title.active').removeClass('active');
+      $(this).addClass('active');
+    }
+    
+    dropDown.stop(false, true).slideToggle('fast');
+    j.preventDefault();
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })(jQuery);

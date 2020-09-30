@@ -158,6 +158,55 @@ class uta_Widget_Accordion extends Widget_Base {
       } ?>
       </div>
 
+
+
+
+
+<div class="content">
+  <div class="acc">
+    <div class="acc__card">
+      <div class="acc__title "><h5> Accordion Title #1 </h5></div>
+      <div class="acc__panel">
+        I am the content found under accordion #1.
+        You can't see me while "active" is not present.
+      </div>
+    </div>
+    <div class="acc__card">
+      <div class="acc__title"> <h5> Accordion Title #2  </h5> </div>
+      <div class="acc__panel">
+        I am the content found under accordion #2.
+        You can't see me while "active" is not present.
+      </div>
+    </div>
+    <div class="acc__card">
+      <div class="acc__title"> <h5> Accordion Title #3 </h5></div>
+      <div class="acc__panel">
+        I am the content found under accordion #3.
+        You can't see me while "active" is not present.
+      </div>
+    </div>
+    <div class="acc__card">
+      <div class="acc__title"><h5>  Accordion Title #4</h5></div>
+      <div class="acc__panel">
+        I am the content found under accordion #4.
+        You can't see me while "active" is not present.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
       
 
       <?php
