@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // team
-class cpthelper_Widget_Team extends Widget_Base {
+class uta_Widget_Team extends Widget_Base {
  
    public function get_name() {
       return 'team';
@@ -18,7 +18,7 @@ class cpthelper_Widget_Team extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
@@ -113,8 +113,8 @@ class cpthelper_Widget_Team extends Widget_Base {
       $this->add_inline_editing_attributes( 'designation', 'basic' );
       ?>
 
-      <div class="cpthelper-team">
-         <?php echo wp_get_attachment_image( $settings['image']['id'], 'cpthelper-400x400' ); ?>
+      <div class="uta-team">
+         <?php echo wp_get_attachment_image( $settings['image']['id'], 'uta-400x400' ); ?>
          <h4 <?php echo esc_html(  $this->get_render_attribute_string( 'name' ) ); ?>><?php echo esc_html( $settings['name'] ); ?></h4>
          <span <?php echo esc_html( $this->get_render_attribute_string( 'designation' ) ); ?>><?php echo esc_html( $settings['designation'] ); ?></span>
          <ul class="list-inline">
@@ -129,4 +129,4 @@ class cpthelper_Widget_Team extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Team() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Team() );

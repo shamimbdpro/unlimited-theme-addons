@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class cpthelper_Widget_Blog extends Widget_Base {
+class uta_Widget_Blog extends Widget_Base {
  
    public function get_name() {
       return 'blog';
@@ -18,7 +18,7 @@ class cpthelper_Widget_Blog extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
@@ -66,7 +66,7 @@ class cpthelper_Widget_Blog extends Widget_Base {
                      <div class="blog-item-img">
                         <?php if ( has_post_thumbnail() ) : ?>
                            <a href="<?php the_permalink(); ?>">
-                              <img src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(),'cpthelper-360-200') ); ?>" alt="<?php the_title() ?>">
+                              <img src="<?php echo esc_url( get_the_post_thumbnail_url( get_the_ID(),'uta-360-200') ); ?>" alt="<?php the_title() ?>">
                            </a>
                            <span><?php the_category( ',' ) ?></span>
                         <?php endif ?>
@@ -96,4 +96,4 @@ class cpthelper_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Blog() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Blog() );

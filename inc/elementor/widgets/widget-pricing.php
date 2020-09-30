@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Pricing
-class cpthelper_Widget_Pricing extends Widget_Base {
+class uta_Widget_Pricing extends Widget_Base {
  
    public function get_name() {
       return 'pricing';
@@ -19,7 +19,7 @@ class cpthelper_Widget_Pricing extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
 
    protected function _register_controls() {
@@ -159,9 +159,9 @@ class cpthelper_Widget_Pricing extends Widget_Base {
       $this->add_inline_editing_attributes( 'btn_text', 'basic' );
       ?>
 
-      <div class="cpthelper-pricing-table <?php if ( 'on' == $settings['recommended'] ) { echo"recommended"; }?>">
+      <div class="uta-pricing-table <?php if ( 'on' == $settings['recommended'] ) { echo"recommended"; }?>">
          <h6 class="type elementor-inline-editing" <?php echo esc_html( $this->get_render_attribute_string( 'title' ) ); ?>><?php echo esc_html( $settings['title'] ); ?></h6>
-         <h1 class="cpthelper-price elementor-inline-editing" <?php echo esc_html( $this->get_render_attribute_string( 'price' ) ); ?>><span class="cpthelper-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
+         <h1 class="uta-price elementor-inline-editing" <?php echo esc_html( $this->get_render_attribute_string( 'price' ) ); ?>><span class="uta-currency"><?php echo esc_html( $settings['currency'] ) ?></span><?php echo esc_html( $settings['price'] ); ?>
          </h1>
 
          <?php if ( 'none' !== $settings['package'] ) : ?>
@@ -178,7 +178,7 @@ class cpthelper_Widget_Pricing extends Widget_Base {
             <?php
             } ?>
          </ul>
-         <a class="elementor-inline-editing cpthelper-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo esc_html( $this->get_render_attribute_string( 'btn_text' ) ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
+         <a class="elementor-inline-editing uta-buy-button" href="<?php echo esc_url( $settings['btn_url'] ) ?>" <?php echo esc_html( $this->get_render_attribute_string( 'btn_text' ) ); ?>><?php echo esc_html( $settings['btn_text'] ) ?></a>
       </div>
 
       <?php
@@ -186,4 +186,4 @@ class cpthelper_Widget_Pricing extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Pricing() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Pricing() );

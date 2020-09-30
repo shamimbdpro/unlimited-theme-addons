@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Call to Action
-class cpthelper_Widget_Video extends Widget_Base {
+class uta_Widget_Video extends Widget_Base {
  
    public function get_name() {
       return 'video';
@@ -18,7 +18,7 @@ class cpthelper_Widget_Video extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
 
    protected function _register_controls() {
@@ -67,10 +67,10 @@ class cpthelper_Widget_Video extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
 
-      <div class="cpthelper-video-popup" style="background-image: url( <?php echo esc_url( $settings['image']['url'] ); ?> );">
-         <div class="cpthelper-video-popup-overlay" style="background: <?php echo esc_attr( $settings['overlay'] ); ?>;">
-            <a class="cpthelper-popup-video" href="<?php echo esc_url( $settings['play_button'] ); ?>">
-               <span class="cpthelper-popup-icon"><i class="fa fa-play"></i></span>
+      <div class="uta-video-popup" style="background-image: url( <?php echo esc_url( $settings['image']['url'] ); ?> );">
+         <div class="uta-video-popup-overlay" style="background: <?php echo esc_attr( $settings['overlay'] ); ?>;">
+            <a class="uta-popup-video" href="<?php echo esc_url( $settings['play_button'] ); ?>">
+               <span class="uta-popup-icon"><i class="fa fa-play"></i></span>
             </a>
          </div>
       </div>
@@ -78,4 +78,4 @@ class cpthelper_Widget_Video extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Video() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Video() );

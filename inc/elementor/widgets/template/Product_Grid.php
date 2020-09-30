@@ -19,18 +19,18 @@ trait Product_Grid
 
                 $product = wc_get_product(get_the_ID());
 
-                if ( 'cpthelper-product-simple' == $settings['cpthelper_product_grid_style_preset'] || 'cpthelper-product-reveal' == $settings['cpthelper_product_grid_style_preset'] ) {
+                if ( 'uta-product-simple' == $settings['uta_product_grid_style_preset'] || 'uta-product-reveal' == $settings['uta_product_grid_style_preset'] ) {
                     echo '<li class="product">
                         <a href="' . $product->get_permalink() . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                             ' . $product->get_image('woocommerce_thumbnail') . '
                             <h2 class="woocommerce-loop-product__title">' . $product->get_title() . '</h2>
-                            ' . ($settings['cpthelper_product_grid_rating'] != 'yes' ? '' : wc_get_rating_html($product->get_average_rating(), $product->get_rating_count())) . '
+                            ' . ($settings['uta_product_grid_rating'] != 'yes' ? '' : wc_get_rating_html($product->get_average_rating(), $product->get_rating_count())) . '
                             '.( ! $product->managing_stock() && ! $product->is_in_stock() ? '<span class="outofstock-badge">'.__('Stock ', 'unlimited-theme-addons'). '<br />' . __('Out', 'unlimited-theme-addons').'</span>' : ($product->is_on_sale() ? '<span class="onsale">' . __('Sale!', 'unlimited-theme-addons') . '</span>' : '') ).'
                             <span class="price">' . $product->get_price_html() . '</span>
                         </a>';
                         woocommerce_template_loop_add_to_cart();
                     echo '</li>';
-                } else if ( $settings['cpthelper_product_grid_style_preset'] == 'cpthelper-product-overlay' ) {
+                } else if ( $settings['uta_product_grid_style_preset'] == 'uta-product-overlay' ) {
                     echo '<li class="product">
                         <div class="overlay">
                             ' . $product->get_image('woocommerce_thumbnail') . '
@@ -40,7 +40,7 @@ trait Product_Grid
                             echo '</div>
                         </div>
                         <h2 class="woocommerce-loop-product__title">' . $product->get_title() . '</h2>
-                        ' . ($settings['cpthelper_product_grid_rating'] != 'yes' ? '' : wc_get_rating_html($product->get_average_rating(), $product->get_rating_count())) . '
+                        ' . ($settings['uta_product_grid_rating'] != 'yes' ? '' : wc_get_rating_html($product->get_average_rating(), $product->get_rating_count())) . '
                         ' . ($product->is_on_sale() ? '<span class="onsale">' . __('Sale!', 'unlimited-theme-addons') . '</span>' : '') . '
                         <span class="price">' . $product->get_price_html() . '</span>
                     </li>';

@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Accordion
-class cpthelper_Widget_Accordion extends Widget_Base {
+class uta_Widget_Accordion extends Widget_Base {
  
    public function get_name() {
       return 'accordion';
@@ -19,7 +19,7 @@ class cpthelper_Widget_Accordion extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
 
    protected function _register_controls() {
@@ -123,7 +123,7 @@ class cpthelper_Widget_Accordion extends Widget_Base {
       $randID = wp_rand();
 
       $settings = $this->get_settings_for_display(); ?>
-      <div id="accordion<?php echo $randID ?>" class="cpthelper-accordion <?php echo esc_attr( $settings['accordion_style'] ) ?>">
+      <div id="accordion<?php echo $randID ?>" class="uta-accordion <?php echo esc_attr( $settings['accordion_style'] ) ?>">
         <?php if ( $settings['accordion_list'] ) {
             foreach ( $settings['accordion_list'] as $key => $accordion ) {
             $title = $this->get_repeater_setting_key( 'title', 'accordion_list' , $key );
@@ -131,7 +131,7 @@ class cpthelper_Widget_Accordion extends Widget_Base {
             $this->add_inline_editing_attributes( $title, 'basic' );
             $this->add_inline_editing_attributes( $text, 'basic' );
            ?>
-          <div class="cpthelper-accordion-item">
+          <div class="uta-accordion-item">
             <h5 <?php echo $this->get_render_attribute_string( $title ); ?> data-toggle="collapse" data-target="#collapse-<?php echo $key.$randID ?>" aria-expanded="false" aria-controls="collapse-<?php echo $key.$randID ?>">
                 <?php echo esc_html( $accordion['title'] ); ?>
                 <span class="<?php echo esc_attr( $settings['collapsed_icon'] ) ?>"></span>
@@ -165,4 +165,4 @@ class cpthelper_Widget_Accordion extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Accordion() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Accordion() );

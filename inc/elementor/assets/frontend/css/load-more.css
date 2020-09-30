@@ -18,14 +18,14 @@
             transform: rotate(360deg);
   }
 }
-.cpthelper-button-wrap,
-.cpthelper-load-more-button-wrap {
+.uta-button-wrap,
+.uta-load-more-button-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.cpthelper-button,
-.cpthelper-load-more-button {
+.uta-button,
+.uta-load-more-button {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -40,12 +40,12 @@
   font-size: 16px;
   overflow: hidden;
 }
-.cpthelper-button > span,
-.cpthelper-load-more-button > span {
+.uta-button > span,
+.uta-load-more-button > span {
   margin-left: -20px;
 }
-.cpthelper-button .cpthelper-btn-loader,
-.cpthelper-load-more-button .cpthelper-btn-loader {
+.uta-button .uta-btn-loader,
+.uta-load-more-button .uta-btn-loader {
   border-radius: 50%;
   width: 20px;
   height: 20px;
@@ -67,17 +67,17 @@
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-.cpthelper-button .cpthelper-btn-loader:after,
-.cpthelper-load-more-button .cpthelper-btn-loader:after {
+.uta-button .uta-btn-loader:after,
+.uta-load-more-button .uta-btn-loader:after {
   border-radius: 50%;
   width: 20px;
   height: 20px;
 }
-.cpthelper-button.button--loading > span,
-.cpthelper-load-more-button.button--loading > span {
+.uta-button.button--loading > span,
+.uta-load-more-button.button--loading > span {
   margin-left: 0;
 }
-.cpthelper-button.button--loading .cpthelper-btn-loader,
-.cpthelper-load-more-button.button--loading .cpthelper-btn-loader {
+.uta-button.button--loading .uta-btn-loader,
+.uta-load-more-button.button--loading .uta-btn-loader {
   left: 0;
 }

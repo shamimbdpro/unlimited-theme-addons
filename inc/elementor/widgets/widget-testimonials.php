@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class cpthelper_Widget_Testimonials extends Widget_Base {
+class uta_Widget_Testimonials extends Widget_Base {
  
    public function get_name() {
       return 'testimonials';
@@ -19,7 +19,7 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
 
    protected function _register_controls() {
@@ -116,4 +116,4 @@ class cpthelper_Widget_Testimonials extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Testimonials() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Testimonials() );

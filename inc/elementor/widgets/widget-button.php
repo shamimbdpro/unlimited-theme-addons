@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Button
-class cpthelper_Widget_Button extends Widget_Base {
+class uta_Widget_Button extends Widget_Base {
  
    public function get_name() {
       return 'button';
@@ -19,7 +19,7 @@ class cpthelper_Widget_Button extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
 
    protected function _register_controls() {
@@ -165,7 +165,7 @@ class cpthelper_Widget_Button extends Widget_Base {
       ?>
 
       <div style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
-         <a class="cpthelper-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'cpthelper-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo esc_html( $this->get_render_attribute_string( 'button_text' ) ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.esc_attr( $settings['icon'] ).'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+         <a class="uta-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo esc_html( $this->get_render_attribute_string( 'button_text' ) ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.esc_attr( $settings['icon'] ).'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
       </div>
 
       <?php
@@ -173,4 +173,4 @@ class cpthelper_Widget_Button extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Button() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Button() );

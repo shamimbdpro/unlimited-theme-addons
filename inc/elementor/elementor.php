@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // get posts dropdown
-function cpthelper_get_portfolio_dropdown_array( $args = [], $key = 'ID', $value = 'post_title' ) {
+function uta_get_portfolio_dropdown_array( $args = [], $key = 'ID', $value = 'post_title' ) {
   $options = [];
   $posts = get_posts($args);
   foreach ( (array) $posts as $term ) {
@@ -12,18 +12,18 @@ function cpthelper_get_portfolio_dropdown_array( $args = [], $key = 'ID', $value
   return $options;
 }
 
-function cpthelper_add_elementor_widget_categories( $elements_manager ) {
+function uta_add_elementor_widget_categories( $elements_manager ) {
 
 	$elements_manager->add_category(
-		'cpthelper-elements',
+		'uta-elements',
 		[
-			'title' => esc_html__( 'cpthelper Elements', 'unlimited-theme-addons' ),
+			'title' => esc_html__( 'uta Elements', 'unlimited-theme-addons' ),
 			'icon' => 'fa fa-plug',
 		]
 	);
 
 }
-add_action( 'elementor/elements/categories_registered', 'cpthelper_add_elementor_widget_categories' );
+add_action( 'elementor/elements/categories_registered', 'uta_add_elementor_widget_categories' );
 
    function load_css_and_js(){
    $plugin_dir_url = plugin_dir_url( __FILE__ );
@@ -79,7 +79,7 @@ class Uta_ElementorCustomElement {
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-accordion.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-blog.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-button.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/Trait/Codepopular_theme_helper.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Trait/Uta_theme_helper.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/template/Product_Grid.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-product-gird.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-pricing.php');

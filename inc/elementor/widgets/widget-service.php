@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class cpthelper_Widget_Service extends Widget_Base {
+class uta_Widget_Service extends Widget_Base {
  
    public function get_name() {
       return 'service_item';
@@ -18,7 +18,7 @@ class cpthelper_Widget_Service extends Widget_Base {
    }
  
    public function get_categories() {
-      return [ 'cpthelper-elements' ];
+      return [ 'uta-elements' ];
    }
    protected function _register_controls() {
       $this->start_controls_section(
@@ -76,4 +76,4 @@ class cpthelper_Widget_Service extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new cpthelper_Widget_Service() );
+Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Service() );
