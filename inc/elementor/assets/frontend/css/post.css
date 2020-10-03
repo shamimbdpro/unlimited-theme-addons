@@ -3,7 +3,12 @@
 /***************************
         blog
 ****************************/
-.blog-item {
+.uta-blog{
+    display: grid;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.uta-blog-item {
     -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     -webkit-transition: 0.3s;
@@ -11,26 +16,29 @@
     transition: 0.3s;
     border-radius: 6px;
     overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px
 }
 
-.blog-item-content {
+.uta-blog-item-content {
     padding: 20px;
 }
 
-.blog-item-content ul {
+.uta-blog-item-content ul {
     margin-bottom: 0;
 }
 
-.blog-item-content ul li i {
+.uta-blog-item-content ul li i {
     margin-right: 10px;
     font-size: 14px;
 }
 
-.blog-item-img {
+.uta-blog-item-img {
     position: relative;
 }
 
-.blog-item-img span {
+.uta-blog-item-img span {
     background: rgba(0, 0, 0, 0.50);
     -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
@@ -43,7 +51,7 @@
     font-size: 14px;
 }
 
-.blog-item-img span a {
+.uta-blog-item-img span a {
     color: #fff;
 }
 
@@ -87,19 +95,20 @@
     display: none;
 }
 
-.blog-item-content h4 {
-    line-height: 30px !important;
-    font-size: 20px;
+.uta-blog-item-content h4 {
+   font-size: 20px;
     margin-bottom: 0;
+    margin: 0;
+    color: #333;
 }
 
-.blog-item-content p {
+.uta-blog-item-content p {
     font-size: 16px
 }
 
 
 
-.blog-item-content .blog-btn {
+.uta-blog-item-content .blog-btn {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 16px;
@@ -108,4 +117,81 @@
 .front-date {
     font-weight: 600;
     margin: 10px 0 15px !important;
+}
+
+
+@media only screen and (min-width: 1025px) {
+  .uta-post-grid-column-1 .uta-blog {
+    grid-template-columns: 100%;
+  }
+
+  .uta-post-grid-column-2 .uta-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uta-post-grid-column-3 .uta-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uta-post-grid-column-4 .uta-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .uta-post-grid-column-5 .uta-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .uta-post-grid-column-6 .uta-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 766px) {
+  .uta-post-grid-column-tablet-1 .uta-blog {
+    grid-template-columns: 100%;
+  }
+
+  .uta-post-grid-column-tablet-2 .uta-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uta-post-grid-column-tablet-3 .uta-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uta-post-grid-column-tablet-4 .uta-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .uta-post-grid-column-tablet-5 .uta-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .uta-post-grid-column-tablet-6 .uta-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  .uta-post-grid-column-mobile-1 .uta-blog {
+    grid-template-columns: 100%;
+  }
+
+  .uta-post-grid-column-mobile-2 .uta-blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .uta-post-grid-column-mobile-3 .uta-blog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .uta-post-grid-column-mobile-4 .uta-blog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .uta-post-grid-column-mobile-5 .uta-blog {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .uta-post-grid-column-mobile-6 .uta-blog {
+    grid-template-columns: repeat(6, 1fr);
+  }
 }

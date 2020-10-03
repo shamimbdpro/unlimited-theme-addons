@@ -10,14 +10,13 @@
     -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     margin: 50px 30px 30px;
-    padding: 100px 50px 70px;
+    padding: 70px 50px 70px;
+    text-align: center;
 }
 
 .testimonial-item img {
-    border: 3px solid #000;
-    position: absolute;
-    top: -150px;
     right: 0;
+    top: 0;
     left: 0;
     width: 100px;
     border-radius: 50% !important;
@@ -145,27 +144,42 @@
 }
 
 .uta-team img {
-    margin-bottom: 20px;
     border-bottom: 1px solid #fff !important;
+    width: 100%;
 }
 
 .uta-team h4 {
-    margin-bottom: 5px;
+    margin-bottom: 1px;
+    margin-top: 20px;
+    font-size: 25px;
 }
 
 .uta-team span {
     margin-bottom: 15px;
     display: block;
+    font-size: 16px;
 }
 
 .uta-team ul {
     display: inline-block;
     margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0
 }
 
+.uta-team ul li{
+   margin: 0;
+}
 
-
-
+li.list-inline-item a {
+    border: 1px solid #eee;
+    padding: 6px 7px;
+    margin: 0px 5px 29px 0px;
+    display: inline-block;
+}
 
 
 /*--------------------------------------------------------------
@@ -231,7 +245,7 @@
 --------------------------------------------------------------*/
 .uta-btn {
     border: none;
-    color: #333;
+    color: #ffffff;
     display: inline-block;
     padding: 15px 50px;
     border-radius: 50px;
@@ -243,7 +257,7 @@
 }
 
 .uta-btn:hover {
-    color: #333;
+    color: #ffffff;
 }
 
 .uta-btn i {
@@ -432,18 +446,19 @@
 
 
 
-/* Accordion
-================================================== */
-.acc {
+/*--------------------------------------------------------------
+# Accordion
+--------------------------------------------------------------*/
+.uta-accordian {
 }
 
-.acc__card {
+.uta-accordian-item {
   margin: 2em 0px;
   position: relative;
   box-shadow: 0px 11px 29px rgba(97, 105, 140, 0.1);
 }
 
-.acc__title {
+.uta-accordian-title {
   background: #fff;
   color: #212121;
   cursor: pointer;
@@ -452,12 +467,12 @@
   position: relative;
   text-align: left;
 }
-.acc__title h5{
+.uta-accordian-title h5{
     margin: 0;
 }
-.acc__title::after {
-  width: 8px;
-  height: 8px;
+.uta-accordian-title::after {
+  width: 10px;
+  height: 10px;
   border-right: 1px solid #4a6e78;
   border-bottom: 1px solid #4a6e78;
   position: absolute;
@@ -469,17 +484,17 @@
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.acc__title.active::after {
+.uta-accordian-title.active::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-.acc__title.active{
+.uta-accordian-title.active{
     border-bottom:1px solid #dadde1;
 }
 
-.acc__panel {
+.uta-accordian-body {
   background: #fff;
   color: #212121;
   display: none;
@@ -487,4 +502,169 @@
   padding: 2em;
   text-align: left;
   font-size: 16px
+}
+
+
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.eael-adv-accordion {
+  width: auto;
+  height: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-header {
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-header > .eael-accordion-tab-title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-header > i {
+  margin-right: 10px;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-header .fa-toggle {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-header.active .fa-toggle {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  z-index: 10;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-accordion-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-content {
+  display: none;
+  border: 1px solid #eee;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-content p {
+  margin: 0;
+}
+
+.eael-adv-accordion .eael-accordion-list .eael-accordion-content.active {
+  display: block;
+}
+
+@-webkit-keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
 }
