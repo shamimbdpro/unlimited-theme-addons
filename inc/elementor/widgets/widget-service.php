@@ -3,7 +3,8 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // service item
-class uta_Widget_Service extends Widget_Base {
+class uta_Widget_Service extends Widget_Base 
+{
  
    public function get_name() {
       return 'service_item';

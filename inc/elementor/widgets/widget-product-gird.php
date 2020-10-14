@@ -6,8 +6,6 @@ if ( ! defined('ABSPATH') ) {
 }
 // Exit if accessed directly
 
-
-
 class Elementor_Widget_Product_Grid extends Widget_Base
 {
     use Uta_theme_helper, Product_Grid;
@@ -17,7 +15,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
     }
 
     public function get_title() {
-        return __('UTA Prodduct', 'unlimited-theme-addons');
+        return __('UTA Prodduct', 'unlimited-theme-addons-lite');
     }
 
     public function get_icon() {
@@ -34,16 +32,16 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'uta_section_product_grid_settings',
             [
-                'label' => esc_html__('Product Settings', 'unlimited-theme-addons'),
+                'label' => esc_html__('Product Settings', 'unlimited-theme-addons-lite'),
             ]
         );
 
-       if ( ! class_exists( 'WooCommerce' ) ) {
+        if ( ! class_exists( 'WooCommerce' ) ) {
             $this->add_control(
                 'uta_product_grid_woo_required',
                 [
                     'type'            => Controls_Manager::RAW_HTML,
-                    'raw'             => __('<strong>WooCommerce</strong> is not installed/activated on your site. Please install and activate <a href="plugin-install.php?s=woocommerce&tab=search&type=term" target="_blank">WooCommerce</a> first.', 'unlimited-theme-addons'),
+                    'raw'             => __('<strong>WooCommerce</strong> is not installed/activated on your site. Please install and activate <a href="plugin-install.php?s=woocommerce&tab=search&type=term" target="_blank">WooCommerce</a> first.', 'unlimited-theme-addons-lite'),
                     'content_classes' => 'uta-warning',
                 ]
             );
@@ -52,15 +50,15 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_filter',
             [
-                'label'   => esc_html__('Filter By', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Filter By', 'unlimited-theme-addons-lite'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'recent-products',
                 'options' => [
-                    'recent-products'       => esc_html__('Recent Products', 'unlimited-theme-addons'),
-                    'featured-products'     => esc_html__('Featured Products', 'unlimited-theme-addons'),
-                    'best-selling-products' => esc_html__('Best Selling Products', 'unlimited-theme-addons'),
-                    'sale-products'         => esc_html__('Sale Products', 'unlimited-theme-addons'),
-                    'top-products'          => esc_html__('Top Rated Products', 'unlimited-theme-addons'),
+                    'recent-products'       => esc_html__('Recent Products', 'unlimited-theme-addons-lite'),
+                    'featured-products'     => esc_html__('Featured Products', 'unlimited-theme-addons-lite'),
+                    'best-selling-products' => esc_html__('Best Selling Products', 'unlimited-theme-addons-lite'),
+                    'sale-products'         => esc_html__('Sale Products', 'unlimited-theme-addons-lite'),
+                    'top-products'          => esc_html__('Top Rated Products', 'unlimited-theme-addons-lite'),
                 ],
             ]
         );
@@ -68,16 +66,16 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_responsive_control(
             'uta_product_grid_column',
             [
-                'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
+                'label'        => esc_html__('Columns', 'unlimited-theme-addons-lite'),
                 'type'         => Controls_Manager::SELECT,
                 'default'      => '4',
                 'options'      => [
-                    '1' => esc_html__('1', 'unlimited-theme-addons'),
-                    '2' => esc_html__('2', 'unlimited-theme-addons'),
-                    '3' => esc_html__('3', 'unlimited-theme-addons'),
-                    '4' => esc_html__('4', 'unlimited-theme-addons'),
-                    '5' => esc_html__('5', 'unlimited-theme-addons'),
-                    '6' => esc_html__('6', 'unlimited-theme-addons'),
+                    '1' => esc_html__('1', 'unlimited-theme-addons-lite'),
+                    '2' => esc_html__('2', 'unlimited-theme-addons-lite'),
+                    '3' => esc_html__('3', 'unlimited-theme-addons-lite'),
+                    '4' => esc_html__('4', 'unlimited-theme-addons-lite'),
+                    '5' => esc_html__('5', 'unlimited-theme-addons-lite'),
+                    '6' => esc_html__('6', 'unlimited-theme-addons-lite'),
                 ],
                 'toggle'       => true,
                 'prefix_class' => 'uta-product-grid-column%s-',
@@ -87,7 +85,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_products_count',
             [
-                'label'   => __('Products Count', 'unlimited-theme-addons'),
+                'label'   => __('Products Count', 'unlimited-theme-addons-lite'),
                 'type'    => Controls_Manager::NUMBER,
                 'default' => 4,
                 'min'     => 1,
@@ -100,7 +98,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_categories',
             [
-                'label'       => esc_html__( 'Product Categories', 'unlimited-theme-addons' ),
+                'label'       => esc_html__( 'Product Categories', 'unlimited-theme-addons-lite' ),
                 'type'        => Controls_Manager::SELECT2,
                 'label_block' => true,
                 'multiple'    => true,
@@ -111,7 +109,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'product_offset',
             [
-                'label'   => __('Offset', 'unlimited-theme-addons'),
+                'label'   => __('Offset', 'unlimited-theme-addons-lite'),
                 'type'    => Controls_Manager::NUMBER,
                 'default' => 0,
             ]
@@ -120,22 +118,21 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_style_preset',
             [
-                'label'   => esc_html__('Style Preset', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Style Preset', 'unlimited-theme-addons-lite'),
                 'type'    => Controls_Manager::SELECT,
                 'default' => 'uta-product-simple',
                 'options' => [
-                    'uta-product-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'uta-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons'),
-                    'uta-product-reveal'  => esc_html__('Reveal Style', 'unlimited-theme-addons'),
-                    'uta-product-overlay' => esc_html__('Overlay Style', 'unlimited-theme-addons'),
+                    'uta-product-default' => esc_html__('Default', 'unlimited-theme-addons-lite'),
+                    'uta-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons-lite'),
                 ],
+                'prefix_class' => '',
             ]
         );
 
         $this->add_control(
             'uta_product_grid_rating',
             [
-                'label'        => esc_html__('Show Product Rating?', 'unlimited-theme-addons'),
+                'label'        => esc_html__('Show Product Rating?', 'unlimited-theme-addons-lite'),
                 'type'         => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'default'      => 'yes',
@@ -144,49 +141,10 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
         $this->end_controls_section();
 
-        /**
-         * -------------------------------
-         *  Section => Load More
-         * -------------------------------
-         */
-        $this->start_controls_section(
-            'uta_product_grid_load_more_section',
-            [
-                'label' => esc_html__('Load More', 'unlimited-theme-addons'),
-            ]
-        );
-
-        $this->add_control(
-            'show_load_more',
-            [
-                'label'        => __('Show Load More', 'unlimited-theme-addons'),
-                'type'         => Controls_Manager::SWITCHER,
-                'label_on'     => __('Show', 'unlimited-theme-addons'),
-                'label_off'    => __('Hide', 'unlimited-theme-addons'),
-                'return_value' => 'true',
-                'default'      => '',
-            ]
-        );
-
-        $this->add_control(
-            'show_load_more_text',
-            [
-                'label'       => esc_html__('Label Text', 'unlimited-theme-addons'),
-                'type'        => Controls_Manager::TEXT,
-                'label_block' => false,
-                'default'     => esc_html__('Load More', 'unlimited-theme-addons'),
-                'condition'   => [
-                    'show_load_more' => 'true',
-                ],
-            ]
-        );
-
-        $this->end_controls_section(); # end of section 'Load More'
-
         $this->start_controls_section(
             'uta_product_grid_styles',
             [
-                'label' => esc_html__('Products Styles', 'unlimited-theme-addons'),
+                'label' => esc_html__('Products Styles', 'unlimited-theme-addons-lite'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -194,7 +152,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_background_color',
             [
-                'label'     => esc_html__('Content Background Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Content Background Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -234,7 +192,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_peoduct_grid_border_radius',
             [
-                'label'     => esc_html__('Border Radius', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Border Radius', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::DIMENSIONS,
                 'selectors' => [
                     '{{WRAPPER}} .uta-product-grid .woocommerce ul.products li.product' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -247,7 +205,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'uta_section_product_grid_typography',
             [
-                'label' => esc_html__('Color &amp; Typography', 'unlimited-theme-addons'),
+                'label' => esc_html__('Color &amp; Typography', 'unlimited-theme-addons-lite'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -255,7 +213,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_title_heading',
             [
-                'label' => __('Product Title', 'unlimited-theme-addons'),
+                'label' => __('Product Title', 'unlimited-theme-addons-lite'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -263,7 +221,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_title_color',
             [
-                'label'     => esc_html__('Product Title Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Product Title Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#272727',
                 'selectors' => [
@@ -283,7 +241,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_price_heading',
             [
-                'label' => __('Product Price', 'unlimited-theme-addons'),
+                'label' => __('Product Price', 'unlimited-theme-addons-lite'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -291,7 +249,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_price_color',
             [
-                'label'     => esc_html__('Product Price Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Product Price Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#272727',
                 'selectors' => [
@@ -311,7 +269,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_rating_heading',
             [
-                'label' => __('Star Rating', 'unlimited-theme-addons'),
+                'label' => __('Star Rating', 'unlimited-theme-addons-lite'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -319,7 +277,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_product_rating_color',
             [
-                'label'     => esc_html__('Rating Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Rating Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#f2b01e',
                 'selectors' => [
@@ -340,7 +298,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_sale_badge_heading',
             [
-                'label' => __('Sale Badge', 'unlimited-theme-addons'),
+                'label' => __('Sale Badge', 'unlimited-theme-addons-lite'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -348,7 +306,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_sale_badge_color',
             [
-                'label'     => esc_html__('Sale Badge Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Sale Badge Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -360,7 +318,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_sale_badge_background',
             [
-                'label'     => esc_html__('Sale Badge Background', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Sale Badge Background', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#ff2a13',
                 'selectors' => [
@@ -381,7 +339,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_stock_out_badge_heading',
             [
-                'label' => __('Stock Out Badge', 'unlimited-theme-addons'),
+                'label' => __('Stock Out Badge', 'unlimited-theme-addons-lite'),
                 'type'  => Controls_Manager::HEADING,
             ]
         );
@@ -389,11 +347,11 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_stock_out_badge_color',
             [
-                'label'     => esc_html__('Stock Out Badge Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Stock Out Badge Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
-                    '{{WRAPPER}} .woocommerce ul.products li.product .outofstock-badge' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-product-grid .woocommerce ul.products li.product .outofstock-badge' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -401,7 +359,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_stock_out_badge_background',
             [
-                'label'     => esc_html__('Stock Out Badge Background', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Stock Out Badge Background', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#ff2a13',
                 'selectors' => [
@@ -423,19 +381,19 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->start_controls_section(
             'uta_section_product_grid_add_to_cart_styles',
             [
-                'label' => esc_html__('Add to Cart Button Styles', 'unlimited-theme-addons'),
+                'label' => esc_html__('Add to Cart Button Styles', 'unlimited-theme-addons-lite'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             ]
         );
 
         $this->start_controls_tabs('uta_product_grid_add_to_cart_style_tabs');
 
-        $this->start_controls_tab('normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons') ]);
+        $this->start_controls_tab('normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons-lite') ]);
 
         $this->add_control(
             'uta_product_grid_add_to_cart_color',
             [
-                'label'     => esc_html__('Button Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Button Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -449,7 +407,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_add_to_cart_background',
             [
-                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#333',
                 'selectors' => [
@@ -481,12 +439,12 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
         $this->end_controls_tab();
 
-        $this->start_controls_tab('uta_product_grid_add_to_cart_hover_styles', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons') ]);
+        $this->start_controls_tab('uta_product_grid_add_to_cart_hover_styles', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons-lite') ]);
 
         $this->add_control(
             'uta_product_grid_add_to_cart_hover_color',
             [
-                'label'     => esc_html__('Button Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Button Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#fff',
                 'selectors' => [
@@ -500,7 +458,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_add_to_cart_hover_background',
             [
-                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Button Background Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '#333',
                 'selectors' => [
@@ -514,7 +472,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_add_to_cart_hover_border_color',
             [
-                'label'     => esc_html__('Border Color', 'unlimited-theme-addons'),
+                'label'     => esc_html__('Border Color', 'unlimited-theme-addons-lite'),
                 'type'      => Controls_Manager::COLOR,
                 'default'   => '',
                 'selectors' => [
@@ -531,17 +489,13 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
         $this->end_controls_section();
 
-           /**
-         * Load More Button Style Controls!
-         */
-        // $this->uta_load_more_button_style();
 
     }
 
     protected function render() {
         $settings = $this->get_settings_for_display();
 
-       if ( ! class_exists( 'WooCommerce' ) ) {
+        if ( ! class_exists( 'WooCommerce' ) ) {
             return;
         }
 
@@ -579,8 +533,8 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                     'field'    => 'slug',
                     'terms'    => $settings['uta_product_grid_categories'],
                 ];
-            }        
-} else if ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
+            }
+        } else if ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
@@ -593,12 +547,12 @@ class Elementor_Widget_Product_Grid extends Widget_Base
                     'compare' => '>',
                     'type'    => 'numeric',
                 ],
-				[
-					'key'     => '_min_variation_sale_price',
-					'value'   => 0,
-					'compare' => '>',
-					'type'    => 'numeric',
-				],
+                [
+                    'key'     => '_min_variation_sale_price',
+                    'value'   => 0,
+                    'compare' => '>',
+                    'type'    => 'numeric',
+                ],
             ];
         } else if ( 'top-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = '_wc_average_rating';
@@ -610,8 +564,6 @@ class Elementor_Widget_Product_Grid extends Widget_Base
             'uta_product_grid_style_preset' => $settings['uta_product_grid_style_preset'],
             'uta_product_grid_rating'       => $settings['uta_product_grid_rating'],
             'uta_product_grid_column'       => $settings['uta_product_grid_column'],
-            'show_load_more'                 => $settings['show_load_more'],
-            'show_load_more_text'            => $settings['show_load_more_text'],
         ];
 
         $html = '<div class="uta-product-grid d-flex' . $settings['uta_product_grid_style_preset'] . '">';
@@ -620,17 +572,6 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $html .= '<ul class="products">
                     ' . self::render_template($args, $settings) . '
                 </ul>';
-
-        if ( 'true' == $settings['show_load_more'] ) {
-            if ( '-1' != $args['posts_per_page'] ) {
-                $html .= '<div class="uta-load-more-button-wrap">
-                            <button class="uta-load-more-button" id="uta-load-more-btn-' . $this->get_id() . '" data-widget="' . $this->get_id() . '" data-class="' . get_class($this) . '" data-args="' . http_build_query($args) . '" data-settings="' . http_build_query($settings) . '" data-layout="masonry" data-page="1">
-                                <div class="uta-btn-loader button__loader"></div>
-                                <span>' . esc_html__($settings['show_load_more_text'], 'unlimited-theme-addons') . '</span>
-                            </button>
-                        </div>';
-            }
-        }
 
         $html .= '</div>
         </div>';
