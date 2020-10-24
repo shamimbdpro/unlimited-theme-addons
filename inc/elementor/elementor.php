@@ -42,7 +42,7 @@ add_action( 'elementor/elements/categories_registered', 'uta_add_elementor_widge
 
 //Elementor init
 
-class Uta_ElementorCustomElement {
+class Uta_Elementor_CustomElement {
  
    private static $instance = null;
  
@@ -68,7 +68,7 @@ class Uta_ElementorCustomElement {
          include_once(plugin_dir_path( __FILE__ ).'/widgets/template/Product_Grid.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-product-gird.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-pricing.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-service.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-info-box.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-team.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-testimonials.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-title.php');
@@ -96,5 +96,5 @@ class Uta_ElementorCustomElement {
         }
     }
 }
- 
-Uta_ElementorCustomElement::get_instance()->init();
+
+Uta_Elementor_CustomElement::get_instance()->init();

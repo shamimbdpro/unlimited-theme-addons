@@ -12,8 +12,8 @@
 
     // Elementor frontend support
     $(window).on('elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction('frontend/element_ready/testimonials.default', function($scope, $) {
-            $scope.find(".testimonials").not('.slick-initialized').slick({
+        elementorFrontend.hooks.addAction('frontend/element_ready/uta-testimonials.default', function($scope, $) {
+            $scope.find(".uta-testimonials").not('.slick-initialized').slick({
                 autoplay: true,
                 infinite: true,
                 speed: 300,

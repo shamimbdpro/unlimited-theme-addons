@@ -9,7 +9,7 @@ class uta_Widget_Pricing extends Widget_Base
 {
 
     public function get_name() {
-        return 'pricing';
+        return 'uta-pricing';
     }
 
     public function get_title() {
@@ -19,6 +19,8 @@ class uta_Widget_Pricing extends Widget_Base
     public function get_icon() {
         return 'eicon-price-table';
     }
+
+
 
     public function get_categories() {
         return [ 'uta-elements' ];

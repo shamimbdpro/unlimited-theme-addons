@@ -174,11 +174,13 @@
    margin: 0;
 }
 
-li.list-inline-item a {
+.uta-team li.list-inline-item a {
     border: 1px solid #eee;
     padding: 6px 7px;
     margin: 0px 5px 29px 0px;
     display: inline-block;
+    width: 40px;
+    text-align: center;
 }
 
 

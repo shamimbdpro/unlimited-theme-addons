@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class uta_Widget_Title extends Widget_Base {
  
    public function get_name() {
-      return 'title';
+      return 'uta-title';
    }
  
    public function get_title() {
@@ -17,6 +17,20 @@ class uta_Widget_Title extends Widget_Base {
    public function get_icon() { 
         return 'eicon-site-title';
    }
+
+   public function get_keywords()
+    {
+        return [
+            'title',
+            'uta title',
+            'uta',
+            'title widget',
+            'widget',
+            'addons',
+            'title addons',
+            'unlimited theme addons'
+        ];
+    }
  
    public function get_categories() {
       return [ 'uta-elements' ];

@@ -7,7 +7,7 @@ class uta_Widget_Service extends Widget_Base
 {
  
    public function get_name() {
-      return 'service_item';
+      return 'uta-info-box';
    }
  
    public function get_title() {
@@ -17,10 +17,24 @@ class uta_Widget_Service extends Widget_Base
    public function get_icon() { 
         return 'eicon-facebook-comments';
    }
- 
-   public function get_categories() {
+
+   public function get_keywords()
+    {
+        return [
+            'info box',
+            'uta info',
+            'uta',
+            'infobox widget',
+            'widget',
+            'infobox',
+            'unlimited theme addons'
+        ];
+    }
+
+    public function get_categories() {
       return [ 'uta-elements' ];
    }
+
    protected function _register_controls() {
       $this->start_controls_section(
          'service_section',
@@ -33,7 +47,7 @@ class uta_Widget_Service extends Widget_Base
            'icon',
            [
                'label' => __( 'Icon', 'text-domain' ),
-               'type' => \Elementor\Controls_Manager::ICONS,
+               'type' => Controls_Manager::ICONS,
                'default' => [
                    'value' => 'fas fa-star',
                    'library' => 'solid',
@@ -71,7 +85,7 @@ class uta_Widget_Service extends Widget_Base
       ?>
 
       <div class="uta-service-item text-center">
-          <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+          <?php Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
          <h4 <?php echo esc_html( $this->get_render_attribute_string( 'title' ) ); ?>><?php echo esc_html( $settings['title'] ); ?></h4>
          <p <?php echo esc_html( $this->get_render_attribute_string( 'text' ) ); ?>><?php echo esc_html( $settings['text'] ); ?></p>
       </div>

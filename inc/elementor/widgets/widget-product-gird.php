@@ -22,6 +22,20 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         return 'fa fa-th';
     }
 
+    public function get_keywords()
+    {
+        return [
+            'product',
+            'product grid',
+            'uta',
+            'woocommerce product',
+            'widget',
+            'product grid',
+            'unlimited theme addons'
+        ];
+    }
+
+
     public function get_categories() {
         return [ 'uta-elements' ];
     }

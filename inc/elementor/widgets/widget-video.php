@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class uta_Widget_Video extends Widget_Base {
  
    public function get_name() {
-      return 'video';
+      return 'uta-video';
    }
  
    public function get_title() {
@@ -16,7 +16,21 @@ class uta_Widget_Video extends Widget_Base {
    public function get_icon() { 
         return 'eicon-play';
    }
- 
+
+   public function get_keywords()
+    {
+        return [
+            'video',
+            'uta video',
+            'uta',
+            'video widget',
+            'widget',
+            'addons',
+            'video addons',
+            'unlimited theme addons'
+        ];
+    }
+
    public function get_categories() {
       return [ 'uta-elements' ];
    }

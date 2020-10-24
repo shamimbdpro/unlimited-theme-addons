@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class uta_Widget_Button extends Widget_Base {
  
    public function get_name() {
-      return 'button';
+      return 'uta-button';
    }
  
    public function get_title() {
@@ -17,6 +17,19 @@ class uta_Widget_Button extends Widget_Base {
    public function get_icon() { 
         return 'eicon-button';
    }
+
+   public function get_keywords()
+    {
+        return [
+            'button',
+            'uta button',
+            'uta',
+            'button widget',
+            'widget',
+            'buttons',
+            'unlimited theme addons'
+        ];
+    }
  
    public function get_categories() {
       return [ 'uta-elements' ];
@@ -56,7 +69,7 @@ class uta_Widget_Button extends Widget_Base {
            'icon',
            [
                'label' => __( 'Icon', 'text-domain' ),
-               'type' => \Elementor\Controls_Manager::ICONS,
+               'type' => Controls_Manager::ICONS,
                'default' => [
                    'value' => 'fas fa-star',
                    'library' => 'solid',

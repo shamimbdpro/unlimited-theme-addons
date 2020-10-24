@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class uta_Widget_Blog extends Widget_Base {
  
    public function get_name() {
-      return 'blog';
+      return 'uta-blog';
    }
  
    public function get_title() {
@@ -16,6 +16,20 @@ class uta_Widget_Blog extends Widget_Base {
    public function get_icon() { 
         return 'eicon-posts-carousel';
    }
+
+    public function get_keywords()
+    {
+        return [
+            'team',
+            'uta team',
+            'uta',
+            'team widget',
+            'widget',
+            'addons',
+            'team addons',
+            'unlimited theme addons'
+        ];
+    }
  
    public function get_categories() {
       return [ 'uta-elements' ];

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class uta_Widget_Testimonials extends Widget_Base {
  
    public function get_name() {
-      return 'testimonials';
+      return 'uta-testimonials';
    }
  
    public function get_title() {
@@ -17,7 +17,7 @@ class uta_Widget_Testimonials extends Widget_Base {
    public function get_icon() { 
         return 'eicon-testimonial';
    }
- 
+
    public function get_categories() {
       return [ 'uta-elements' ];
    }
@@ -63,7 +63,7 @@ class uta_Widget_Testimonials extends Widget_Base {
       );
 
       $repeater->add_control(
-         'testimonial',
+         'feedback',
          [
 			 'label' => __( 'Testimonial', 'unlimited-theme-addons' ),
 			 'type' => \Elementor\Controls_Manager::TEXTAREA,
@@ -71,7 +71,7 @@ class uta_Widget_Testimonials extends Widget_Base {
       );
 
       $this->add_control(
-         'testimonial_list',
+         'testimonial_count',
          [
 			 'label' => __( 'Testimonial List', 'unlimited-theme-addons' ),
 			 'type' => \Elementor\Controls_Manager::REPEATER,
@@ -91,11 +91,11 @@ class uta_Widget_Testimonials extends Widget_Base {
        
       $settings = $this->get_settings_for_display(); ?>
       
-      <div class="testimonials">
-         <?php foreach ( $settings['testimonial_list'] as $index => $testimonial ) :
-         $testimonialText = $this->get_repeater_setting_key( 'testimonial' , 'testimonial_list' , $index );
-         $name = $this->get_repeater_setting_key( 'name' , 'testimonial_list' , $index );         
-         $designation = $this->get_repeater_setting_key( 'designation' , 'testimonial_list' , $index );
+      <div class="uta-testimonials">
+         <?php foreach ( $settings['testimonial_count'] as $index => $testimonial ) :
+         $testimonialText = $this->get_repeater_setting_key( 'feedback' , 'testimonial_count' , $index );
+         $name = $this->get_repeater_setting_key( 'name' , 'testimonial_count' , $index );
+         $designation = $this->get_repeater_setting_key( 'designation' , 'testimonial_count' , $index );
          $this->add_inline_editing_attributes( $testimonialText , 'basic' );
          $this->add_inline_editing_attributes( $name , 'basic' );         
          $this->add_inline_editing_attributes( $designation , 'basic' ); ?>
