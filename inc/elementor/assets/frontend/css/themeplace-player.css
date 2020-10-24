@@ -1,0 +1,9 @@
+/*Video*/
+.wp-video,
+video.wp-video-shortcode {
+    width: 100% !important;
+    height: 100% !important;
+}
+.mejs-audio {
+  height: 40px;
+}

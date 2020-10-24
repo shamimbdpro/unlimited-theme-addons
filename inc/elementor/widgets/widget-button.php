@@ -5,7 +5,11 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Button
 class uta_Widget_Button extends Widget_Base {
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
    public function get_name() {
       return 'button';
    }
@@ -43,7 +47,11 @@ class uta_Widget_Button extends Widget_Base {
       $this->add_control(
          'button_icon',
          [
+<<<<<<< HEAD
 			 'label' => __( 'Show Icon', 'unlimited-theme-addons' ),
+=======
+			 'label' => __( 'Icon', 'unlimited-theme-addons' ),
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
 			 'type' => \Elementor\Controls_Manager::SWITCHER,
 			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
 			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
@@ -55,6 +63,7 @@ class uta_Widget_Button extends Widget_Base {
       $this->add_control(
          'icon',
          [
+<<<<<<< HEAD
              'label' => __( 'Icon', 'text-domain' ),
              'type' => \Elementor\Controls_Manager::ICONS,
              'default' => [
@@ -62,6 +71,12 @@ class uta_Widget_Button extends Widget_Base {
                  'library' => 'solid',
              ],
              'condition' => [ 'button_icon' => 'yes' ],
+=======
+			 'label' => __( 'Choose Icon', 'unlimited-theme-addons' ),
+			 'type' => \Elementor\Controls_Manager::ICON,
+			 'default' => 'fa fa-play',
+			 'condition' => [ 'button_icon' => 'yes' ],
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
          ]
       );
 
@@ -168,7 +183,11 @@ class uta_Widget_Button extends Widget_Base {
       ?>
 
       <div style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
+<<<<<<< HEAD
          <a class="uta-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo  $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+=======
+         <a class="uta-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo esc_html( $this->get_render_attribute_string( 'button_text' ) ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { echo '<i class="'.esc_attr( $settings['icon'] ).'"></i>'; } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
       </div>
 
       <?php

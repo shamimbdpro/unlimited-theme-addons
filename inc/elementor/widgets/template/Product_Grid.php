@@ -35,6 +35,7 @@ trait Product_Grid
                         <?php // echo woocommerce_template_loop_add_to_cart(); ?>
                     </li>
                 <?php }else {
+
                     wc_get_template_part('content', 'product');
                 }
             }

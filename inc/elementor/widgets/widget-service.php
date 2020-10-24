@@ -15,7 +15,11 @@ class uta_Widget_Service extends Widget_Base
    }
  
    public function get_icon() { 
+<<<<<<< HEAD
         return 'eicon-table-of-contents';
+=======
+        return 'eicon-facebook-comments';
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
    }
  
    public function get_categories() {
@@ -33,6 +37,7 @@ class uta_Widget_Service extends Widget_Base
          'icon',
          [
 			 'label' => __( 'Icon', 'unlimited-theme-addons' ),
+<<<<<<< HEAD
              'type' => \Elementor\Controls_Manager::ICONS,
              'default' => [
                  'value' => 'fas fa-star',
@@ -41,6 +46,11 @@ class uta_Widget_Service extends Widget_Base
          ]
 
 
+=======
+			 'type' => \Elementor\Controls_Manager::ICON,
+			 'default' => 'fa-rocket',
+         ]     
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
       );
 
       $this->add_control(
@@ -72,8 +82,13 @@ class uta_Widget_Service extends Widget_Base
       $this->add_inline_editing_attributes( 'text', 'basic' );
       ?>
  
+<<<<<<< HEAD
       <div class="uta-service-item text-center">
           <?php \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); ?>
+=======
+      <div class="service-item text-center">
+         <i class="fa fa-fw fa-2x <?php echo esc_html( $settings['icon'] ); ?>"></i>
+>>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
          <h4 <?php echo esc_html( $this->get_render_attribute_string( 'title' ) ); ?>><?php echo esc_html( $settings['title'] ); ?></h4>
          <p <?php echo esc_html( $this->get_render_attribute_string( 'text' ) ); ?>><?php echo esc_html( $settings['text'] ); ?></p>
       </div>
