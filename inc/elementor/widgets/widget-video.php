@@ -17,8 +17,7 @@ class uta_Widget_Video extends Widget_Base {
         return 'eicon-play';
    }
 
-   public function get_keywords()
-    {
+   public function get_keywords() {
         return [
             'video',
             'uta video',
@@ -27,7 +26,7 @@ class uta_Widget_Video extends Widget_Base {
             'widget',
             'addons',
             'video addons',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
 

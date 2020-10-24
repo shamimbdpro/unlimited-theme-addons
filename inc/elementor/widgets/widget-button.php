@@ -18,8 +18,7 @@ class uta_Widget_Button extends Widget_Base {
         return 'eicon-button';
    }
 
-   public function get_keywords()
-    {
+   public function get_keywords() {
         return [
             'button',
             'uta button',
@@ -27,7 +26,7 @@ class uta_Widget_Button extends Widget_Base {
             'button widget',
             'widget',
             'buttons',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
  
@@ -68,7 +67,7 @@ class uta_Widget_Button extends Widget_Base {
        $this->add_control(
            'icon',
            [
-               'label' => __( 'Icon', 'text-domain' ),
+               'label' => __( 'Icon', 'unlimited-theme-addons' ),
                'type' => Controls_Manager::ICONS,
                'default' => [
                    'value' => 'fas fa-star',
@@ -181,7 +180,7 @@ class uta_Widget_Button extends Widget_Base {
       ?>
 
        <div style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
-           <a class="uta-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo  $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?><?php echo esc_html( $settings['button_text'] ); ?></a>
+           <a class="uta-btn <?php if ( 'yes' == $settings['bordered'] ) { echo'bordered'; } ?> elementor-inline-editing <?php if ( 'yes' == $settings['drop_shadow'] ) { echo'shadow'; } ?> <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" style="border-radius: <?php echo esc_attr( $settings['button_radius']['size'] ) ?>px;" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?></a>
        </div>
 
       <?php

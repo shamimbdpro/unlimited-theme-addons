@@ -18,8 +18,7 @@ class uta_Widget_Title extends Widget_Base {
         return 'eicon-site-title';
    }
 
-   public function get_keywords()
-    {
+   public function get_keywords() {
         return [
             'title',
             'uta title',
@@ -28,7 +27,7 @@ class uta_Widget_Title extends Widget_Base {
             'widget',
             'addons',
             'title addons',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
  

@@ -18,8 +18,7 @@ class uta_Widget_Service extends Widget_Base
         return 'eicon-facebook-comments';
    }
 
-   public function get_keywords()
-    {
+   public function get_keywords() {
         return [
             'info box',
             'uta info',
@@ -27,7 +26,7 @@ class uta_Widget_Service extends Widget_Base
             'infobox widget',
             'widget',
             'infobox',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
 
@@ -46,7 +45,7 @@ class uta_Widget_Service extends Widget_Base
        $this->add_control(
            'icon',
            [
-               'label' => __( 'Icon', 'text-domain' ),
+               'label' => __( 'Icon', 'unlimited-theme-addons' ),
                'type' => Controls_Manager::ICONS,
                'default' => [
                    'value' => 'fas fa-star',

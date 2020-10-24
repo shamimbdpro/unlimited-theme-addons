@@ -22,8 +22,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         return 'fa fa-th';
     }
 
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'product',
             'product grid',
@@ -31,7 +30,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
             'woocommerce product',
             'widget',
             'product grid',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
 
@@ -590,7 +589,7 @@ class Elementor_Widget_Product_Grid extends Widget_Base
         $html .= '</div>
         </div>';
 
-        echo $html;
+        echo $html; //phpcs:ignore
     }
 
 }

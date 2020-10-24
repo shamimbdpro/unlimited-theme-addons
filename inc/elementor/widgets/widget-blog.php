@@ -17,8 +17,7 @@ class uta_Widget_Blog extends Widget_Base {
         return 'eicon-posts-carousel';
    }
 
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'team',
             'uta team',
@@ -27,7 +26,7 @@ class uta_Widget_Blog extends Widget_Base {
             'widget',
             'addons',
             'team addons',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
  
@@ -117,10 +116,10 @@ class uta_Widget_Blog extends Widget_Base {
                      </div>
                      
                      <div class="uta-blog-item-content">
-                        <a href="<?php the_permalink() ?>"><h4><?php echo wp_trim_words( get_the_title(), 8, '...' );?></h4></a>
+                        <a href="<?php the_permalink() ?>"><h4><?php echo esc_html( wp_trim_words( get_the_title(), 8, '...' ) );?></h4></a>
                         <ul class="uta-blog-item-meta">
                            <li class="blog-meta-info">
-                              <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?><?php the_author(); ?></a>
+                              <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'ID' ), 32 ); ?><?php the_author(); ?></a>
                            </li>
                            <li class="blog-item-date">
                               <?php echo get_the_date(); ?>

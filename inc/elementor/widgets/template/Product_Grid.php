@@ -21,20 +21,20 @@ trait Product_Grid
 
                 if ( 'uta-product-simple' == $settings['uta_product_grid_style_preset'] ) { ?>
                     <li class="product">
-                        <a href="<?php echo $product->get_permalink();?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                          <?php echo $product->get_image('woocommerce_thumbnail'); ?>
-                            <h2 class="woocommerce-loop-product__title"> <?php echo $product->get_title(); ?> </h2>
-                            <?php if( ($settings['uta_product_grid_rating'] == 'yes' )) {
-                                echo '<span>'. wc_get_rating_html($product->get_average_rating(), $product->get_rating_count()).'</span>';
+                        <a href="<?php echo $product->get_permalink();?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> <?php //phpcs:ignore?>
+                          <?php echo $product->get_image('woocommerce_thumbnail'); ?><?php //phpcs:ignore?>
+                            <h2 class="woocommerce-loop-product__title"> <?php echo $product->get_title(); ?> </h2><?php //phpcs:ignore?>
+                            <?php if ( 'yes' == ($settings['uta_product_grid_rating'] ) ) {
+                                echo '<span>'. wc_get_rating_html($product->get_average_rating(), $product->get_rating_count()).'</span>'; //phpcs:ignore
                             }?>
 
                             <?php
-                            echo ''.( ! $product->managing_stock() && ! $product->is_in_stock() ? '<span class="outofstock-badge">'.__('Stock ', 'unlimited-theme-addons-free'). '<br />' . __('Out', 'unlimited-theme-addons-free').'</span>' : ($product->is_on_sale() ? '<span class="onsale">' . __('Sale!', 'unlimited-theme-addons-free') . '</span>' : '') ).'';
+                            echo ''.( ! $product->managing_stock() && ! $product->is_in_stock() ? '<span class="outofstock-badge">'.esc_html__('Stock ', 'unlimited-theme-addons'). '<br />' . esc_html__('Out', 'unlimited-theme-addons').'</span>' : ($product->is_on_sale() ? '<span class="onsale">' . esc_html__('Sale!', 'unlimited-theme-addons') . '</span>' : '') ).'';
                             ?>
 
-                            <span class="price"><?php echo $product->get_price_html(); ?></span>
+                            <span class="price"><?php echo $product->get_price_html(); //phpcs:ignore ?></span>
                         </a>
-                        <?php echo woocommerce_template_loop_add_to_cart(); ?>
+                        <?php echo woocommerce_template_loop_add_to_cart(); //phpcs:ignore ?>
                     </li>
                 <?php }else {
                     wc_get_template_part('content', 'product');

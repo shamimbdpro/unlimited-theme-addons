@@ -166,9 +166,9 @@ class uta_Widget_Pricing extends Widget_Base
         <div class="uta-pricing-table <?php if ( 'on' == $settings['recommended'] ) {
             echo "recommended";
         } ?>">
-            <h6 class="type elementor-inline-editing" <?php echo $this->get_render_attribute_string('title'); ?>><?php echo esc_html($settings['title']); ?></h6>
-            <h1 class="uta-price elementor-inline-editing" <?php echo $this->get_render_attribute_string('price'); ?>>
-                <span class="uta-currency"><?php echo $settings['currency']; ?></span><?php echo esc_html($settings['price']); ?>
+            <h6 class="type elementor-inline-editing" <?php echo $this->get_render_attribute_string('title'); ?>><?php echo esc_html($settings['title']); //phpcs:ignore ?></h6>
+            <h1 class="uta-price elementor-inline-editing" <?php echo $this->get_render_attribute_string('price'); //phpcs:ignore ?>>
+                <span class="uta-currency"><?php echo $settings['currency']; ?></span><?php echo esc_html($settings['price']); //phpcs:ignore ?>
             </h1>
 
             <?php if ( 'none' !== $settings['package'] ) : ?>
@@ -186,7 +186,7 @@ class uta_Widget_Pricing extends Widget_Base
                 } ?>
             </ul>
             <a class="elementor-inline-editing uta-buy-button"
-               href="<?php echo esc_url($settings['btn_url']) ?>" <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']) ?></a>
+               href="<?php echo esc_url($settings['btn_url']) ?>" <?php echo $this->get_render_attribute_string('btn_text'); ?>><?php echo esc_html($settings['btn_text']); //phpcs:ignore ?></a>
         </div>
 
         <?php

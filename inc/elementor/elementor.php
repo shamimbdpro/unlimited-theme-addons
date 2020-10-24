@@ -76,12 +76,11 @@ class Uta_Elementor_CustomElement {
       }
 	}
 
-    public function register_hooks()
-    {
+    public function register_hooks() {
         // Admin
-        if (is_admin()) {
-            if (!empty($_REQUEST['action']) && 'elementor' === $_REQUEST['action']) {
-                add_action('init', [$this, 'load_wc_hooks'], 5);
+        if ( is_admin() ) {
+            if ( ! empty($_REQUEST['action']) && 'elementor' === $_REQUEST['action'] ) {
+                add_action('init', [ $this, 'load_wc_hooks' ], 5);
             }
         }
     }
@@ -89,9 +88,8 @@ class Uta_Elementor_CustomElement {
     /**
      *  Load woocommerce hook.
      */
-    public function load_wc_hooks()
-    {
-        if (class_exists('WooCommerce')) {
+    public function load_wc_hooks() {
+        if ( class_exists('WooCommerce') ) {
             wc()->frontend_includes();
         }
     }

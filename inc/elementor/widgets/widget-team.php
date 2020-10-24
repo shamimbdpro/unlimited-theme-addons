@@ -17,8 +17,7 @@ class uta_Widget_Team extends Widget_Base {
         return 'eicon-person';
     }
 
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'team',
             'uta team',
@@ -27,7 +26,7 @@ class uta_Widget_Team extends Widget_Base {
             'widget',
             'addons',
             'team addons',
-            'unlimited theme addons'
+            'unlimited theme addons',
         ];
     }
 
@@ -103,21 +102,21 @@ class uta_Widget_Team extends Widget_Base {
                     [
                         'social_icon' => [
                             'value' => 'fab fa-facebook-f',
-                            'library' => 'fa-brands'
+                            'library' => 'fa-brands',
                         ],
                         'social_url' => '#',
                     ],
                     [
                         'social_icon' => [
                             'value' => 'fab fa-linkedin-in',
-                            'library' => 'fa-brands'
+                            'library' => 'fa-brands',
                         ],
                         'social_url' => '#',
                     ],
                     [
                         'social_icon' => [
                             'value' => 'fab fa-twitter',
-                            'library' => 'fa-brands'
+                            'library' => 'fa-brands',
                         ],
                         'social_url' => '#',
                     ],
