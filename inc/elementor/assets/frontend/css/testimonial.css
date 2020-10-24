@@ -1,0 +1,385 @@
+
+/*--------------------------------------------------------------
+## testimonials
+--------------------------------------------------------------*/
+
+.testimonial-item {
+    background: #fff;
+    cursor: move;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    margin: 50px 30px 30px;
+    padding: 70px 50px 70px;
+    text-align: center;
+}
+
+.testimonial-item img {
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    border-radius: 50% !important;
+    margin: 0 auto 30px;
+}
+
+.testimonial-item p {
+    margin-bottom: 50px;
+    color: #2b2a5a;
+    font-size:16px;
+    line-height: 26px;
+}
+
+.testimonial-item h5 {
+    font-size: 20px;
+    color: #2b2a5a;
+    margin-bottom: 5px;
+}
+
+.testimonial-item span {
+    color: #2b2a5a;
+    opacity: .8;
+}
+
+.testimonial-item ul {
+    margin: 0;
+    color: #ffe552;
+    margin-top: 20px;
+}
+
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
+    font-size: 30px;
+}
+
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+
+.uta-pricing-table {
+    text-align: center;
+    padding: 50px 30px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.uta-pricing-table h6 {
+    text-transform: uppercase;
+}
+
+.uta-pricing-table.recommended {
+    position: relative;
+}
+
+.uta-pricing-table.recommended:after {
+    position: absolute;
+    content: 'Recommended';
+    left: 27%;
+    top: -15px;
+    color: #fff;
+    padding: 3px 15px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(142, 142, 142, 0.38);
+    box-shadow: 0px 10px 20px 0px rgba(142, 142, 142, 0.38);
+    border-radius: 20px;
+    background: #065FD4
+}
+
+.uta-pricing-table .uta-currency {
+    font-size: 16px;
+}
+
+.uta-pricing-table .uta-price {
+    font-size: 52px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.uta-pricing-table>span {
+    color: #000;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.uta-pricing-table ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.uta-pricing-table ul li {
+    line-height: 40px;
+}
+
+.uta-pricing-table .uta-buy-button {
+    color: #fff;
+    padding: 12px 40px;
+    display: inline-block;
+    border-radius: 30px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    background: #065FD4
+}
+
+.uta-pricing-table .uta-buy-button:hover {
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(125, 66, 202, 0.4);
+    box-shadow: 0px 10px 20px 0px rgba(125, 66, 202, 0.4);
+}
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.uta-team {
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.uta-team img {
+    border-bottom: 1px solid #fff !important;
+    width: 100%;
+}
+
+.uta-team h4 {
+    margin-bottom: 1px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.uta-team span {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.uta-team ul {
+    display: inline-block;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 0
+}
+
+.uta-team ul li{
+   margin: 0;
+}
+
+.uta-team ul li.list-inline-item a {
+    border: 1px solid #eee;
+    padding: 6px 7px;
+    margin: 0px 5px 29px 0px;
+    display: inline-block;
+}
+
+
+/*--------------------------------------------------------------
+# Video
+--------------------------------------------------------------*/
+.uta-video-popup {
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: table;
+    text-align: center;
+}
+
+.uta-video-popup-overlay {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.uta-popup-video {
+    position: relative;
+    margin: auto;
+    width: 66px;
+    height: 66px;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #fff;
+    -webkit-animation: 1.6s playShadow ease-out infinite;
+    animation: 1.6s playShadow ease-out infinite;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.uta-popup-video span {
+    margin: auto;
+    padding-left: 3px;
+}
+
+.uta-popup-video:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-transition: 0.35s;
+    -o-transition: 0.35s;
+    transition: 0.35s;
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.uta-btn {
+    border: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 15px 50px;
+    border-radius: 50px;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    cursor: pointer;
+    background: #065FD4
+}
+
+.uta-btn:hover {
+    color: #ffffff;
+}
+
+.uta-btn i {
+    margin-right: 20px;
+}
+
+.uta-btn.shadow {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
+}
+
+.uta-play-btn>span {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    border-radius: inherit;
+    border-color: inherit;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.uta-play-btn-txt {
+    font-weight: 700;
+    color: #000;
+}
+
+.uta-play-btn-icon {
+    border-radius: 50%;
+    margin-top: -5%;
+    margin-bottom: -5%;
+    letter-spacing: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 20px;
+    width: 3.5em;
+    height: 3.5em;
+    -webkit-box-ordinal-group: 0;
+    -ms-flex-order: -1;
+    order: -1;
+    margin-left: 0;
+    margin-right: 20px;
+    border: none;
+    color: #fff;
+}
+
+.uta-btn.bordered {
+    background: #fff;
+    border: 2px solid;
+}
+
+.uta-btn.bordered:hover {
+    color: #333;
+}
+
+@-webkit-keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+.uta-service-item i{
+    font-size:30px;
+    padding-bottom:15px;
+}
