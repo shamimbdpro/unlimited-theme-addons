@@ -1,24 +1,17 @@
 <?xml version="1.0"?>
-<ruleset name="WebAppick Coding Standards">
-	<description>Dotart dev PHP_CodeSniffer ruleset.</description>
+<ruleset name="PHPCS Coding Standards">
+	<description>PHPCS dev PHP_CodeSniffer ruleset.</description>
 
 	<file>.</file>
 
 	<!-- Exclude paths -->
 	<exclude-pattern>min.js</exclude-pattern>
-	<exclude-pattern>js/localization/</exclude-pattern>
-	<exclude-pattern>js/jquery-sortable.js</exclude-pattern>
 	<exclude-pattern>min.css</exclude-pattern>
-	<exclude-pattern>libs/WebAppick/</exclude-pattern>
-	<exclude-pattern>tests/cli/</exclude-pattern>
-	<exclude-pattern>includes/wc-legacy-support.php</exclude-pattern>
-	<exclude-pattern>includes/classes/class-woo-feed-engine.php</exclude-pattern>
-	<exclude-pattern>includes/classes/class-woo-feed-list-table.php</exclude-pattern>
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/languages/*</exclude-pattern>
-	<exclude-pattern>*/inc/elementor/assets/*</exclude-pattern>
-	
+	<exclude-pattern>*/assets*</exclude-pattern>
+
 
 	<!-- Show progress, show the error codes for each message (source). -->
 	<arg value="ps" />
@@ -27,25 +20,25 @@
 	<arg name="basepath" value="./" />
 
 	<!-- Check up to 8 files simultaneously. -->
-<!--	<arg name="parallel" value="4" />-->
+	<!--	<arg name="parallel" value="4" />-->
 
 	<!-- Configs -->
 	<config name="minimum_supported_wp_version" value="5.0" /> <!-- Minimum WP Version -->
 	<config name="testVersion" value="5.6" /> <!-- Minimum PHP Version -->
 	<config name="text_domain" value="unlimited-theme-addons"/>
-	<config name="installed_paths" value="F:\localproject\htdocs\wpcs" />
+	<config name="installed_paths" value="C:\xampp\htdocs\wpcs" />
 
 	<!-- Rules -->
-	
+
 	<rule ref="Squiz">
 		<exclude name="Squiz"/>
 		<exclude-pattern>index.php</exclude-pattern>
 	</rule>
 	<rule ref="WordPress">
-        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
-        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
-        <exclude name="WordPress.NamingConventions"/>
-    </rule>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+		<exclude name="WordPress.NamingConventions"/>
+	</rule>
 	<rule ref="WordPress-Core" />
 	<rule ref="WordPress-Extra" />
 	<!--<rule ref="WordPress-VIP-Go" /> -->
@@ -57,9 +50,9 @@
 	</rule>
 
 	<!--<rule ref="PHPCompatibility">-->
-		<!--<exclude-pattern>tests/</exclude-pattern>-->
-		<!--&lt;!&ndash; Marked some internal method with DoubleUnderscore before method name &ndash;&gt;-->
-		<!--<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore"/>-->
+	<!--<exclude-pattern>tests/</exclude-pattern>-->
+	<!--&lt;!&ndash; Marked some internal method with DoubleUnderscore before method name &ndash;&gt;-->
+	<!--<exclude name="PHPCompatibility.FunctionNameRestrictions.ReservedFunctionNames.MethodDoubleUnderscore"/>-->
 	<!--</rule>-->
 
 	<rule ref="WordPress.Files.FileName.InvalidClassFileName">

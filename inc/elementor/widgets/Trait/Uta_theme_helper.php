@@ -30,11 +30,7 @@ trait Uta_theme_helper
         $this->start_controls_section(
             'uta_section_load_more_btn',
             [
-<<<<<<< HEAD
                 'label' => __('Load More Button Style', 'unlimited-theme-addons'),
-=======
-                'label' => __('Load More Button Style', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_load_more' => [ 'yes', '1', 'true' ],
@@ -45,11 +41,7 @@ trait Uta_theme_helper
         $this->add_responsive_control(
             'uta_post_grid_load_more_btn_padding',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Padding', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Padding', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -61,11 +53,7 @@ trait Uta_theme_helper
         $this->add_responsive_control(
             'uta_post_grid_load_more_btn_margin',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Margin', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Margin', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -84,20 +72,12 @@ trait Uta_theme_helper
         $this->start_controls_tabs('uta_post_grid_load_more_btn_tabs');
 
         // Normal State Tab
-<<<<<<< HEAD
         $this->start_controls_tab('uta_post_grid_load_more_btn_normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons') ]);
-=======
-        $this->start_controls_tab('uta_post_grid_load_more_btn_normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons-lite') ]);
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
 
         $this->add_control(
             'uta_post_grid_load_more_btn_normal_text_color',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Text Color', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Text Color', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::COLOR,
                 'default' => '#fff',
                 'selectors' => [
@@ -109,11 +89,7 @@ trait Uta_theme_helper
         $this->add_control(
             'uta_cta_btn_normal_bg_color',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Background Color', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Background Color', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::COLOR,
                 'default' => '#29d8d8',
                 'selectors' => [
@@ -126,11 +102,7 @@ trait Uta_theme_helper
             Group_Control_Border::get_type(),
             [
                 'name' => 'uta_post_grid_load_more_btn_normal_border',
-<<<<<<< HEAD
                 'label' => esc_html__('Border', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Border', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'selector' => '{{WRAPPER}} .uta-load-more-button',
             ]
         );
@@ -138,11 +110,7 @@ trait Uta_theme_helper
         $this->add_control(
             'uta_post_grid_load_more_btn_border_radius',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Border Radius', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Border Radius', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -166,20 +134,12 @@ trait Uta_theme_helper
         $this->end_controls_tab();
 
         // Hover State Tab
-<<<<<<< HEAD
         $this->start_controls_tab('uta_post_grid_load_more_btn_hover', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons') ]);
-=======
-        $this->start_controls_tab('uta_post_grid_load_more_btn_hover', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons-lite') ]);
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
 
         $this->add_control(
             'uta_post_grid_load_more_btn_hover_text_color',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Text Color', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Text Color', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::COLOR,
                 'default' => '#fff',
                 'selectors' => [
@@ -191,11 +151,7 @@ trait Uta_theme_helper
         $this->add_control(
             'uta_post_grid_load_more_btn_hover_bg_color',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Background Color', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Background Color', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::COLOR,
                 'default' => '#27bdbd',
                 'selectors' => [
@@ -207,11 +163,7 @@ trait Uta_theme_helper
         $this->add_control(
             'uta_post_grid_load_more_btn_hover_border_color',
             [
-<<<<<<< HEAD
                 'label' => esc_html__('Border Color', 'unlimited-theme-addons'),
-=======
-                'label' => esc_html__('Border Color', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -235,7 +187,6 @@ trait Uta_theme_helper
         $this->add_responsive_control(
             'uta_post_grid_loadmore_button_alignment',
             [
-<<<<<<< HEAD
                 'label' => __('Button Alignment', 'unlimited-theme-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
@@ -249,21 +200,6 @@ trait Uta_theme_helper
                     ],
                     'flex-end' => [
                         'title' => __('Right', 'unlimited-theme-addons'),
-=======
-                'label' => __('Button Alignment', 'unlimited-theme-addons-lite'),
-                'type' => Controls_Manager::CHOOSE,
-                'options' => [
-                    'flex-start' => [
-                        'title' => __('Left', 'unlimited-theme-addons-lite'),
-                        'icon' => 'fa fa-align-left',
-                    ],
-                    'center' => [
-                        'title' => __('Center', 'unlimited-theme-addons-lite'),
-                        'icon' => 'fa fa-align-center',
-                    ],
-                    'flex-end' => [
-                        'title' => __('Right', 'unlimited-theme-addons-lite'),
->>>>>>> 21df55c1f3f9d85439dc0b25aa6e1f5b240af475
                         'icon' => 'fa fa-align-right',
                     ],
                 ],

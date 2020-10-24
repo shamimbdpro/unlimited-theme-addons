@@ -10,7 +10,9 @@ trait Product_Grid
 {
     public static function render_template( $args, $settings ) {
         $query = new \WP_Query($args);
+
         ob_start();
+
         if ( $query->have_posts() ) {
             while ( $query->have_posts() ) {
                 $query->the_post();
@@ -32,10 +34,9 @@ trait Product_Grid
 
                             <span class="price"><?php echo $product->get_price_html(); ?></span>
                         </a>
-                        <?php // echo woocommerce_template_loop_add_to_cart(); ?>
+                        <?php echo woocommerce_template_loop_add_to_cart(); ?>
                     </li>
                 <?php }else {
-
                     wc_get_template_part('content', 'product');
                 }
             }
