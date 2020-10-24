@@ -5,7 +5,7 @@ namespace Elementor;
 if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Pricing
-class uta_Widget_Pricing extends Widget_Base
+class Uta_Pricing extends Widget_Base
 {
 
     public function get_name() {
@@ -194,4 +194,4 @@ class uta_Widget_Pricing extends Widget_Base
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type(new uta_Widget_Pricing());
+Plugin::instance()->widgets_manager->register_widget_type(new Uta_Pricing());

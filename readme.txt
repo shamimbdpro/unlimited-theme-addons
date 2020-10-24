@@ -1,10 +1,10 @@
 
-=== Unlimited Theme Addons ===
+=== Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi
-Tags: addons, elementor, theme addons, elementor widget  
+Tags: addons, elementor, theme addons, elementor widget  , unlimited addons
 Requires at least: 4.6
 Tested up to: 5.5
-Stable tag: 0.0.1
+Stable tag: 0.0.3
 License: GPLv2 or later
 
 == Description ==
@@ -29,6 +29,9 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 9. Blog
 
 == Changelog ==
+
+= 0.0.2 =
+*Css Issue Fixed*
 
 = 0.0.1 =
 *initial release*

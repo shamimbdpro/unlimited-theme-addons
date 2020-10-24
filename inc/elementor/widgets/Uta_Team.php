@@ -3,7 +3,7 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // team
-class uta_Widget_Team extends Widget_Base {
+class Uta_Team extends Widget_Base {
 
     public function get_name() {
         return 'uta-team';
@@ -159,4 +159,4 @@ class uta_Widget_Team extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Team() );
+Plugin::instance()->widgets_manager->register_widget_type( new Uta_Team() );

@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
-class uta_Widget_Testimonials extends Widget_Base {
+class Uta_Testimonials extends Widget_Base {
  
    public function get_name() {
       return 'uta-testimonials';
@@ -116,4 +116,4 @@ class uta_Widget_Testimonials extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Testimonials() );
+Plugin::instance()->widgets_manager->register_widget_type( new Uta_Testimonials() );

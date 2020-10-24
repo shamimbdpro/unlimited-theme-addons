@@ -4,7 +4,7 @@ namespace Elementor;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Button
-class uta_Widget_Button extends Widget_Base {
+class Uta_Button extends Widget_Base {
  
    public function get_name() {
       return 'uta-button';
@@ -188,4 +188,4 @@ class uta_Widget_Button extends Widget_Base {
  
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Button() );
+Plugin::instance()->widgets_manager->register_widget_type( new Uta_Button() );

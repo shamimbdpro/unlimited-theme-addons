@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // Call to Action
-class uta_Widget_Video extends Widget_Base {
+class Uta_Video extends Widget_Base {
  
    public function get_name() {
       return 'uta-video';
@@ -91,4 +91,4 @@ class uta_Widget_Video extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Video() );
+Plugin::instance()->widgets_manager->register_widget_type( new Uta_Video() );

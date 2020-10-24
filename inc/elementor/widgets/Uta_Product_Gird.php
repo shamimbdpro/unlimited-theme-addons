@@ -6,7 +6,7 @@ if ( ! defined('ABSPATH') ) {
 }
 // Exit if accessed directly
 
-class Elementor_Widget_Product_Grid extends Widget_Base
+class Uta_Product_Grid extends Widget_Base
 {
     use Uta_theme_helper, Product_Grid;
 
@@ -594,4 +594,4 @@ class Elementor_Widget_Product_Grid extends Widget_Base
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type(new Elementor_Widget_Product_Grid());
+Plugin::instance()->widgets_manager->register_widget_type(new Uta_Product_Grid());

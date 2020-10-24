@@ -62,17 +62,17 @@ class Uta_Elementor_CustomElement {
  
     // We check if the Elementor plugin has been installed / activated.
     if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-blog.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-button.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Blog.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Button.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/Trait/Uta_theme_helper.php');
          include_once(plugin_dir_path( __FILE__ ).'/widgets/template/Product_Grid.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-product-gird.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-pricing.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-info-box.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-team.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-testimonials.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-title.php');
-         include_once(plugin_dir_path( __FILE__ ).'/widgets/widget-video.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Product_Gird.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Pricing.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Infobox.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Team.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Testimonials.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_title.php');
+         include_once(plugin_dir_path( __FILE__ ).'/widgets/Uta_Video.php');
       }
 	}
 

@@ -3,7 +3,7 @@ namespace Elementor;
  
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 // blog
-class uta_Widget_Blog extends Widget_Base {
+class Uta_Blog extends Widget_Base {
  
    public function get_name() {
       return 'uta-blog';
@@ -137,4 +137,4 @@ class uta_Widget_Blog extends Widget_Base {
    }
  
 }
-Plugin::instance()->widgets_manager->register_widget_type( new uta_Widget_Blog() );
+Plugin::instance()->widgets_manager->register_widget_type( new Uta_Blog() );
