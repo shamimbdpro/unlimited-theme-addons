@@ -1,20 +1,20 @@
-<?php 
+<?php
 namespace Elementor;
- 
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Title
 class Uta_Testimonials extends Widget_Base {
- 
+
    public function get_name() {
       return 'uta-testimonials';
    }
- 
+
    public function get_title() {
       return esc_html__( 'UTA Testimonials', 'unlimited-theme-addons' );
    }
- 
-   public function get_icon() { 
+
+   public function get_icon() {
         return 'eicon-testimonial';
    }
 
@@ -44,13 +44,13 @@ class Uta_Testimonials extends Widget_Base {
 			 ],
          ]
       );
-      
+
       $repeater->add_control(
          'name',
          [
 			 'label' => __( 'Name', 'unlimited-theme-addons' ),
 			 'type' => \Elementor\Controls_Manager::TEXT,
-            
+
          ]
       );
 
@@ -80,30 +80,30 @@ class Uta_Testimonials extends Widget_Base {
 
          ]
       );
-      
+
       $this->end_controls_section();
 
    }
 
    protected function render( $instance = [] ) {
- 
+
       // get our input from the widget settings.
-       
+
       $settings = $this->get_settings_for_display(); ?>
-      
+
       <div class="uta-testimonials">
          <?php foreach ( $settings['testimonial_count'] as $index => $testimonial ) :
          $testimonialText = $this->get_repeater_setting_key( 'feedback' , 'testimonial_count' , $index );
          $name = $this->get_repeater_setting_key( 'name' , 'testimonial_count' , $index );
          $designation = $this->get_repeater_setting_key( 'designation' , 'testimonial_count' , $index );
          $this->add_inline_editing_attributes( $testimonialText , 'basic' );
-         $this->add_inline_editing_attributes( $name , 'basic' );         
+         $this->add_inline_editing_attributes( $name , 'basic' );
          $this->add_inline_editing_attributes( $designation , 'basic' ); ?>
          <div class="testimonial-item">
             <div class="row justify-content-center">
                <div class="col-sm-9 text-center">
                   <img src="<?php echo esc_url( $testimonial['image']['url'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>">
-                  <p <?php echo esc_html( $this->get_render_attribute_string( $testimonialText ) ); ?>><?php echo esc_html( $testimonial['testimonial'] ); ?></p>
+                  <p <?php echo esc_html( $this->get_render_attribute_string( $testimonialText ) ); ?>><?php echo esc_html( $testimonial['feedback'] ); ?></p>
                   <h5 <?php echo esc_html(  $this->get_render_attribute_string( $name ) ); ?>><?php echo esc_html( $testimonial['name'] ); ?></h5>
                   <span <?php echo esc_html( $this->get_render_attribute_string( $designation ) ); ?>><?php echo esc_html( $testimonial['designation'] ); ?></span>
                </div>
@@ -112,8 +112,8 @@ class Uta_Testimonials extends Widget_Base {
          <?php endforeach; ?>
       </div>
 
-   <?php } 
- 
+   <?php }
+
 }
 
 Plugin::instance()->widgets_manager->register_widget_type( new Uta_Testimonials() );

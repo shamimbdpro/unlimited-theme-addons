@@ -113,6 +113,7 @@
 
 .uta-pricing-table ul li {
     line-height: 40px;
+    list-style:none;
 }
 
 .uta-pricing-table .uta-buy-button {
