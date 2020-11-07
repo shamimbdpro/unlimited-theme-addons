@@ -30,7 +30,7 @@ class Unlimited_Theme_Addons {
     }
 
     public function register_hooks() {
-        add_action( 'elementor/elements/categories_registered', array($this, 'uta_add_elementor_widget_categories') );
+        add_action( 'elementor/elements/categories_registered', array( $this, 'uta_add_elementor_widget_categories' ) );
         add_action( 'elementor/widgets/widgets_registered', array( $this, 'widgets_registered' ) );
         add_action( 'wp_enqueue_scripts', array( $this, 'load_css_and_js' ) );
         if ( is_admin() ) {
@@ -43,20 +43,98 @@ class Unlimited_Theme_Addons {
     public function load_css_and_js(){
 
         // load css
-        wp_enqueue_style( 'uta-magnific-popup',  UTA_PLUGIN_URL . 'assets/frontend/css/magnific-popup.css', array(), UTA_PLUGIN_VERSION );
-        wp_enqueue_style( 'uta-slick', UTA_PLUGIN_URL . 'assets/frontend/css/slick.css', array(), UTA_PLUGIN_VERSION );
-        wp_enqueue_style( 'uta-slick-theme', UTA_PLUGIN_URL . 'assets/frontend/css/slick-theme.css', array(), UTA_PLUGIN_VERSION );
-        wp_enqueue_style( 'uta-font-awesome', UTA_PLUGIN_URL . 'assets/frontend/css/font-awesome.css', array(), UTA_PLUGIN_VERSION );
+        wp_enqueue_style(
+            'uta-magnific-popup',
+            UTA_PLUGIN_URL . 'assets/frontend/css/magnific-popup.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+        wp_enqueue_style(
+            'uta-slick',
+            UTA_PLUGIN_URL . 'assets/frontend/css/slick.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+        wp_enqueue_style(
+            'uta-slick-theme',
+            UTA_PLUGIN_URL . 'assets/frontend/css/slick-theme.css',
+            array(),
+            UTA_PLUGIN_VERSION );
+        wp_enqueue_style(
+            'uta-font-awesome',
+            UTA_PLUGIN_URL . 'assets/frontend/css/font-awesome.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
 
-        wp_enqueue_style( 'uta-product-gird', UTA_PLUGIN_URL . 'assets/frontend/css/product-grid.css', array(), UTA_PLUGIN_VERSION );
-        wp_enqueue_style( 'uta-blog', UTA_PLUGIN_URL . 'assets/frontend/css/post.css', array(), UTA_PLUGIN_VERSION );
-        wp_enqueue_style( 'uta-testimonial', UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.css', array(), UTA_PLUGIN_VERSION );
+        wp_enqueue_style(
+            'uta-product-gird',
+            UTA_PLUGIN_URL . 'assets/frontend/css/product-grid.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+        wp_enqueue_style(
+            'uta-blog',
+            UTA_PLUGIN_URL . 'assets/frontend/css/post.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+        wp_enqueue_style(
+            'uta-twentytwenty',
+            UTA_PLUGIN_URL . 'assets/frontend/css/twentytwenty.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+        wp_enqueue_style(
+            'uta-testimonial',
+            UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
 
         // Load Js
-        wp_enqueue_script( 'uta-magnific-popup', UTA_PLUGIN_URL . 'assets/frontend/js/magnific-popup.js', array( 'jquery' ), UTA_PLUGIN_VERSION, true );
-        wp_enqueue_script( 'uta-slick', UTA_PLUGIN_URL . 'assets/frontend/js/slick.js', array( 'jquery' ), UTA_PLUGIN_VERSION, true );
-        wp_enqueue_script( 'uta-skip-link-focus-fix', UTA_PLUGIN_URL . 'assets/frontend/js/skip-link-focus-fix.js', array(), UTA_PLUGIN_VERSION, true );
-        wp_enqueue_script( 'uta-main', UTA_PLUGIN_URL . 'assets/frontend/js/main.js', array( 'jquery' ), UTA_PLUGIN_VERSION, true );
+        wp_enqueue_script(
+            'uta-magnific-popup',
+            UTA_PLUGIN_URL . 'assets/frontend/js/magnific-popup.js',
+            array( 'jquery' ),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'uta-slick',
+            UTA_PLUGIN_URL . 'assets/frontend/js/slick.js',
+            array( 'jquery' ),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'uta-jquery-event-move',
+            UTA_PLUGIN_URL . 'assets/frontend/js/jquery.event.move.js',
+            array( 'jquery' ),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'uta-twentytwenty',
+            UTA_PLUGIN_URL . 'assets/frontend/js/jquery.twentytwenty.js',
+            array( 'jquery' ),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'uta-skip-link-focus-fix',
+            UTA_PLUGIN_URL . 'assets/frontend/js/skip-link-focus-fix.js',
+            array(),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+        wp_enqueue_script(
+            'uta-main',
+            UTA_PLUGIN_URL . 'assets/frontend/js/main.js',
+            array( 'jquery' ),
+            UTA_PLUGIN_VERSION,
+            true
+        );
 
     }
 
@@ -71,6 +149,7 @@ class Unlimited_Theme_Addons {
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-grid/Uta_Product_Gird.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/pricing/Uta_Pricing.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/infobox/Uta_Infobox.php');
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/team/Uta_Team.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/testimonials/Uta_Testimonials.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/title/Uta_title.php');
