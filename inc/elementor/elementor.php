@@ -142,18 +142,42 @@ class Unlimited_Theme_Addons {
  
     // We check if the Elementor plugin has been installed / activated.
     if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
+
+          // Blog.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/blog/Uta_Blog.php');
+
+         // Button.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/button/Uta_Button.php');
+
+        // Product Grid.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/Trait/Uta_theme_helper.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/template/Product_Grid.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-grid/Uta_Product_Gird.php');
+
+        // Pricing.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/pricing/Uta_Pricing.php');
+
+        // Infobox.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/infobox/Uta_Infobox.php');
+
+        // Image comparison.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php');
+
+        // Blog.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/team/Uta_Team.php');
+
+        // Testimonial.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/testimonials/Uta_Testimonials.php');
+
+        // Title
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/title/Uta_title.php');
+
+        // Video
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/video/Uta_Video.php');
+
+         // Client Logo.
+//        include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/client-logo/Uta_client_logo.php');
+
       }
 	}
 
