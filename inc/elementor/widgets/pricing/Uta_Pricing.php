@@ -32,15 +32,15 @@ class Uta_Pricing extends Widget_Base
             'pricing_section',
             [
                 'label' => esc_html__('Pricing', 'unlimited-theme-addons'),
-                'type' => Controls_Manager::SECTION,
+                'type'  => Controls_Manager::SECTION,
             ]
         );
 
         $this->add_control(
             'title',
             [
-                'label' => __('title', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __('title', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => 'Standard Plan',
             ]
         );
@@ -48,8 +48,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'price',
             [
-                'label' => __('Price', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __('Price', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => '70',
             ]
         );
@@ -57,8 +57,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'currency',
             [
-                'label' => __('Currency', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __('Currency', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => __('$', 'unlimited-theme-addons'),
             ]
         );
@@ -66,15 +66,15 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'package',
             [
-                'label' => __('Package', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::SELECT,
+                'label'   => __('Package', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::SELECT,
                 'default' => 'Yealry',
                 'options' => [
-                    'Daily' => __('Daily', 'unlimited-theme-addons'),
-                    'Weekly' => __('Weekly', 'unlimited-theme-addons'),
+                    'Daily'   => __('Daily', 'unlimited-theme-addons'),
+                    'Weekly'  => __('Weekly', 'unlimited-theme-addons'),
                     'Monthly' => __('Monthly', 'unlimited-theme-addons'),
-                    'Yealry' => __('Yealry', 'unlimited-theme-addons'),
-                    'none' => __('None', 'unlimited-theme-addons'),
+                    'Yealry'  => __('Yealry', 'unlimited-theme-addons'),
+                    'none'    => __('None', 'unlimited-theme-addons'),
                 ],
             ]
         );
@@ -84,8 +84,8 @@ class Uta_Pricing extends Widget_Base
         $feature->add_control(
             'feature',
             [
-                'label' => __('Feature', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXTAREA,
+                'label'   => __('Feature', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXTAREA,
                 'default' => __('10 Free Domain Names', 'unlimited-theme-addons'),
             ]
         );
@@ -93,10 +93,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'feature_list',
             [
-                'label' => __('Feature List', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::REPEATER,
-                'fields' => $feature->get_controls(),
-                'default' => [
+                'label'       => __('Feature List', 'unlimited-theme-addons'),
+                'type'        => \Elementor\Controls_Manager::REPEATER,
+                'fields'      => $feature->get_controls(),
+                'default'     => [
                     [
                         'feature' => __('5GB Storage Space', 'unlimited-theme-addons'),
                     ],
@@ -120,8 +120,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'btn_text',
             [
-                'label' => __('button text', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __('button text', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => 'Select Plan',
             ]
         );
@@ -129,8 +129,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'btn_url',
             [
-                'label' => __('button URL', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __('button URL', 'unlimited-theme-addons'),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => '#',
             ]
         );
@@ -138,12 +138,12 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'recommended',
             [
-                'label' => __('Recommended', 'unlimited-theme-addons'),
-                'type' => \Elementor\Controls_Manager::SWITCHER,
-                'label_on' => __('On', 'unlimited-theme-addons'),
-                'label_off' => __('Off', 'unlimited-theme-addons'),
+                'label'        => __('Recommended', 'unlimited-theme-addons'),
+                'type'         => \Elementor\Controls_Manager::SWITCHER,
+                'label_on'     => __('On', 'unlimited-theme-addons'),
+                'label_off'    => __('Off', 'unlimited-theme-addons'),
                 'return_value' => 'on',
-                'default' => 'off',
+                'default'      => 'off',
             ]
         );
 

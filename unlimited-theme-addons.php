@@ -9,6 +9,10 @@
 * Text Domain: unlimited-theme-addons
 * License: GPL/GNU.
 * Domain Path: /languages
+* WP Requirement & Test
+* Requires at least: 4.0
+* Tested up to: 5.6
+* Requires PHP: 5.6
 */
 
 define('UTA_PLUGIN_FILE', __FILE__);
@@ -19,7 +23,13 @@ define('UTA_PLUGIN_VERSION', '1.0.4');
 
 /**----------------------------------------------------------------*/
 /* Include all file
-/*-----------------------------------------------------------------*/  
+/*-----------------------------------------------------------------*/
 
-include_once(dirname( __FILE__ ). '/inc/elementor/elementor.php');
- 
+/**
+ *
+ */
+include_once(dirname( __FILE__ ). '/inc/Uta_Loader.php');
+
+if( function_exists( 'unlimited_theme_addons_run' ) ){
+    unlimited_theme_addons_run();
+}

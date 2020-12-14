@@ -1,0 +1,79 @@
+
+/*--------------------------------------------------------------
+# Pricing
+--------------------------------------------------------------*/
+
+.uta-pricing-table {
+  text-align: center;
+  padding: 50px 30px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.uta-pricing-table h6 {
+  text-transform: uppercase;
+}
+
+.uta-pricing-table.recommended {
+  position: relative;
+}
+
+.uta-pricing-table.recommended:after {
+  position: absolute;
+  content: 'Recommended';
+  left: 27%;
+  top: -15px;
+  color: #fff;
+  padding: 3px 15px;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(142, 142, 142, 0.38);
+  box-shadow: 0px 10px 20px 0px rgba(142, 142, 142, 0.38);
+  border-radius: 20px;
+  background: #065FD4
+}
+
+.uta-pricing-table .uta-currency {
+  font-size: 16px;
+}
+
+.uta-pricing-table .uta-price {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin: 30px 0;
+}
+
+.uta-pricing-table>span {
+  color: #000;
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+.uta-pricing-table ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.uta-pricing-table ul li {
+  line-height: 40px;
+  list-style:none;
+}
+
+.uta-pricing-table .uta-buy-button {
+  color: #fff;
+  padding: 12px 40px;
+  display: inline-block;
+  border-radius: 30px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background: #065FD4
+}
+
+.uta-pricing-table .uta-buy-button:hover {
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(125, 66, 202, 0.4);
+  box-shadow: 0px 10px 20px 0px rgba(125, 66, 202, 0.4);
+}

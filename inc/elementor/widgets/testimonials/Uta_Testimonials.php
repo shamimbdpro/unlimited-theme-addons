@@ -28,7 +28,7 @@ class Uta_Testimonials extends Widget_Base {
          'testimonials_section',
          [
 			 'label' => esc_html__( 'Testimonials', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
 
@@ -37,8 +37,8 @@ class Uta_Testimonials extends Widget_Base {
       $repeater->add_control(
          'image',
          [
-			 'label' => __( 'Choose Photo', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::MEDIA,
+			 'label'   => __( 'Choose Photo', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::MEDIA,
 			 'default' => [
 				 'url' => \Elementor\Utils::get_placeholder_image_src(),
 			 ],
@@ -49,7 +49,7 @@ class Uta_Testimonials extends Widget_Base {
          'name',
          [
 			 'label' => __( 'Name', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'type'  => \Elementor\Controls_Manager::TEXT,
 
          ]
       );
@@ -58,7 +58,7 @@ class Uta_Testimonials extends Widget_Base {
          'designation',
          [
 			 'label' => __( 'Designation', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'type'  => \Elementor\Controls_Manager::TEXT,
          ]
       );
 
@@ -66,20 +66,32 @@ class Uta_Testimonials extends Widget_Base {
          'feedback',
          [
 			 'label' => __( 'Testimonial', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXTAREA,
+			 'type'  => \Elementor\Controls_Manager::TEXTAREA,
          ]
       );
 
       $this->add_control(
          'testimonial_count',
          [
-			 'label' => __( 'Testimonial List', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::REPEATER,
-			 'fields' => $repeater->get_controls(),
+			 'label'       => __( 'Testimonial List', 'unlimited-theme-addons' ),
+			 'type'        => \Elementor\Controls_Manager::REPEATER,
+			 'fields'      => $repeater->get_controls(),
 			 'title_field' => '{{{name}}}',
 
          ]
       );
+
+       $this->add_control(
+           'uta-testimonial-ratings',
+           [
+               'label'        => __('Show Ratings', 'unlimited-theme-addons'),
+               'type'         => \Elementor\Controls_Manager::SWITCHER,
+               'label_on'     => __('On', 'unlimited-theme-addons'),
+               'label_off'    => __('Off', 'unlimited-theme-addons'),
+               'return_value' => 'on',
+               'default'      => 'on',
+           ]
+       );
 
       $this->end_controls_section();
 
@@ -99,11 +111,20 @@ class Uta_Testimonials extends Widget_Base {
          $this->add_inline_editing_attributes( $testimonialText , 'basic' );
          $this->add_inline_editing_attributes( $name , 'basic' );
          $this->add_inline_editing_attributes( $designation , 'basic' ); ?>
-         <div class="testimonial-item">
+         <div class="uta-testimonial-item">
             <div class="row justify-content-center">
                <div class="col-sm-9 text-center">
                   <img src="<?php echo esc_url( $testimonial['image']['url'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>">
                   <p <?php echo esc_html( $this->get_render_attribute_string( $testimonialText ) ); ?>><?php echo esc_html( $testimonial['feedback'] ); ?></p>
+                <?php if( 'on' == $settings['uta-testimonial-ratings'] ){?>
+                   <ul>
+                     <li><i class="fa fa-star"></i></li>
+                     <li><i class="fa fa-star"></i></li>
+                     <li><i class="fa fa-star"></i></li>
+                     <li><i class="fa fa-star"></i></li>
+                     <li><i class="fa fa-star"></i></li>
+                   </ul>
+               <?php }?>
                   <h5 <?php echo esc_html(  $this->get_render_attribute_string( $name ) ); ?>><?php echo esc_html( $testimonial['name'] ); ?></h5>
                   <span <?php echo esc_html( $this->get_render_attribute_string( $designation ) ); ?>><?php echo esc_html( $testimonial['designation'] ); ?></span>
                </div>

@@ -39,16 +39,16 @@ class Uta_Infobox extends Widget_Base
          'service_section',
          [
 			 'label' => esc_html__( 'Service Item', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
        $this->add_control(
            'icon',
            [
-               'label' => __( 'Icon', 'unlimited-theme-addons' ),
-               'type' => Controls_Manager::ICONS,
+               'label'   => __( 'Icon', 'unlimited-theme-addons' ),
+               'type'    => Controls_Manager::ICONS,
                'default' => [
-                   'value' => 'fas fa-star',
+                   'value'   => 'fas fa-star',
                    'library' => 'solid',
                ],
            ]
@@ -57,16 +57,16 @@ class Uta_Infobox extends Widget_Base
       $this->add_control(
          'title',
          [
-			 'label' => __( 'Title', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'label'   => __( 'Title', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXT,
 			 'default' => __('Design','unlimited-theme-addons'),
          ]
       );
       $this->add_control(
          'text',
          [
-			 'label' => __( 'Text', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXTAREA,
+			 'label'   => __( 'Text', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXTAREA,
 			 'default' => __('Lorem ipsum dummy text in print and website industry are usually use in these section','unlimited-theme-addons'),
          ]
       );

@@ -38,15 +38,15 @@ class Uta_Team extends Widget_Base {
             'team_section',
             [
                 'label' => esc_html__( 'team', 'unlimited-theme-addons' ),
-                'type' => Controls_Manager::SECTION,
+                'type'  => Controls_Manager::SECTION,
             ]
         );
 
         $this->add_control(
             'image',
             [
-                'label' => __( 'Choose photo', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::MEDIA,
+                'label'   => __( 'Choose photo', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
@@ -56,16 +56,16 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'name',
             [
-                'label' => __( 'Name', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __( 'Name', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => __( 'John Doe', 'unlimited-theme-addons' ),
             ]
         );
         $this->add_control(
             'designation',
             [
-                'label' => __( 'Designation', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __( 'Designation', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => __( 'App Developer', 'unlimited-theme-addons' ),
             ]
         );
@@ -74,10 +74,10 @@ class Uta_Team extends Widget_Base {
 
         $social->add_control(
             'social_icon', [
-                'label' => __( 'Social Icon', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::ICONS,
+                'label'   => __( 'Social Icon', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::ICONS,
                 'default' => [
-                    'value' => 'fab fa-facebook-f',
+                    'value'   => 'fab fa-facebook-f',
                     'library' => 'solid',
                 ],
             ]
@@ -85,8 +85,8 @@ class Uta_Team extends Widget_Base {
 
         $social->add_control(
             'social_url', [
-                'label' => __( 'Socia URL', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::TEXT,
+                'label'   => __( 'Socia URL', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => '#',
             ]
         );
@@ -94,31 +94,31 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'social_media',
             [
-                'label' => __( 'social profile', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::REPEATER,
-                'fields' => $social->get_controls(),
+                'label'       => __( 'social profile', 'unlimited-theme-addons' ),
+                'type'        => \Elementor\Controls_Manager::REPEATER,
+                'fields'      => $social->get_controls(),
                 'title_field' => 'Social Item',
-                'default' => [
+                'default'     => [
                     [
                         'social_icon' => [
-                            'value' => 'fab fa-facebook-f',
+                            'value'   => 'fab fa-facebook-f',
                             'library' => 'fa-brands',
                         ],
-                        'social_url' => '#',
+                        'social_url'  => '#',
                     ],
                     [
                         'social_icon' => [
-                            'value' => 'fab fa-linkedin-in',
+                            'value'   => 'fab fa-linkedin-in',
                             'library' => 'fa-brands',
                         ],
-                        'social_url' => '#',
+                        'social_url'  => '#',
                     ],
                     [
                         'social_icon' => [
-                            'value' => 'fab fa-twitter',
+                            'value'   => 'fab fa-twitter',
                             'library' => 'fa-brands',
                         ],
-                        'social_url' => '#',
+                        'social_url'  => '#',
                     ],
 
                 ],

@@ -40,15 +40,15 @@ class Uta_Video extends Widget_Base {
          'video_section',
          [
 			 'label' => esc_html__( 'Video Image', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'image',
          [
-			 'label' => __( 'Choose Photo', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::MEDIA,
+			 'label'   => __( 'Choose Photo', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::MEDIA,
 			 'default' => [
 				 'url' => \Elementor\Utils::get_placeholder_image_src(),
 			 ],
@@ -58,8 +58,8 @@ class Uta_Video extends Widget_Base {
       $this->add_control(
          'overlay',
          [
-			 'label' => __( 'Overlay', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::COLOR,
+			 'label'   => __( 'Overlay', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::COLOR,
 			 'default' => '#',
          ]
       );
@@ -68,7 +68,7 @@ class Uta_Video extends Widget_Base {
          'play_button',
          [
 			 'label' => __( 'Play Button URL', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'type'  => \Elementor\Controls_Manager::TEXT,
          ]
       );
 

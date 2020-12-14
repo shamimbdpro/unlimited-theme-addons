@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Class Uta_Loader
+ */
+class Uta_Loader{
+    // Autoload dependency.
+    public function __construct(){
+        $this->load_dependency();
+    }
+
+    /**
+     * Load all Plugin FIle.
+     */
+    public function load_dependency(){
+        include_once(dirname( __FILE__ ). '/uta-helpers.php');
+        include_once(dirname( __FILE__ ). '/elementor/elementor.php');
+    }
+}
+
+/**
+ * Initialize load class .
+ */
+function unlimited_theme_addons_run(){
+    if( class_exists( 'Uta_Loader' ) ){
+        new Uta_Loader();
+    }
+}
+?>

@@ -40,14 +40,14 @@ class Uta_Button extends Widget_Base {
          'button_section',
          [
 			 'label' => esc_html__( 'Button', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'button_text', [
-			 'label' => __( 'Button Text', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'label'   => __( 'Button Text', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXT,
 			 'default' => __( 'Raed More', 'unlimited-theme-addons' ),
          ]
       );
@@ -55,22 +55,22 @@ class Uta_Button extends Widget_Base {
       $this->add_control(
          'button_icon',
          [
-			 'label' => __( 'Icon', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::SWITCHER,
-			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
-			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'label'        => __( 'Icon', 'unlimited-theme-addons' ),
+			 'type'         => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on'     => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off'    => __( 'No', 'unlimited-theme-addons' ),
 			 'return_value' => 'yes',
-			 'default' => 'no',
+			 'default'      => 'no',
          ]
       );
 
        $this->add_control(
            'icon',
            [
-               'label' => __( 'Icon', 'unlimited-theme-addons' ),
-               'type' => Controls_Manager::ICONS,
-               'default' => [
-                   'value' => 'fas fa-star',
+               'label'     => __( 'Icon', 'unlimited-theme-addons' ),
+               'type'      => Controls_Manager::ICONS,
+               'default'   => [
+                   'value'   => 'fas fa-star',
                    'library' => 'solid',
                ],
                'condition' => [ 'button_icon' => 'yes' ],
@@ -79,8 +79,8 @@ class Uta_Button extends Widget_Base {
 
       $this->add_control(
          'button_url', [
-			 'label' => __( 'Button URL', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'label'   => __( 'Button URL', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXT,
 			 'default' => '#',
          ]
       );      
@@ -88,77 +88,77 @@ class Uta_Button extends Widget_Base {
       $this->add_control(
          'popup',
          [
-			 'label' => __( 'Popup Video', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::SWITCHER,
-			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
-			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'label'        => __( 'Popup Video', 'unlimited-theme-addons' ),
+			 'type'         => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on'     => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off'    => __( 'No', 'unlimited-theme-addons' ),
 			 'return_value' => 'yes',
-			 'default' => 'no',
+			 'default'      => 'no',
          ]
       );
 
       $this->add_control(
          'align',
          [
-			 'label' => __( 'Alignment', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::CHOOSE,
+			 'label'   => __( 'Alignment', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::CHOOSE,
 			 'options' => [
-				 'left' => [
+				 'left'   => [
 					 'title' => __( 'Left', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-left',
+					 'icon'  => 'fa fa-align-left',
 				 ],
 				 'center' => [
 					 'title' => __( 'Center', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-center',
+					 'icon'  => 'fa fa-align-center',
 				 ],
-				 'right' => [
+				 'right'  => [
 					 'title' => __( 'Right', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-right',
+					 'icon'  => 'fa fa-align-right',
 				 ],
 			 ],
 			 'default' => 'left',
-			 'toggle' => true,
+			 'toggle'  => true,
          ]
       );
 
        $this->add_control(
          'drop_shadow',
          [
-			 'label' => __( 'Drop Shadow', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::SWITCHER,
-			 'label_on' => __( 'Show', 'unlimited-theme-addons' ),
-			 'label_off' => __( 'Hide', 'unlimited-theme-addons' ),
+			 'label'        => __( 'Drop Shadow', 'unlimited-theme-addons' ),
+			 'type'         => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on'     => __( 'Show', 'unlimited-theme-addons' ),
+			 'label_off'    => __( 'Hide', 'unlimited-theme-addons' ),
 			 'return_value' => 'yes',
-			 'default' => 'yes',
+			 'default'      => 'yes',
          ]
       );
 
       $this->add_control(
          'bordered',
          [
-			 'label' => __( 'Bordered', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::SWITCHER,
-			 'label_on' => __( 'Yes', 'unlimited-theme-addons' ),
-			 'label_off' => __( 'No', 'unlimited-theme-addons' ),
+			 'label'        => __( 'Bordered', 'unlimited-theme-addons' ),
+			 'type'         => \Elementor\Controls_Manager::SWITCHER,
+			 'label_on'     => __( 'Yes', 'unlimited-theme-addons' ),
+			 'label_off'    => __( 'No', 'unlimited-theme-addons' ),
 			 'return_value' => 'yes',
-			 'default' => 'no',
+			 'default'      => 'no',
          ]
       );
 
       $this->add_control(
          'button_radius',
          [
-			 'label' => __( 'Button Radius', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SLIDER,
+			 'label'      => __( 'Button Radius', 'unlimited-theme-addons' ),
+			 'type'       => Controls_Manager::SLIDER,
 			 'size_units' => [ 'px', '%' ],
-			 'range' => [
+			 'range'      => [
 				 'px' => [
-					 'min' => 0,
-					 'max' => 50,
+					 'min'  => 0,
+					 'max'  => 50,
 					 'step' => 1,
 				 ],
 			 ],
-			 'default' => [
+			 'default'    => [
 				 'unit' => 'px',
 				 'size' => 0,
 			 ],

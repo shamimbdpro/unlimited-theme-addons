@@ -41,15 +41,15 @@ class Uta_Twentytwenty extends Widget_Base {
          'uta_title_section',
          [
 			 'label' => esc_html__( 'Before After Slider', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
 
        $this->add_control(
            'uta_before_image',
            [
-               'label' => esc_html( 'Before Image', 'elementor-before-after-image-slider' ),
-               'type' => \Elementor\Controls_Manager::MEDIA,
+               'label'   => esc_html( 'Before Image', 'elementor-before-after-image-slider' ),
+               'type'    => \Elementor\Controls_Manager::MEDIA,
                'default' => [
                    'url' => \Elementor\Utils::get_placeholder_image_src(),
                ],
@@ -59,8 +59,8 @@ class Uta_Twentytwenty extends Widget_Base {
        $this->add_control(
            'uta_after_image',
            [
-               'label' => esc_html( 'After Image', 'elementor-before-after-image-slider' ),
-               'type' => \Elementor\Controls_Manager::MEDIA,
+               'label'   => esc_html( 'After Image', 'elementor-before-after-image-slider' ),
+               'type'    => \Elementor\Controls_Manager::MEDIA,
                'default' => [
                    'url' => \Elementor\Utils::get_placeholder_image_src(),
                ],
@@ -70,7 +70,7 @@ class Uta_Twentytwenty extends Widget_Base {
        $this->add_group_control(
            \Elementor\Group_Control_Image_Size::get_type(),
            [
-               'name' => 'thumbnail',
+               'name'    => 'thumbnail',
                'default' => 'full',
            ]
        );

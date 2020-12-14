@@ -1,0 +1,61 @@
+
+/*--------------------------------------------------------------
+## testimonials
+--------------------------------------------------------------*/
+
+.uta-testimonial-item {
+  background: #fff;
+  cursor: move;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  margin: 50px 30px 30px;
+  padding: 70px 50px 70px;
+  text-align: center;
+
+  img {
+    right: 0;
+    top: 0;
+    left: 0;
+    width: 100px;
+    border-radius: 50% !important;
+    margin: 0 auto 30px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    color: #2b2a5a;
+    font-size:16px;
+    line-height: 26px;
+  }
+
+  ul {
+    margin: 0;
+    color: #ffe552;
+    list-style: none;
+    padding-left: 0 !important;
+  }
+  ul li{
+    display: inline;
+  }
+
+
+  h5 {
+    font-size: 20px;
+    color: #2b2a5a;
+    margin-bottom: 5px;
+  }
+
+  span {
+    color: #2b2a5a;
+    opacity: .8;
+  }
+
+
+}
+
+
+.testimonials .slick-prev:before,
+.testimonials .slick-next:before {
+  font-size: 30px;
+}

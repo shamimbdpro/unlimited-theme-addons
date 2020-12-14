@@ -23,7 +23,7 @@ class Unlimited_Theme_Addons {
             'uta-elements',
             [
                 'title' => esc_html__( 'uta Elements', 'unlimited-theme-addons' ),
-                'icon' => 'fa fa-plug',
+                'icon'  => 'fa fa-plug',
             ]
         );
 
@@ -44,50 +44,15 @@ class Unlimited_Theme_Addons {
 
         // load css
         wp_enqueue_style(
-            'uta-magnific-popup',
-            UTA_PLUGIN_URL . 'assets/frontend/css/magnific-popup.css',
-            array(),
-            UTA_PLUGIN_VERSION
-        );
-        wp_enqueue_style(
-            'uta-slick',
-            UTA_PLUGIN_URL . 'assets/frontend/css/slick.css',
-            array(),
-            UTA_PLUGIN_VERSION
-        );
-        wp_enqueue_style(
-            'uta-slick-theme',
-            UTA_PLUGIN_URL . 'assets/frontend/css/slick-theme.css',
-            array(),
-            UTA_PLUGIN_VERSION );
-        wp_enqueue_style(
-            'uta-font-awesome',
-            UTA_PLUGIN_URL . 'assets/frontend/css/font-awesome.css',
+            'uta-library',
+            UTA_PLUGIN_URL . 'assets/frontend/css/css-library.min.css',
             array(),
             UTA_PLUGIN_VERSION
         );
 
         wp_enqueue_style(
-            'uta-product-gird',
-            UTA_PLUGIN_URL . 'assets/frontend/css/product-grid.css',
-            array(),
-            UTA_PLUGIN_VERSION
-        );
-        wp_enqueue_style(
-            'uta-blog',
-            UTA_PLUGIN_URL . 'assets/frontend/css/post.css',
-            array(),
-            UTA_PLUGIN_VERSION
-        );
-        wp_enqueue_style(
-            'uta-twentytwenty',
-            UTA_PLUGIN_URL . 'assets/frontend/css/twentytwenty.css',
-            array(),
-            UTA_PLUGIN_VERSION
-        );
-        wp_enqueue_style(
-            'uta-testimonial',
-            UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.css',
+            'uta-style',
+            UTA_PLUGIN_URL . 'assets/frontend/css/uta-style.min.css',
             array(),
             UTA_PLUGIN_VERSION
         );

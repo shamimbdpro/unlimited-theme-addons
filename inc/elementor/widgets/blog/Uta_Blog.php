@@ -38,14 +38,14 @@ class Uta_Blog extends Widget_Base {
          'blog_section',
          [
 			 'label' => esc_html__( 'Blog', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-			 'label' => __( 'Order', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::SELECT,
+			 'label'   => __( 'Order', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::SELECT,
 			 'default' => 'ASC',
 			 'options' => [
 				 'ASC'  => __( 'Ascending', 'unlimited-theme-addons' ),
@@ -97,10 +97,10 @@ class Uta_Blog extends Widget_Base {
       <div class="uta-blog">
                <?php
                $blog = new \WP_Query( array( 
-				   'post_type' => 'post',
-				   'posts_per_page' => '' != $settings['uta_blog_grid_per_page'] ? $settings['uta_blog_grid_per_page'] : 3,
+				   'post_type'           => 'post',
+				   'posts_per_page'      => '' != $settings['uta_blog_grid_per_page'] ? $settings['uta_blog_grid_per_page'] : 3,
 				   'ignore_sticky_posts' => true,
-				   'order' => $settings['order'],
+				   'order'               => $settings['order'],
                ));
                /* Start the Loop */
                while ( $blog->have_posts() ) : $blog->the_post(); ?>

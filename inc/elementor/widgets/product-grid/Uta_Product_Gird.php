@@ -41,6 +41,50 @@ class Uta_Product_Grid extends Widget_Base
 
     protected function _register_controls() {
 
+        $this->start_controls_section(
+            'uta_section_product_layout_settings',
+            [
+                'label' => esc_html__('Layouts', 'unlimited-theme-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'uta_product_grid_style_preset',
+            [
+                'label'        => esc_html__('Style Preset', 'unlimited-theme-addons'),
+                'type'         => Controls_Manager::SELECT,
+                'default'      => 'uta-product-simple',
+                'options'      => [
+                    'uta-product-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'uta-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons'),
+                ],
+                'prefix_class' => '',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'uta_product_grid_column',
+            [
+                'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
+                'type'         => Controls_Manager::SELECT,
+                'default'      => '4',
+                'options'      => [
+                    '1' => esc_html__('1', 'unlimited-theme-addons'),
+                    '2' => esc_html__('2', 'unlimited-theme-addons'),
+                    '3' => esc_html__('3', 'unlimited-theme-addons'),
+                    '4' => esc_html__('4', 'unlimited-theme-addons'),
+                    '5' => esc_html__('5', 'unlimited-theme-addons'),
+                    '6' => esc_html__('6', 'unlimited-theme-addons'),
+                ],
+                'toggle'       => true,
+                'prefix_class' => 'uta-product-grid-column%s-',
+            ]
+        );
+
+        $this->end_controls_section();
+
+
+
         // Content Controls
         $this->start_controls_section(
             'uta_section_product_grid_settings',
@@ -73,25 +117,6 @@ class Uta_Product_Grid extends Widget_Base
                     'sale-products'         => esc_html__('Sale Products', 'unlimited-theme-addons'),
                     'top-products'          => esc_html__('Top Rated Products', 'unlimited-theme-addons'),
                 ],
-            ]
-        );
-
-        $this->add_responsive_control(
-            'uta_product_grid_column',
-            [
-                'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
-                'type'         => Controls_Manager::SELECT,
-                'default'      => '4',
-                'options'      => [
-                    '1' => esc_html__('1', 'unlimited-theme-addons'),
-                    '2' => esc_html__('2', 'unlimited-theme-addons'),
-                    '3' => esc_html__('3', 'unlimited-theme-addons'),
-                    '4' => esc_html__('4', 'unlimited-theme-addons'),
-                    '5' => esc_html__('5', 'unlimited-theme-addons'),
-                    '6' => esc_html__('6', 'unlimited-theme-addons'),
-                ],
-                'toggle'       => true,
-                'prefix_class' => 'uta-product-grid-column%s-',
             ]
         );
 
@@ -128,19 +153,6 @@ class Uta_Product_Grid extends Widget_Base
             ]
         );
 
-        $this->add_control(
-            'uta_product_grid_style_preset',
-            [
-                'label'   => esc_html__('Style Preset', 'unlimited-theme-addons'),
-                'type'    => Controls_Manager::SELECT,
-                'default' => 'uta-product-simple',
-                'options' => [
-                    'uta-product-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'uta-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons'),
-                ],
-                'prefix_class' => '',
-            ]
-        );
 
         $this->add_control(
             'uta_product_grid_rating',
@@ -547,11 +559,11 @@ class Uta_Product_Grid extends Widget_Base
                     'terms'    => $settings['uta_product_grid_categories'],
                 ];
             }
-        } else if ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';
-        } else if ( 'sale-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'sale-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_query'] = [
                 'relation' => 'OR',
                 [
@@ -567,7 +579,7 @@ class Uta_Product_Grid extends Widget_Base
                     'type'    => 'numeric',
                 ],
             ];
-        } else if ( 'top-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'top-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = '_wc_average_rating';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';

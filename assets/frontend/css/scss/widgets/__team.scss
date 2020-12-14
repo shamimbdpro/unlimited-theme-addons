@@ -1,0 +1,52 @@
+
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.uta-team {
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+}
+
+.uta-team img {
+  border-bottom: 1px solid #fff !important;
+  width: 100%;
+}
+
+.uta-team h4 {
+  margin-bottom: 1px;
+  margin-top: 20px;
+  font-size: 25px;
+}
+
+.uta-team span {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 16px;
+}
+
+.uta-team ul {
+  display: inline-block;
+  margin-bottom: 25px;
+  text-align: center;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 0
+}
+
+.uta-team ul li{
+  margin: 0;
+}
+
+.uta-team li.list-inline-item a {
+  border: 1px solid #eee;
+  padding: 6px 7px;
+  margin: 0px 5px 29px 0px;
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}

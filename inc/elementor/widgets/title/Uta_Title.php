@@ -41,15 +41,15 @@ class Uta_Title extends Widget_Base {
          'title_section',
          [
 			 'label' => esc_html__( 'Title', 'unlimited-theme-addons' ),
-			 'type' => Controls_Manager::SECTION,
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
       
       $this->add_control(
          'title',
          [
-			 'label' => __( 'Title', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXT,
+			 'label'   => __( 'Title', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXT,
 			 'default' => __('Latest portfolio','unlimited-theme-addons'),
          ]
       );
@@ -58,8 +58,8 @@ class Uta_Title extends Widget_Base {
       $this->add_control(
          'sub-title',
          [
-			 'label' => __( 'Sub Title', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::TEXTAREA,
+			 'label'   => __( 'Sub Title', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::TEXTAREA,
 			 'default' => __('Nemo enim ipsam voluptatem quia voluptas aspernatur','unlimited-theme-addons'),
          ]
       );
@@ -67,24 +67,24 @@ class Uta_Title extends Widget_Base {
       $this->add_control(
          'align',
          [
-			 'label' => __( 'Alignment', 'unlimited-theme-addons' ),
-			 'type' => \Elementor\Controls_Manager::CHOOSE,
+			 'label'   => __( 'Alignment', 'unlimited-theme-addons' ),
+			 'type'    => \Elementor\Controls_Manager::CHOOSE,
 			 'options' => [
-				 'left' => [
+				 'left'   => [
 					 'title' => __( 'Left', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-left',
+					 'icon'  => 'fa fa-align-left',
 				 ],
 				 'center' => [
 					 'title' => __( 'Center', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-center',
+					 'icon'  => 'fa fa-align-center',
 				 ],
-				 'right' => [
+				 'right'  => [
 					 'title' => __( 'Right', 'unlimited-theme-addons' ),
-					 'icon' => 'fa fa-align-right',
+					 'icon'  => 'fa fa-align-right',
 				 ],
 			 ],
 			 'default' => 'left',
-			 'toggle' => true,
+			 'toggle'  => true,
          ]
       );
       
