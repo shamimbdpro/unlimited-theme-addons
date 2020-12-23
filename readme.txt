@@ -1,9 +1,9 @@
 
 === Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi
-Tags: addons, elementor, theme addons, elementor widget  , unlimited addons, elementor addons
+Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
-Tested up to: 5.5
+Tested up to: 5.6
 Stable tag: 1.0.4
 Requires PHP: 5.6
 License: GPLv2 or later

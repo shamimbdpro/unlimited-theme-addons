@@ -114,10 +114,14 @@ class Unlimited_Theme_Addons {
          // Button.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/button/Uta_Button.php');
 
-        // Product Grid.
+        // Product grid.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/Trait/Uta_theme_helper.php');
-         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/template/Product_Grid.php');
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-grid/template/Product_Grid.php');
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-grid/Uta_Product_Gird.php');
+
+         // Product list.
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php');
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-list/Uta_Product_list.php');
 
         // Pricing.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/pricing/Uta_Pricing.php');

@@ -41,7 +41,7 @@ trait Product_Grid
                 }
             }
         } else {
-            esc_html_e('<p class="no-posts-found">No posts found!</p>', 'unlimited-theme-addons');
+            _e('<p class="no-posts-found">No posts found!</p>', 'unlimited-theme-addons');
         }
         wp_reset_postdata();
         return ob_get_clean();
