@@ -17,14 +17,15 @@
 
 .uta-blog-item-content {
   padding: 20px; }
+  .uta-blog-item-content ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    align-items: center; }
 
-.uta-blog-item-content ul {
-  margin-bottom: 0;
-  margin: 0;
-  padding-left: 0;
-  list-style: none;
-  display: flex;
-  align-items: center; }
+ul.uta-blog-item-meta li {
+  list-style: none; }
 
 .uta-blog-item-content ul li i {
   margin-right: 10px;
@@ -32,17 +33,16 @@
 
 .uta-blog-item-img {
   position: relative; }
-
-.uta-blog-item-img span {
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  border: 1px solid #fff;
-  border-radius: 20px;
-  padding: 0 15px;
-  font-size: 14px; }
+  .uta-blog-item-img span {
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 0 15px;
+    font-size: 14px; }
 
 .uta-blog-item-img span a {
   color: #fff; }
@@ -52,15 +52,13 @@
   border-top: 1px solid #eceef2;
   padding-top: 15px;
   margin-top: 15px; }
-
-.uta-blog-item-meta .avatar {
-  border-radius: 50%;
-  margin-right: 10px; }
-
-.uta-blog-item-meta a {
-  display: flex;
-  align-items: center;
-  padding-right: 10px; }
+  .uta-blog-item-meta .avatar {
+    border-radius: 50%;
+    margin-right: 10px; }
+  .uta-blog-item-meta a {
+    display: flex;
+    align-items: center;
+    padding-right: 10px; }
 
 .uta-blog-item-meta .blog-meta-info {
   position: relative;
@@ -87,18 +85,15 @@
 
 .uta-blog-item-content h4 {
   font-size: 20px;
-  margin-bottom: 0;
   margin: 0;
   color: #333;
   padding-bottom: 20px; }
-
-.uta-blog-item-content p {
-  font-size: 16px; }
-
-.uta-blog-item-content .blog-btn {
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 16px; }
+  .uta-blog-item-content h4 p {
+    font-size: 16px; }
+  .uta-blog-item-content h4 .blog-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px; }
 
 .blog-item-date {
   margin: 0; }
@@ -368,6 +363,8 @@
 .uta-product-default .uta-product-list .woocommerce ul.products li.product {
   border-width: 0 !important;
   border: none; }
+  .uta-product-default .uta-product-list .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-weight: 700; }
 
 .uta-product-list .woocommerce ul.products {
   display: grid;

@@ -129,6 +129,19 @@ class Uta_Product_Grid extends Widget_Base
         );
 
         $this->add_control(
+            'uta_product_grid_order',
+            [
+                'label'   => __( 'Order', 'unlimited-theme-addons' ),
+                'type'    => \Elementor\Controls_Manager::SELECT,
+                'default' => 'ASC',
+                'options' => [
+                    'ASC'  => __( 'Ascending', 'unlimited-theme-addons' ),
+                    'DESC' => __( 'Descending', 'unlimited-theme-addons' ),
+                ],
+            ]
+        );
+
+        $this->add_control(
             'uta_product_grid_style_preset',
             [
                 'label'   => esc_html__('Style Preset', 'unlimited-theme-addons'),
@@ -149,6 +162,7 @@ class Uta_Product_Grid extends Widget_Base
                 'type'         => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'default'      => 'yes',
+                'condition' => [ 'uta_product_grid_style_preset' => 'uta-product-simple' ],
             ]
         );
 
@@ -177,7 +191,7 @@ class Uta_Product_Grid extends Widget_Base
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name'           => 'uta_peoduct_grid_border',
+                'name'           => 'uta_product_grid_border',
                 'fields_options' => [
                     'border' => [
                         'default' => 'solid',
@@ -203,7 +217,7 @@ class Uta_Product_Grid extends Widget_Base
         );
 
         $this->add_control(
-            'uta_peoduct_grid_border_radius',
+            'uta_product_grid_border_radius',
             [
                 'label'     => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::DIMENSIONS,
@@ -515,7 +529,7 @@ class Uta_Product_Grid extends Widget_Base
         $args = [
             'post_type'      => 'product',
             'posts_per_page' => '' != $settings['uta_product_grid_products_count'] ? $settings['uta_product_grid_products_count'] : 4,
-            'order'          => 'DESC',
+            'order'          => $settings['uta_product_grid_order'],
             'offset'         => $settings['product_offset'],
         ];
 
@@ -550,7 +564,7 @@ class Uta_Product_Grid extends Widget_Base
         } else if ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
-            $args['order']    = 'DESC';
+            $args['order']    = 'ASC';
         } else if ( 'sale-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_query'] = [
                 'relation' => 'OR',

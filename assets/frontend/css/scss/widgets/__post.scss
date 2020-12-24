@@ -23,15 +23,20 @@
 
 .uta-blog-item-content {
     padding: 20px;
-}
 
-.uta-blog-item-content ul {
-    margin-bottom: 0;
+  ul {
     margin: 0;
     padding-left: 0;
     list-style: none;
     display: flex;
     align-items: center;
+  }
+
+}
+
+
+ul.uta-blog-item-meta li{
+  list-style:none;
 }
 .uta-blog-item-content ul li i {
     margin-right: 10px;
@@ -40,9 +45,8 @@
 
 .uta-blog-item-img {
     position: relative;
-}
 
-.uta-blog-item-img span {
+  span{
     background: rgba(0, 0, 0, 0.50);
     -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
@@ -53,7 +57,11 @@
     border-radius: 20px;
     padding: 0 15px;
     font-size: 14px;
+  }
+
 }
+
+
 
 .uta-blog-item-img span a {
     color: #fff;
@@ -64,17 +72,22 @@
     border-top: 1px solid #eceef2;
     padding-top: 15px;
     margin-top: 15px;
-}
 
-.uta-blog-item-meta .avatar {
+ .avatar {
     border-radius: 50%;
     margin-right: 10px;
-}
-.uta-blog-item-meta a {
+  }
+
+  a {
     display: flex;
     align-items: center;
     padding-right: 10px;
+  }
+
+
 }
+
+
 
 .uta-blog-item-meta .blog-meta-info {
     position: relative;
@@ -106,23 +119,24 @@
 
 .uta-blog-item-content h4 {
    font-size: 20px;
-    margin-bottom: 0;
     margin: 0;
     color: #333;
-    padding-bottom: 20px
-}
+    padding-bottom: 20px;
 
-.uta-blog-item-content p {
-    font-size: 16px
-}
-
-
-
-.uta-blog-item-content .blog-btn {
+  p{
+      font-size: 16px
+    }
+  .blog-btn {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 16px;
+  }
 }
+
+
+
+
+
 .blog-item-date{
   margin: 0;
 }
