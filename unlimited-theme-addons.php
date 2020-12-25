@@ -30,6 +30,6 @@ define('UTA_PLUGIN_VERSION', '1.0.5');
  */
 include_once(dirname( __FILE__ ). '/inc/Uta_Loader.php');
 
-if( function_exists( 'unlimited_theme_addons_run' ) ){
+if ( function_exists( 'unlimited_theme_addons_run' ) ) {
     unlimited_theme_addons_run();
 }

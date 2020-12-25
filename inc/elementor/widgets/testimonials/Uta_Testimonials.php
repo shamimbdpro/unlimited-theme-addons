@@ -116,7 +116,7 @@ class Uta_Testimonials extends Widget_Base {
                <div class="col-sm-9 text-center">
                   <img src="<?php echo esc_url( $testimonial['image']['url'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>">
                   <p <?php echo esc_html( $this->get_render_attribute_string( $testimonialText ) ); ?>><?php echo esc_html( $testimonial['feedback'] ); ?></p>
-                <?php if( 'on' == $settings['uta-testimonial-ratings'] ){?>
+                <?php if ( 'on' == $settings['uta-testimonial-ratings'] ) {?>
                    <ul>
                      <li><i class="fa fa-star"></i></li>
                      <li><i class="fa fa-star"></i></li>

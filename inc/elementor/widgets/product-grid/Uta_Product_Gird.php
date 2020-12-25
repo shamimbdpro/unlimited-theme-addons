@@ -144,10 +144,10 @@ class Uta_Product_Grid extends Widget_Base
         $this->add_control(
             'uta_product_grid_style_preset',
             [
-                'label'   => esc_html__('Style Preset', 'unlimited-theme-addons'),
-                'type'    => Controls_Manager::SELECT,
-                'default' => 'uta-product-simple',
-                'options' => [
+                'label'        => esc_html__('Style Preset', 'unlimited-theme-addons'),
+                'type'         => Controls_Manager::SELECT,
+                'default'      => 'uta-product-simple',
+                'options'      => [
                     'uta-product-default' => esc_html__('Default', 'unlimited-theme-addons'),
                     'uta-product-simple'  => esc_html__('Simple Style', 'unlimited-theme-addons'),
                 ],
@@ -162,7 +162,7 @@ class Uta_Product_Grid extends Widget_Base
                 'type'         => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'default'      => 'yes',
-                'condition' => [ 'uta_product_grid_style_preset' => 'uta-product-simple' ],
+                'condition'    => [ 'uta_product_grid_style_preset' => 'uta-product-simple' ],
             ]
         );
 
@@ -561,11 +561,11 @@ class Uta_Product_Grid extends Widget_Base
                     'terms'    => $settings['uta_product_grid_categories'],
                 ];
             }
-        } else if ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'best-selling-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = 'total_sales';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'ASC';
-        } else if ( 'sale-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'sale-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_query'] = [
                 'relation' => 'OR',
                 [
@@ -581,7 +581,7 @@ class Uta_Product_Grid extends Widget_Base
                     'type'    => 'numeric',
                 ],
             ];
-        } else if ( 'top-products' == $settings['uta_product_grid_product_filter'] ) {
+        } elseif ( 'top-products' == $settings['uta_product_grid_product_filter'] ) {
             $args['meta_key'] = '_wc_average_rating';
             $args['orderby']  = 'meta_value_num';
             $args['order']    = 'DESC';

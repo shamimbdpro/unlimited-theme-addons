@@ -1,10 +1,11 @@
 
 === Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi
+Donate link: https://codepopular.com
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -30,11 +31,31 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 9. Blog
 10. Before After Image Comparison
 
+== Frequently Asked Questions ==
+
+= Do WordPress Plugins Affect Site Speed? =
+
+No, We have provided minified css to optimize your website.
+
+= How can i discuss about the plugin issues? =
+
+You're more than welcome! we ready to solve your issue. you can ask the query here.
+https://wordpress.org/support/plugin/unlimited-theme-addons
+
+== Screenshots ==
+1. Latest Blog
+2. Product Grid
+3. Product List
+4. Testimonial
+5. Before after compare
+
 == Changelog ==
 
 = 1.0.5=
-* Tested up to 5.6
-* Ratings added in testimonial
+* Product grid updated.
+* Product list added.
+* Tested up to 5.6.
+* Ratings added in testimonial.
 
 = 1.0.4=
 * Before after image comparison added

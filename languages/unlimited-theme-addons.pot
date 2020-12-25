@@ -1,0 +1,764 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2020-12-26 00:18+0600\n"
+"PO-Revision-Date: 2020-12-26 00:15+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: .git\n"
+"X-Poedit-SearchPathExcluded-2: assets\n"
+"X-Poedit-SearchPathExcluded-3: languages\n"
+
+#: inc/elementor/Trait/Uta_theme_helper.php:33
+msgid "Load More Button Style"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:44
+msgid "Padding"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:56
+msgid "Margin"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:75
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:418
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:477
+msgid "Normal"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:80
+#: inc/elementor/Trait/Uta_theme_helper.php:142
+msgid "Text Color"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:92
+#: inc/elementor/Trait/Uta_theme_helper.php:154
+msgid "Background Color"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:105
+msgid "Border"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:113
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:222
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:245
+msgid "Border Radius"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:137
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:469
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:526
+msgid "Hover"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:166
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:502
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:559
+msgid "Border Color"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:190
+msgid "Button Alignment"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:194
+#: inc/elementor/widgets/button/Uta_Button.php:107
+#: inc/elementor/widgets/title/Uta_Title.php:74
+msgid "Left"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:198
+#: inc/elementor/widgets/button/Uta_Button.php:111
+#: inc/elementor/widgets/title/Uta_Title.php:78
+msgid "Center"
+msgstr ""
+
+#: inc/elementor/Trait/Uta_theme_helper.php:202
+#: inc/elementor/widgets/button/Uta_Button.php:115
+#: inc/elementor/widgets/title/Uta_Title.php:82
+msgid "Right"
+msgstr ""
+
+#: inc/elementor/elementor.php:25
+msgid "uta Elements"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:13
+msgid "UTA Blog"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:40
+msgid "Blog"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:47
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:134
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:138
+msgid "Order"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:51
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:138
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:142
+msgid "Ascending"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:52
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:139
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:143
+msgid "Descending"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:60
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:82
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:90
+msgid "Columns"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:64
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:86
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:94
+msgid "1"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:65
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:87
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:95
+msgid "2"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:66
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:88
+msgid "3"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:67
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:89
+msgid "4"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:68
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:90
+msgid "5"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:69
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:91
+msgid "6"
+msgstr ""
+
+#: inc/elementor/widgets/blog/Uta_Blog.php:79
+msgid "Post Count"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:14
+msgid "UTA Button"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:42
+msgid "Button"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:49
+msgid "Button Text"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:51
+msgid "Raed More"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:58
+#: inc/elementor/widgets/button/Uta_Button.php:70
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:48
+msgid "Icon"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:60
+#: inc/elementor/widgets/button/Uta_Button.php:93
+#: inc/elementor/widgets/button/Uta_Button.php:141
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:82
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:108
+msgid "Yes"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:61
+#: inc/elementor/widgets/button/Uta_Button.php:94
+#: inc/elementor/widgets/button/Uta_Button.php:142
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:83
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:109
+msgid "No"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:82
+msgid "Button URL"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:91
+msgid "Popup Video"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:103
+#: inc/elementor/widgets/title/Uta_Title.php:70
+msgid "Alignment"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:127
+msgid "Drop Shadow"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:129
+msgid "Show"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:130
+msgid "Hide"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:139
+msgid "Bordered"
+msgstr ""
+
+#: inc/elementor/widgets/button/Uta_Button.php:151
+msgid "Button Radius"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:14
+msgid "UTA Client Logo"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:41
+msgid "Logo"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:59
+msgid "Client Name"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:61
+msgid "List Title"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:69
+msgid "Client Logo"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:80
+msgid "Enable Hover Logo"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:92
+msgid "Hover Logo"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:106
+msgid "Enable Link"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:117
+msgid "Link"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:119
+msgid "https://your-link.com"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:131
+msgid "Repeater List"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:136
+msgid "Title #1"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:139
+msgid "Title #2"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:142
+msgid "Title #3"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:145
+msgid "Title #4"
+msgstr ""
+
+#: inc/elementor/widgets/client-logo/Uta_Client_Logo.php:148
+msgid "Title #5"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:14
+msgid "UTA Service Item"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:41
+msgid "Service Item"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:60
+#: inc/elementor/widgets/title/Uta_Title.php:43
+#: inc/elementor/widgets/title/Uta_Title.php:51
+msgid "Title"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:62
+msgid "Design"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:68
+msgid "Text"
+msgstr ""
+
+#: inc/elementor/widgets/infobox/Uta_Infobox.php:70
+msgid ""
+"Lorem ipsum dummy text in print and website industry are usually use in "
+"these section"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:16
+msgid "UTA Pricing"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:34
+msgid "Pricing"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:42
+msgid "title"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:51
+msgid "Price"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:60
+msgid "Currency"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:62
+msgid "$"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:69
+msgid "Package"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:73
+msgid "Daily"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:74
+msgid "Weekly"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:75
+msgid "Monthly"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:76
+msgid "Yealry"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:77
+msgid "None"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:87
+msgid "Feature"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:89
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:113
+msgid "10 Free Domain Names"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:96
+msgid "Feature List"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:101
+msgid "5GB Storage Space"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:104
+msgid "20GB Monthly Bandwidth"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:107
+msgid "My SQL Databases"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:110
+msgid "100 Email Account"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:123
+msgid "button text"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:132
+msgid "button URL"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:141
+msgid "Recommended"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:143
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:89
+msgid "On"
+msgstr ""
+
+#: inc/elementor/widgets/pricing/Uta_Pricing.php:144
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:90
+msgid "Off"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:18
+msgid "UTA Product Grid"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:48
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:56
+msgid "Product Settings"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:57
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:65
+msgid ""
+"<strong>WooCommerce</strong> is not installed/activated on your site. Please "
+"install and activate <a href=\"plugin-install.php?"
+"s=woocommerce&tab=search&type=term\" target=\"_blank\">WooCommerce</a> first."
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:66
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:74
+msgid "Filter By"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:70
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:78
+msgid "Recent Products"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:71
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:79
+msgid "Featured Products"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:72
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:80
+msgid "Best Selling Products"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:73
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:81
+msgid "Sale Products"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:74
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:82
+msgid "Top Rated Products"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:101
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:105
+msgid "Products Count"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:114
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:118
+msgid "Product Categories"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:125
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:129
+msgid "Offset"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:147
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:171
+msgid "Style Preset"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:151
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:175
+msgid "Default"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:152
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:176
+msgid "Simple Style"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:161
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:185
+msgid "Show Product Rating?"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:174
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:197
+msgid "Products Styles"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:182
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:205
+msgid "Content Background Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:235
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:258
+msgid "Color &amp; Typography"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:243
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:266
+msgid "Product Title"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:251
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:274
+msgid "Product Title Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:271
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:324
+msgid "Product Price"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:279
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:332
+msgid "Product Price Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:299
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:354
+msgid "Star Rating"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:307
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:362
+msgid "Rating Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:328
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:385
+msgid "Sale Badge"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:336
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:393
+msgid "Sale Badge Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:348
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:405
+msgid "Sale Badge Background"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:369
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:426
+msgid "Stock Out Badge"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:377
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:434
+msgid "Stock Out Badge Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:389
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:446
+msgid "Stock Out Badge Background"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:411
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:470
+msgid "Add to Cart Button Styles"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:423
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:474
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:482
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:531
+msgid "Button Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:437
+#: inc/elementor/widgets/product-grid/Uta_Product_Gird.php:488
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:494
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:545
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/template/Product_Grid.php:23
+msgid "This is Product Grid"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/template/Product_Grid.php:33
+#: inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php:51
+msgid "Stock "
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/template/Product_Grid.php:33
+#: inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php:51
+msgid "Out"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/template/Product_Grid.php:33
+#: inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php:51
+msgid "Sale!"
+msgstr ""
+
+#: inc/elementor/widgets/product-grid/template/Product_Grid.php:45
+#: inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php:62
+msgid "<p class=\"no-posts-found\">No posts found!</p>"
+msgstr ""
+
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:22
+msgid "UTA Product List"
+msgstr ""
+
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:151
+msgid "Show Product Excerpt?"
+msgstr ""
+
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:161
+msgid "Excerpt Word Limit"
+msgstr ""
+
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:295
+msgid "Product Content"
+msgstr ""
+
+#: inc/elementor/widgets/product-list/Uta_Product_List.php:303
+msgid "Product Content Color"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:13
+msgid "UTA Team"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:40
+msgid "team"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:48
+msgid "Choose photo"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:59
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:51
+msgid "Name"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:61
+msgid "John Doe"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:67
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:60
+msgid "Designation"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:69
+msgid "App Developer"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:77
+msgid "Social Icon"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:88
+msgid "Socia URL"
+msgstr ""
+
+#: inc/elementor/widgets/team/Uta_Team.php:97
+msgid "social profile"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:14
+msgid "UTA Testimonials"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:30
+msgid "Testimonials"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:40
+#: inc/elementor/widgets/video/Uta_Video.php:50
+msgid "Choose Photo"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:68
+msgid "Testimonial"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:76
+msgid "Testimonial List"
+msgstr ""
+
+#: inc/elementor/widgets/testimonials/Uta_Testimonials.php:87
+msgid "Show Ratings"
+msgstr ""
+
+#: inc/elementor/widgets/title/Uta_Title.php:14
+msgid "UTA Title"
+msgstr ""
+
+#: inc/elementor/widgets/title/Uta_Title.php:53
+msgid "Latest portfolio"
+msgstr ""
+
+#: inc/elementor/widgets/title/Uta_Title.php:61
+msgid "Sub Title"
+msgstr ""
+
+#: inc/elementor/widgets/title/Uta_Title.php:63
+msgid "Nemo enim ipsam voluptatem quia voluptas aspernatur"
+msgstr ""
+
+#: inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php:14
+msgid "UTA Image Comparison"
+msgstr ""
+
+#: inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php:43
+msgid "Before After Slider"
+msgstr ""
+
+#: inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php:87
+msgid "Before"
+msgstr ""
+
+#: inc/elementor/widgets/twentytwenty/Uta_Twentytwenty.php:88
+msgid "After"
+msgstr ""
+
+#: inc/elementor/widgets/video/Uta_Video.php:13
+msgid "UTA Video"
+msgstr ""
+
+#: inc/elementor/widgets/video/Uta_Video.php:42
+msgid "Video Image"
+msgstr ""
+
+#: inc/elementor/widgets/video/Uta_Video.php:61
+msgid "Overlay"
+msgstr ""
+
+#: inc/elementor/widgets/video/Uta_Video.php:70
+msgid "Play Button URL"
+msgstr ""

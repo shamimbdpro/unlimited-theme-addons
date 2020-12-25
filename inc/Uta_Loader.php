@@ -13,7 +13,8 @@ class Uta_Loader{
      * Load all Plugin FIle.
      */
     public function load_dependency(){
-        include_once(dirname( __FILE__ ). '/uta-helpers.php');
+        include_once(dirname( __FILE__ ). '/Uta-i18n.php');
+        include_once(dirname( __FILE__ ). '/Uta-Helpers.php');
         include_once(dirname( __FILE__ ). '/elementor/elementor.php');
     }
 }
@@ -22,8 +23,8 @@ class Uta_Loader{
  * Initialize load class .
  */
 function unlimited_theme_addons_run(){
-    if( class_exists( 'Uta_Loader' ) ){
+    if ( class_exists( 'Uta_Loader' ) ) {
         new Uta_Loader();
     }
 }
-?>
+

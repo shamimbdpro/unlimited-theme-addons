@@ -38,4 +38,4 @@ class Uta_helpers{
 
 Uta_helpers::get_instance()->init();
 
-?>
+
