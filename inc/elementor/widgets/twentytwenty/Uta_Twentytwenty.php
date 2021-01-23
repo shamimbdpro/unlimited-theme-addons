@@ -74,21 +74,75 @@ class Uta_Twentytwenty extends Widget_Base {
                'default' => 'full',
            ]
        );
+
+       $this->add_control(
+           'uta_twentytwenty_direction',
+           [
+               'label'   => __( 'Direction', 'unlimited-theme-addons' ),
+               'type'    => \Elementor\Controls_Manager::SELECT,
+               'default' => 'horizontal',
+               'options' => [
+                   'horizontal' => __( 'Horizontal', 'unlimited-theme-addons' ),
+                   'vertical'   => __( 'Vertical', 'unlimited-theme-addons' ),
+               ],
+           ]
+       );
       
       $this->end_controls_section();
+
+       $this->start_controls_section(
+           'uta_before_label_section',
+           [
+               'label' => esc_html( 'Before Label', 'unlimited-theme-addons' ),
+               'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+           ]
+       );
+
+       $this->add_control(
+           'uta_before_label_title',
+           [
+               'label'   => __( 'Before Label', 'unlimited-theme-addons' ),
+               'type'    => \Elementor\Controls_Manager::TEXT,
+               'default' => __('Before','unlimited-theme-addons'),
+           ]
+       );
+
+       $this->end_controls_section();
+
+       $this->start_controls_section(
+           'uta_after_label_section',
+           [
+               'label' => esc_html( 'After Label', 'unlimited-theme-addons' ),
+               'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
+           ]
+       );
+
+       $this->add_control(
+           'uta_after_label_title',
+           [
+               'label'   => __( 'After Label', 'unlimited-theme-addons' ),
+               'type'    => \Elementor\Controls_Manager::TEXT,
+               'default' => __('After','unlimited-theme-addons'),
+           ]
+       );
+
+       $this->end_controls_section();
 
    }
 
     protected function render() {
         $settings = $this->get_settings_for_display();
         $element_id = $this->get_id();
+        $direction = $settings['uta_twentytwenty_direction'];
+        $before_label_title = $settings['uta_before_label_title'];
+        $after_label_title = $settings['uta_after_label_title'];
         ?>
-        <div class="uta-twentytwenty twentytwenty-container" data-orientation="horizontal" id="uta_before_after_<?php echo esc_attr($element_id); ?>">
-            <span class='before_text'><?php echo esc_html_e('Before', 'unlimited-theme-addons'); ?></span>
-            <span class='after_text'><?php echo esc_html_e('After', 'unlimited-theme-addons'); ?></span>
+        <div class="uta-twentytwenty twentytwenty-container" data-orientation="<?php echo esc_attr( $direction );?>" id="uta_before_after_<?php echo esc_attr($element_id); ?>">
+            <span class='before_text'><?php echo esc_html_e( $before_label_title, 'unlimited-theme-addons' ); ?></span>
+            <span class='after_text'><?php echo esc_html_e( $after_label_title, 'unlimited-theme-addons' ); ?></span>
             <?php
-            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_before_image' ); //phpcs:ignore
-            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_after_image' ); //phpcs:ignore
+            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_before_image' );
+            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_after_image' );
 
             ?>
         </div>

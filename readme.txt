@@ -1,11 +1,11 @@
 
 === Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi
-Donate link: https://codepopular.com
+Donate link: https://www.codepopular.com/donate
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.6
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -21,15 +21,16 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 == Features==
 
 1. WooCommerce Product Grid.
-2. Title
-3. Video
-4. Button
-5. Testimonial
-6. Team
-7. Pricing
-8. Service
-9. Blog
-10. Before After Image Comparison
+2. WooCommerce Product List.
+3. Title
+4. Video
+5. Button
+6. Testimonial
+7. Team
+8. Pricing
+9. Service
+10. Blog
+11. Before After Image Comparison
 
 == Frequently Asked Questions ==
 
@@ -50,6 +51,10 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.6=
+* Option added to change before after comparison label.
+* Woocommerce latest version( 4.9 ) tested.
 
 = 1.0.5=
 * Product grid updated.

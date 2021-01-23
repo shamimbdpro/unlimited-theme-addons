@@ -1,6 +1,5 @@
 <?php
 if ( ! defined( 'ABSPATH' ) ) exit;
-
 /**
  * Class Unlimited_Theme_Addons
  */
