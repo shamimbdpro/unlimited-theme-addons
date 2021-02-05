@@ -5,12 +5,12 @@ Donate link: https://www.codepopular.com/donate
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.6
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Unlimited theme addons is very useful plugin to get amazing features for your website . if you Looking to add extra functionality to the Elementor page builder then this plugin will be help for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using umlimited theme addons you can quick enhance your website performance.
+Unlimited theme addons is very useful plugin to get amazing features for your website . It is much essential addons for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be help for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quick enhance your website performance. You can make easily woocommerce product grid and product list using this plugin.
 
 [Live Demo](http://codepopular.com/unlimited-theme-addons)
 
@@ -51,6 +51,12 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.7=
+* Product list widget fixed.
+* Title widget fixed.
+* WordPress latest Version Tested.
+* Woocommerce latest version( 4.9.2 ) tested.
 
 = 1.0.6=
 * Option added to change before after comparison label.

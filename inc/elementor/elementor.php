@@ -120,7 +120,7 @@ class Unlimited_Theme_Addons {
 
          // Product list.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-list/template/Uta_Product_List_Display.php');
-         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-list/Uta_Product_list.php');
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/product-list/Uta_Product_List.php');
 
         // Pricing.
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/pricing/Uta_Pricing.php');
@@ -138,7 +138,7 @@ class Unlimited_Theme_Addons {
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/testimonials/Uta_Testimonials.php');
 
         // Title
-         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/title/Uta_title.php');
+         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/title/Uta_Title.php');
 
         // Video
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/video/Uta_Video.php');
