@@ -27,7 +27,7 @@ const config = {
         dist: 'admin/js',
     },
     scss: {
-        src: 'assets/frontend/css/scss/*.scss',
+        src: 'assets/frontend/css/scss/**/*.scss',
         dist: 'assets/frontend/css',
     },
     autoprefixer: {
