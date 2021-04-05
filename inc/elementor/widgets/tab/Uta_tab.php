@@ -127,12 +127,44 @@ class Uta_Tab extends Widget_Base {
 		// Start Controls Style Sections
 		// Tab Style
 		$this->start_controls_section(
+			'tab_default_style',
+			array(
+				'label'		=> __('Tab','unlimited-theme-addons'),
+				'tab'		=> Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'chose_style' => ['tab-style-2']
+				],
+			)
+		);
+		$this->add_control(
+			'uta_tab_tab_active_background',
+			array(
+				'label'		=> __('Background','unlimited-theme-addons'),
+				'type'		=> Controls_Manager::COLOR,
+
+			)
+		);
+		$this->end_controls_section();
+		// Tab Style
+		$this->start_controls_section(
 			'tab_style',
 			array(
 				'label'		=> __('Ttile','unlimited-theme-addons'),
 				'tab'		=> Controls_Manager::TAB_STYLE,
 			)
 		);
+
+		$this->add_responsive_control(
+            'uta_menu_width',
+            [
+                'label' => esc_html__( 'Menu Width', 'unlimited-theme-addons' ),
+                'type' => \Elementor\Controls_Manager::NUMBER,
+                'condition' => [
+					'chose_style' => ['tab-style-2']
+				],
+            ]
+        );
+
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
@@ -374,6 +406,8 @@ class Uta_Tab extends Widget_Base {
 		$content__active_color = $settings['content__active_color'];
 		$uta_content_active_background = $settings['uta_content_active_background'];
 		$content_text_align = $settings['content_text_align'];
+		$uta_tab_tab_active_background = $settings['uta_tab_tab_active_background'];
+		$uta_menu_width = $settings['uta_menu_width'];
 		$custom_css = $settings['custom_css'];
 		?>
 		<!-- 
@@ -404,8 +438,15 @@ class Uta_Tab extends Widget_Base {
 				color: <?php echo $content__active_color; ?>;
 				background: <?php echo $uta_content_active_background; ?>;
 			}
+			.Uta-tab-container{
+				background: <?php echo $uta_tab_tab_active_background; ?>;
+			}
+			.Uta-tab-menu.vertical-tab-bar-menu{
+				width: <?php echo $uta_menu_width; ?>%;
+			}
 		 	<?php echo $custom_css; ?>
 		</style>
+		<?php if( $chose_style == 'tab-style-1' ): ?>
 		<div class="Uta-tab-container">
 			<div class="Uta-tab-menu">
 				<?php if ( $settings['Tab_list'] ) { ?>
@@ -442,6 +483,44 @@ class Uta_Tab extends Widget_Base {
 	   		</div>
 	   		<?php } ?>
 		</div><!--end of container-->
+		<?php	elseif( $chose_style == 'tab-style-2' ): ?>
+			<div class="Uta-tab-container vertical-tab-bar">
+			<div class="Uta-tab-menu vertical-tab-bar-menu">
+				<?php if ( $settings['Tab_list'] ) { ?>
+	      		<ul><?php $counter = 1; ?>
+	      			<?php foreach ( $settings['Tab_list'] as  $key => $item ) : ?>
+	      				<?php 
+						$tab_active = ($key == 0 ) ? 'active-a' : '';
+						?>
+						<?php 
+						$tab_active_c = ($key == 0 ) ? 'tab-active' : '';
+						?>
+	         		<li><span  class="tab-a <?php print $tab_active; ?>" data-id="<?php echo $item['title'].$counter; ?>"><?php echo $item['title']; ?></span></li>
+	         		<?php
+	         		$counter++;
+	         		 endforeach; ?>
+	      		</ul>
+	      		<?php } ?>
+
+	   		</div><!--end of tab-menu-->
+	   		<?php if ( $settings['Tab_list'] ) { ?>
+	   		<div class="Uta-tab-item-full vertical-tab-bar-tab-full-item">
+	   			<?php $counterd = 1; ?>
+	   			<?php foreach ( $settings['Tab_list'] as  $key => $item ) : 
+	   				$tab_pane_active = ($key == 0 ) ? 'tab-active' : '';
+	   				?>
+	   				
+		   		<div  class="uta-tab-item uta-tab-item-content vertical-tab-bar-tab-single-item <?php print $tab_pane_active; ?>" data-id="<?php echo $item['title'].$counterd; ?>">
+		         	<?php echo $item['description']; ?>
+		   		</div><!--end of tab one--> 
+
+		   		<?php 
+		   		$counterd++;
+		   	endforeach; ?>
+	   		</div>
+	   		<?php } ?>
+		</div><!--end of container-->
+		<?php endif; ?>
 		<script>
 		(function($) {
     		"use strict";

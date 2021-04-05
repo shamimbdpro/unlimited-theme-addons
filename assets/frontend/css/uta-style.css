@@ -843,3 +843,29 @@ ul.uta-blog-item-meta li {
 
 .tab-active {
   display: block; }
+
+.Uta-tab-menu.vertical-tab-bar-menu {
+  width: 300px;
+  float: left; }
+
+.Uta-tab-item-full.vertical-tab-bar-tab-full-item {
+  overflow: hidden; }
+
+.Uta-tab-menu.vertical-tab-bar-menu ul li {
+  width: 100%; }
+
+.Uta-tab-menu.vertical-tab-bar-menu ul li span {
+  width: 100%; }
+
+.Uta-tab-container {
+  text-align: left;
+  background: #588d7d;
+  overflow: hidden; }
+
+@media (max-width: 576px) {
+  .Uta-tab-menu.vertical-tab-bar-menu {
+    width: 100%;
+    overflow: hidden; }
+  .Uta-tab-item-full.vertical-tab-bar-tab-full-item {
+    overflow: hidden;
+    width: 100%; } }
