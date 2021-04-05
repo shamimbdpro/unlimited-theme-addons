@@ -1,0 +1,44 @@
+.Uta-tab-menu ul{
+	margin: 0;
+	padding: 0;
+}
+.Uta-tab-menu ul li{
+	list-style-type: none;
+	display: inline-block;
+    margin-right: -5px;
+    box-sizing: border-box;
+}
+.Uta-tab-menu ul li span {
+    text-decoration: none;
+    color: rgba(0,0,0,0.4);
+    background-color: #000000;
+    padding: 13px 40px;
+    display: inline-block;
+    border-radius: 4px;
+    color: #fff;
+    cursor:pointer;
+    border-radius: 0px;
+    text-transform: uppercase;
+}
+.Uta-tab-menu ul li span.active-a{
+	background-color: #588d7d;
+	color: #ffffff;
+}
+.uta-tab-item {
+    padding: 10px 10px;
+    display: none;
+}
+.uta-tab-item{
+  background:#588d7d;
+  color:#fff;
+}
+.uta-tab-item h2{
+	color: rgba(0,0,0,.7);
+}
+.uta-tab-item p{
+	color: rgba(0,0,0,0.6);
+	text-align: justify;
+}
+.tab-active{
+	display: block;
+}
