@@ -143,7 +143,11 @@ class Unlimited_Theme_Addons {
         // Video
          include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/video/Uta_Video.php');
 
-         // Client Logo.
+        // Search.
+        include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/search/Uta_Search.php');
+
+
+        // Client Logo.
 //        include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/client-logo/Uta_client_logo.php');
 
       }
