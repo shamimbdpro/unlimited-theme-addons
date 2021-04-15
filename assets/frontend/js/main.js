@@ -49,6 +49,7 @@
     $(".uta-twentytwenty[data-orientation='vertical']").twentytwenty({orientation: 'vertical'})
 
 
+    
 })(jQuery);
 
 
