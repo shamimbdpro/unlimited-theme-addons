@@ -5,7 +5,7 @@ Donate link: https://www.codepopular.com/donate
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -22,6 +22,7 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 
 1. WooCommerce Product Grid.
 2. WooCommerce Product List.
+4. WooCommerce Product Search.
 3. Title
 4. Video
 5. Button
@@ -51,6 +52,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.9 =
+* Woocommerce Product Search Added.
 
 = 1.0.8 =
 * WordPress latest version( 5.7 ) tested.

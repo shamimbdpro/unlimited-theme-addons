@@ -45,20 +45,20 @@ class Uta_Search extends Widget_Base {
        $this->add_control(
            'uta_product_cat_width',
            [
-               'label' => __( 'Category Width', 'unlimited-theme-addons' ),
-               'type' => Controls_Manager::SLIDER,
+               'label'      => __( 'Category Width', 'unlimited-theme-addons' ),
+               'type'       => Controls_Manager::SLIDER,
                'size_units' => [ '%' ],
-               'range' => [
+               'range'      => [
                    '%' => [
                        'min' => 0,
                        'max' => 100,
                    ],
                ],
-               'default' => [
+               'default'    => [
                    'unit' => '%',
                    'size' => 20,
                ],
-               'selectors' => [
+               'selectors'  => [
                    '{{WRAPPER}} .uta-product-category' => 'width: {{SIZE}}{{UNIT}};',
                ],
            ]
@@ -67,20 +67,20 @@ class Uta_Search extends Widget_Base {
        $this->add_control(
            'uta_product_search_bar_width',
            [
-               'label' => __( 'Search Bar Width', 'unlimited-theme-addons' ),
-               'type' => Controls_Manager::SLIDER,
+               'label'      => __( 'Search Bar Width', 'unlimited-theme-addons' ),
+               'type'       => Controls_Manager::SLIDER,
                'size_units' => [ '%' ],
-               'range' => [
+               'range'      => [
                    '%' => [
                        'min' => 0,
                        'max' => 100,
                    ],
                ],
-               'default' => [
+               'default'    => [
                    'unit' => '%',
                    'size' => 80,
                ],
-               'selectors' => [
+               'selectors'  => [
                    '{{WRAPPER}} .uta-product-search-form' => 'width: {{SIZE}}{{UNIT}};',
                ],
            ]
@@ -134,7 +134,7 @@ class Uta_Search extends Widget_Base {
                        $select_cat = 0;
                    }
                    $args = array(
-                       'show_option_all' => esc_html__('All Categories', 'digicart'),
+                       'show_option_all' => esc_html__('All Categories', 'unlimited-theme-addons'),
                        'hierarchical'    => 1,
                        'class'           => 'cat',
                        'echo'            => 1,
@@ -150,10 +150,10 @@ class Uta_Search extends Widget_Base {
                        <?php wp_dropdown_categories($args); ?>
                    </div>
                   <div class="uta-product-search-form">
-                      <input type="text"  name="s"  maxlength="128" value="<?php echo get_search_query();?>" placeholder="<?php esc_attr_e( $settings['product_search_placeholder'], 'digicart');?>">
+                      <input type="text"  name="s"  maxlength="128" value="<?php echo get_search_query();?>" placeholder="<?php esc_attr_e( $settings['product_search_placeholder'], 'unlimited-theme-addons');?>">
                       <input type="hidden" value="product" name="post_type">
                       <div class="uta-product-search-button">
-                          <button type="submit" title="<?php esc_attr_e('Search', 'digicart');?>" ><span><?php esc_attr_e('Search', 'digicart');?></span></button>
+                          <button type="submit" title="<?php esc_attr_e('Search', 'unlimited-theme-addons');?>" ><span><?php esc_attr_e('Search', 'unlimited-theme-addons');?></span></button>
                       </div>
                   </div>
                </div>
