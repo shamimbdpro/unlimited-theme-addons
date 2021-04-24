@@ -438,7 +438,44 @@ ul.uta-blog-item-meta li {
 /*--------------------------------------------------------------
 ## testimonials
 --------------------------------------------------------------*/
-.uta-testimonial-item {
+.uta-testimonials ul {
+  margin: 0;
+  padding: 0; }
+
+.uta-testimonials li {
+  list-style: none; }
+
+.uta-testimonials .slick-prev:before, .uta-testimonials .slick-next:before {
+  font-size: 30px; }
+
+.uta-testimonials .slick-dots li button:before {
+  font-size: 40px; }
+
+.uta-testimonials .slick-prev.slick-arrow {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 999; }
+
+.uta-testimonials .slick-next.slick-arrow {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 999; }
+
+.uta-testimonials .slick-next:focus, .uta-testimonials .slick-next:hover, .uta-testimonials .slick-prev:focus, .uta-testimonials .slick-prev:hover {
+  color: #fff !important;
+  outline: 0;
+  background: #333; }
+
+/*-------- Style Default ------------*/
+.testimonial-style-default {
   background: #fff;
   cursor: move;
   border-radius: 6px;
@@ -446,36 +483,32 @@ ul.uta-blog-item-meta li {
   margin: 50px 30px 30px;
   padding: 70px 50px 70px;
   text-align: center; }
-  .uta-testimonial-item img {
+  .testimonial-style-default img {
     right: 0;
     top: 0;
     left: 0;
     width: 100px;
     border-radius: 50% !important;
     margin: 0 auto 30px; }
-  .uta-testimonial-item p {
+  .testimonial-style-default p {
     margin-bottom: 30px;
     color: #2b2a5a;
     font-size: 16px;
     line-height: 26px; }
-  .uta-testimonial-item ul {
+  .testimonial-style-default ul {
     margin: 0;
     color: #ffe552;
     list-style: none;
     padding-left: 0 !important; }
-  .uta-testimonial-item ul li {
+  .testimonial-style-default ul li {
     display: inline; }
-  .uta-testimonial-item h5 {
+  .testimonial-style-default h5 {
     font-size: 20px;
     color: #2b2a5a;
     margin-bottom: 5px; }
-  .uta-testimonial-item span {
+  .testimonial-style-default span {
     color: #2b2a5a;
     opacity: .8; }
-
-.testimonials .slick-prev:before,
-.testimonials .slick-next:before {
-  font-size: 30px; }
 
 /*--------------------------------------------------------------
 # Pricing

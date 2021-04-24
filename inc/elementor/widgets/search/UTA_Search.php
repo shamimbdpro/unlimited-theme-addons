@@ -42,7 +42,7 @@ class Uta_Search extends Widget_Base {
          ]
       );
 
-       $this->add_control(
+       $this->add_responsive_control(
            'uta_product_cat_width',
            [
                'label'      => __( 'Category Width', 'unlimited-theme-addons' ),
@@ -54,9 +54,20 @@ class Uta_Search extends Widget_Base {
                        'max' => 100,
                    ],
                ],
-               'default'    => [
+               'devices' => [ 'desktop', 'tablet', 'mobile' ],
+               'desktop_default'    => [
                    'unit' => '%',
                    'size' => 20,
+               ],
+
+               'tablet_default'    => [
+                   'unit' => '%',
+                   'size' => 100,
+               ],
+
+               'mobile_default'    => [
+                   'unit' => '%',
+                   'size' => 100,
                ],
                'selectors'  => [
                    '{{WRAPPER}} .uta-product-category' => 'width: {{SIZE}}{{UNIT}};',
@@ -64,7 +75,7 @@ class Uta_Search extends Widget_Base {
            ]
        );
 
-       $this->add_control(
+       $this->add_responsive_control(
            'uta_product_search_bar_width',
            [
                'label'      => __( 'Search Bar Width', 'unlimited-theme-addons' ),
@@ -76,10 +87,22 @@ class Uta_Search extends Widget_Base {
                        'max' => 100,
                    ],
                ],
-               'default'    => [
+               'devices' => [ 'desktop', 'tablet', 'mobile' ],
+               'desktop_default'    => [
                    'unit' => '%',
                    'size' => 80,
                ],
+
+               'tablet_default'    => [
+                   'unit' => '%',
+                   'size' => 100,
+               ],
+
+               'mobile_default'    => [
+                   'unit' => '%',
+                   'size' => 100,
+               ],
+
                'selectors'  => [
                    '{{WRAPPER}} .uta-product-search-form' => 'width: {{SIZE}}{{UNIT}};',
                ],

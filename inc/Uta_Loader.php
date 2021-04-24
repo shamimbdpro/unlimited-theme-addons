@@ -14,6 +14,7 @@ class Uta_Loader{
      */
     public function load_dependency(){
         include_once(dirname( __FILE__ ). '/Uta-i18n.php');
+        include_once(dirname( __FILE__ ). '/codepopular-promotion.php');
         include_once(dirname( __FILE__ ). '/Uta-Helpers.php');
         include_once(dirname( __FILE__ ). '/elementor/elementor.php');
     }

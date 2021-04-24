@@ -3,7 +3,54 @@
 ## testimonials
 --------------------------------------------------------------*/
 
-.uta-testimonial-item {
+.uta-testimonials{
+  ul{
+    margin:0;
+    padding:0;
+  }
+  li{
+
+    list-style:none;
+  }
+
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px;
+  }
+
+  .slick-dots li button:before{
+    font-size:40px
+  }
+  .slick-prev.slick-arrow {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+  }
+
+  .slick-next.slick-arrow {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 999;
+  }
+  .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
+    color: #fff !important;
+    outline: 0;
+    background: #333;
+  }
+
+}
+
+
+/*-------- Style Default ------------*/
+
+.testimonial-style-default {
   background: #fff;
   cursor: move;
   border-radius: 6px;
@@ -21,7 +68,6 @@
     border-radius: 50% !important;
     margin: 0 auto 30px;
   }
-
   p {
     margin-bottom: 30px;
     color: #2b2a5a;
@@ -52,10 +98,4 @@
   }
 
 
-}
-
-
-.testimonials .slick-prev:before,
-.testimonials .slick-next:before {
-  font-size: 30px;
 }
