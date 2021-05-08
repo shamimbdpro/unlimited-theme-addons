@@ -5,7 +5,7 @@ Donate link: https://www.codepopular.com/donate
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 1.0.11
+Stable tag: 1.0.12
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -29,7 +29,7 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 6. Testimonial
 7. Team
 8. Pricing
-9. Service
+9. Infobox
 10. Blog
 11. Before After Image Comparison
 
@@ -52,6 +52,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.12 =
+* 12 type of style added for infobox.
 
 = 1.0.11 =
 * Product Search Bar Fixed.
