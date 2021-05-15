@@ -1,4 +1,4 @@
-<div class="testimonial-style-default">
+<div class="testimonial-<?php echo esc_html($settings['uta_testimonial_style']);?>">
     <div class="row justify-content-center">
         <div class="col-sm-9 text-center">
             <img src="<?php echo esc_url( $testimonial['image']['url'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>">
