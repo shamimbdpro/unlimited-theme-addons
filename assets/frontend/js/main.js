@@ -10,7 +10,7 @@
         fixedContentPos: false
     });
 
-     // Elementor frontend support for Testimonial.
+    // Elementor frontend support for Testimonial.
     $(window).on('elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction('frontend/element_ready/uta-testimonials.default', function($scope, $) {
             $scope.find(".uta-testimonials").not('.slick-initialized').slick({
@@ -30,7 +30,8 @@
         });
     });
 
-    jQuery(window).on('elementor/frontend/init', function(){
+
+    $(window).on('elementor/frontend/init', function(){
         elementorFrontend.hooks.addAction('frontend/element_ready/uta-twentytwenty.default', function ($scope, $) {
             var before_text = $scope.find('.before_text').text();
             var after_text = $scope.find('.after_text').text();
@@ -41,8 +42,9 @@
             });
         });
     });
-    
-    jQuery(window).on('elementor/frontend/init', function(){
+
+
+    $(window).on('elementor/frontend/init', function(){
         elementorFrontend.hooks.addAction('frontend/element_ready/uta-twentytwenty.default', function ($scope, $) {
             var before_text = $scope.find('.before_text').text();
             var after_text = $scope.find('.after_text').text();
@@ -55,6 +57,7 @@
 
     $(".uta-twentytwenty[data-orientation!='vertical']").twentytwenty();
     $(".uta-twentytwenty[data-orientation='vertical']").twentytwenty({orientation: 'vertical'})
+
 
     
 })(jQuery);
