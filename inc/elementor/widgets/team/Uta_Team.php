@@ -36,7 +36,7 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'team_section',
             [
-                'label' => esc_html__( 'team', 'uta-team-member' ),
+                'label' => esc_html__( 'team', 'unlimited-theme-addons' ),
                 'type'  => Controls_Manager::SECTION,
             ]
         );
@@ -44,7 +44,7 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'image',
             [
-                'label'   => esc_html__( 'Choose photo', 'uta-team-member' ),
+                'label'   => esc_html__( 'Choose photo', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -55,24 +55,24 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_style',
             [
-                'label'        => esc_html__('Team Style', 'uta-team-member'),
+                'label'        => esc_html__('Team Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options'      => [
-                    'team-style-default' => esc_html__('Default', 'uta-team-member'),
-                    'team-style-1' => esc_html__('Style-1', 'uta-team-member'),
-                    'team-style-2' => esc_html__('Style-2', 'uta-team-member'),
-                    'team-style-3' => esc_html__('Style-3', 'uta-team-member'),
-                    'team-style-4' => esc_html__('Style-4', 'uta-team-member'),
-                    'team-style-5' => esc_html__('Style-5', 'uta-team-member'),
-                    'team-style-6' => esc_html__('Style-6', 'uta-team-member'),
-                    'team-style-7' => esc_html__('Style-7', 'uta-team-member'),
-                    'team-style-8' => esc_html__('Style-8', 'uta-team-member'),
-                    'team-style-9' => esc_html__('Style-9', 'uta-team-member'),
-                    'team-style-10' => esc_html__('Style-10', 'uta-team-member'),
-                    'team-style-11' => esc_html__('Style-11', 'uta-team-member'),
-                    'team-style-12' => esc_html__('Style-12', 'uta-team-member'),
-                    'team-style-13' => esc_html__('Style-13', 'uta-team-member'),
-                    'team-style-14' => esc_html__('Style-14', 'uta-team-member'),
+                    'team-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'team-style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'team-style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'team-style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
+                    'team-style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
+                    'team-style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
+                    'team-style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
+                    'team-style-7' => esc_html__('Style-7', 'unlimited-theme-addons'),
+                    'team-style-8' => esc_html__('Style-8', 'unlimited-theme-addons'),
+                    'team-style-9' => esc_html__('Style-9', 'unlimited-theme-addons'),
+                    'team-style-10' => esc_html__('Style-10', 'unlimited-theme-addons'),
+                    'team-style-11' => esc_html__('Style-11', 'unlimited-theme-addons'),
+                    'team-style-12' => esc_html__('Style-12', 'unlimited-theme-addons'),
+                    'team-style-13' => esc_html__('Style-13', 'unlimited-theme-addons'),
+                    'team-style-14' => esc_html__('Style-14', 'unlimited-theme-addons'),
                 ],
                 
                 'default'      => 'team-style-default',
@@ -82,27 +82,27 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'name',
             [
-                'label'   => esc_html__( 'Name', 'uta-team-member' ),
+                'label'   => esc_html__( 'Name', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'John Doe', 'uta-team-member' ),
+                'default' => __( 'John Doe', 'unlimited-theme-addons' ),
                 'label_block'   => true,
             ]
         );
         $this->add_control(
             'designation',
             [
-                'label'   => esc_html__( 'Designation', 'uta-team-member' ),
+                'label'   => esc_html__( 'Designation', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'App Developer', 'uta-team-member' ),
+                'default' => __( 'App Developer', 'unlimited-theme-addons' ),
                 'label_block'   => true,
             ]
         );
         $this->add_control(
             'description_team_mebmber',
             [
-                'label'   => esc_html__( 'Description', 'uta-team-member' ),
+                'label'   => esc_html__( 'Description', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::TEXTAREA,
-                'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'uta-team-member' ),
+                'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'unlimited-theme-addons' ),
                 'label_block'   => true,
                 'condition' => [
                     'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13'],
@@ -114,7 +114,7 @@ class Uta_Team extends Widget_Base {
 
         $social->add_control(
             'social_icon', [
-                'label'   => esc_html__( 'Social Icon', 'uta-team-member' ),
+                'label'   => esc_html__( 'Social Icon', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::ICONS,
                 'default' => [
                     'value'   => 'fab fa-facebook-f',
@@ -125,7 +125,7 @@ class Uta_Team extends Widget_Base {
 
         $social->add_control(
             'social_url', [
-                'label'   => esc_html__( 'Socia URL', 'uta-team-member' ),
+                'label'   => esc_html__( 'Socia URL', 'unlimited-theme-addons' ),
                 'type'    => \Elementor\Controls_Manager::TEXT,
                 'default' => '#',
             ]
@@ -134,10 +134,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'social_media',
             [
-                'label'       => __( 'social profile', 'uta-team-member' ),
+                'label'       => __( 'social profile', 'unlimited-theme-addons' ),
                 'type'        => \Elementor\Controls_Manager::REPEATER,
                 'fields'      => $social->get_controls(),
-                'title_field' => esc_html__('Social Item', 'uta-team-memeber'),
+                'title_field' => esc_html__('Social Item', 'unlimited-theme-addons'),
                 'default'     => [
                     [
                         'social_icon' => [
@@ -794,6 +794,10 @@ class Uta_Team extends Widget_Base {
         $this->add_inline_editing_attributes( 'designation', 'basic' );
         $this->add_inline_editing_attributes( 'description_team_mebmber', 'basic' );
 
+        ?>
+        <div class="uta-team">
+        <?php
+
             if( 'team-style-default' === $settings['uta_team_style']){
               
                 require (__DIR__) . '/template/style-default.php';
@@ -884,6 +888,8 @@ class Uta_Team extends Widget_Base {
                 require (__DIR__) . '/template/style-14.php';
 
             }
+
+            echo "</div>";
 
     }
 
