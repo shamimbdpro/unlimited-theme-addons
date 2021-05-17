@@ -73,16 +73,16 @@ gulp.task(
     'compile:js',
     () => {
         return gulp.src( config.js.src )
-            .pipe( sourcemaps.init( { largeFile: true } ) )
+           // .pipe( sourcemaps.init( { largeFile: true } ) )
             .pipe( eslint() )
             .pipe( eslint.format() )
-            .pipe( babel( config.babel ) )
+           // .pipe( babel( config.babel ) )
             .on( 'error', notify.onError( {title: "Error", message: "Error: <%= error.message %>"} ) ) // phpcs:ignore WordPressVIPMinimum.Security.Underscorejs.OutputNotation
             .pipe( prettify( config.prettify ) )
             // .pipe( gulp.dest( config.js.dist ) )
             .pipe( uglify() )
             .pipe( rename( { suffix: '.min' } ) )
-            .pipe( sourcemaps.write( '/.' ) )
+           // .pipe( sourcemaps.write( '/.' ) )
             .pipe( gulp.dest( config.js.dist ) )
             .pipe( notify( {message: 'TASK: compile:js Completed! 💯', onLast: true} ) );
     }

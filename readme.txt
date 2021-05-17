@@ -1,11 +1,11 @@
 
 === Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi
-Donate link: https://www.codepopular.com/donate
+Donate link: https://www.codepopular.com
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -19,19 +19,19 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 2. Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
 == Features==
-
-1. WooCommerce Product Grid.
-2. WooCommerce Product List.
-4. WooCommerce Product Search.
-3. Title
-4. Video
-5. Button
-6. Testimonial
-7. Team
-8. Pricing
-9. Infobox
-10. Blog
-11. Before After Image Comparison
+1. [WooCommerce Product Grid](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. 
+2. [WooCommerce Product List](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with diffrent style.
+4. [WooCommerce Product Search](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-search/) - Make Woocommerce product search with category in elementor addons.
+3. [Title][https://www.codepopular.com/unlimited-theme-addons/elmentor-title/] - Make section title, blok title, premium section title.
+4. [Video](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup video with elementor in diffrent type of layouts.
+5. [Button](https://www.codepopular.com/unlimited-theme-addons/elementor-button/) - You can make quick button with responsive style.
+6. [Testimonial](https://www.codepopular.com/unlimited-theme-addons/elementor-testimonial) - Easly able to make elementor testimonial with unlimited theme addons.
+7. [Team](https://www.codepopular.com/unlimited-theme-addons/elementor-team) - Make your team member style with elementor. you can make almost 10+ diffrent type of design.
+8. [Pricing](https://www.codepopular.com/unlimited-theme-addons/elementor-pricing) - Make Pricing style with elementor in vast number of design.
+9. [Infobox](https://www.codepopular.com/unlimited-theme-addons/elementor-infobox) - Make elementor infobox with 10+ style.
+10. [Blog](https://www.codepopular.com/unlimited-theme-addons/elementor-blog-grid) - Build elementor blog grid style with outstanding design.
+11. [Before After Image Comparison](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style.
+12. [Company Logo Slider](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with huge number of style.
 
 == Frequently Asked Questions ==
 
@@ -52,6 +52,11 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.13 =
+* Multiple Team style added.
+* Multiple Pricing style added.
+* Company Logo Slider Added.
 
 = 1.0.12 =
 * 12 type of style added for infobox.
