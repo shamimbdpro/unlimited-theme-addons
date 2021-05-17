@@ -80,21 +80,21 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_control(
             'uta_company_logo_style',
             [
-                'label' => esc_html__( 'Slide Style ', 'unlimited-theme-addons' ),
-                'type' => Controls_Manager::SELECT,
+                'label'   => esc_html__( 'Slide Style ', 'unlimited-theme-addons' ),
+                'type'    => Controls_Manager::SELECT,
                 'default' => 'uta-company-logo-style-default',
                 'options' => [
-                    'uta-company-logo-style-default'  => esc_html__( 'Style Default', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-1'  => esc_html__( 'Style 1', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-2'  => esc_html__( 'Style 2', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-3'  => esc_html__( 'Style 3', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-4'  => esc_html__( 'Style 4', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-5'  => esc_html__( 'Style 5', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-6'  => esc_html__( 'Style 6', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-7'  => esc_html__( 'Style 7', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-8'  => esc_html__( 'Style 8', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-9'  => esc_html__( 'Style 9', 'unlimited-theme-addons' ),
-                    'uta-company-logo-style-10'  => esc_html__( 'Style 10', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-default' => esc_html__( 'Style Default', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-1'       => esc_html__( 'Style 1', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-2'       => esc_html__( 'Style 2', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-3'       => esc_html__( 'Style 3', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-4'       => esc_html__( 'Style 4', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-5'       => esc_html__( 'Style 5', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-6'       => esc_html__( 'Style 6', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-7'       => esc_html__( 'Style 7', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-8'       => esc_html__( 'Style 8', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-9'       => esc_html__( 'Style 9', 'unlimited-theme-addons' ),
+                    'uta-company-logo-style-10'      => esc_html__( 'Style 10', 'unlimited-theme-addons' ),
                 ],
             ]
         );
@@ -215,7 +215,7 @@ class Uta_Company_Logo extends Widget_Base
        $this->start_controls_section(
        'uta_client_logo_settings',
            [
-                   'label' => esc_html__('Settings', 'unlimited-theme-addons'),
+			   'label' => esc_html__('Settings', 'unlimited-theme-addons'),
            ]
        );
 
@@ -224,9 +224,9 @@ class Uta_Company_Logo extends Widget_Base
        $this->add_control(
           'uta_company_logo_slideshow',
            [
-               'label'        => esc_html__( 'Slide Show', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'default'      => '5',
+               'label'   => esc_html__( 'Slide Show', 'unlimited-theme-addons' ),
+               'type'    => Controls_Manager::NUMBER,
+               'default' => '5',
            ]
        );
 
@@ -266,7 +266,7 @@ class Uta_Company_Logo extends Widget_Base
                 'label_on'     => esc_html__( 'Yes', 'unlimited-theme-addons' ),
                 'label_off'    => esc_html__( 'No', 'unlimited-theme-addons' ),
                 'return_value' => true,
-                'default'      => true
+                'default'      => true,
             ]
         );
 
@@ -275,9 +275,9 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_control(
             'uta_company_logo_speed',
             [
-                'label'        => esc_html__( 'Auto Play Speed', 'unlimited-theme-addons' ),
-                'type'         => Controls_Manager::NUMBER,
-                'default'      => 1000,
+                'label'   => esc_html__( 'Auto Play Speed', 'unlimited-theme-addons' ),
+                'type'    => Controls_Manager::NUMBER,
+                'default' => 1000,
             ]
         );
 
@@ -291,7 +291,7 @@ class Uta_Company_Logo extends Widget_Base
                 'label_on'     => esc_html__( 'Yes', 'unlimited-theme-addons' ),
                 'label_off'    => esc_html__( 'No', 'unlimited-theme-addons' ),
                 'return_value' => true,
-                'default'      => true
+                'default'      => true,
             ]
         );
 
@@ -304,7 +304,7 @@ class Uta_Company_Logo extends Widget_Base
         $this->start_controls_section(
             'company_logo_style',
             array(
-                'label'   => __('Style','unlimited-theme-addons'),
+                'label' => __('Style','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -314,10 +314,10 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_control(
             'uta_client_logo_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-company-logo-style-default .uta-company-logo-item-single, .uta-company-logo-style-1 .uta-company-logo-item-single, .uta-company-logo-style-2,.uta-company-logo-style-3, .uta-company-logo-style-4, .uta-company-logo-style-5, .uta-company-logo-style-6, .uta-company-logo-style-7, .uta-company-logo-style-8, .uta-company-logo-style-9, .uta-company-logo-style-10' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -328,10 +328,10 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_control(
             'uta_client_logo_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-company-logo-style-default .uta-company-logo-item-single, .uta-company-logo-style-1 .uta-company-logo-item-single, .uta-company-logo-style-2 .uta-company-logo-single-full, .uta-company-logo-style-3 .uta-company-logo-single-full, .uta-company-logo-style-4 .uta-company-logo-single, .uta-company-logo-style-5 .uta-company-logo-single-full, .uta-company-logo-style-6 .uta-company-logo-single-full, .uta-company-logo-style-7 .uta-company-logo-single-full, .uta-company-logo-style-8 .uta-company-logo-single-full, .uta-company-logo-style-9 .uta-company-logo-single-full, .uta-company-logo-style-10 .uta-company-logo-single-full' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -342,8 +342,8 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_client_logo_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_client_logo_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-company-logo-style-default .uta-company-logo-item-single, .uta-company-logo-style-1 .uta-company-logo-item-single, .uta-company-logo-style-2 .uta-company-logo-single-full, .uta-company-logo-style-3 .uta-company-logo-single-full, .uta-company-logo-style-4 .uta-company-logo-single, .uta-company-logo-style-5 .uta-company-logo-single-full, .uta-company-logo-style-6 .uta-company-logo-single-full, .uta-company-logo-style-7 .uta-company-logo-single-full, .uta-company-logo-style-8 .uta-company-logo-single-full, .uta-company-logo-style-9 .uta-company-logo-single-full, .uta-company-logo-style-10 .uta-company-logo-single-full',
             ]
         );
@@ -353,11 +353,11 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_client_logo_hover_border',
-                'label' => esc_html__( 'Hover Border', 'unlimited-theme-addons' ),
-                'selector' => '{{WRAPPER}} .uta-company-logo-style-9 .uta-company-logo-single-full:hover',
+                'name'      => 'uta_client_logo_hover_border',
+                'label'     => esc_html__( 'Hover Border', 'unlimited-theme-addons' ),
+                'selector'  => '{{WRAPPER}} .uta-company-logo-style-9 .uta-company-logo-single-full:hover',
                 'condition' => [
-                    'uta_company_logo_style' => ['uta-company-logo-style-9'],
+                    'uta_company_logo_style' => [ 'uta-company-logo-style-9' ],
                 ],
             ]
         );
@@ -367,10 +367,10 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_control(
             'uta_client_logo_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-company-logo-style-default .uta-company-logo-item-single, .uta-company-logo-style-1 .uta-company-logo-item-single, .uta-company-logo-style-2 .uta-company-logo-single-full, .uta-company-logo-style-3 .uta-company-logo-single-full, .uta-company-logo-style-4 .uta-company-logo-single, .uta-company-logo-style-5 .uta-company-logo-single-full, .uta-company-logo-style-6 .uta-company-logo-single-full, .uta-company-logo-style-7 .uta-company-logo-single-full, .uta-company-logo-style-8 .uta-company-logo-single-full, .uta-company-logo-style-9 .uta-company-logo-single-full, .uta-company-logo-style-10 .uta-company-logo-single-full' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -381,8 +381,8 @@ class Uta_Company_Logo extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_client_logo_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_client_logo_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-company-logo-style-default .uta-company-logo-item-single, .uta-company-logo-style-1 .uta-company-logo-item-single, .uta-company-logo-style-2 .uta-company-logo-single-full, .uta-company-logo-style-3 .uta-company-logo-single-full, .uta-company-logo-style-4 .uta-company-logo-single, .uta-company-logo-style-5 .uta-company-logo-single-full, .uta-company-logo-style-6 .uta-company-logo-single-full, .uta-company-logo-style-7 .uta-company-logo-single-full, .uta-company-logo-style-8 .uta-company-logo-single-full, .uta-company-logo-style-9 .uta-company-logo-single-full, .uta-company-logo-style-10 .uta-company-logo-single-full',
             ]
         );
@@ -407,20 +407,20 @@ class Uta_Company_Logo extends Widget_Base
                     '{{WRAPPER}} .uta-company-logo-style-3 .uta-company-logo-single-full:hover, .uta-company-logo-style-4 .uta-company-logo-single::after, .uta-company-logo-style-5 .uta-company-logo-single-full::after, .uta-company-logo-style-6 .uta-company-logo-single-full .overly, .uta-company-logo-style-7 .uta-company-logo-single-full .uta-partner-overly, .uta-company-logo-style-8 .uta-company-logo-single-full .uta-partner-overly' => 'background-color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'uta_company_logo_style' => ['uta-company-logo-style-3','uta-company-logo-style-4','uta-company-logo-style-5','uta-company-logo-style-6','uta-company-logo-style-7','uta-company-logo-style-8'],
+                    'uta_company_logo_style' => [ 'uta-company-logo-style-3', 'uta-company-logo-style-4', 'uta-company-logo-style-5', 'uta-company-logo-style-6', 'uta-company-logo-style-7', 'uta-company-logo-style-8' ],
                 ],
             )
         );
         $this->add_control(
             'image_width',
             [
-                'label' => __( 'Width', 'plugin-domain' ),
-                'type' => Controls_Manager::SLIDER,
+                'label'      => __( 'Width', 'unlimited-theme-addons' ),
+                'type'       => Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
-                'default' => [
+                'default'    => [
                     'unit' => '%',
                 ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-company-logo img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
@@ -451,12 +451,12 @@ class Uta_Company_Logo extends Widget_Base
 
         // Config
         $config = [
-            'arrows'         => ! empty($settings['uta_company_logo_show_arrow']),
-            'dots'           => ! empty($settings['uta_company_logo_show_dots']),
-            'autoplay'       => ! empty($settings['uta_company_logo_autoplay']),
-            'autoplaySpeed'  => ! empty($settings['uta_company_logo_speed']) ? $settings['uta_company_logo_speed'] : 1000,
-            'infinite'       => ! empty($settings['uta_company_logo_infinite_scroll']) ? $settings['uta_company_logo_infinite_scroll'] : true,
-            'slidesToShow'   => ! empty($settings['uta_company_logo_slideshow']) ? $settings['uta_company_logo_slideshow'] : 5,
+            'arrows'        => ! empty($settings['uta_company_logo_show_arrow']),
+            'dots'          => ! empty($settings['uta_company_logo_show_dots']),
+            'autoplay'      => ! empty($settings['uta_company_logo_autoplay']),
+            'autoplaySpeed' => ! empty($settings['uta_company_logo_speed']) ? $settings['uta_company_logo_speed'] : 1000,
+            'infinite'      => ! empty($settings['uta_company_logo_infinite_scroll']) ? $settings['uta_company_logo_infinite_scroll'] : true,
+            'slidesToShow'  => ! empty($settings['uta_company_logo_slideshow']) ? $settings['uta_company_logo_slideshow'] : 5,
         ];
 
         $this->add_render_attribute( 'wrapper', 'class', 'uta-company-logo');
@@ -474,68 +474,68 @@ class Uta_Company_Logo extends Widget_Base
             foreach ( $logos as $logo ) :
 
              // Normal Image.
-            $uta_company_logo_url = !empty($logo['uta_company_logo_website_link']['url']) ? $logo['uta_company_logo_website_link']['url'] : '';
+            $uta_company_logo_url = ! empty($logo['uta_company_logo_website_link']['url']) ? $logo['uta_company_logo_website_link']['url'] : '';
             $uta_company_logo_alt = \Elementor\Control_Media::get_image_alt($logo['uta_company_logo_image_normal']);
 
             // Hover Image.
-            $uta_company_logo_hover_img = !empty($logo['uta_company_logo_image_hover']['url']) ? $logo['uta_company_logo_image_hover']['url'] : '';
+            $uta_company_logo_hover_img = ! empty($logo['uta_company_logo_image_hover']['url']) ? $logo['uta_company_logo_image_hover']['url'] : '';
             $uta_company_logo_hover_alt = \Elementor\Control_Media::get_image_alt($logo['uta_company_logo_image_hover']);
 
             $uta_company_logo_url_is_external = 'on' === $logo['uta_company_logo_website_link']['is_external'] ? '_blank' : '';
 
              // Company logo style default.
-            if( 'uta-company-logo-style-default' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-default' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-default.php';
             }
 
             // Company logo style 1.
-            if( 'uta-company-logo-style-1' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-1' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-1.php';
             }
 
             // Company logo style 2.
-            if( 'uta-company-logo-style-2' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-2' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-2.php';
             }
 
             // Company logo style 3.
-            if( 'uta-company-logo-style-3' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-3' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-3.php';
             }
 
             // Company logo style 4.
-            if( 'uta-company-logo-style-4' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-4' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-4.php';
             }
 
             // Company logo style 5.
-            if( 'uta-company-logo-style-5' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-5' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-5.php';
             }
 
             // Company logo style 6.
-            if( 'uta-company-logo-style-6' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-6' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-6.php';
             }
 
             // Company logo style 7.
-            if( 'uta-company-logo-style-7' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-7' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-7.php';
             }
 
             // Company logo style 8.
-            if( 'uta-company-logo-style-8' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-8' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-8.php';
             }
 
 
             // Company logo style 9.
-            if( 'uta-company-logo-style-9' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-9' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-9.php';
             }
 
             // Company logo style 10.
-            if( 'uta-company-logo-style-10' === $settings['uta_company_logo_style'] ){
+            if ( 'uta-company-logo-style-10' === $settings['uta_company_logo_style'] ) {
                 require (__DIR__) . '/template/style-10.php';
             }
 

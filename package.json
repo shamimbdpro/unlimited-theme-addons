@@ -25,7 +25,7 @@
     "gulp-eslint": "^6.0.0",
     "gulp-js-prettify": "^0.1.0",
     "gulp-notify": "^3.2.0",
-    "gulp-zip": "^5.0.2"
+    "gulp-zip": "^5.1.0"
   },
   "repository": {
     "type": "git",

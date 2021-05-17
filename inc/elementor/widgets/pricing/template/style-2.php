@@ -1,7 +1,7 @@
 
-<div class="uta-pricing-item <?php echo esc_attr( $settings['uta_pricing_style'] );?>  <?php  if ($show_pricing_active == 'yes'):  ?> active <?php endif; ?>">
+<div class="uta-pricing-item <?php echo esc_attr( $settings['uta_pricing_style'] );?>  <?php  if ( 'yes' == $show_pricing_active ) :  ?> active <?php endif; ?>">
   
-   <?php  if ($show_pricing_active == 'yes'):  ?>
+   <?php  if ( 'yes' == $show_pricing_active ) :  ?>
 		<span class="uta-pricing-badge"><?php echo esc_html($badge_title); ?></span>
 	<?php endif; ?>
 

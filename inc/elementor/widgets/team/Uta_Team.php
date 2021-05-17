@@ -55,57 +55,57 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_style',
             [
-                'label'        => esc_html__('Team Style', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Team Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
-                'options'      => [
+                'options' => [
                     'team-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'team-style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'team-style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
-                    'team-style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
-                    'team-style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
-                    'team-style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
-                    'team-style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
-                    'team-style-7' => esc_html__('Style-7', 'unlimited-theme-addons'),
-                    'team-style-8' => esc_html__('Style-8', 'unlimited-theme-addons'),
-                    'team-style-9' => esc_html__('Style-9', 'unlimited-theme-addons'),
-                    'team-style-10' => esc_html__('Style-10', 'unlimited-theme-addons'),
-                    'team-style-11' => esc_html__('Style-11', 'unlimited-theme-addons'),
-                    'team-style-12' => esc_html__('Style-12', 'unlimited-theme-addons'),
-                    'team-style-13' => esc_html__('Style-13', 'unlimited-theme-addons'),
-                    'team-style-14' => esc_html__('Style-14', 'unlimited-theme-addons'),
+                    'team-style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'team-style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'team-style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
+                    'team-style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
+                    'team-style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
+                    'team-style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
+                    'team-style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
+                    'team-style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
+                    'team-style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
+                    'team-style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
+                    'team-style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
+                    'team-style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
+                    'team-style-13'      => esc_html__('Style-13', 'unlimited-theme-addons'),
+                    'team-style-14'      => esc_html__('Style-14', 'unlimited-theme-addons'),
                 ],
                 
-                'default'      => 'team-style-default',
+                'default' => 'team-style-default',
             ]
         );
 
         $this->add_control(
             'name',
             [
-                'label'   => esc_html__( 'Name', 'unlimited-theme-addons' ),
-                'type'    => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'John Doe', 'unlimited-theme-addons' ),
-                'label_block'   => true,
+                'label'       => esc_html__( 'Name', 'unlimited-theme-addons' ),
+                'type'        => \Elementor\Controls_Manager::TEXT,
+                'default'     => __( 'John Doe', 'unlimited-theme-addons' ),
+                'label_block' => true,
             ]
         );
         $this->add_control(
             'designation',
             [
-                'label'   => esc_html__( 'Designation', 'unlimited-theme-addons' ),
-                'type'    => \Elementor\Controls_Manager::TEXT,
-                'default' => __( 'App Developer', 'unlimited-theme-addons' ),
-                'label_block'   => true,
+                'label'       => esc_html__( 'Designation', 'unlimited-theme-addons' ),
+                'type'        => \Elementor\Controls_Manager::TEXT,
+                'default'     => __( 'App Developer', 'unlimited-theme-addons' ),
+                'label_block' => true,
             ]
         );
         $this->add_control(
             'description_team_mebmber',
             [
-                'label'   => esc_html__( 'Description', 'unlimited-theme-addons' ),
-                'type'    => \Elementor\Controls_Manager::TEXTAREA,
-                'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'unlimited-theme-addons' ),
-                'label_block'   => true,
-                'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13'],
+                'label'       => esc_html__( 'Description', 'unlimited-theme-addons' ),
+                'type'        => \Elementor\Controls_Manager::TEXTAREA,
+                'default'     => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'unlimited-theme-addons' ),
+                'label_block' => true,
+                'condition'   => [
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             ]
         );
@@ -171,20 +171,20 @@ class Uta_Team extends Widget_Base {
                 'label'     => __( 'Alignment', 'unlimited-theme-addons' ),
                 'type'      => Controls_Manager::CHOOSE,
                 'options'   => [
-                    'left'      => [
-                        'title'     => __( 'Left', 'unlimited-theme-addons' ),
-                        'icon'      => 'fa fa-align-left',
+                    'left'   => [
+                        'title' => __( 'Left', 'unlimited-theme-addons' ),
+                        'icon'  => 'fa fa-align-left',
                     ],
-                    'center'    => [
-                        'title'     => __( 'Center', 'unlimited-theme-addons' ),
-                        'icon'      => 'fa fa-align-center',
+                    'center' => [
+                        'title' => __( 'Center', 'unlimited-theme-addons' ),
+                        'icon'  => 'fa fa-align-center',
                     ],
-                    'right'     => [
-                        'title'     => __( 'Right', 'unlimited-theme-addons' ),
+                    'right'  => [
+                        'title' => __( 'Right', 'unlimited-theme-addons' ),
                         'icon'  => 'fa fa-align-right',
                     ],
                 ],
-                'toggle' => true,
+                'toggle'    => true,
                 'selectors' => [
                     '{{WRAPPER}} .team-style-default-content, .team-overly, .team-overly, .team-style-2-overly, .team-style-5' => 'text-align: {{VALUE}};',
                 ],
@@ -193,10 +193,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'custom_css',
             [
-                'label' => __( 'Custom CSS', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::CODE,
+                'label'    => __( 'Custom CSS', 'unlimited-theme-addons' ),
+                'type'     => \Elementor\Controls_Manager::CODE,
                 'language' => 'css',
-                'rows' => 20,
+                'rows'     => 20,
             ]
         );
         $this->end_controls_section();
@@ -205,8 +205,8 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'team_default_style',
             array(
-                'label'     => __('Team','unlimited-theme-addons'),
-                'tab'       => Controls_Manager::TAB_STYLE,
+                'label' => __('Team','unlimited-theme-addons'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
         /*
@@ -215,10 +215,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default, .team-style-1, .team-style-2, .team-style-3, .team-style-4, .team-style-5, .team-style-6, .team-style-7, .team-style-8, .team-style-9, .team-style-10, .team-style-11, .team-style-12, .team-style-13, .team-style-14' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -229,10 +229,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default, .team-style-1, .team-style-2, .team-style-3, .team-style-4, .team-style-5, .team-style-6, .team-style-7, .team-style-8, .team-style-9, .team-style-10, .team-style-11, .team-style-12, .team-style-13, .team-style-14' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -243,8 +243,8 @@ class Uta_Team extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_team_item_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_team_item_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .team-style-default, .team-style-2, .team-style-3, .team-style-4, .team-style-5, .team-style-6, .team-style-7, .team-style-8, .team-style-9, .team-style-10, .team-style-11, .team-style-13, .team-style-14',
             ]
         );
@@ -254,10 +254,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'uta_team_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default, .team-style-2, .team-style-3, .team-style-4, .team-style-5, .team-style-6, .team-style-7, .team-style-8, .team-style-9, .team-style-10, .team-style-11, .team-style-13, .team-style-14' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -293,8 +293,8 @@ class Uta_Team extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'box_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'box_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .team-style-default, .team-style-2, .team-style-3, .team-style-4, .team-style-5, .team-style-6, .team-style-7, .team-style-8, .team-style-9, .team-style-10, .team-style-11, .team-style-13, .team-style-14',
             ]
         );
@@ -322,8 +322,8 @@ class Uta_Team extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'box__hover_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'box__hover_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .team-style-default:hover, .team-style-2:hover, .team-style-3:hover, .team-style-4:hover, .team-style-5:hover, .team-style-6:hover, .team-style-7:hover, .team-style-8:hover, .team-style-9:hover, .team-style-10:hover, .team-style-11:hover, .team-style-13:hover, .team-style-14:hover',
             ]
         );
@@ -336,17 +336,17 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'name_style',
             array(
-                'label'     => __('Name','unlimited-theme-addons'),
-                'tab'       => Controls_Manager::TAB_STYLE,
+                'label' => __('Name','unlimited-theme-addons'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'name_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .team-style-default-content h3, .team-content h3, .team-style-2-overly-full h3, .team-style-3-content h3, .team-style-3-content h3, .team-style-4-overly-full h3, .team-style-5 h3, .team-style-6-overly-full h3, .team-style-7-content h3, .team-style-8-content h3, .team-style-9 h3, .team-style-10-content h3, .team-single-info-11 .member-info-content h3, .team-style-12-content h3, .team-style-13-overly-top-full h3, .team-style-14-content h3'
+                'name'     => 'name_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .team-style-default-content h3, .team-content h3, .team-style-2-overly-full h3, .team-style-3-content h3, .team-style-3-content h3, .team-style-4-overly-full h3, .team-style-5 h3, .team-style-6-overly-full h3, .team-style-7-content h3, .team-style-8-content h3, .team-style-9 h3, .team-style-10-content h3, .team-single-info-11 .member-info-content h3, .team-style-12-content h3, .team-style-13-overly-top-full h3, .team-style-14-content h3',
             ]
         );
         /*
@@ -355,10 +355,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_name_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content h3, .team-content h3, .team-style-2-overly-full h3, .team-style-3-content h3, .team-style-3-content h3, .team-style-4-overly-full h3, .team-style-5 h3, .team-style-6-overly-full h3, .team-style-7-content h3, .team-style-8-content h3, .team-style-9 h3, .team-style-10-content h3, .team-single-info-11 .member-info-content h3, .team-style-12-content h3, .team-style-13-overly-top-full h3, .team-style-14-content h3' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -369,10 +369,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_name_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content h3, .team-content h3, .team-style-2-overly-full h3, .team-style-3-content h3, .team-style-3-content h3, .team-style-4-overly-full h3, .team-style-5 h3, .team-style-6-overly-full h3, .team-style-7-content h3, .team-style-8-content h3, .team-style-9 h3, .team-style-10-content h3, .team-single-info-11 .member-info-content h3, .team-style-12-content h3, .team-style-13-overly-top-full h3, .team-style-14-content h3' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -412,17 +412,17 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'Designation_style',
             array(
-                'label'     => __('Designation','unlimited-theme-addons'),
-                'tab'       => Controls_Manager::TAB_STYLE,
+                'label' => __('Designation','unlimited-theme-addons'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'designation_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .team-style-default-content h5, .team-content p, .team-style-2-overly-full p, .team-style-3-content h5, .team-style-4-overly-full h5, .team-style-5 h5, .team-style-6-overly-full h5, .team-style-7-content h5, .team-style-8-content h5, .team-style-9 h5, .team-style-10-content h5, .team-single-info-11 .member-info-content h5, .team-style-12-content h5, .team-style-13-overly-top-full h5, .team-style-14-content h5'
+                'name'     => 'designation_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .team-style-default-content h5, .team-content p, .team-style-2-overly-full p, .team-style-3-content h5, .team-style-4-overly-full h5, .team-style-5 h5, .team-style-6-overly-full h5, .team-style-7-content h5, .team-style-8-content h5, .team-style-9 h5, .team-style-10-content h5, .team-single-info-11 .member-info-content h5, .team-style-12-content h5, .team-style-13-overly-top-full h5, .team-style-14-content h5',
             ]
         );
         /*
@@ -431,10 +431,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_designation_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content h5, .team-content p, .team-style-2-overly-full p, .team-style-3-content h5, .team-style-4-overly-full h5, .team-style-5 h5, .team-style-6-overly-full h5, .team-style-7-content h5, .team-style-8-content h5, .team-style-9 h5, .team-style-10-content h5, .team-single-info-11 .member-info-content h5, .team-style-12-content h5, .team-style-13-overly-top-full h5, .team-style-14-content h5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -445,10 +445,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_designation_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content h5, .team-content p, .team-style-2-overly-full p, .team-style-3-content h5, .team-style-4-overly-full h5, .team-style-5 h5, .team-style-6-overly-full h5, .team-style-7-content h5, .team-style-8-content h5, .team-style-9 h5, .team-style-10-content h5, .team-single-info-11 .member-info-content h5, .team-style-12-content h5, .team-style-13-overly-top-full h5, .team-style-14-content h5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -491,7 +491,7 @@ class Uta_Team extends Widget_Base {
                 'label'     => __('Description','unlimited-theme-addons'),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13'],
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             )
         );
@@ -503,7 +503,7 @@ class Uta_Team extends Widget_Base {
                 'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector'  => '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p',
                 'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13'],
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             ]
         );
@@ -513,15 +513,15 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_description_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 
                 ],
-                'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13']
+                'condition'  => [
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             ]
         );
@@ -531,14 +531,14 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_description_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
-                'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13']
+                'condition'  => [
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             ]
         );
@@ -554,7 +554,7 @@ class Uta_Team extends Widget_Base {
                     '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13'],
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             )
         );
@@ -570,7 +570,7 @@ class Uta_Team extends Widget_Base {
                     '{{WRAPPER}} .team-style-3-content p:hover, .team-style-5 p:hover, .team-style-7-content p:hover, .team-style-12-content p:hover, .team-style-13-overly-top-full p:hover' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'uta_team_style' => ['team-style-3','team-style-5','team-style-7','team-style-12','team-style-13']
+                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
                 ],
             )
         );
@@ -582,8 +582,8 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'team_social',
             array(
-                'label'     => __('Social','unlimited-theme-addons'),
-                'tab'       => Controls_Manager::TAB_STYLE,
+                'label' => __('Social','unlimited-theme-addons'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
         /*
@@ -592,10 +592,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_social_icon_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 
                 ],
@@ -607,10 +607,10 @@ class Uta_Team extends Widget_Base {
         $this->add_responsive_control(
             'uta_team_social_icon_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -618,10 +618,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'uta_team_icon_width',
             array(
-                'label'     => __('Width','unlimited-theme-addons'),
-                'type'      => Controls_Manager::NUMBER,
+                'label'      => __('Width','unlimited-theme-addons'),
+                'type'       => Controls_Manager::NUMBER,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i' => 'width: {{VALUE}}px;',
                 ],
             )
@@ -677,8 +677,8 @@ class Uta_Team extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_team_social_icon_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_team_social_icon_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i',
             ]
         );
@@ -688,10 +688,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'uta_team_social_icon_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -731,8 +731,8 @@ class Uta_Team extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_team_social_icon_hover_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_team_social_icon_hover_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i',
             ]
         );
@@ -742,10 +742,10 @@ class Uta_Team extends Widget_Base {
         $this->add_control(
             'uta_team_social_icon_border_hover_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .team-style-default-content .social ul li a i, .team-overly .team-social ul, .team-social ul li a i, .team-style-2-overly-full .social ul li a i, .team-style-3-content .social ul li a i, .team-style-4-overly-full .social ul li a i, .team-style-5 .social ul li a i, .team-style-6-overly-full .social ul li a i, .team-style-7-overly ul li a i, .team-style-8-social ul li a, .team-style-9-img .social ul li a i, .team-style-10-content .social ul li a i, .team-single-info-11 .team-member-icon ul li a i, .team-style-12-content .social ul li a i, .team-style-13-overly-top-full .social-top ul li a i, .team-style-14-img-overly .social ul li a i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -759,8 +759,8 @@ class Uta_Team extends Widget_Base {
         $this->start_controls_section(
             'team_overly_background',
             array(
-                'label'     => __('Team Overly','unlimited-theme-addons'),
-                'tab'       => Controls_Manager::TAB_STYLE,
+                'label' => __('Team Overly','unlimited-theme-addons'),
+                'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
         $this->add_control(
@@ -781,11 +781,10 @@ class Uta_Team extends Widget_Base {
         // get our input from the widget settings.
 
         $settings = $this->get_settings_for_display();
-        extract($settings);
         $custom_css = $settings['custom_css'];
         ?>
         <style>
-            <?php echo $custom_css; ?>
+            <?php echo $custom_css; //PHPCS:IGNORE ?>
         </style>    
         <?php
 
@@ -798,92 +797,92 @@ class Uta_Team extends Widget_Base {
         <div class="uta-team">
         <?php
 
-            if( 'team-style-default' === $settings['uta_team_style']){
+            if ( 'team-style-default' === $settings['uta_team_style'] ) {
               
                 require (__DIR__) . '/template/style-default.php';
            
             }
 
-            if( 'team-style-1' === $settings['uta_team_style'] ){
+            if ( 'team-style-1' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-01.php';
 
             }
 
-            if( 'team-style-2' === $settings['uta_team_style'] ){
+            if ( 'team-style-2' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-02.php';
 
             }
 
 
-            if( 'team-style-3' === $settings['uta_team_style'] ){
+            if ( 'team-style-3' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-03.php';
 
             }
 
-            if( 'team-style-4' === $settings['uta_team_style'] ){
+            if ( 'team-style-4' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-04.php';
 
             }
 
-            if( 'team-style-5' === $settings['uta_team_style'] ){
+            if ( 'team-style-5' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-05.php';
 
             }
 
-            if( 'team-style-6' === $settings['uta_team_style'] ){
+            if ( 'team-style-6' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-06.php';
 
             }
 
-            if( 'team-style-7' === $settings['uta_team_style'] ){
+            if ( 'team-style-7' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-07.php';
 
             }
 
-            if( 'team-style-8' === $settings['uta_team_style'] ){
+            if ( 'team-style-8' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-08.php';
 
             }
 
-            if( 'team-style-9' === $settings['uta_team_style'] ){
+            if ( 'team-style-9' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-09.php';
 
             }
 
-            if( 'team-style-10' === $settings['uta_team_style'] ){
+            if ( 'team-style-10' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-10.php';
 
             }
 
-            if( 'team-style-11' === $settings['uta_team_style'] ){
+            if ( 'team-style-11' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-11.php';
 
             }
 
-            if( 'team-style-12' === $settings['uta_team_style'] ){
+            if ( 'team-style-12' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-12.php';
 
             }
 
-            if( 'team-style-13' === $settings['uta_team_style'] ){
+            if ( 'team-style-13' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-13.php';
 
             }
 
-            if( 'team-style-14' === $settings['uta_team_style'] ){
+            if ( 'team-style-14' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-14.php';
 

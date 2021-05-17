@@ -35,19 +35,19 @@ class Uta_Testimonials extends Widget_Base {
        $this->add_responsive_control(
            'uta_testimonial_style',
            [
-               'label'        => esc_html__('Testimonial Style', 'unlimited-theme-addons'),
+               'label'   => esc_html__('Testimonial Style', 'unlimited-theme-addons'),
                'type'    => \Elementor\Controls_Manager::SELECT,
-               'options'      => [
+               'options' => [
                    'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                   'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                   'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
-                   'style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
-                   'style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
-                   'style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
-                   'style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
+                   'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                   'style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
+                   'style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
+                   'style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
+                   'style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
+                   'style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
                ],
 
-               'default'      => 'style-default',
+               'default' => 'style-default',
            ]
        );
 
@@ -118,8 +118,8 @@ class Uta_Testimonials extends Widget_Base {
                'label'   => __( 'Slide Show', 'unlimited-theme-addons' ),
                'type'    => \Elementor\Controls_Manager::NUMBER,
                'default' => 2,
-               'max' => 3,
-               'min' => 1,
+               'max'     => 3,
+               'min'     => 1,
            ]
        );
 
@@ -143,7 +143,7 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_style',
             array(
-                'label'   => __('Testimonial','unlimited-theme-addons'),
+                'label' => __('Testimonial','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -153,10 +153,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -167,10 +167,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -181,8 +181,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_testimonial_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_testimonial_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5',
             ]
         );
@@ -192,10 +192,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_control(
             'uta_testimonial_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -206,8 +206,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_testimonial_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_testimonial_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5',
             ]
         );
@@ -227,10 +227,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_content_box_style',
             array(
-                'label'   => __('Content Box','unlimited-theme-addons'),
-                'tab'   => Controls_Manager::TAB_STYLE,
+                'label'     => __('Content Box','unlimited-theme-addons'),
+                'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_testimonial_style' => ['style-6','style-3','style-2','style-1','style-5'],
+                    'uta_testimonial_style' => [ 'style-6', 'style-3', 'style-2', 'style-1', 'style-5' ],
                 ],
             )
         );
@@ -240,10 +240,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_content_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -254,10 +254,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_content_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -268,8 +268,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_testimonial_content_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_testimonial_content_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content',
             ]
         );
@@ -279,10 +279,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_control(
             'uta_testimonial_content_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -293,8 +293,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_testimonial_content_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_testimonial_content_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content',
             ]
         );
@@ -314,7 +314,7 @@ class Uta_Testimonials extends Widget_Base {
                 'label'     => __('Bootom Background','unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'condition' => [
-                    'uta_testimonial_style' => ['style-5'],
+                    'uta_testimonial_style' => [ 'style-5' ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .testimonial-item5 .thumbnail' => 'background-color: {{VALUE}};',
@@ -328,7 +328,7 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_image_style',
             array(
-                'label'   => __('Image','unlimited-theme-addons'),
+                'label' => __('Image','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -338,10 +338,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_image_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail, .testimonial-item2 .thumbnail, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail, .testimonial-item5 .thumbnail img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -352,8 +352,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_testimonial_image_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_testimonial_image_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail img, .testimonial-item2 .thumbnail img, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail img, .testimonial-item5 .thumbnail img',
             ]
         );
@@ -363,10 +363,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_control(
             'uta_testimonial_image_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail img, .testimonial-item2 .thumbnail img, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail img, .testimonial-item5 .thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -377,8 +377,8 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_testimonial_image_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_testimonial_image_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail img, .testimonial-item2 .thumbnail img, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail img, .testimonial-item5 .thumbnail img',
             ]
         );
@@ -399,7 +399,7 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_content_style',
             array(
-                'label'   => __('Content','unlimited-theme-addons'),
+                'label' => __('Content','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -409,10 +409,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_p_content_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default p, .testimonial-item1 .content p, .testimonial-item2 .content p, .testimonial-item3 .content p, .testimonial-item4 .content p, .testimonial-item5 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -420,10 +420,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'testimonial_content_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .testimonial-style-default p, .testimonial-item1 .content p, .testimonial-item2 .content p, .testimonial-item3 .content p, .testimonial-item4 .content p, .testimonial-item5 .content p'
+                'name'     => 'testimonial_content_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .testimonial-style-default p, .testimonial-item1 .content p, .testimonial-item2 .content p, .testimonial-item3 .content p, .testimonial-item4 .content p, .testimonial-item5 .content p',
             ]
         );
         $this->add_control(
@@ -443,7 +443,7 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_name_style',
             array(
-                'label'   => __('Name','unlimited-theme-addons'),
+                'label' => __('Name','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -453,10 +453,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_name_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default h5, .testimonial-item1 .content h2, .testimonial-item2 .thumbnail h2, .testimonial-item3 .thumbnail h2, .testimonial-item4 .content h2, .testimonial-item5 .thumbnail h2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -464,10 +464,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'testimonial_name_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .testimonial-style-default h5, .testimonial-item1 .content h2, .testimonial-item2 .thumbnail h2, .testimonial-item3 .thumbnail h2, .testimonial-item4 .content h2, .testimonial-item5 .thumbnail h2'
+                'name'     => 'testimonial_name_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .testimonial-style-default h5, .testimonial-item1 .content h2, .testimonial-item2 .thumbnail h2, .testimonial-item3 .thumbnail h2, .testimonial-item4 .content h2, .testimonial-item5 .thumbnail h2',
             ]
         );
         $this->add_control(
@@ -487,7 +487,7 @@ class Uta_Testimonials extends Widget_Base {
         $this->start_controls_section(
             'testimonial_designation_style',
             array(
-                'label'   => __('Designation','unlimited-theme-addons'),
+                'label' => __('Designation','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -497,10 +497,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_responsive_control(
             'uta_testimonial_designation_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default span, .testimonial-item5 .thumbnail h5, .testimonial-item4 .content h5, .testimonial-item3 .thumbnail h5, .testimonial-item2 .thumbnail h5, .testimonial-item1 .content h5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -508,10 +508,10 @@ class Uta_Testimonials extends Widget_Base {
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'testimonial_designation_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .testimonial-style-default span, .testimonial-item5 .thumbnail h5, .testimonial-item4 .content h5, .testimonial-item3 .thumbnail h5, .testimonial-item2 .thumbnail h5, .testimonial-item1 .content h5'
+                'name'     => 'testimonial_designation_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .testimonial-style-default span, .testimonial-item5 .thumbnail h5, .testimonial-item4 .content h5, .testimonial-item3 .thumbnail h5, .testimonial-item2 .thumbnail h5, .testimonial-item1 .content h5',
             ]
         );
         $this->add_control(
@@ -545,31 +545,31 @@ class Uta_Testimonials extends Widget_Base {
          $this->add_inline_editing_attributes( $testimonialText , 'basic' );
          $this->add_inline_editing_attributes( $name , 'basic' );
          $this->add_inline_editing_attributes( $designation , 'basic' );
-             if( 'style-default' === $settings['uta_testimonial_style'] ){
+             if ( 'style-default' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-default.php';
              }
 
-             if( 'style-1' === $settings['uta_testimonial_style'] ){
+             if ( 'style-1' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-1.php';
              }
 
-             if( 'style-2' === $settings['uta_testimonial_style'] ){
+             if ( 'style-2' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-2.php';
              }
 
-             if( 'style-3' === $settings['uta_testimonial_style'] ){
+             if ( 'style-3' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-3.php';
              }
 
-             if( 'style-4' === $settings['uta_testimonial_style'] ){
+             if ( 'style-4' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-4.php';
              }
 
-             if( 'style-5' === $settings['uta_testimonial_style'] ){
+             if ( 'style-5' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-5.php';
              }
 
-             if( 'style-6' === $settings['uta_testimonial_style'] ){
+             if ( 'style-6' === $settings['uta_testimonial_style'] ) {
                  require (__DIR__) . '/template/style-6.php';
              }
 

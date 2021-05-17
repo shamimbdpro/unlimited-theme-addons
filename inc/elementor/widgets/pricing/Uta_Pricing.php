@@ -38,15 +38,15 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_pricing_style',
             [
-                'label'        => esc_html__('Pricing Style', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Pricing Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
-                'options'      => [
+                'options' => [
                     'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
                 ],
                 
-                'default'      => 'pricing-style-default',
+                'default' => 'pricing-style-default',
             ]
         );
 
@@ -177,7 +177,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_style',
             array(
-                'label'   => __('Pricing Box','unlimited-theme-addons'),
+                'label' => __('Pricing Box','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -187,10 +187,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table, .pricing-item-1, .pricing-item-2, .pricing-item-3, .pricing-item-4, .pricing-item-5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -201,10 +201,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_pricing_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table, .pricing-item-1, .pricing-item-2, .pricing-item-3, .pricing-item-4, .pricing-item-5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -215,8 +215,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_pricing_item_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_pricing_item_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-table, .pricing-item-1, .pricing-item-2, .pricing-item-3, .pricing-item-4, .pricing-item-5',
             ]
         );
@@ -226,10 +226,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'uta_pricing_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table, .pricing-item-1, .pricing-item-2, .pricing-item-3, .pricing-item-4, .pricing-item-5' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -240,8 +240,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_pricing_box_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_pricing_box_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-table, .pricing-item-1, .pricing-item-2, .pricing-item-3, .pricing-item-4, .pricing-item-5',
             ]
         );
@@ -263,7 +263,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_title_style',
             array(
-                'label'   => __('Title','unlimited-theme-addons'),
+                'label' => __('Title','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -273,10 +273,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_title_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table h6, .uta-pricing-item h4, .uta-pricing-item.pricing-item-4 h5, .uta-pricing-item.pricing-item-5 .pricing-single-head h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -287,10 +287,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_title_pricing_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table h6, .uta-pricing-item h4, .uta-pricing-item.pricing-item-4 h5, .uta-pricing-item.pricing-item-5 .pricing-single-head h4' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -298,10 +298,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'title_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table h6, .uta-pricing-item h4, .uta-pricing-item.pricing-item-4 h5, .uta-pricing-item.pricing-item-5 .pricing-single-head h4'
+                'name'     => 'title_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table h6, .uta-pricing-item h4, .uta-pricing-item.pricing-item-4 h5, .uta-pricing-item.pricing-item-5 .pricing-single-head h4',
             ]
         );
         $this->add_control(
@@ -320,7 +320,7 @@ class Uta_Pricing extends Widget_Base
                 'label'     => __('Title Box','unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'condition' => [
-                    'uta_pricing_style' => ['pricing-style-2'],
+                    'uta_pricing_style' => [ 'pricing-style-2' ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-pricing-item.pricing-item-2.active .title' => 'background-color: {{VALUE}};',
@@ -334,7 +334,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_price_style',
             array(
-                'label'   => __('Price','unlimited-theme-addons'),
+                'label' => __('Price','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -344,10 +344,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_price_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-price, .uta-pricing-item h2, .uta-pricing-item.pricing-item-4 h2, .uta-pricing-item.pricing-item-5 .pricing-single-head h2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -355,10 +355,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'price_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table .uta-price, .uta-pricing-item h2, .uta-pricing-item.pricing-item-4 h2, .uta-pricing-item.pricing-item-5 .pricing-single-head h2'
+                'name'     => 'price_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table .uta-price, .uta-pricing-item h2, .uta-pricing-item.pricing-item-4 h2, .uta-pricing-item.pricing-item-5 .pricing-single-head h2',
             ]
         );
         $this->add_control(
@@ -379,7 +379,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_currency_style',
             array(
-                'label'   => __('Currency','unlimited-theme-addons'),
+                'label' => __('Currency','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -389,10 +389,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_currency_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-currency, .uta-pricing-item h2 sup' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -400,10 +400,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'currency_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table .uta-currency, .uta-pricing-item h2 sup'
+                'name'     => 'currency_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table .uta-currency, .uta-pricing-item h2 sup',
             ]
         );
         $this->add_control(
@@ -424,7 +424,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_Package_style',
             array(
-                'label'   => __('Package','unlimited-theme-addons'),
+                'label' => __('Package','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -434,10 +434,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_Package_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table>span, .uta-pricing-item.pricing-item-1 small, .uta-pricing-item.pricing-item-2 small, .uta-pricing-item.pricing-item-3 small, .uta-pricing-item.pricing-item-4 h2 small, .uta-pricing-item.pricing-item-5 .pricing-single-head h2 span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -445,10 +445,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'Package_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table>span, .uta-pricing-item.pricing-item-1 small, .uta-pricing-item.pricing-item-2 small, .uta-pricing-item.pricing-item-3 small, .uta-pricing-item.pricing-item-4 h2 small, .uta-pricing-item.pricing-item-5 .pricing-single-head h2 span'
+                'name'     => 'Package_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table>span, .uta-pricing-item.pricing-item-1 small, .uta-pricing-item.pricing-item-2 small, .uta-pricing-item.pricing-item-3 small, .uta-pricing-item.pricing-item-4 h2 small, .uta-pricing-item.pricing-item-5 .pricing-single-head h2 span',
             ]
         );
         $this->add_control(
@@ -468,7 +468,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'uta_pricing_badge_style',
             array(
-                'label'   => __('Active Badge Style','unlimited-theme-addons'),
+                'label' => __('Active Badge Style','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -478,10 +478,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_pricing_badge_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table.recommended, .pricing-item-1 span, .pricing-item-2.active span, .uta-pricing-item.pricing-item-4 h5 label.badge, .uta-pricing-item.pricing-item-5 .pricing-single-head small' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -492,10 +492,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_pricing_badge_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-badge' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -503,10 +503,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'uta_pricing_badge_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-badge'
+                'name'     => 'uta_pricing_badge_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-badge',
             ]
         );
         $this->add_control(
@@ -535,8 +535,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_pricing_item_border_active',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_pricing_item_border_active',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-badge',
             ]
         );
@@ -546,10 +546,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'uta_pricing_badge_border_radius',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-badge' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -560,8 +560,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_pricing_badge_box_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_pricing_badge_box_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-badge',
             ]
         );
@@ -574,7 +574,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'uta_pricing_Feature_list_style',
             array(
-                'label'   => __('Feature List Style','unlimited-theme-addons'),
+                'label' => __('Feature List Style','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -584,10 +584,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_Feature_list_pricing_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table ul li, .uta-pricing-item ul li, .uta-pricing-item.pricing-item-5 .pricing-single-content ul li, .uta-pricing-item.pricing-item-4 ul li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -595,10 +595,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'Feature_list_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table ul li, .uta-pricing-item ul li, .uta-pricing-item.pricing-item-5 .pricing-single-content ul li, .uta-pricing-item.pricing-item-4 ul li'
+                'name'     => 'Feature_list_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table ul li, .uta-pricing-item ul li, .uta-pricing-item.pricing-item-5 .pricing-single-content ul li, .uta-pricing-item.pricing-item-4 ul li',
             ]
         );
         $this->add_control(
@@ -630,7 +630,7 @@ class Uta_Pricing extends Widget_Base
         $this->start_controls_section(
             'pricing_button_style',
             array(
-                'label'   => __('Button Style','unlimited-theme-addons'),
+                'label' => __('Button Style','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -640,10 +640,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_button_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -654,10 +654,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_responsive_control(
             'uta_button_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -665,10 +665,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'button_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing'
+                'name'     => 'button_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing',
             ]
         );
 
@@ -703,8 +703,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_pricing_button_item_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_pricing_button_item_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing',
             ]
         );
@@ -714,10 +714,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'uta_pricing_button_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-buy-button, .uta-pricing-item .pricing-btn a, .uta-pricing-item.pricing-item-4 a.pricing' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -756,8 +756,8 @@ class Uta_Pricing extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_pricing_button_hover_item_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_pricing_button_hover_item_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-pricing-table .uta-buy-button:hover, .uta-pricing-item .pricing-btn a:hover, .uta-pricing-item.pricing-item-4 a.pricing:hover',
             ]
         );
@@ -767,10 +767,10 @@ class Uta_Pricing extends Widget_Base
         $this->add_control(
             'uta_pricing_button_hover_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-pricing-table .uta-buy-button:hover, .uta-pricing-item .pricing-btn a:hover, .uta-pricing-item.pricing-item-4 a.pricing:hover' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -801,13 +801,13 @@ class Uta_Pricing extends Widget_Base
         <div class="uta-pricing-table">
 
         <?php
-        if( 'style-default' === $settings['uta_pricing_style'] ){
+        if ( 'style-default' === $settings['uta_pricing_style'] ) {
             require (__DIR__) . '/template/style-default.php';
         }
-        if( 'style-1' === $settings['uta_pricing_style'] ){
+        if ( 'style-1' === $settings['uta_pricing_style'] ) {
             require (__DIR__) . '/template/style-1.php';
         }
-        if( 'style-2' === $settings['uta_pricing_style'] ){
+        if ( 'style-2' === $settings['uta_pricing_style'] ) {
             require (__DIR__) . '/template/style-2.php';
         }
         

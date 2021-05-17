@@ -1,5 +1,6 @@
 <?php 
 namespace Elementor;
+
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class Uta_Infobox extends Widget_Base{
 
@@ -42,25 +43,25 @@ class Uta_Infobox extends Widget_Base{
       	$this->add_responsive_control(
             'uta_infobox_style',
             [
-                'label'        => esc_html__('Team Style', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Team Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
-                'options'      => [
-                    'infobox-style-default' 	=> esc_html__('Default', 'unlimited-theme-addons'),
-                    'infobox-style-1' 			=> esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'infobox-style-2' 			=> esc_html__('Style-2', 'unlimited-theme-addons'),
-                    'infobox-style-3' 			=> esc_html__('Style-3', 'unlimited-theme-addons'),
-                    'infobox-style-4' 			=> esc_html__('Style-4', 'unlimited-theme-addons'),
-                    'infobox-style-5' 			=> esc_html__('Style-5', 'unlimited-theme-addons'),
-                    'infobox-style-6' 			=> esc_html__('Style-6', 'unlimited-theme-addons'),
+                'options' => [
+                    'infobox-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'infobox-style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'infobox-style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'infobox-style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
+                    'infobox-style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
+                    'infobox-style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
+                    'infobox-style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
                     'infobox-style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
                     'infobox-style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
                     'infobox-style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
-                    'infobox-style-10'       => esc_html__('Style-10', 'unlimited-theme-addons'),
-                    'infobox-style-11'       => esc_html__('Style-11', 'unlimited-theme-addons'),
-                    'infobox-style-12'       => esc_html__('Style-12', 'unlimited-theme-addons'),
+                    'infobox-style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
+                    'infobox-style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
+                    'infobox-style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
                 ],
                 
-                'default'      => 'infobox-style-default',
+                'default' => 'infobox-style-default',
             ]
         );
        	$this->add_control(
@@ -78,9 +79,9 @@ class Uta_Infobox extends Widget_Base{
       	$this->add_control(
          	'title',
          	[
-			 	'label'   => __( 'Title', 'unlimited-theme-addons' ),
-			 	'type'    => \Elementor\Controls_Manager::TEXT,
-			 	'default' => __('Design','unlimited-theme-addons'),
+			 	'label'       => __( 'Title', 'unlimited-theme-addons' ),
+			 	'type'        => \Elementor\Controls_Manager::TEXT,
+			 	'default'     => __('Design','unlimited-theme-addons'),
                 'label_block' => true,
          	]
       	);
@@ -102,7 +103,7 @@ class Uta_Infobox extends Widget_Base{
         $this->start_controls_section(
             'infobox_style',
             array(
-                'label'   => __('Info Box','unlimited-theme-addons'),
+                'label' => __('Info Box','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -112,10 +113,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_responsive_control(
             'uta_info_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -126,10 +127,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_responsive_control(
             'uta_info_margin',
             [
-                'label' => esc_html__( 'Margin', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Margin', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -140,8 +141,8 @@ class Uta_Infobox extends Widget_Base{
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'uta_info_item_border',
-                'label' => esc_html__( 'Border', 'unlimited-theme-addons' ),
+                'name'     => 'uta_info_item_border',
+                'label'    => esc_html__( 'Border', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06',
             ]
         );
@@ -151,10 +152,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_control(
             'uta_info_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -165,8 +166,8 @@ class Uta_Infobox extends Widget_Base{
         $this->add_group_control(
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
-                'name' => 'uta_info_box_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'name'     => 'uta_info_box_shadow',
+                'label'    => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06',
             ]
         );
@@ -199,7 +200,7 @@ class Uta_Infobox extends Widget_Base{
         $this->start_controls_section(
             'icon_style',
             array(
-                'label'   => __('Icon Box','unlimited-theme-addons'),
+                'label' => __('Icon Box','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -209,10 +210,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_responsive_control(
             'uta_icon_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -263,10 +264,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_control(
             'uta_info_icon_border_radious',
             [
-                'label' => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Border Radius', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -277,7 +278,7 @@ class Uta_Infobox extends Widget_Base{
         $this->start_controls_section(
             'info_title_style',
             array(
-                'label'   => __('Title','unlimited-theme-addons'),
+                'label' => __('Title','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -287,10 +288,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_responsive_control(
             'uta_info_titleg_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -298,10 +299,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'info_title_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4'
+                'name'     => 'info_title_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4',
             ]
         );
         $this->add_control(
@@ -331,7 +332,7 @@ class Uta_Infobox extends Widget_Base{
         $this->start_controls_section(
             'info_content_style',
             array(
-                'label'   => __('Content','unlimited-theme-addons'),
+                'label' => __('Content','unlimited-theme-addons'),
                 'tab'   => Controls_Manager::TAB_STYLE,
             )
         );
@@ -341,10 +342,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_responsive_control(
             'uta_info_content_padding',
             [
-                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
-                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'label'      => esc_html__( 'Padding', 'unlimited-theme-addons' ),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
-                'selectors' => [
+                'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
@@ -352,10 +353,10 @@ class Uta_Infobox extends Widget_Base{
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name'      => 'info_content_typography',
-                'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector'  => '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p'
+                'name'     => 'info_content_typography',
+                'label'    => __( 'Typography', 'unlimited-theme-addons' ),
+                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
+                'selector' => '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p',
             ]
         );
         $this->add_control(
@@ -394,45 +395,45 @@ class Uta_Infobox extends Widget_Base{
       	$this->add_inline_editing_attributes( 'text', 'basic' );
         $this->add_inline_editing_attributes( 'icon', 'basic' );
 
-        if( 'infobox-style-default' === $settings['uta_infobox_style']){
+        if ( 'infobox-style-default' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-default.php';
         }
 
-        if( 'infobox-style-1' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-1' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-1.php';
        	}
 
-        if( 'infobox-style-2' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-2' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-2.php';
        	}
-        if( 'infobox-style-3' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-3' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-3.php';
        	}
-        if( 'infobox-style-4' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-4' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-4.php';
        	}
-        if( 'infobox-style-5' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-5' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-5.php';
        	}
-        if( 'infobox-style-6' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-6' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-6.php';
        	}
-        if( 'infobox-style-7' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-7' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-7.php';
         }
-        if( 'infobox-style-8' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-8' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-8.php';
         }
-        if( 'infobox-style-9' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-9' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-9.php';
         }
-        if( 'infobox-style-10' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-10' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-10.php';
         }
-        if( 'infobox-style-11' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-11' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-11.php';
         }
-        if( 'infobox-style-12' === $settings['uta_infobox_style'] ){
+        if ( 'infobox-style-12' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-12.php';
         }
 

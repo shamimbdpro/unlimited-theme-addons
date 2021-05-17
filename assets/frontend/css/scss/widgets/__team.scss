@@ -56,9 +56,9 @@
 	transition: all 0.3s ease-in-out;
 }
 .team-style-default-content .social ul li a i:hover {
-	background: $uta-brand-color;
+	background: $brand-color;
 	color: #fff;
-	border-color: $uta-brand-color;
+	border-color: $brand-color;
 }
 /*Team Style 1*/
 .team-style-1 {
@@ -1196,7 +1196,7 @@
 }
 .team-style-14-img-overly .social ul li a i:hover {
 	color: #fff;
-	background: $uta-brand-color;
+	background: $brand-color;
 	transform: translateY(-4px);
 }
 .team-style-14:hover .team-style-14-img-overly {

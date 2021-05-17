@@ -45,31 +45,31 @@ class Uta_Search extends Widget_Base {
        $this->add_responsive_control(
            'uta_product_cat_width',
            [
-               'label'      => __( 'Category Width', 'unlimited-theme-addons' ),
-               'type'       => Controls_Manager::SLIDER,
-               'size_units' => [ '%' ],
-               'range'      => [
+               'label'           => __( 'Category Width', 'unlimited-theme-addons' ),
+               'type'            => Controls_Manager::SLIDER,
+               'size_units'      => [ '%' ],
+               'range'           => [
                    '%' => [
                        'min' => 0,
                        'max' => 100,
                    ],
                ],
-               'devices' => [ 'desktop', 'tablet', 'mobile' ],
-               'desktop_default'    => [
+               'devices'         => [ 'desktop', 'tablet', 'mobile' ],
+               'desktop_default' => [
                    'unit' => '%',
                    'size' => 20,
                ],
 
-               'tablet_default'    => [
+               'tablet_default'  => [
                    'unit' => '%',
                    'size' => 100,
                ],
 
-               'mobile_default'    => [
+               'mobile_default'  => [
                    'unit' => '%',
                    'size' => 100,
                ],
-               'selectors'  => [
+               'selectors'       => [
                    '{{WRAPPER}} .uta-product-category' => 'width: {{SIZE}}{{UNIT}};',
                ],
            ]
@@ -78,32 +78,32 @@ class Uta_Search extends Widget_Base {
        $this->add_responsive_control(
            'uta_product_search_bar_width',
            [
-               'label'      => __( 'Search Bar Width', 'unlimited-theme-addons' ),
-               'type'       => Controls_Manager::SLIDER,
-               'size_units' => [ '%' ],
-               'range'      => [
+               'label'           => __( 'Search Bar Width', 'unlimited-theme-addons' ),
+               'type'            => Controls_Manager::SLIDER,
+               'size_units'      => [ '%' ],
+               'range'           => [
                    '%' => [
                        'min' => 0,
                        'max' => 100,
                    ],
                ],
-               'devices' => [ 'desktop', 'tablet', 'mobile' ],
-               'desktop_default'    => [
+               'devices'         => [ 'desktop', 'tablet', 'mobile' ],
+               'desktop_default' => [
                    'unit' => '%',
                    'size' => 80,
                ],
 
-               'tablet_default'    => [
+               'tablet_default'  => [
                    'unit' => '%',
                    'size' => 100,
                ],
 
-               'mobile_default'    => [
+               'mobile_default'  => [
                    'unit' => '%',
                    'size' => 100,
                ],
 
-               'selectors'  => [
+               'selectors'       => [
                    '{{WRAPPER}} .uta-product-search-form' => 'width: {{SIZE}}{{UNIT}};',
                ],
            ]
