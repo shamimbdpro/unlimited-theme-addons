@@ -26,12 +26,15 @@ class Uta_Admin{
      * @return string
      */
     public function register_admin_menu_callback() {
-       add_menu_page('Unlimited Theme Addons', 'Unlimited Theme Addons', 'manage_options', 'unlimited-theme-addons', [ $this, 'uta_admin_page_callback' ], '', 25);
+       add_menu_page('Unlimited Theme Addons', 'Theme Addons', 'manage_options', 'unlimited-theme-addons', [ $this, 'uta_admin_page_callback' ], 'dashicons-insert', 25);
+       add_action('admin_head', [ $this, 'uta_admin_page_callback' ]);
     }
 
 
     public function uta_admin_page_callback(){
-        echo "Test";
+          remove_all_actions( 'user_admin_notices' );
+          remove_all_actions( 'admin_notices' );
+          echo "Test";
     }
 
 }
