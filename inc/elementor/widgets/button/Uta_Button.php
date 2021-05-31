@@ -115,9 +115,6 @@ class Uta_Button extends Widget_Base {
           'label_off'    => __( 'No', 'unlimited-theme-addons' ),
           'return_value' => 'yes',
           'default'      => 'no',
-       'condition' => [
-                'uta_button_style' => ['button-style-default'],
-            ],
          ]
       );
 
@@ -1274,48 +1271,48 @@ class Uta_Button extends Widget_Base {
 
       if( 'button-style-1' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-1 btn-bg-two " href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-1 btn-bg-two <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-2' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-2" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-2 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-3' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-3" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-3 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-4' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-4" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-4 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-5' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-5" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-5 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-6' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-6" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-6 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-7' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-7" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-7 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-8' === $settings['uta_button_style'] ){
       ?>
-        <a class="uta-button-8" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
+        <a class="uta-button-8 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
       if( 'button-style-9' === $settings['uta_button_style'] ){
       ?>
         <div class="button-area-9">
-            <a class="uta-button-9" href="<?php echo esc_url( $settings['button_url'] ); ?>"><span><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></span></a>
+            <a class="uta-button-9 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><span><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></span></a>
           </div>
       <?php
       }
