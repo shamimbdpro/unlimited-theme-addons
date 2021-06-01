@@ -642,7 +642,7 @@ class Uta_Pricing extends Widget_Base
 		$this->start_controls_tab(
 			'style_normal_tab',
 			[
-				'label' => __( 'Normal', 'plugin-name' ),
+				'label' => __( 'Normal', 'unlimited-theme-addons' ),
 			]
 		);
 
@@ -758,7 +758,7 @@ class Uta_Pricing extends Widget_Base
 		$this->start_controls_tab(
 			'uta_pricing_button_hover_tab',
 			[
-				'label' => __( 'Hover', 'plugin-name' ),
+				'label' => __( 'Hover', 'unlimited-theme-addons' ),
 			]
 		);
 
