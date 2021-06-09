@@ -33,6 +33,15 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 11. [Before After Image Comparison](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style.
 12. [Company Logo Slider](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with huge number of style.
 
+
+
+### **About the Maker**
+
+Unlimited Theme Addons is newest addition to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the heart of its users with a staggering 5-star rating. The plugin is codeded in a structure way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive feature. You can get largest number of addons style in free here.
+
+
+
+
 == Frequently Asked Questions ==
 
 = Do WordPress Plugins Affect Site Speed? =
