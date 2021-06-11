@@ -151,6 +151,9 @@ class Unlimited_Theme_Addons {
         // Client Logo.
         include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/client-logo/Uta_Client_Logo.php');
 
+        // Counter Up
+        include_once( UTA_PLUGIN_PATH .'inc/elementor/widgets/counterup/Uta_counterup.php');
+
       }
 	}
 
