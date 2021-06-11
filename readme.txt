@@ -1,11 +1,11 @@
 
 === Unlimited Theme Addons For Elementor ===
-Contributors: codepopular, shamimtpi
+Contributors: codepopular, shamimtpi, bokhtyer
 Donate link: https://www.codepopular.com
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 1.0.13
+Stable tag: 1.0.14
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -33,6 +33,15 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 11. [Before After Image Comparison](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style.
 12. [Company Logo Slider](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with huge number of style.
 
+
+
+### **About the Maker**
+
+Unlimited Theme Addons is newest addition to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the heart of its users with a staggering 5-star rating. The plugin is codeded in a structure way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive feature. You can get largest number of addons style in free here.
+
+
+
+
 == Frequently Asked Questions ==
 
 = Do WordPress Plugins Affect Site Speed? =
@@ -52,6 +61,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.14 =
+* Multiple button style added.
 
 = 1.0.13 =
 * Multiple Team style added.

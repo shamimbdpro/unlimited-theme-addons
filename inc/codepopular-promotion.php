@@ -51,6 +51,7 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 			?>
 			<hr>
 			<p> <a style="text-decoration: none;font-weight: bold" href="<?php echo esc_url( 'https://codepopular.com/blog/' ); ?>" target=_balnk><?php echo esc_html__( 'Get more WordPress tips & news on our blog...', 'unlimited-theme-addons' ); ?></a></p>
+			<a style="text-decoration: none; font-weight: bold; color: #fff; border: 1px solid #ccc; padding: 6px 10px; border-radius: 4px; background: #39b54a; " href="<?php echo esc_url_raw('https://codepopular.com/contact');?>" target="_balnk"><?php echo esc_html('Hire WordPress Developer');?></a>
 			<?php
 		}
 	}
