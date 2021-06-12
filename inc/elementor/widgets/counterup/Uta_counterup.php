@@ -1,6 +1,6 @@
 <?php
 namespace Elementor;
-Use Elementor\Core\Schemes\Typography;
+Use \Elementor\Core\Schemes\Typography;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -385,7 +385,7 @@ class Uta_CounterUP extends Widget_Base
             [
                 'name'      => 'counterup_title_typography',
                 'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => Scheme_Typography::TYPOGRAPHY_2,
+                'scheme'    => Typography::TYPOGRAPHY_2,
                 'selector'  => '{{WRAPPER}} .uta-counter-item h2'
             ]
         );
@@ -429,7 +429,7 @@ class Uta_CounterUP extends Widget_Base
             [
                 'name'      => 'counterup_cont_typography',
                 'label'     => __( 'Typography', 'unlimited-theme-addons' ),
-                'scheme'    => Scheme_Typography::TYPOGRAPHY_2,
+                'scheme'    => Typography::TYPOGRAPHY_2,
                 'selector'  => '{{WRAPPER}} .uta-counter-item p'
             ]
         );
