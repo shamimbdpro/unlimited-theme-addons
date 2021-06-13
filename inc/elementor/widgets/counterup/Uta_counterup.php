@@ -89,9 +89,6 @@ class Uta_CounterUP extends Widget_Base
                   'counterup-style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
                   'counterup-style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
                   'counterup-style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
-                  'counterup-style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
-                  'counterup-style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
-                  'counterup-style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
                 ],     
                 'default'      => 'counterup-style-default',
             ]
@@ -263,34 +260,7 @@ class Uta_CounterUP extends Widget_Base
                 ],
             ]
         );
-        // Counter Up Width
-        $this->add_control(
-            'uta_counter_up_box_width',
-            [
-               'label'        => esc_html__( 'Box Width', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'condition' => [
-                    'uta_counter_up_style' => ['counterup-style-5'],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .uta-counter-item' => 'width: {{VALUE}}px;',
-                ],
-            ]
-        );
-        // Counter Up Height
-        $this->add_control(
-            'uta_counter_up_box_height',
-            [
-               'label'        => esc_html__( 'Box Height', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'condition' => [
-                    'uta_counter_up_style' => ['counterup-style-5'],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .uta-counter-item' => 'height: {{VALUE}}px;',
-                ],
-            ]
-        );
+       
         $this->end_controls_section();
 
         // Counter Up Icon
@@ -501,19 +471,6 @@ class Uta_CounterUP extends Widget_Base
             require (__DIR__) . '/template/style3.php';
         }
 
-         // Counter Up style 4.
-        if( 'counterup-style-4' === $settings['uta_counter_up_style'] ){
-            require (__DIR__) . '/template/style4.php';
-        }
-
-         // Counter Up style 5.
-        if( 'counterup-style-5' === $settings['uta_counter_up_style'] ){
-            require (__DIR__) . '/template/style5.php';
-        }
-         // Counter Up style 6.
-        if( 'counterup-style-6' === $settings['uta_counter_up_style'] ){
-            require (__DIR__) . '/template/style6.php';
-        }
         ?>
 
         <script>
