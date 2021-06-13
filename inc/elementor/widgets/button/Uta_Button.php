@@ -50,18 +50,18 @@ class Uta_Button extends Widget_Base {
         'label'        => esc_html__('Button Style', 'unlimited-theme-addons'),
         'type'    => \Elementor\Controls_Manager::SELECT,
         'options'      => [
-          'button-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-          'button-style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-          'button-style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
-          'button-style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
-          'button-style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
-          'button-style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
-          'button-style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
-          'button-style-7' => esc_html__('Style-7', 'unlimited-theme-addons'),
-          'button-style-8' => esc_html__('Style-8', 'unlimited-theme-addons'),
-          // 'button-style-9' => esc_html__('Style-9', 'unlimited-theme-addons'),
+          'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+          'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
+          'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+          'style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
+          'style-4' => esc_html__('Style-4', 'unlimited-theme-addons'),
+          'style-5' => esc_html__('Style-5', 'unlimited-theme-addons'),
+          'style-6' => esc_html__('Style-6', 'unlimited-theme-addons'),
+          'style-7' => esc_html__('Style-7', 'unlimited-theme-addons'),
+          'style-8' => esc_html__('Style-8', 'unlimited-theme-addons'),
+          // 'style-9' => esc_html__('Style-9', 'unlimited-theme-addons'),
         ],
-        'default'      => 'button-style-default',
+        'default'      => 'style-default',
       ]
     );
 
@@ -200,7 +200,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-btn',
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       ]
     );
@@ -213,7 +213,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-1',
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       ]
     );
@@ -226,7 +226,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-2',
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       ]
     );
@@ -239,7 +239,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-3',
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       ]
     );
@@ -252,7 +252,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-4',
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       ]
     );
@@ -265,7 +265,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-5',
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       ]
     );
@@ -278,7 +278,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-6',
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       ]
     );
@@ -291,7 +291,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-7',
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       ]
     );
@@ -304,7 +304,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-8',
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       ]
     );
@@ -317,7 +317,7 @@ class Uta_Button extends Widget_Base {
         'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
         'selector'  => '{{WRAPPER}} .uta-button-9',
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       ]
     );
@@ -348,7 +348,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-btn' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       )
     );
@@ -362,7 +362,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-btn' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       )
     );
@@ -376,7 +376,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-btn',
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       ]
     );
@@ -393,7 +393,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-1' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       )
     );
@@ -407,7 +407,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .btn-bg-two::before' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       )
     );
@@ -421,7 +421,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-1',
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       ]
     );
@@ -438,7 +438,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-2' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       )
     );
@@ -452,7 +452,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-2' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       )
     );
@@ -466,7 +466,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-2',
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       ]
     );
@@ -484,7 +484,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-3' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       )
     );
@@ -498,7 +498,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-3' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       )
     );
@@ -512,7 +512,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-3',
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       ]
     );
@@ -529,7 +529,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-4' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       )
     );
@@ -543,7 +543,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-4' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       )
     );
@@ -557,7 +557,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-4',
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       ]
     );
@@ -573,7 +573,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-5' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       )
     );
@@ -587,7 +587,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-5' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       )
     );
@@ -601,7 +601,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-5',
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       ]
     );
@@ -618,7 +618,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-6' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       )
     );
@@ -632,7 +632,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-6' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       )
     );
@@ -646,7 +646,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-6',
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       ]
     );
@@ -662,7 +662,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-7' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       )
     );
@@ -676,7 +676,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-7' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       )
     );
@@ -690,7 +690,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-7',
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       ]
     );
@@ -706,7 +706,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-8' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       )
     );
@@ -720,7 +720,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-8' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       )
     );
@@ -734,7 +734,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-8',
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       ]
     );
@@ -750,7 +750,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-9' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       )
     );
@@ -764,7 +764,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-9' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       )
     );
@@ -778,7 +778,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-9',
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       ]
     );
@@ -804,7 +804,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-btn:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       )
     );
@@ -818,7 +818,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-btn:hover' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       )
     );
@@ -832,7 +832,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-btn:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-default'],
+          'uta_button_style' => ['style-default'],
         ],
       ]
     );
@@ -849,7 +849,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-1:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       )
     );
@@ -863,7 +863,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-1' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       )
     );
@@ -877,7 +877,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-1:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-1'],
+          'uta_button_style' => ['style-1'],
         ],
       ]
     );
@@ -894,7 +894,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-2:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       )
     );
@@ -908,7 +908,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-2::after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       )
     );
@@ -922,7 +922,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-2:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-2'],
+          'uta_button_style' => ['style-2'],
         ],
       ]
     );
@@ -940,7 +940,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-3:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       )
     );
@@ -954,7 +954,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-3:after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       )
     );
@@ -968,7 +968,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-3:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-3'],
+          'uta_button_style' => ['style-3'],
         ],
       ]
     );
@@ -985,7 +985,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-4:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       )
     );
@@ -999,7 +999,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-4:after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       )
     );
@@ -1013,7 +1013,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-4:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-4'],
+          'uta_button_style' => ['style-4'],
         ],
       ]
     );
@@ -1029,7 +1029,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-5:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       )
     );
@@ -1043,7 +1043,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-5:after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       )
     );
@@ -1057,7 +1057,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-5:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-5'],
+          'uta_button_style' => ['style-5'],
         ],
       ]
     );
@@ -1074,7 +1074,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-6' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       )
     );
@@ -1088,7 +1088,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-6::before, .uta-button-6::after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-6'],
+          'uta_button_style' => ['style-6'],
         ],
       )
     );
@@ -1104,7 +1104,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-7:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       )
     );
@@ -1118,7 +1118,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-7::before, .uta-button-7::after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       )
     );
@@ -1132,7 +1132,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-7:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-7'],
+          'uta_button_style' => ['style-7'],
         ],
       ]
     );
@@ -1148,7 +1148,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-8:hover' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       )
     );
@@ -1162,7 +1162,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-8:after' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       )
     );
@@ -1176,7 +1176,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-8:hover',
         'condition' => [
-          'uta_button_style' => ['button-style-8'],
+          'uta_button_style' => ['style-8'],
         ],
       ]
     );
@@ -1192,7 +1192,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-9' => 'color: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       )
     );
@@ -1206,7 +1206,7 @@ class Uta_Button extends Widget_Base {
           '{{WRAPPER}} .uta-button-9' => 'background: {{VALUE}};',
         ],
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       )
     );
@@ -1220,7 +1220,7 @@ class Uta_Button extends Widget_Base {
         'label' => esc_html__('Border', 'unlimited-theme-addons'),
         'selector' => '{{WRAPPER}} .uta-button-9',
         'condition' => [
-          'uta_button_style' => ['button-style-9'],
+          'uta_button_style' => ['style-9'],
         ],
       ]
     );
@@ -1244,7 +1244,7 @@ class Uta_Button extends Widget_Base {
       ?>
       <div class="uta-btn-center" style="text-align: <?php echo esc_attr( $settings['align'] ) ?>">
       <?php
-      if ( 'button-style-default' === $settings['uta_button_style'] ) {
+      if ( 'style-default' === $settings['uta_button_style'] ) {
         ?>
           <div>
            <a class="uta-btn  elementor-inline-editing  <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" <?php echo $this->get_render_attribute_string( 'button_text' ); ?> href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?></a>
@@ -1253,47 +1253,47 @@ class Uta_Button extends Widget_Base {
         <?php
       }
 
-      if ( 'button-style-1' === $settings['uta_button_style'] ) {
+      if ( 'style-1' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-1 btn-bg-two <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-2' === $settings['uta_button_style'] ) {
+      if ( 'style-2' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-2 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-3' === $settings['uta_button_style'] ) {
+      if ( 'style-3' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-3 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-4' === $settings['uta_button_style'] ) {
+      if ( 'style-4' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-4 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-5' === $settings['uta_button_style'] ) {
+      if ( 'style-5' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-5 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-6' === $settings['uta_button_style'] ) {
+      if ( 'style-6' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-6 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-7' === $settings['uta_button_style'] ) {
+      if ( 'style-7' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-7 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-8' === $settings['uta_button_style'] ) {
+      if ( 'style-8' === $settings['uta_button_style'] ) {
       ?>
         <a class="uta-button-8 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></a>
       <?php
       }
-      if ( 'button-style-9' === $settings['uta_button_style'] ) {
+      if ( 'style-9' === $settings['uta_button_style'] ) {
       ?>
         <div class="button-area-9">
             <a class="uta-button-9 <?php if ( 'yes' == $settings['popup'] ) { echo'uta-popup-url'; } ?>" href="<?php echo esc_url( $settings['button_url'] ); ?>"><span><?php echo esc_html( $settings['button_text'] ); //phpcs:ignore ?> <?php if ( 'yes' == $settings['button_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?></span></a>

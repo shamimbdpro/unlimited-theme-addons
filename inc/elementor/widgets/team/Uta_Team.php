@@ -58,21 +58,21 @@ class Uta_Team extends Widget_Base {
                 'label'   => esc_html__('Team Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options' => [
-                    'team-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'team-style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'team-style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
-                    'team-style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
-                    'team-style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
-                    'team-style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
-                    'team-style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
-                    'team-style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
-                    'team-style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
-                    'team-style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
-                    'team-style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
-                    'team-style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
-                    'team-style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
-                    'team-style-13'      => esc_html__('Style-13', 'unlimited-theme-addons'),
-                    'team-style-14'      => esc_html__('Style-14', 'unlimited-theme-addons'),
+                    'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
+                    'style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
+                    'style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
+                    'style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
+                    'style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
+                    'style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
+                    'style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
+                    'style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
+                    'style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
+                    'style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
+                    'style-13'      => esc_html__('Style-13', 'unlimited-theme-addons'),
+                    'style-14'      => esc_html__('Style-14', 'unlimited-theme-addons'),
                 ],
                 
                 'default' => 'team-style-default',
@@ -105,7 +105,7 @@ class Uta_Team extends Widget_Base {
                 'default'     => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'unlimited-theme-addons' ),
                 'label_block' => true,
                 'condition'   => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             ]
         );
@@ -491,7 +491,7 @@ class Uta_Team extends Widget_Base {
                 'label'     => __('Description','unlimited-theme-addons'),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             )
         );
@@ -503,7 +503,7 @@ class Uta_Team extends Widget_Base {
                 'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector'  => '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p',
                 'condition' => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             ]
         );
@@ -521,7 +521,7 @@ class Uta_Team extends Widget_Base {
 
                 ],
                 'condition'  => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             ]
         );
@@ -538,7 +538,7 @@ class Uta_Team extends Widget_Base {
                     '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
                 'condition'  => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             ]
         );
@@ -554,7 +554,7 @@ class Uta_Team extends Widget_Base {
                     '{{WRAPPER}} .team-style-3-content p, .team-style-5 p, .team-style-7-content p, .team-style-12-content p, .team-style-13-overly-top-full p' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             )
         );
@@ -570,7 +570,7 @@ class Uta_Team extends Widget_Base {
                     '{{WRAPPER}} .team-style-3-content p:hover, .team-style-5 p:hover, .team-style-7-content p:hover, .team-style-12-content p:hover, .team-style-13-overly-top-full p:hover' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'uta_team_style' => [ 'team-style-3', 'team-style-5', 'team-style-7', 'team-style-12', 'team-style-13' ],
+                    'uta_team_style' => [ 'style-3', 'style-5', 'style-7', 'style-12', 'style-13' ],
                 ],
             )
         );
@@ -797,92 +797,92 @@ class Uta_Team extends Widget_Base {
         <div class="uta-team">
         <?php
 
-            if ( 'team-style-default' === $settings['uta_team_style'] ) {
+            if ( 'style-default' === $settings['uta_team_style'] ) {
               
                 require (__DIR__) . '/template/style-default.php';
            
             }
 
-            if ( 'team-style-1' === $settings['uta_team_style'] ) {
+            if ( 'style-1' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-01.php';
 
             }
 
-            if ( 'team-style-2' === $settings['uta_team_style'] ) {
+            if ( 'style-2' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-02.php';
 
             }
 
 
-            if ( 'team-style-3' === $settings['uta_team_style'] ) {
+            if ( 'style-3' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-03.php';
 
             }
 
-            if ( 'team-style-4' === $settings['uta_team_style'] ) {
+            if ( 'style-4' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-04.php';
 
             }
 
-            if ( 'team-style-5' === $settings['uta_team_style'] ) {
+            if ( 'style-5' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-05.php';
 
             }
 
-            if ( 'team-style-6' === $settings['uta_team_style'] ) {
+            if ( 'style-6' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-06.php';
 
             }
 
-            if ( 'team-style-7' === $settings['uta_team_style'] ) {
+            if ( 'style-7' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-07.php';
 
             }
 
-            if ( 'team-style-8' === $settings['uta_team_style'] ) {
+            if ( 'style-8' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-08.php';
 
             }
 
-            if ( 'team-style-9' === $settings['uta_team_style'] ) {
+            if ( 'style-9' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-09.php';
 
             }
 
-            if ( 'team-style-10' === $settings['uta_team_style'] ) {
+            if ( 'style-10' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-10.php';
 
             }
 
-            if ( 'team-style-11' === $settings['uta_team_style'] ) {
+            if ( 'style-11' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-11.php';
 
             }
 
-            if ( 'team-style-12' === $settings['uta_team_style'] ) {
+            if ( 'style-12' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-12.php';
 
             }
 
-            if ( 'team-style-13' === $settings['uta_team_style'] ) {
+            if ( 'style-13' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-13.php';
 
             }
 
-            if ( 'team-style-14' === $settings['uta_team_style'] ) {
+            if ( 'style-14' === $settings['uta_team_style'] ) {
 
                 require (__DIR__) . '/template/style-14.php';
 
