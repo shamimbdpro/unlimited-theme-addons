@@ -46,19 +46,19 @@ class Uta_Infobox extends Widget_Base{
                 'label'   => esc_html__('Team Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options' => [
-                    'infobox-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'infobox-style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'infobox-style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
-                    'infobox-style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
-                    'infobox-style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
-                    'infobox-style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
-                    'infobox-style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
-                    'infobox-style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
-                    'infobox-style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
-                    'infobox-style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
-                    'infobox-style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
-                    'infobox-style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
-                    'infobox-style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
+                    'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                    'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
+                    'style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
+                    'style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
+                    'style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
+                    'style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
+                    'style-7'       => esc_html__('Style-7', 'unlimited-theme-addons'),
+                    'style-8'       => esc_html__('Style-8', 'unlimited-theme-addons'),
+                    'style-9'       => esc_html__('Style-9', 'unlimited-theme-addons'),
+                    'style-10'      => esc_html__('Style-10', 'unlimited-theme-addons'),
+                    'style-11'      => esc_html__('Style-11', 'unlimited-theme-addons'),
+                    'style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
                 ],
                 
                 'default' => 'infobox-style-default',
@@ -395,45 +395,45 @@ class Uta_Infobox extends Widget_Base{
       	$this->add_inline_editing_attributes( 'text', 'basic' );
         $this->add_inline_editing_attributes( 'icon', 'basic' );
 
-        if ( 'infobox-style-default' === $settings['uta_infobox_style'] ) {
+        if ( 'style-default' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-default.php';
         }
 
-        if ( 'infobox-style-1' === $settings['uta_infobox_style'] ) {
+        if ( 'style-1' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-1.php';
        	}
 
-        if ( 'infobox-style-2' === $settings['uta_infobox_style'] ) {
+        if ( 'style-2' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-2.php';
        	}
-        if ( 'infobox-style-3' === $settings['uta_infobox_style'] ) {
+        if ( 'style-3' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-3.php';
        	}
-        if ( 'infobox-style-4' === $settings['uta_infobox_style'] ) {
+        if ( 'style-4' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-4.php';
        	}
-        if ( 'infobox-style-5' === $settings['uta_infobox_style'] ) {
+        if ( 'style-5' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-5.php';
        	}
-        if ( 'infobox-style-6' === $settings['uta_infobox_style'] ) {
+        if ( 'style-6' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-6.php';
        	}
-        if ( 'infobox-style-7' === $settings['uta_infobox_style'] ) {
+        if ( 'style-7' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-7.php';
         }
-        if ( 'infobox-style-8' === $settings['uta_infobox_style'] ) {
+        if ( 'style-8' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-8.php';
         }
-        if ( 'infobox-style-9' === $settings['uta_infobox_style'] ) {
+        if ( 'style-9' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-9.php';
         }
-        if ( 'infobox-style-10' === $settings['uta_infobox_style'] ) {
+        if ( 'style-10' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-10.php';
         }
-        if ( 'infobox-style-11' === $settings['uta_infobox_style'] ) {
+        if ( 'style-11' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-11.php';
         }
-        if ( 'infobox-style-12' === $settings['uta_infobox_style'] ) {
+        if ( 'style-12' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-12.php';
         }
 
