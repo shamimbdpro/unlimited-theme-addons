@@ -129,7 +129,7 @@ $uta_widget_lists = array(
         'is_free' => 1,
     ),
 
-     // 14. Counter Up.
+     // 15. Counter Up.
     array(
         'title' => __('Woocommerce Product Carousel', 'unlimited-theme-addons'),
         'description' => __('Get Woocommerce product carouse to show up the product in creative style to your customer.', 'unlimited-theme-addons'),
@@ -138,7 +138,7 @@ $uta_widget_lists = array(
         'is_free' => 0,
     ),
 
-     // 14. Counter Up.
+     // 16. Counter Up.
      array(
         'title' => __('Post Carousel', 'unlimited-theme-addons'),
         'description' => __('Show to latest blog post in creative looking into your website.', 'unlimited-theme-addons'),
