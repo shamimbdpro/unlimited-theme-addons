@@ -118,18 +118,22 @@ class Uta_Admin
     function uta_admin_ajax_callback()
     {
 
-        // Check valid request form user.
-        check_ajax_referer('uta-admin-js');
+        if (isset($_POST['widget_lists'])) {
+            
+            // Check valid request form user.
+            check_ajax_referer('uta-admin-js');
 
-        parse_str($_POST['widget_lists'], $get_widget_lists);
+            parse_str($_POST['widget_lists'], $get_widget_lists);
 
-        foreach ($get_widget_lists as $key => $value) {
-            $data[$key] = $value;
+            foreach ($get_widget_lists as $key => $value) {
+                $data[$key] = $value;
+            }
+            update_option('unlimited_theme_addons_active_widgets', $data);
+
+            $response['message'] = 'sucess';
+            wp_send_json_success($response);
         }
-        update_option('unlimited_theme_addons_active_widgets', $data);
 
-        $response['message'] = 'sucess';
-        wp_send_json_success($response);
         wp_die();
     }
 }

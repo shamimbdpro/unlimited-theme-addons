@@ -1,6 +1,6 @@
 <?php
 
-$widget_list = get_option('unlimited_theme_addons_active_widgets') == !'' ? get_option('unlimited_theme_addons_active_widgets') : array();
+$widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get_option('unlimited_theme_addons_active_widgets') : array();
 $uta_widget_lists = array(
 
     // 1. Woocommerce product grid.
@@ -8,7 +8,7 @@ $uta_widget_lists = array(
         'title' => __('Woocommerce Product Grid', 'unlimited-theme-addons'),
         'description' => __('Enable Woocommerce Product Grid. Please ensure that you need to install Woocoomerce plugin first.', 'unlimited-theme-addons'),
         'name'  => 'woocommerce-product-grid',
-        'default' => array_key_exists('woocommerce-product-grid', $widget_list) &&  $widget_list['woocommerce-product-grid'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('woocommerce-product-grid', $widget_list) && $widget_list['woocommerce-product-grid'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -17,7 +17,7 @@ $uta_widget_lists = array(
         'title' => __('Woocommerce Product List', 'unlimited-theme-addons'),
         'description' => __('Make Prodcut list with elementor. You should to install woocommerce before working this addons.', 'unlimited-theme-addons'),
         'name'  => 'woocommerce-product-list',
-        'default' => array_key_exists('woocommerce-product-list', $widget_list) &&  $widget_list['woocommerce-product-list'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('woocommerce-product-list', $widget_list) && $widget_list['woocommerce-product-list'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -26,7 +26,7 @@ $uta_widget_lists = array(
         'title' => __('Woocommerce Product Search', 'unlimited-theme-addons'),
         'description' => __('Add Woocommerce product search with category. You can change style from option panel.', 'unlimited-theme-addons'),
         'name'  => 'woocommerce-product-search',
-        'default' => array_key_exists('woocommerce-product-search', $widget_list) &&  $widget_list['woocommerce-product-search'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('woocommerce-product-search', $widget_list) && $widget_list['woocommerce-product-search'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -35,7 +35,7 @@ $uta_widget_lists = array(
         'title' => __('Section Title', 'unlimited-theme-addons'),
         'description' => __('Get beautify section title. No codeing skill required to work on this addons.', 'unlimited-theme-addons'),
         'name'  => 'section-title',
-        'default' => array_key_exists('section-title', $widget_list) &&  $widget_list['section-title'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('section-title', $widget_list) && $widget_list['section-title'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -44,7 +44,7 @@ $uta_widget_lists = array(
         'title' => __('Team', 'unlimited-theme-addons'),
         'description' => __('There has huge number of team style in free. Just make the best design and enjoy with it.', 'unlimited-theme-addons'),
         'name'  => 'team',
-        'default' => array_key_exists('team', $widget_list) &&  $widget_list['team'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('team', $widget_list) && $widget_list['team'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -53,7 +53,7 @@ $uta_widget_lists = array(
         'title' => __('Testimonial', 'unlimited-theme-addons'),
         'description' => __('Build up outstanding testimonial design with Elementor. Multiple option panel to manage it.', 'unlimited-theme-addons'),
         'name'  => 'testimonial',
-        'default' => array_key_exists('testimonial', $widget_list) &&  $widget_list['testimonial'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('testimonial', $widget_list) && $widget_list['testimonial'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -62,7 +62,7 @@ $uta_widget_lists = array(
         'title' => __('Video', 'unlimited-theme-addons'),
         'description' => __('Make popup video box. You can show any youtube video on here.', 'unlimited-theme-addons'),
         'name'  => 'video',
-        'default' => array_key_exists('video', $widget_list) &&  $widget_list['video'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('video', $widget_list) && $widget_list['video'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -71,7 +71,7 @@ $uta_widget_lists = array(
         'title' => __('Image Comparison', 'unlimited-theme-addons'),
         'description' => __('Make image comparing design vertically and horizontally. Allow to customize label.', 'unlimited-theme-addons'),
         'name'  => 'image-comparison',
-        'default' => array_key_exists('image-comparison', $widget_list) &&  $widget_list['image-comparison'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('image-comparison', $widget_list) && $widget_list['image-comparison'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -80,7 +80,7 @@ $uta_widget_lists = array(
         'title' => __('Button', 'unlimited-theme-addons'),
         'description' => __('Setup the multiple style button for your webpage. Just add it to your page and select style.', 'unlimited-theme-addons'),
         'name'  => 'button',
-        'default' => array_key_exists('button', $widget_list) &&  $widget_list['button'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('button', $widget_list) && $widget_list['button'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -89,7 +89,7 @@ $uta_widget_lists = array(
         'title' => __('Infobox', 'unlimited-theme-addons'),
         'description' => __('Many pre-build infobox design for you. After add this addons just select your choosen style.', 'unlimited-theme-addons'),
         'name'  => 'infobox',
-        'default' => array_key_exists('infobox', $widget_list) &&  $widget_list['infobox'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('infobox', $widget_list) && $widget_list['infobox'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -98,7 +98,7 @@ $uta_widget_lists = array(
         'title' => __('Blog', 'unlimited-theme-addons'),
         'description' => __('Make awesome blog grid for your website. Choose ASC/DESC order according to your need.', 'unlimited-theme-addons'),
         'name'  => 'blog',
-        'default' => array_key_exists('blog', $widget_list) &&  $widget_list['blog'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('blog', $widget_list) && $widget_list['blog'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -107,7 +107,7 @@ $uta_widget_lists = array(
         'title' => __('Company Logo', 'unlimited-theme-addons'),
         'description' => __('We have added a huge number of company logo style in free. Just choose your style.', 'unlimited-theme-addons'),
         'name'  => 'company-logo',
-        'default' => array_key_exists('company-logo', $widget_list) &&  $widget_list['company-logo'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('company-logo', $widget_list) && $widget_list['company-logo'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -116,7 +116,7 @@ $uta_widget_lists = array(
         'title' => __('Pricing', 'unlimited-theme-addons'),
         'description' => __('Three type of pricing table added for your. Now make flexible pricing plan for customer.', 'unlimited-theme-addons'),
         'name'  => 'pricing',
-        'default' => array_key_exists('pricing', $widget_list) &&  $widget_list['pricing'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('pricing', $widget_list) && $widget_list['pricing'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
@@ -125,27 +125,27 @@ $uta_widget_lists = array(
         'title' => __('Counter Up', 'unlimited-theme-addons'),
         'description' => __('Responsive counter up option to show up your business statistics. ', 'unlimited-theme-addons'),
         'name'  => 'counter',
-        'default' => array_key_exists('counter', $widget_list) &&  $widget_list['counter'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('counter', $widget_list) && $widget_list['counter'] == 'off' ? 'off' : 'on',
         'is_free' => 1,
     ),
 
-     // 15. Counter Up.
+	// 15. Counter Up.
     array(
         'title' => __('Woocommerce Product Carousel', 'unlimited-theme-addons'),
         'description' => __('Get Woocommerce product carouse to show up the product in creative style to your customer.', 'unlimited-theme-addons'),
         'name'  => 'woocommerce-product-carousel',
-        'default' => array_key_exists('counter', $widget_list) &&  $widget_list['counter'] == 'off' ?  'off' : 'on',
+        'default' => array_key_exists('counter', $widget_list) && $widget_list['counter'] == 'off' ? 'off' : 'on',
         'is_free' => 0,
     ),
 
-     // 16. Counter Up.
-     array(
-        'title' => __('Post Carousel', 'unlimited-theme-addons'),
-        'description' => __('Show to latest blog post in creative looking into your website.', 'unlimited-theme-addons'),
-        'name'  => 'woocommerce-post-carousel',
-        'default' => array_key_exists('counter', $widget_list) &&  $widget_list['counter'] == 'off' ?  'off' : 'on',
-        'is_free' => 0,
-    ),
+	// 16. Counter Up.
+	array(
+		'title' => __('Post Carousel', 'unlimited-theme-addons'),
+		'description' => __('Show to latest blog post in creative looking into your website.', 'unlimited-theme-addons'),
+		'name'  => 'woocommerce-post-carousel',
+		'default' => array_key_exists('counter', $widget_list) && $widget_list['counter'] == 'off' ? 'off' : 'on',
+		'is_free' => 0,
+	),
 
 );
 
@@ -161,10 +161,10 @@ $uta_widget_lists = array(
             Savings...
         </button>
         <div class="row">
-            <?php foreach ($uta_widget_lists as $widget) { ?>
+            <?php foreach ( $uta_widget_lists as $widget ) { ?>
                 <div class="col-md-4">
                     <div class="uta-single-widget">
-                        <?php if (0 == $widget['is_free']) { ?><span class="badge bg-primary">Upgrade Pro</span> <?php  } ?>
+                        <?php if ( 0 == $widget['is_free'] ) { ?><span class="badge bg-primary">Upgrade Pro</span> <?php  } ?>
                         <div class="widget-label">
                             <h5><?php echo esc_html($widget['title']) //ignore:phpcs ;?></h5>
                             <span><?php echo esc_html($widget['description']); //ignore:phpcs ?></span>

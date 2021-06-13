@@ -1,5 +1,5 @@
 <div class="uta-counter-item uta-counter-item-01">
-	<?php if($icon): ?>
+	<?php if ( $icon ) : ?>
 		<div class="icon">
 			<?php if ( 'yes' == $settings['counter_up_icon'] ) { \Elementor\Icons_Manager::render_icon( $settings['icon'], [ 'aria-hidden' => 'true' ] ); } ?>
 		</div>

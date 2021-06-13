@@ -1,5 +1,6 @@
 <?php
 namespace Elementor;
+
 Use \Elementor\Core\Schemes\Typography;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -85,12 +86,12 @@ class Uta_CounterUP extends Widget_Base
                 'label'        => esc_html__('Countr Up Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options'      => [
-                  'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                  'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                  'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
-                  'style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
-                ],     
-                'default'      => 'style-default',
+					'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+					'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
+					'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+					'style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
+                ],
+				'default'      => 'style-default',
             ]
         );
 
@@ -98,9 +99,9 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
           'uta_counter_up_start_number',
             [
-               'label'        => esc_html__( 'Starting Number', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'default'      => '0',
+				'label'        => esc_html__( 'Starting Number', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::NUMBER,
+				'default'      => '0',
             ]
         );
 
@@ -108,9 +109,9 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
           'uta_counter_up_ends_number',
             [
-               'label'        => esc_html__( 'Ends Number', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'default'      => '299',
+				'label'        => esc_html__( 'Ends Number', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::NUMBER,
+				'default'      => '299',
             ]
         );
 
@@ -118,9 +119,9 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
           'uta_counter_up_suffix_number',
             [
-               'label'        => esc_html__( 'Number Suffix', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::TEXT,
-               'default'      => '+',
+				'label'        => esc_html__( 'Number Suffix', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::TEXT,
+				'default'      => '+',
             ]
         );
 
@@ -128,9 +129,9 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
           'uta_counter_up_animation',
             [
-               'label'        => esc_html__( 'Animation Duration', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
-               'default'      => '3000',
+				'label'        => esc_html__( 'Animation Duration', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::NUMBER,
+				'default'      => '3000',
             ]
         );
 
@@ -138,9 +139,9 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
           'uta_counter_up_title',
             [
-               'label'        => esc_html__( 'Title', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::TEXT,
-               'default'      => 'Happy Customers',
+				'label'        => esc_html__( 'Title', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::TEXT,
+				'default'      => 'Happy Customers',
             ]
         );
 
@@ -148,12 +149,12 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
             'counter_up_icon',
             [
-             'label'        => __( 'Icon', 'unlimited-theme-addons' ),
-             'type'         => \Elementor\Controls_Manager::SWITCHER,
-             'label_on'     => __( 'Yes', 'unlimited-theme-addons' ),
-             'label_off'    => __( 'No', 'unlimited-theme-addons' ),
-             'return_value' => 'yes',
-             'default'      => 'yes',
+				'label'        => __( 'Icon', 'unlimited-theme-addons' ),
+				'type'         => \Elementor\Controls_Manager::SWITCHER,
+				'label_on'     => __( 'Yes', 'unlimited-theme-addons' ),
+				'label_off'    => __( 'No', 'unlimited-theme-addons' ),
+				'return_value' => 'yes',
+				'default'      => 'yes',
             ]
         );
         $this->add_control(
@@ -275,8 +276,8 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
             'uta_counter_up_icon_width',
             [
-               'label'        => esc_html__( 'Box Width', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
+				'label'        => esc_html__( 'Box Width', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::NUMBER,
                 'selectors' => [
                     '{{WRAPPER}} .uta-counter-item .icon' => 'width: {{VALUE}}px;',
                 ],
@@ -286,8 +287,8 @@ class Uta_CounterUP extends Widget_Base
         $this->add_control(
             'uta_counter_up_icon_height',
             [
-               'label'        => esc_html__( 'Box Height', 'unlimited-theme-addons' ),
-               'type'         => Controls_Manager::NUMBER,
+				'label'        => esc_html__( 'Box Height', 'unlimited-theme-addons' ),
+				'type'         => Controls_Manager::NUMBER,
                 'selectors' => [
                     '{{WRAPPER}} .uta-counter-item .icon' => 'height: {{VALUE}}px;',
                 ],
@@ -356,7 +357,7 @@ class Uta_CounterUP extends Widget_Base
                 'name'      => 'counterup_title_typography',
                 'label'     => __( 'Typography', 'unlimited-theme-addons' ),
                 'scheme'    => Typography::TYPOGRAPHY_2,
-                'selector'  => '{{WRAPPER}} .uta-counter-item h2'
+                'selector'  => '{{WRAPPER}} .uta-counter-item h2',
             ]
         );
         /*
@@ -400,7 +401,7 @@ class Uta_CounterUP extends Widget_Base
                 'name'      => 'counterup_cont_typography',
                 'label'     => __( 'Typography', 'unlimited-theme-addons' ),
                 'scheme'    => Typography::TYPOGRAPHY_2,
-                'selector'  => '{{WRAPPER}} .uta-counter-item p'
+                'selector'  => '{{WRAPPER}} .uta-counter-item p',
             ]
         );
         /*
@@ -452,22 +453,22 @@ class Uta_CounterUP extends Widget_Base
         </style>
         <?php
          // Counter Up style default.
-        if( 'style-default' === $settings['uta_counter_up_style'] ){
+        if ( 'style-default' === $settings['uta_counter_up_style'] ) {
             require (__DIR__) . '/template/default.php';
         }
 
          // Counter Up style 1.
-        if( 'style-1' === $settings['uta_counter_up_style'] ){
+        if ( 'style-1' === $settings['uta_counter_up_style'] ) {
             require (__DIR__) . '/template/style1.php';
         }
 
          // Counter Up style 2.
-        if( 'style-2' === $settings['uta_counter_up_style'] ){
+        if ( 'style-2' === $settings['uta_counter_up_style'] ) {
             require (__DIR__) . '/template/style2.php';
         }
 
          // Counter Up style 3.
-        if( 'style-3' === $settings['uta_counter_up_style'] ){
+        if ( 'style-3' === $settings['uta_counter_up_style'] ) {
             require (__DIR__) . '/template/style3.php';
         }
 
