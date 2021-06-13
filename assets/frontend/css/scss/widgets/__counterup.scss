@@ -78,40 +78,7 @@
 	left: 0;
 	right: 0;
 }
-/*Style 4*/
-.uta-counter-item-04 {
-	border: 20px solid #ea6f6f;
-	box-shadow: none;
-}
-.uta-counter-item-04 .icon {
-	background: #ea6f6f;
-}
-/*Style 5*/
-.uta-counter-item-05 {
-	width: 280px;
-	height: 280px;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-}
-.uta-counter-item-05 .icon {
-	margin-bottom: 10px;
-}
-.uta-counter-item-06 {
-	background: #131867;
-	color: #fff;
-	-webkit-transition: all .3s ease-in-out;
-	transition: all .3s ease-in-out;
-}
-.uta-counter-item-06:hover{
-	transform: translateY(-10px);
-}
-.uta-counter-item-06 p{
-	color: #fff;
-	font-size:16px;
-} 
+
 @media (max-width:360px){
 	.uta-counter-item-01 .icon {
 	    float: inline-end;
