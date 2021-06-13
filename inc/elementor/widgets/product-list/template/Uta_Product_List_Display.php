@@ -24,7 +24,7 @@ trait Uta_Product_List_Display
                 <li class="product">
                     <div class="uta-product-list-wrapper">
                         <div class="uta-product-img-wrapper">
-                            <a href="<?php echo $product->get_permalink(); ?>"
+                            <a href="<?php echo esc_url( $product->get_permalink() ); ?>"
                                class="woocommerce-Loop Product-link woocommerce-loop-product__link"> <?php //phpcs:ignore?>
                                 <?php echo $product->get_image('woocommerce_thumbnail'); ?><?php //phpcs:ignore?>
                             </a>
@@ -32,13 +32,13 @@ trait Uta_Product_List_Display
 
                         <div class="uta-product-list-details">
 
-                            <a href="<?php echo $product->get_permalink(); ?>"
+                            <a href="<?php echo esc_url( $product->get_permalink() ); ?>"
                             <h2 class="woocommerce-loop-product__title"> <?php echo $product->get_title(); ?> </h2><?php //phpcs:ignore?>
                             </a>
 
                             <?php if ( 'yes' == $show_excerpt ) { ?>
                                 <div class="uta-product-content">
-                                      <p><?php echo wp_trim_words( get_the_excerpt(), $excerpt_word_limit, ' ...' ); ?></p>
+                                      <p><?php echo wp_trim_words( get_the_excerpt(), $excerpt_word_limit, ' ...' ); //phpcs:ignore ?></p>
                                 </div>
                             <?php } ?>
 

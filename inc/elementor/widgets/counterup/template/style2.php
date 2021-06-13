@@ -5,7 +5,7 @@
 		</div>
 	<?php endif; ?>
 	<div class="content">
-		<h2><span class="uta-counter"><?php echo $uta_counter_up_ends_number; ?></span> <small><?php echo $uta_counter_up_suffix_number; ?></small></h2>
-		<p><?php echo $uta_counter_up_title; ?></p>
+		<h2><span class="uta-counter"><?php echo esc_html( $uta_counter_up_ends_number ); ?></span> <small><?php echo esc_html( $uta_counter_up_suffix_number ); ?></small></h2>
+		<p><?php echo esc_html( $uta_counter_up_title ); ?></p>
 	</div>
 </div>

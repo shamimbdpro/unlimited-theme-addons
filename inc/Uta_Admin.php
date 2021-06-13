@@ -11,9 +11,8 @@ class Uta_Admin
     /**
      * Make instance of the admin class.
      */
-    public static function get_instance()
-    {
-        if (!self::$instance)
+    public static function get_instance() {
+        if ( ! self::$instance)
             self::$instance = new self();
         return self::$instance;
     }
@@ -21,16 +20,15 @@ class Uta_Admin
     /**
      * Initialize global hooks.
      */
-    public function init()
-    {
+    public function init() {
         // Create admin menu.
-        add_action('admin_menu', [$this, 'register_admin_menu_callback']);
+        add_action('admin_menu', [ $this, 'register_admin_menu_callback' ]);
 
         // Load css and js.
-        add_action('admin_enqueue_scripts', array($this, 'uta_admin_script_callback'));
+        add_action('admin_enqueue_scripts', array( $this, 'uta_admin_script_callback' ));
 
         // Handle ajax form submission.
-        add_action('wp_ajax_uta_admin_ajax', array($this, 'uta_admin_ajax_callback'));
+        add_action('wp_ajax_uta_admin_ajax', array( $this, 'uta_admin_ajax_callback' ));
     }
 
     /**
@@ -39,19 +37,18 @@ class Uta_Admin
      * @param $count
      * @return string
      */
-    public function register_admin_menu_callback()
-    {
+    public function register_admin_menu_callback() {
         add_menu_page(
             esc_html__('Unlimited Theme Addons', 'unlimited-theme-addons'),
             esc_html__('Theme Addons', 'unlimited-theme-addons'),
             'manage_options',
             'unlimited-theme-addons',
-            array($this, 'uta_admin_page_callback'),
+            array( $this, 'uta_admin_page_callback' ),
             'dashicons-insert',
             25
         );
 
-        add_action('admin_head', [$this, 'uta_remove_admin_action']);
+        add_action('admin_head', [ $this, 'uta_remove_admin_action' ]);
     }
 
 
@@ -60,8 +57,7 @@ class Uta_Admin
      * 
      * @return mixed
      */
-    public function uta_admin_page_callback()
-    {
+    public function uta_admin_page_callback() {
         wp_enqueue_style('uta-bootstrap');
         wp_enqueue_style('uta-admin-style');
         wp_enqueue_script('uta-bootstrap-script');
@@ -74,8 +70,7 @@ class Uta_Admin
      * 
      * @return array|mixed.
      */
-    public function uta_remove_admin_action()
-    {
+    public function uta_remove_admin_action() {
         remove_all_actions('user_admin_notices');
         remove_all_actions('admin_notices');
     }
@@ -85,8 +80,7 @@ class Uta_Admin
      * 
      * @return string.
      */
-    public function uta_admin_script_callback()
-    {
+    public function uta_admin_script_callback() {
 
         // Load bootstrap library CSS.
         wp_register_style('uta-bootstrap', UTA_PLUGIN_URL . '/assets/admin/css/bootstrap.min.css', array(), UTA_PLUGIN_VERSION);
@@ -95,10 +89,10 @@ class Uta_Admin
         wp_register_style('uta-admin-style', UTA_PLUGIN_URL . '/assets/frontend/css/admin-style.min.css', array(), UTA_PLUGIN_VERSION);
 
         // Load bootstrap JS.
-        wp_register_script('uta-bootstrap-script', UTA_PLUGIN_URL . '/assets/admin/js/bootstrap.bundle.min.js', array('jquery'), UTA_PLUGIN_VERSION, true);
+        wp_register_script('uta-bootstrap-script', UTA_PLUGIN_URL . '/assets/admin/js/bootstrap.bundle.min.js', array( 'jquery' ), UTA_PLUGIN_VERSION, true);
 
         // Load admin JS.
-        wp_register_script('uta-admin-js', UTA_PLUGIN_URL . '/assets/frontend/js/admin-script.js', array('jquery'), UTA_PLUGIN_VERSION, true);
+        wp_register_script('uta-admin-js', UTA_PLUGIN_URL . '/assets/frontend/js/admin-script.js', array( 'jquery' ), UTA_PLUGIN_VERSION, true);
 
         // Ajax admin localization.
         $uta_admin_nonce = wp_create_nonce('uta-admin-js');
@@ -115,18 +109,18 @@ class Uta_Admin
     /**
      * Handle admin ajax submission.
      */
-    function uta_admin_ajax_callback()
-    {
+    function uta_admin_ajax_callback() {
 
-        if (isset($_POST['widget_lists'])) {
+        $widget_lists = isset($_POST['widget_lists']) ? sanitize_text_field(wp_unslash($_POST['widget_lists'])) : array();
+        if ( $widget_lists ) {
             
             // Check valid request form user.
             check_ajax_referer('uta-admin-js');
 
-            parse_str($_POST['widget_lists'], $get_widget_lists);
+            parse_str($widget_lists, $get_widget_lists);
 
-            foreach ($get_widget_lists as $key => $value) {
-                $data[$key] = $value;
+            foreach ( $get_widget_lists as $key => $value ) {
+                $data[ $key ] = $value;
             }
             update_option('unlimited_theme_addons_active_widgets', $data);
 

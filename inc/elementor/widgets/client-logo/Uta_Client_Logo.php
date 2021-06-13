@@ -465,10 +465,10 @@ class Uta_Company_Logo extends Widget_Base
 
         $this->add_render_attribute( 'wrapper', 'data-slick', wp_json_encode($config) );
         $this->add_inline_editing_attributes( 'uta_company_logo_list_title', 'basic' );
-        
+
         ?>
 
-        <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
+        <div <?php echo $this->get_render_attribute_string( 'wrapper' ); //phpcs:ignore ?>>
 
             <?php
 

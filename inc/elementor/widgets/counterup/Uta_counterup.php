@@ -243,7 +243,7 @@ class Uta_CounterUP extends Widget_Base
             \Elementor\Group_Control_Box_Shadow::get_type(),
             [
                 'name' => 'uta_counter_up_box_shadow',
-                'label' => __( 'Box Shadow', 'plugin-domain' ),
+                'label' => __( 'Box Shadow', 'unlimited-theme-addons' ),
                 'selector' => '{{WRAPPER}} .uta-counter-item',
             ]
         );
@@ -438,7 +438,6 @@ class Uta_CounterUP extends Widget_Base
     }
     protected function render_callback() {
         $settings = $this->get_settings_for_display();
-        extract($settings);
         $uta_counter_up_start_number = $settings['uta_counter_up_start_number'];
         $uta_counter_up_ends_number = $settings['uta_counter_up_ends_number'];
         $uta_counter_up_suffix_number = $settings['uta_counter_up_suffix_number'];
@@ -480,11 +479,11 @@ class Uta_CounterUP extends Widget_Base
 
         $('.uta-counter').each(function () {
             var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
-            $(this).prop('Counter', <?php echo $uta_counter_up_start_number; ?>).animate({
+            $(this).prop('Counter', <?php echo esc_html( $uta_counter_up_start_number ); ?>).animate({
                 Counter: $(this).text()
             }, 
             {
-                duration: <?php echo $uta_counter_up_animation; ?>,
+                duration: <?php echo esc_html( $uta_counter_up_animation ); ?>,
                 step: function (func) {
                 $(this).text(parseFloat(func).toFixed(size));
             }

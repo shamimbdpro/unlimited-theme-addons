@@ -173,7 +173,7 @@ class Uta_Search extends Widget_Base {
                        <?php wp_dropdown_categories($args); ?>
                    </div>
                   <div class="uta-product-search-form">
-                      <input type="text"  name="s"  maxlength="128" value="<?php echo get_search_query();?>" placeholder="<?php esc_attr_e( $settings['product_search_placeholder'], 'unlimited-theme-addons');?>">
+                      <input type="text"  name="s"  maxlength="128" value="<?php echo get_search_query();?>" placeholder="<?php esc_attr_e( $settings['product_search_placeholder'], 'unlimited-theme-addons'); //phpcs:ignore ?>">
                       <input type="hidden" value="product" name="post_type">
                       <div class="uta-product-search-button">
                           <button type="submit" title="<?php esc_attr_e('Search', 'unlimited-theme-addons');?>" ><span><?php esc_attr_e('Search', 'unlimited-theme-addons');?></span></button>

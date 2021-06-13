@@ -138,11 +138,11 @@ class Uta_Twentytwenty extends Widget_Base {
         $after_label_title = $settings['uta_after_label_title'];
         ?>
         <div class="uta-twentytwenty twentytwenty-container" data-orientation="<?php echo esc_attr( $direction );?>" id="uta_before_after_<?php echo esc_attr($element_id); ?>">
-            <span class='before_text'><?php echo esc_html_e( $before_label_title, 'unlimited-theme-addons' ); ?></span>
-            <span class='after_text'><?php echo esc_html_e( $after_label_title, 'unlimited-theme-addons' ); ?></span>
+            <span class='before_text'><?php echo esc_html_e( $before_label_title, 'unlimited-theme-addons' ); //phpcs:ignore ?></span>
+            <span class='after_text'><?php echo esc_html_e( $after_label_title, 'unlimited-theme-addons' ); //phpcs:ignore ?></span>
             <?php
-            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_before_image' );
-            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_after_image' );
+            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_before_image' ); //phpcs:ignore
+            echo \Elementor\Group_Control_Image_Size::get_attachment_image_html( $settings, 'thumbnail', 'uta_after_image' ); //phpcs:ignore
 
             ?>
         </div>
