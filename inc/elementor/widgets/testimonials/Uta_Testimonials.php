@@ -537,7 +537,9 @@ class Uta_Testimonials extends Widget_Base {
       $uta_testimonial_dots = $settings['uta_testimonial_dots'] ? $settings['uta_testimonial_dots'] : 'false';
       ?>
 
-      <div class="uta-testimonials" data-slick='{"slidesToShow": <?php echo esc_html($uta_testimonial_slide_show);?>, "dots":<?php echo esc_html($uta_testimonial_dots);?>}'>
+      
+
+      <div class="uta-testimonials" data-slick='{"slidesToShow": <?php echo esc_html($uta_testimonial_slide_show);?>,  "dots":<?php echo esc_html($uta_testimonial_dots);?>}' >
          <?php foreach ( $settings['testimonial_count'] as $index => $testimonial ) :
          $testimonialText = $this->get_repeater_setting_key( 'feedback' , 'testimonial_count' , $index );
          $name = $this->get_repeater_setting_key( 'name' , 'testimonial_count' , $index );
