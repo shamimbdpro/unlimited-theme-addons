@@ -85,12 +85,12 @@ class Uta_CounterUP extends Widget_Base
                 'label'        => esc_html__('Countr Up Style', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options'      => [
-                  'counterup-style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                  'counterup-style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                  'counterup-style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
-                  'counterup-style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
+                  'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
+                  'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
+                  'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+                  'style-3' => esc_html__('Style-3', 'unlimited-theme-addons'),
                 ],     
-                'default'      => 'counterup-style-default',
+                'default'      => 'style-default',
             ]
         );
 
@@ -452,22 +452,22 @@ class Uta_CounterUP extends Widget_Base
         </style>
         <?php
          // Counter Up style default.
-        if( 'counterup-style-default' === $settings['uta_counter_up_style'] ){
+        if( 'style-default' === $settings['uta_counter_up_style'] ){
             require (__DIR__) . '/template/default.php';
         }
 
          // Counter Up style 1.
-        if( 'counterup-style-1' === $settings['uta_counter_up_style'] ){
+        if( 'style-1' === $settings['uta_counter_up_style'] ){
             require (__DIR__) . '/template/style1.php';
         }
 
          // Counter Up style 2.
-        if( 'counterup-style-2' === $settings['uta_counter_up_style'] ){
+        if( 'style-2' === $settings['uta_counter_up_style'] ){
             require (__DIR__) . '/template/style2.php';
         }
 
          // Counter Up style 3.
-        if( 'counterup-style-3' === $settings['uta_counter_up_style'] ){
+        if( 'style-3' === $settings['uta_counter_up_style'] ){
             require (__DIR__) . '/template/style3.php';
         }
 
