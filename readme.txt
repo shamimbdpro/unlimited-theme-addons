@@ -10,7 +10,7 @@ Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Unlimited theme addons is very useful plugin to get amazing features for your website . It is much essential addons for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be help for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quick enhance your website performance. You can make easily woocommerce product grid and product list using this plugin.
+Unlimited theme addons is very useful plugin to get amazing features for your website . It is a very essential addon for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 [Live Demo](http://codepopular.com/unlimited-theme-addons)
 
@@ -19,25 +19,36 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 2. Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
 == Features==
-1. [WooCommerce Product Grid](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. 
-2. [WooCommerce Product List](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with diffrent style.
-4. [WooCommerce Product Search](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-search/) - Make Woocommerce product search with category in elementor addons.
-3. [Title](https://www.codepopular.com/unlimited-theme-addons/elementor-title/) - Make section title, blok title, premium section title.
-4. [Video](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup video with elementor in diffrent type of layouts.
-5. [Button](https://www.codepopular.com/unlimited-theme-addons/elementor-button/) - You can make quick button with responsive style.
-6. [Testimonial](https://www.codepopular.com/unlimited-theme-addons/elementor-testimonial) - Easly able to make elementor testimonial with unlimited theme addons.
-7. [Team](https://www.codepopular.com/unlimited-theme-addons/elementor-team) - Make your team member style with elementor. you can make almost 10+ diffrent type of design.
-8. [Pricing](https://www.codepopular.com/unlimited-theme-addons/elementor-pricing) - Make Pricing style with elementor in vast number of design.
-9. [Infobox](https://www.codepopular.com/unlimited-theme-addons/elementor-infobox) - Make elementor infobox with 10+ style.
-10. [Blog](https://www.codepopular.com/unlimited-theme-addons/elementor-blog-grid) - Build elementor blog grid style with outstanding design.
-11. [Before After Image Comparison](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style.
-12. [Company Logo Slider](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with huge number of style.
+- [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons comes with multiple options to manage the product grid into your wordpress website.
+
+- [**WooCommerce Product List**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with different styles. Our plugin provides the opportunity to make a product list with elementor for your woocommerce store. You aren't required to have programming knowledge to make a product list for your WordPress website.
+
+- [**WooCommerce Product Search**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-search/) - Make Woocommerce product search with category in elementor addons. If you are looking to search your woocommerce product with elementor addons plugin then we can help you with that to make it easy. Our plugin has a widget to set product search options. you can set the elementor search addons with product category. it will help to find out the products for your customer.
+- [**Title**](https://www.codepopular.com/unlimited-theme-addons/elementor-title/) - Make section title, blok title, premium section title. No skill required to do this thing. just make different type of product title with unlimited theme addons plugins.
+
+- [**Video**](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup videos with elementor in different type of layouts.
+
+- [**Button**](https://www.codepopular.com/unlimited-theme-addons/elementor-button/) - You can make quick buttons with responsive style. You can make also video popup by set the URL to button.
+
+- [**Testimonial**](https://www.codepopular.com/unlimited-theme-addons/elementor-testimonial) - Easily able to make elementor testimonials with unlimited theme addons.
+
+- [**Team**](https://www.codepopular.com/unlimited-theme-addons/elementor-team) - Make your team member style with elementor. You can make almost 10+ different types of design. Choose your team style according to your needs. There has largest option to customize the team each components.
+
+- [**Pricing**](https://www.codepopular.com/unlimited-theme-addons/elementor-pricing) - Make a beautify pricing table with theme addons plugin. It is super easy to make a pricing table for your website . just make modern, creative, outstanding pricing table with elementor.
+
+- [**Infobox**](https://www.codepopular.com/unlimited-theme-addons/elementor-infobox) - Make elementor infobox with 10+ style. Create infobox design with beautiful icon creative layout. just build up a modern infobox design for your WordPress site.
+
+- [**Blog**](https://www.codepopular.com/unlimited-theme-addons/elementor-blog-grid) - Build elementor blog grid style with outstanding design. Get the blog according to your need with a huge customization option.
+
+- [**Before After Image Comparison**](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style. Make the image comparison slider horizontal and vertical.
+
+- [**Company Logo Slider**](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with a huge number of styles. This is the important elementor addons widget for our plugin cause we have set a huge number of styles for free for our customer.
 
 
 
-### **About the Maker**
+### **About the Author**
 
-Unlimited Theme Addons is newest addition to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the heart of its users with a staggering 5-star rating. The plugin is codeded in a structure way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive feature. You can get largest number of addons style in free here.
+Unlimited Theme Addons is the newest creation to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the hearts of its users with a staggering 5-star rating. The plugin is coded in a structured way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive features. You can get the largest number of addon styles for free here.
 
 
 
@@ -48,9 +59,9 @@ Unlimited Theme Addons is newest addition to the product line up of [CodePopular
 
 No, We have provided minified css to optimize your website.
 
-= How can i discuss about the plugin issues? =
+= How can I discuss the plugin issues? =
 
-You're more than welcome! we ready to solve your issue. you can ask the query here.
+You're more than welcome! we are ready to solve your issue. you can ask the query here.
 https://wordpress.org/support/plugin/unlimited-theme-addons
 
 == Screenshots ==
