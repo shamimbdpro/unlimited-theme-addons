@@ -1,6 +1,6 @@
 === Unlimited Theme Addons For Elementor ===
 Contributors: codepopular, shamimtpi, bokhtyer
-Donate link: https://www.codepopular.com
+Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
