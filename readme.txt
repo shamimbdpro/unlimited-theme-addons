@@ -14,8 +14,15 @@ Unlimited theme addons is very useful plugin to get amazing features for your we
 [Live Demo](http://codepopular.com/unlimited-theme-addons)
 
 == Installation ==
-1. Upload the plugin folder to the /wp-content/plugins/ directory, or install the plugin through the WordPress plugins screen directly.
-2. Activate the plugin through the ‘Plugins Menu’ screen in WordPress
+Here is few step to describes how to install the plugin and get it working.
+
+e.g.
+
+1. Download and unzip the plugin
+2. Upload the entire "unlimited-theme-addons" directory to the `/wp-content/plugins/` directory
+3. Activate the plugin through the 'Plugins' menu in WordPress
+4. Go to "Theme Addons" menu and configure your settings
+5. On the other way you can Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
 == Features==
 - [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons comes with multiple options to manage the product grid into your wordpress website.
