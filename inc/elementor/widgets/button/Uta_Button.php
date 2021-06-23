@@ -18,6 +18,18 @@ class Uta_Button extends Widget_Base {
     return 'eicon-button';
   }
 
+  public function get_style_depends() {
+    $styles = [];
+  
+    return $styles;
+  }
+  
+  public function get_script_depends() {
+    $scripts = [];
+  
+    return $scripts;
+  }
+
   public function get_keywords() {
     return [
 		'button',
