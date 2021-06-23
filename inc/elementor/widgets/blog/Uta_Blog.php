@@ -33,6 +33,19 @@ class Uta_Blog extends Widget_Base {
    public function get_categories() {
       return [ 'uta-elements' ];
    }
+
+
+   /**
+    * Retrieve Widget Support URL.
+    *
+    * @access public
+    *
+    * @return string support URL.
+    */
+   public function get_custom_help_url() {
+      return 'https://codepopular.com/contact/';
+   }
+
    protected function _register_controls() {
       $this->start_controls_section(
          'blog_section',

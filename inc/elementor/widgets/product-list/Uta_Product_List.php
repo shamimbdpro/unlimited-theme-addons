@@ -2,7 +2,7 @@
 
 namespace Elementor;
 
-if ( ! defined('ABSPATH') ) {
+if (!defined('ABSPATH')) {
     exit;
 }
 
@@ -12,19 +12,23 @@ class Uta_Product_List extends Widget_Base
 {
     use Uta_theme_helper, Uta_Product_List_Display;
 
-    public function get_name() {
+    public function get_name()
+    {
         return 'uta-product-list';
     }
 
-    public function get_title() {
+    public function get_title()
+    {
         return __('UTA Product List', 'unlimited-theme-addons');
     }
 
-    public function get_icon() {
+    public function get_icon()
+    {
         return 'fa fa-th-list';
     }
 
-    public function get_keywords() {
+    public function get_keywords()
+    {
         return [
             'product',
             'product list',
@@ -37,11 +41,25 @@ class Uta_Product_List extends Widget_Base
     }
 
 
-    public function get_categories() {
-        return [ 'uta-elements' ];
+    public function get_categories()
+    {
+        return ['uta-elements'];
     }
 
-    protected function _register_controls() {
+    /**
+     * Retrieve Widget Support URL.
+     *
+     * @access public
+     *
+     * @return string support URL.
+     */
+    public function get_custom_help_url()
+    {
+        return 'https://codepopular.com/contact/';
+    }
+
+    protected function _register_controls()
+    {
 
         // Content Controls
         $this->start_controls_section(
@@ -51,7 +69,7 @@ class Uta_Product_List extends Widget_Base
             ]
         );
 
-        if ( ! class_exists('WooCommerce') ) {
+        if (!class_exists('WooCommerce')) {
             $this->add_control(
                 'uta_product_list_woo_required',
                 [
@@ -155,7 +173,7 @@ class Uta_Product_List extends Widget_Base
                 'label'     => __('Excerpt Word Limit', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::NUMBER,
                 'default'   => 10,
-                'condition' => [ 'uta_product_list_show_excerpt' => 'yes' ],
+                'condition' => ['uta_product_list_show_excerpt' => 'yes'],
             ]
         );
 
@@ -228,7 +246,7 @@ class Uta_Product_List extends Widget_Base
                 ],
                 'selector'       => '{{WRAPPER}} .uta-product-list .woocommerce ul.products li.product',
                 'condition'      => [
-                    'uta_product_list_style_preset' => [ 'uta-product-default', 'uta-product-simple', 'uta-product-overlay' ],
+                    'uta_product_list_style_preset' => ['uta-product-default', 'uta-product-simple', 'uta-product-overlay'],
                 ],
             ]
         );
@@ -468,7 +486,7 @@ class Uta_Product_List extends Widget_Base
 
         $this->start_controls_tabs('uta_product_list_add_to_cart_style_tabs');
 
-        $this->start_controls_tab('normal', [ 'label' => esc_html__('Normal', 'unlimited-theme-addons') ]);
+        $this->start_controls_tab('normal', ['label' => esc_html__('Normal', 'unlimited-theme-addons')]);
 
         $this->add_control(
             'uta_product_list_add_to_cart_color',
@@ -510,14 +528,14 @@ class Uta_Product_List extends Widget_Base
                 'name'      => 'uta_product_list_add_to_cart_typography',
                 'selector'  => '{{WRAPPER}} .uta-product-list .woocommerce li.product .button.add_to_cart_button',
                 'condition' => [
-                    'uta_product_list_style_preset' => [ 'uta-product-default', 'uta-product-simple' ],
+                    'uta_product_list_style_preset' => ['uta-product-default', 'uta-product-simple'],
                 ],
             ]
         );
 
         $this->end_controls_tab();
 
-        $this->start_controls_tab('uta_product_list_add_to_cart_hover_styles', [ 'label' => esc_html__('Hover', 'unlimited-theme-addons') ]);
+        $this->start_controls_tab('uta_product_list_add_to_cart_hover_styles', ['label' => esc_html__('Hover', 'unlimited-theme-addons')]);
 
         $this->add_control(
             'uta_product_list_add_to_cart_hover_color',
@@ -566,14 +584,13 @@ class Uta_Product_List extends Widget_Base
         $this->end_controls_tabs();
 
         $this->end_controls_section();
-
-
     }
 
-    protected function render() {
+    protected function render()
+    {
         $settings = $this->get_settings_for_display();
 
-        if ( ! class_exists('WooCommerce') ) {
+        if (!class_exists('WooCommerce')) {
             return;
         }
 
@@ -584,7 +601,7 @@ class Uta_Product_List extends Widget_Base
             'offset'         => $settings['product_offset'],
         ];
 
-        if ( ! empty($settings['uta_product_list_categories']) ) {
+        if (!empty($settings['uta_product_list_categories'])) {
             $args['tax_query'] = [
                 [
                     'taxonomy' => 'product_cat',
@@ -595,7 +612,7 @@ class Uta_Product_List extends Widget_Base
             ];
         }
 
-        if ( 'featured-products' == $settings['uta_product_list_product_filter'] ) {
+        if ('featured-products' == $settings['uta_product_list_product_filter']) {
             $args['tax_query'] = [
                 'relation' => 'AND',
                 [
@@ -605,18 +622,18 @@ class Uta_Product_List extends Widget_Base
                 ],
             ];
 
-            if ( $settings['uta_product_list_categories'] ) {
+            if ($settings['uta_product_list_categories']) {
                 $args['tax_query'][] = [
                     'taxonomy' => 'product_cat',
                     'field'    => 'slug',
                     'terms'    => $settings['uta_product_list_categories'],
                 ];
             }
-        } elseif ( 'best-selling-products' == $settings['uta_product_list_product_filter'] ) {
+        } elseif ('best-selling-products' == $settings['uta_product_list_product_filter']) {
             $args['meta_key'] = 'total_sales';
             $args['orderby'] = 'meta_value_num';
             $args['order'] = 'DESC';
-        } elseif ( 'sale-products' == $settings['uta_product_list_product_filter'] ) {
+        } elseif ('sale-products' == $settings['uta_product_list_product_filter']) {
             $args['meta_query'] = [
                 'relation' => 'OR',
                 [
@@ -632,7 +649,7 @@ class Uta_Product_List extends Widget_Base
                     'type'    => 'numeric',
                 ],
             ];
-        } elseif ( 'top-products' == $settings['uta_product_list_product_filter'] ) {
+        } elseif ('top-products' == $settings['uta_product_list_product_filter']) {
             $args['meta_key'] = '_wc_average_rating';
             $args['orderby'] = 'meta_value_num';
             $args['order'] = 'DESC';
@@ -658,7 +675,6 @@ class Uta_Product_List extends Widget_Base
 
         echo $html; //phpcs:ignore
     }
-
 }
 
 Plugin::instance()->widgets_manager->register_widget_type(new Uta_Product_List());

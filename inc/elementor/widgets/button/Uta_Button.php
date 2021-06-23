@@ -34,6 +34,17 @@ class Uta_Button extends Widget_Base {
     return [ 'uta-elements' ];
   }
 
+    /**
+    * Retrieve Widget Support URL.
+    *
+    * @access public
+    *
+    * @return string support URL.
+    */
+   public function get_custom_help_url() {
+      return 'https://codepopular.com/contact/';
+   }
+
   protected function _register_controls() {
 
     $this->start_controls_section(
