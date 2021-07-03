@@ -46,16 +46,51 @@ class Unlimited_Theme_Addons
     public function load_css_and_js()
     {
 
-       //----------- Load CSS ---------------//
+        //----------- Load Library CSS ---------------//
+        // Fonts Awesome.
         wp_enqueue_style(
-            'uta-library',
-            UTA_PLUGIN_URL . 'assets/frontend/css/css-library.min.css',
+            'font-awesome',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/font-awesome.min.css',
             array(),
             UTA_PLUGIN_VERSION
         );
 
-         // Accordion. 
-         wp_register_style(
+        // Magnific Popup.
+        wp_register_style(
+            'magnific-popup',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/magnific-popup.min.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+
+        // Slick Theme.
+        wp_register_style(
+            'slick-theme',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/slick-theme.min.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+
+        // Slick Slider.
+        wp_register_style(
+            'slick',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/slick.min.css',
+            array('slick-theme'),
+            UTA_PLUGIN_VERSION
+        );
+
+        // Twentytwenty Image comparison.
+        wp_register_style(
+            'twentytwenty',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/twentytwenty.min.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+
+
+        //----------- Load Widget CSS ---------------//
+        // Accordion. 
+        wp_register_style(
             'uta-accordion',
             UTA_PLUGIN_URL . 'assets/frontend/css/accordian.min.css',
             array(),
@@ -74,7 +109,7 @@ class Unlimited_Theme_Addons
         wp_register_style(
             'uta-company-logo',
             UTA_PLUGIN_URL . 'assets/frontend/css/company-logo.min.css',
-            array(),
+            array('slick'),
             UTA_PLUGIN_VERSION
         );
 
@@ -154,12 +189,12 @@ class Unlimited_Theme_Addons
         wp_register_style(
             'uta-testimonial',
             UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.min.css',
-            array(),
+            array('slick'),
             UTA_PLUGIN_VERSION
         );
 
         // Section Title. 
-          wp_register_style(
+        wp_register_style(
             'uta-title',
             UTA_PLUGIN_URL . 'assets/frontend/css/title.min.css',
             array(),
@@ -167,7 +202,7 @@ class Unlimited_Theme_Addons
         );
 
         // Video. 
-          wp_register_style(
+        wp_register_style(
             'uta-video',
             UTA_PLUGIN_URL . 'assets/frontend/css/video.min.css',
             array(),
@@ -175,9 +210,9 @@ class Unlimited_Theme_Addons
         );
 
 
-        
 
-        //----------- Load Js ---------------//
+
+        //----------- Load JS ---------------//
 
         // Cideo Popup.
         wp_register_script(
@@ -214,16 +249,15 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION,
             true
         );
-        
+
         // Unlimited Theme Addons Main JS.
         wp_register_script(
             'uta-main',
             UTA_PLUGIN_URL . 'assets/frontend/js/main.js',
-            array('jquery', 'uta-magnific-popup','uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty'),
+            array('jquery', 'uta-magnific-popup', 'uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty'),
             UTA_PLUGIN_VERSION,
             true
         );
-
     }
 
     public function widgets_registered()

@@ -30,7 +30,7 @@ class Uta_Twentytwenty extends Widget_Base
      */
     public function get_style_depends()
     {
-        $styles = ['uta-counterup-style'];
+        $styles = ['twentytwenty', 'uta-counterup-style'];
 
         return $styles;
     }
