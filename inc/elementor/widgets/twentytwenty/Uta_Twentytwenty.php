@@ -42,7 +42,7 @@ class Uta_Twentytwenty extends Widget_Base
      */
     public function get_script_depends()
     {
-        $scripts = [];
+        $scripts = ['uta-jquery-event-move', 'uta-twentytwenty', 'uta-main'];
 
         return $scripts;
     }

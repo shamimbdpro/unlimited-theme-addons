@@ -51,8 +51,7 @@ class Uta_Company_Logo extends Widget_Base
      * @return string
     */ 
     public function get_script_depends() {
-        $scripts = [];
-      
+        $scripts = ['uta-slick', 'uta-main'];
         return $scripts;
     }
 

@@ -31,6 +31,7 @@
     });
 
 
+     // Elementor frontend support for Image Comparison.
     $(window).on('elementor/frontend/init', function(){
         elementorFrontend.hooks.addAction('frontend/element_ready/uta-twentytwenty.default', function ($scope, $) {
             var before_text = $scope.find('.before_text').text();

@@ -41,7 +41,7 @@ class Uta_Video extends Widget_Base
     */
    public function get_script_depends()
    {
-      $scripts = [];
+      $scripts = ['uta-magnific-popup', 'uta-main'];
 
       return $scripts;
    }

@@ -178,42 +178,52 @@ class Unlimited_Theme_Addons
         
 
         //----------- Load Js ---------------//
-        wp_enqueue_script(
+
+        // Cideo Popup.
+        wp_register_script(
             'uta-magnific-popup',
-            UTA_PLUGIN_URL . 'assets/frontend/js/magnific-popup.js',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/magnific-popup/magnific-popup.min.js',
             array('jquery'),
             UTA_PLUGIN_VERSION,
             true
         );
-        wp_enqueue_script(
+
+        // Slick Slider.
+        wp_register_script(
             'uta-slick',
-            UTA_PLUGIN_URL . 'assets/frontend/js/slick.js',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/slick/slick.min.js',
             array('jquery'),
             UTA_PLUGIN_VERSION,
             true
         );
-        wp_enqueue_script(
+
+        // Image Comparison Slider.
+        wp_register_script(
             'uta-jquery-event-move',
-            UTA_PLUGIN_URL . 'assets/frontend/js/jquery.event.move.js',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/twentytwenty/jquery.event.move.min.js',
             array('jquery'),
             UTA_PLUGIN_VERSION,
             true
         );
-        wp_enqueue_script(
+
+        // Image Comparison Slider.
+        wp_register_script(
             'uta-twentytwenty',
-            UTA_PLUGIN_URL . 'assets/frontend/js/jquery.twentytwenty.js',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/twentytwenty/jquery.twentytwenty.min.js',
             array('jquery'),
             UTA_PLUGIN_VERSION,
             true
         );
         
-        wp_enqueue_script(
+        // Unlimited Theme Addons Main JS.
+        wp_register_script(
             'uta-main',
             UTA_PLUGIN_URL . 'assets/frontend/js/main.js',
-            array('jquery'),
+            array('jquery', 'uta-magnific-popup','uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty'),
             UTA_PLUGIN_VERSION,
             true
         );
+
     }
 
     public function widgets_registered()
