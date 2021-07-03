@@ -12,7 +12,7 @@
 
     // Elementor frontend support for Testimonial.
     $(window).on('elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction('frontend/element_ready/uta-testimonials.default', function($scope, $) {
+        elementorFrontend.hooks.addAction('frontend/element_ready/uta-testimonial.default', function($scope, $) {
             $scope.find(".uta-testimonials").not('.slick-initialized').slick({
                 autoplay: true,
                 infinite: true,
