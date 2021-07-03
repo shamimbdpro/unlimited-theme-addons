@@ -26,6 +26,31 @@ class Uta_Product_Grid extends Widget_Base
         return 'fa fa-th';
     }
 
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-product-grid'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
     public function get_keywords()
     {
         return [

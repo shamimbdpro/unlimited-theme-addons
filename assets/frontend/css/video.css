@@ -1,4 +1,3 @@
-
 /*--------------------------------------------------------------
 # Video
 --------------------------------------------------------------*/
@@ -11,13 +10,11 @@
   background-position: center;
   background-size: cover;
   display: table;
-  text-align: center;
-}
+  text-align: center; }
 
 .uta-video-popup-overlay {
   display: table-cell;
-  vertical-align: middle;
-}
+  vertical-align: middle; }
 
 .uta-popup-video {
   position: relative;
@@ -30,17 +27,13 @@
   color: #fff;
   -webkit-animation: 1.6s playShadow ease-out infinite;
   animation: 1.6s playShadow ease-out infinite;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 .uta-popup-video span {
   margin: auto;
-  padding-left: 3px;
-}
+  padding-left: 3px; }
 
 .uta-popup-video:after {
   content: '';
@@ -52,7 +45,4 @@
   border-radius: 50%;
   z-index: -1;
   pointer-events: none;
-  -webkit-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s;
-}
+  transition: 0.35s; }

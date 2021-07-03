@@ -21,6 +21,31 @@ class Uta_Team extends Widget_Base
         return 'eicon-person';
     }
 
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-team'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
     public function get_keywords()
     {
         return [
@@ -97,7 +122,7 @@ class Uta_Team extends Widget_Base
                     'style-14'      => esc_html__('Style-14', 'unlimited-theme-addons'),
                 ],
 
-                'default' => 'team-style-default',
+                'default' => 'style-default',
             ]
         );
 

@@ -1,4 +1,9 @@
-@charset "UTF-8";
+
+@import "_variable.scss";
+
+/*--------------------------------------------------------------
+# Product Grid.
+--------------------------------------------------------------*/
 
 .uta-product-grid .woocommerce ul.products{
   display: grid;

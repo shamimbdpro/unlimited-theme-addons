@@ -41,6 +41,31 @@ class Uta_CounterUP extends Widget_Base
     }
 
     /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-counter-up'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
+    /**
      * Widget keywords.
      * @return array|string[]
      */

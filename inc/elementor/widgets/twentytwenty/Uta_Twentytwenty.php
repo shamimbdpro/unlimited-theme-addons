@@ -23,6 +23,31 @@ class Uta_Twentytwenty extends Widget_Base
         return 'eicon-image-before-after';
     }
 
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-counterup-style'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
     public function get_keywords()
     {
         return [

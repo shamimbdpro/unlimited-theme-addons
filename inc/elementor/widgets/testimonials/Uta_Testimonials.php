@@ -10,7 +10,7 @@ class Uta_Testimonials extends Widget_Base
 
     public function get_name()
     {
-        return 'uta-testimonials';
+        return 'uta-testimonial';
     }
 
     public function get_title()
@@ -27,6 +27,31 @@ class Uta_Testimonials extends Widget_Base
     {
         return ['uta-elements'];
     }
+
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-testimonial'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
 
     /**
      * Retrieve Widget Support URL.

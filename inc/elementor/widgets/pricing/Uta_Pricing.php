@@ -23,6 +23,31 @@ class Uta_Pricing extends Widget_Base
         return 'eicon-price-table';
     }
 
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-pricing'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
 
 
     public function get_categories()
@@ -64,7 +89,7 @@ class Uta_Pricing extends Widget_Base
                     'style-2'       => esc_html__('Style-2', 'unlimited-theme-addons'),
                 ],
 
-                'default' => 'pricing-style-default',
+                'default' => 'style-default',
             ]
         );
 

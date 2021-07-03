@@ -21,6 +21,31 @@ class Uta_Infobox extends Widget_Base
         return 'eicon-facebook-comments';
     }
 
+    /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends()
+    {
+        $styles = ['uta-infobox'];
+
+        return $styles;
+    }
+
+    /**
+     * Widget script.
+     * 
+     * @return string
+     */
+    public function get_script_depends()
+    {
+        $scripts = [];
+
+        return $scripts;
+    }
+
+
     public function get_keywords()
     {
         return [
@@ -81,7 +106,7 @@ class Uta_Infobox extends Widget_Base
                     'style-12'      => esc_html__('Style-12', 'unlimited-theme-addons'),
                 ],
 
-                'default' => 'infobox-style-default',
+                'default' => 'style-default',
             ]
         );
         $this->add_control(

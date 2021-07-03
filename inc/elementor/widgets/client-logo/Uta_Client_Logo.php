@@ -35,6 +35,28 @@ class Uta_Company_Logo extends Widget_Base
     }
 
     /**
+     * Widget CSS.
+     * 
+     * @return string
+     */
+    public function get_style_depends() {
+        $styles = ['uta-company-logo'];
+      
+        return $styles;
+    }
+      
+    /**
+     * Widget script.
+     * 
+     * @return string
+    */ 
+    public function get_script_depends() {
+        $scripts = [];
+      
+        return $scripts;
+    }
+
+    /**
      * Widget keywords.
      * @return array|string[]
      */
