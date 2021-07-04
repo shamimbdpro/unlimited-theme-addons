@@ -131,21 +131,12 @@ $uta_widget_lists = array(
 
 	// 15. Woocommerce Product Carousel.
     array(
-        'title' => __('Woocommerce Product Carousel', 'unlimited-theme-addons'),
-        'description' => __('Get Woocommerce product carouse to show up the product in creative style to your customer.', 'unlimited-theme-addons'),
+        'title' => __('Countdown Pro', 'unlimited-theme-addons'),
+        'description' => __('Get unlimited countdown prebuild layout.', 'unlimited-theme-addons'),
         'name'  => 'woocommerce-product-carousel',
         'default' => array_key_exists('counter', $widget_list) && 'off' == $widget_list['counter'] ? 'off' : 'on',
         'is_free' => 0,
     ),
-
-	// 16. Post Carousel.
-	array(
-		'title' => __('Post Carousel', 'unlimited-theme-addons'),
-		'description' => __('Show to latest blog post in creative looking into your website.', 'unlimited-theme-addons'),
-		'name'  => 'woocommerce-post-carousel',
-		'default' => array_key_exists('counter', $widget_list) && 'off' == $widget_list['counter'] ? 'off' : 'on',
-		'is_free' => 0,
-	),
 
 );
 

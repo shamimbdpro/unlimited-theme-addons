@@ -4,17 +4,17 @@ Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.7
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Unlimited theme addons is very useful plugin to get amazing features for your website . It is a very essential addon for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
+Unlimited theme addons are very useful plugins to get amazing features for your website . It is a very essential addon for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 [Live Demo](http://codepopular.com/unlimited-theme-addons)
 
 == Installation ==
-Here is few step to describes how to install the plugin and get it working.
+Here are a few steps to describe how to install the plugin and get it working.
 
 e.g.
 
@@ -25,22 +25,22 @@ e.g.
 5. On the other way you can Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
 == Features==
-- [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons comes with multiple options to manage the product grid into your wordpress website.
+- [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons come with multiple options to manage the product grid into your wordpress website.
 
 - [**WooCommerce Product List**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with different styles. Our plugin provides the opportunity to make a product list with elementor for your woocommerce store. You aren't required to have programming knowledge to make a product list for your WordPress website.
 
 - [**WooCommerce Product Search**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-search/) - Make Woocommerce product search with category in elementor addons. If you are looking to search your woocommerce product with elementor addons plugin then we can help you with that to make it easy. Our plugin has a widget to set product search options. you can set the elementor search addons with product category. it will help to find out the products for your customer.
-- [**Title**](https://www.codepopular.com/unlimited-theme-addons/elementor-title/) - Make section title, blok title, premium section title. No skill required to do this thing. just make different type of product title with unlimited theme addons plugins.
+- [**Title**](https://www.codepopular.com/unlimited-theme-addons/elementor-title/) - Make section title, block title, premium section title. No skill required to do this thing. just make different types of product title with unlimited theme addons plugins.
 
-- [**Video**](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup videos with elementor in different type of layouts.
+- [**Video**](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup videos with elementor in different types of layouts.
 
-- [**Button**](https://www.codepopular.com/unlimited-theme-addons/elementor-button/) - You can make quick buttons with responsive style. You can make also video popup by set the URL to button.
+- [**Button**](https://www.codepopular.com/unlimited-theme-addons/elementor-button/) - You can make quick buttons with responsive style. You can also make a video popup by set the URL to button.
 
 - [**Testimonial**](https://www.codepopular.com/unlimited-theme-addons/elementor-testimonial) - Easily able to make elementor testimonials with unlimited theme addons.
 
-- [**Team**](https://www.codepopular.com/unlimited-theme-addons/elementor-team) - Make your team member style with elementor. You can make almost 10+ different types of design. Choose your team style according to your needs. There has largest option to customize the team each components.
+- [**Team**](https://www.codepopular.com/unlimited-theme-addons/elementor-team) - Make your team member style with elementor. You can make almost 10+ different types of design. Choose your team style according to your needs. There has largest option to customize the team's components.
 
-- [**Pricing**](https://www.codepopular.com/unlimited-theme-addons/elementor-pricing) - Make a beautify pricing table with theme addons plugin. It is super easy to make a pricing table for your website . just make modern, creative, outstanding pricing table with elementor.
+- [**Pricing**](https://www.codepopular.com/unlimited-theme-addons/elementor-pricing) - Make a beautify pricing table with theme addons plugin. It is super easy to make a pricing table for your website . just make a modern, creative, outstanding pricing table with elementor.
 
 - [**Infobox**](https://www.codepopular.com/unlimited-theme-addons/elementor-infobox) - Make elementor infobox with 10+ style. Create infobox design with beautiful icon creative layout. just build up a modern infobox design for your WordPress site.
 
@@ -52,10 +52,13 @@ e.g.
 
 
 
+### **Why this plugin is SEO friendly**
+Unlimited Theme Addons is an SEO friendly plugin. We don't reload extra resources while using Elementor Widget. You can simply enable/disable widgets from Dashboard > Theme Option. CSS and JS will be loaded depending on what Widget are you using on your Website.
+
+
 ### **About the Author**
 
 Unlimited Theme Addons is the newest creation to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the hearts of its users with a staggering 5-star rating. The plugin is coded in a structured way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive features. You can get the largest number of addon styles for free here.
-
 
 
 
@@ -78,6 +81,10 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.16 =
+* CSS and JS seperatly loaded depending on Widget.
+* Slick slider issue fixed.
 
 = 1.0.15 =
 * Counter up widget added.
@@ -132,3 +139,4 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 
 = 0.0.1 =
 *initial release*
+
