@@ -521,6 +521,7 @@ class Uta_CounterUP extends Widget_Base
 
         <script>
             (function($) {
+                'use script';
 
                 $('.uta-counter').each(function() {
                     var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
