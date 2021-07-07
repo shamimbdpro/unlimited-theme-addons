@@ -7,7 +7,7 @@ const prettify = require( 'gulp-js-prettify' );
 const uglify = require( 'gulp-uglify' );
 const rename = require( 'gulp-rename' );
 const sass = require( 'gulp-sass' );
-//const sourcemaps = require( 'gulp-sourcemaps' );
+const sourcemaps = require( 'gulp-sourcemaps' );
 const minifyCSS = require( 'gulp-clean-css' );
 const autoprefixer = require( 'gulp-autoprefixer' );
 //const wpPot = require( 'gulp-wp-pot' );
@@ -92,12 +92,14 @@ gulp.task(
     'compile:scss',
     () => {
         return gulp.src( config.scss.src )
+			.pipe( sourcemaps.init( { largeFile: true } ) )
             .pipe( sass().on( 'error', sass.logError ) )
             .on( 'error', notify.onError( {title: "Error", message: "Error: <%= error.message %>"} ) ) // phpcs:ignore WordPressVIPMinimum.Security.Underscorejs.OutputNotation
             .pipe( autoprefixer( config.autoprefixer.options ) )
             .pipe( gulp.dest( config.scss.dist ) )
             .pipe( minifyCSS() )
             .pipe( rename( { suffix: '.min'} ) )
+			.pipe( sourcemaps.write( '/.' ) )
             .pipe( gulp.dest( config.scss.dist ) )
             .pipe( notify( {message: 'TASK: compile:scss Completed! 💯', onLast: true} ) );
     }
