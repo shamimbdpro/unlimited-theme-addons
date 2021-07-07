@@ -59,7 +59,7 @@ class Uta_CounterUP extends Widget_Base
      */
     public function get_script_depends()
     {
-        $scripts = [];
+        $scripts = ['uta-jquery-waypoints','uta-jquery-counterup'];
 
         return $scripts;
     }

@@ -241,6 +241,24 @@ class Unlimited_Theme_Addons
             true
         );
 
+        // Counter
+        wp_register_script(
+            'uta-jquery-waypoints',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/jquery.waypoints.min.js',
+            array('jquery'),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+
+        // Counter
+        wp_register_script(
+            'uta-jquery-counterup',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/jquery.counterup.min.js',
+            array('jquery'),
+            UTA_PLUGIN_VERSION,
+            true
+        );
+
         // Image Comparison Slider.
         wp_register_script(
             'uta-twentytwenty',
@@ -254,7 +272,7 @@ class Unlimited_Theme_Addons
         wp_register_script(
             'uta-main',
             UTA_PLUGIN_URL . 'assets/frontend/js/main.js',
-            array('jquery', 'uta-magnific-popup', 'uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty'),
+            array('jquery', 'uta-magnific-popup', 'uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty', 'uta-jquery-waypoints', 'uta-jquery-counterup'),
             UTA_PLUGIN_VERSION,
             true
         );
