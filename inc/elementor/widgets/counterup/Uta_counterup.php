@@ -523,16 +523,21 @@ class Uta_CounterUP extends Widget_Base
             (function($) {
                 'use script';
 
-                $('.uta-counter').each(function() {
-                    var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
-                    $(this).prop('Counter', <?php echo esc_html($uta_counter_up_start_number); ?>).animate({
-                        Counter: $(this).text()
-                    }, {
-                        duration: <?php echo esc_html($uta_counter_up_animation); ?>,
-                        step: function(func) {
-                            $(this).text(parseFloat(func).toFixed(size));
-                        }
-                    });
+                // $('.uta-counter').each(function() {
+                //     var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+                //     $(this).prop('Counter', <?php echo esc_html($uta_counter_up_start_number); ?>).animate({
+                //         Counter: $(this).text()
+                //     }, {
+                //         duration: <?php echo esc_html($uta_counter_up_animation); ?>,
+                //         step: function(func) {
+                //             $(this).text(parseFloat(func).toFixed(size));
+                //         }
+                //     });
+                // });
+
+                $('.uta-counter').counterUp({
+                    delay: 10,
+                    time: 2000
                 });
 
             })(jQuery);
