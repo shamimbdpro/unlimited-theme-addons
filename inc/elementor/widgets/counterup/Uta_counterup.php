@@ -170,14 +170,14 @@ class Uta_CounterUP extends Widget_Base
         );
 
         // Counter Up Animation Duration
-        $this->add_control(
-            'uta_counter_up_animation',
-            [
-                'label'        => esc_html__('Animation Duration', 'unlimited-theme-addons'),
-                'type'         => Controls_Manager::NUMBER,
-                'default'      => '3000',
-            ]
-        );
+        // $this->add_control(
+        //     'uta_counter_up_animation',
+        //     [
+        //         'label'        => esc_html__('Animation Duration', 'unlimited-theme-addons'),
+        //         'type'         => Controls_Manager::NUMBER,
+        //         'default'      => '3000',
+        //     ]
+        // );
 
         // Counter Up Title
         $this->add_control(
@@ -487,7 +487,7 @@ class Uta_CounterUP extends Widget_Base
         $uta_counter_up_start_number = $settings['uta_counter_up_start_number'];
         $uta_counter_up_ends_number = $settings['uta_counter_up_ends_number'];
         $uta_counter_up_suffix_number = $settings['uta_counter_up_suffix_number'];
-        $uta_counter_up_animation = $settings['uta_counter_up_animation'];
+        // $uta_counter_up_animation = $settings['uta_counter_up_animation'];
         $uta_counter_up_title = $settings['uta_counter_up_title'];
         $icon = $settings['icon'];
 ?>
