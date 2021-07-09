@@ -39,11 +39,11 @@ class Uta_Company_Logo extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends() {
-        $styles = ['slick-theme', 'slick', 'uta-company-logo'];
+    // public function get_style_depends() {
+    //     $styles = ['slick-theme', 'slick', 'uta-company-logo'];
       
-        return $styles;
-    }
+    //     return $styles;
+    // }
       
     /**
      * Widget script.

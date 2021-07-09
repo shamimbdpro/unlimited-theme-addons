@@ -45,12 +45,12 @@ class Uta_CounterUP extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-odometer', 'uta-counter-up'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-odometer', 'uta-counter-up'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

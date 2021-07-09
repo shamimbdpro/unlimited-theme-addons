@@ -27,12 +27,12 @@ class Uta_Video extends Widget_Base
     * 
     * @return string
     */
-   public function get_style_depends()
-   {
-      $styles = ['magnific-popup','uta-video'];
+   // public function get_style_depends()
+   // {
+   //    $styles = ['magnific-popup','uta-video'];
 
-      return $styles;
-   }
+   //    return $styles;
+   // }
 
    /**
     * Widget script.

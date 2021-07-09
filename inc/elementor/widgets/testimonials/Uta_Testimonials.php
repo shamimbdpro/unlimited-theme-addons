@@ -33,12 +33,12 @@ class Uta_Testimonials extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['slick-theme', 'slick', 'uta-testimonial'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['slick-theme', 'slick', 'uta-testimonial'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

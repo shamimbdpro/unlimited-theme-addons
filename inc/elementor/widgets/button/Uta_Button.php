@@ -28,12 +28,12 @@ class Uta_Button extends Widget_Base
    * 
    * @return string
    */
-  public function get_style_depends()
-  {
-    $styles = ['uta-button'];
+  // public function get_style_depends()
+  // {
+  //   $styles = ['uta-button'];
 
-    return $styles;
-  }
+  //   return $styles;
+  // }
 
   /**
    * Widget script.

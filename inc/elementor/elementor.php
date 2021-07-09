@@ -56,7 +56,7 @@ class Unlimited_Theme_Addons
         );
 
         // Magnific Popup.
-        wp_register_style(
+        wp_enqueue_style(
             'magnific-popup',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/magnific-popup.min.css',
             array(),
@@ -64,7 +64,7 @@ class Unlimited_Theme_Addons
         );
 
         // Slick Theme.
-        wp_register_style(
+        wp_enqueue_style(
             'slick-theme',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/slick-theme.min.css',
             array(),
@@ -72,7 +72,7 @@ class Unlimited_Theme_Addons
         );
 
         // Slick Slider.
-        wp_register_style(
+        wp_enqueue_style(
             'slick',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/slick.min.css',
             array('slick-theme'),
@@ -80,7 +80,7 @@ class Unlimited_Theme_Addons
         );
 
         // Twentytwenty Image comparison.
-        wp_register_style(
+        wp_enqueue_style(
             'twentytwenty',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/twentytwenty.min.css',
             array(),
@@ -90,7 +90,7 @@ class Unlimited_Theme_Addons
 
         //----------- Load Widget CSS ---------------//
         // Accordion. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-accordion',
             UTA_PLUGIN_URL . 'assets/frontend/css/accordian.min.css',
             array(),
@@ -98,7 +98,7 @@ class Unlimited_Theme_Addons
         );
 
         // Button.
-        wp_register_style(
+        wp_enqueue_style(
             'uta-button',
             UTA_PLUGIN_URL . 'assets/frontend/css/button.min.css',
             array(),
@@ -106,7 +106,7 @@ class Unlimited_Theme_Addons
         );
 
         // Company Logo.
-        wp_register_style(
+        wp_enqueue_style(
             'uta-company-logo',
             UTA_PLUGIN_URL . 'assets/frontend/css/company-logo.min.css',
             array('slick'),
@@ -115,7 +115,7 @@ class Unlimited_Theme_Addons
 
 
         // Counter Up. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-odometer',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/odometer.min.css',
             array(),
@@ -124,7 +124,7 @@ class Unlimited_Theme_Addons
 
 
         // Counter Up. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-counter-up',
             UTA_PLUGIN_URL . 'assets/frontend/css/counterup.min.css',
             array(),
@@ -134,7 +134,7 @@ class Unlimited_Theme_Addons
        
 
         // Infobox. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-infobox',
             UTA_PLUGIN_URL . 'assets/frontend/css/infobox.min.css',
             array(),
@@ -142,7 +142,7 @@ class Unlimited_Theme_Addons
         );
 
         // Post. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-blog',
             UTA_PLUGIN_URL . 'assets/frontend/css/post.min.css',
             array(),
@@ -150,7 +150,7 @@ class Unlimited_Theme_Addons
         );
 
         // Pricing. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-pricing',
             UTA_PLUGIN_URL . 'assets/frontend/css/pricing.min.css',
             array(),
@@ -158,7 +158,7 @@ class Unlimited_Theme_Addons
         );
 
         // Product Grid. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-product-grid',
             UTA_PLUGIN_URL . 'assets/frontend/css/product-grid.css',
             array(),
@@ -166,7 +166,7 @@ class Unlimited_Theme_Addons
         );
 
         // Product List. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-product-list',
             UTA_PLUGIN_URL . 'assets/frontend/css/product-list.min.css',
             array(),
@@ -174,7 +174,7 @@ class Unlimited_Theme_Addons
         );
 
         // Search. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-product-search',
             UTA_PLUGIN_URL . 'assets/frontend/css/search.min.css',
             array(),
@@ -182,7 +182,7 @@ class Unlimited_Theme_Addons
         );
 
         // Tab. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-tab',
             UTA_PLUGIN_URL . 'assets/frontend/css/tab.min.css',
             array(),
@@ -190,7 +190,7 @@ class Unlimited_Theme_Addons
         );
 
         // Team. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-team',
             UTA_PLUGIN_URL . 'assets/frontend/css/team.min.css',
             array(),
@@ -198,7 +198,7 @@ class Unlimited_Theme_Addons
         );
 
         // Testimonial. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-testimonial',
             UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.min.css',
             array('slick'),
@@ -206,7 +206,7 @@ class Unlimited_Theme_Addons
         );
 
         // Section Title. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-title',
             UTA_PLUGIN_URL . 'assets/frontend/css/title.min.css',
             array(),
@@ -214,7 +214,7 @@ class Unlimited_Theme_Addons
         );
 
         // Video. 
-        wp_register_style(
+        wp_enqueue_style(
             'uta-video',
             UTA_PLUGIN_URL . 'assets/frontend/css/video.min.css',
             array(),

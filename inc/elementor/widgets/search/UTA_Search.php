@@ -29,12 +29,12 @@ class Uta_Search extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-product-search'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-product-search'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

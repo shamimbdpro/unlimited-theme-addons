@@ -28,12 +28,12 @@ class Uta_Title extends Widget_Base
     * 
     * @return string
     */
-   public function get_style_depends()
-   {
-      $styles = ['uta-title'];
+   // public function get_style_depends()
+   // {
+   //    $styles = ['uta-title'];
 
-      return $styles;
-   }
+   //    return $styles;
+   // }
 
    /**
     * Widget script.
