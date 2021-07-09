@@ -47,7 +47,7 @@ class Uta_CounterUP extends Widget_Base
      */
     public function get_style_depends()
     {
-        $styles = ['uta-counter-up'];
+        $styles = ['uta-odometer', 'uta-counter-up'];
 
         return $styles;
     }
@@ -59,7 +59,7 @@ class Uta_CounterUP extends Widget_Base
      */
     public function get_script_depends()
     {
-        $scripts = ['uta-jquery-waypoints','uta-jquery-counterup'];
+        $scripts = ['uta-jquery-appear','uta-odometer', 'uta-main'];
 
         return $scripts;
     }
@@ -518,7 +518,6 @@ class Uta_CounterUP extends Widget_Base
         }
 
         ?>
-
 <?php
     }
 }

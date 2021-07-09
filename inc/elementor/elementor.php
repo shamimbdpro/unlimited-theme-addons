@@ -113,6 +113,16 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
+
+        // Counter Up. 
+        wp_register_style(
+            'uta-odometer',
+            UTA_PLUGIN_URL . 'assets/frontend/css/library/odometer.min.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+
+
         // Counter Up. 
         wp_register_style(
             'uta-counter-up',
@@ -120,6 +130,8 @@ class Unlimited_Theme_Addons
             array(),
             UTA_PLUGIN_VERSION
         );
+
+       
 
         // Infobox. 
         wp_register_style(
@@ -243,8 +255,8 @@ class Unlimited_Theme_Addons
 
         // Counter
         wp_register_script(
-            'uta-jquery-waypoints',
-            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/jquery.waypoints.min.js',
+            'uta-jquery-appear',
+            'https://codepopular.com/demo/template/ultraline-it-business-template/assets/js/jquery.appear.min.js',
             array('jquery'),
             UTA_PLUGIN_VERSION,
             true
@@ -252,9 +264,9 @@ class Unlimited_Theme_Addons
 
         // Counter
         wp_register_script(
-            'uta-jquery-counterup',
-            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/jquery.counterup.min.js',
-            array('jquery'),
+            'uta-odometer',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/odometer.min.js',
+            array('jquery', 'uta-jquery-appear'),
             UTA_PLUGIN_VERSION,
             true
         );
@@ -272,7 +284,7 @@ class Unlimited_Theme_Addons
         wp_register_script(
             'uta-main',
             UTA_PLUGIN_URL . 'assets/frontend/js/main.js',
-            array('jquery', 'uta-magnific-popup', 'uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty', 'uta-jquery-waypoints', 'uta-jquery-counterup'),
+            array('jquery', 'uta-magnific-popup', 'uta-slick', 'uta-jquery-event-move', 'uta-twentytwenty', 'uta-jquery-appear', 'uta-odometer'),
             UTA_PLUGIN_VERSION,
             true
         );

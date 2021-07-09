@@ -57,21 +57,32 @@
     });
 
     $(".uta-twentytwenty[data-orientation!='vertical']").twentytwenty();
-    $(".uta-twentytwenty[data-orientation='vertical']").twentytwenty({orientation: 'vertical'})
+    $(".uta-twentytwenty[data-orientation='vertical']").twentytwenty({orientation: 'vertical'});
 
-    // Elementor frontend support for Testimonial.
-    $(window).on('elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction('frontend/element_ready/uta-counter.default', function($scope, $) {
-            $('.uta-counter').counterUp({
-                delay: 10,
-                time: 2000,
-            });
-        });
-        
-    }
+ 
+
+
+ // Jquery Counter Up.
+
+  var utaCounterHandler = function ($scope, $) {
+      
+     $(".odometer").appear(function(e) {
+        $(".odometer").each(function() {
+            var e = $(this).attr("data-count");
+            $(this).html(e)
+        })
+     });
+
+    };
+
+
+  $(window).on('elementor/frontend/init', function () {
+      
+        elementorFrontend.hooks.addAction('frontend/element_ready/uta-counter-up.default', utaCounterHandler);
+      
+    });
 
 
 })(jQuery);
-
 
 
