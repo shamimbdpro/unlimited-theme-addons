@@ -88,7 +88,6 @@ class Uta_Testimonials extends Widget_Base
                     'style-3'       => esc_html__('Style-3', 'unlimited-theme-addons'),
                     'style-4'       => esc_html__('Style-4', 'unlimited-theme-addons'),
                     'style-5'       => esc_html__('Style-5', 'unlimited-theme-addons'),
-                    'style-6'       => esc_html__('Style-6', 'unlimited-theme-addons'),
                 ],
 
                 'default' => 'style-default',
@@ -274,7 +273,7 @@ class Uta_Testimonials extends Widget_Base
                 'label'     => __('Content Box', 'unlimited-theme-addons'),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_testimonial_style' => ['style-6', 'style-3', 'style-2', 'style-1', 'style-5'],
+                    'uta_testimonial_style' => ['style-3', 'style-2', 'style-1', 'style-5'],
                 ],
             )
         );
@@ -615,9 +614,6 @@ class Uta_Testimonials extends Widget_Base
                     require (__DIR__) . '/template/style-5.php';
                 }
 
-                if ('style-6' === $settings['uta_testimonial_style']) {
-                    require (__DIR__) . '/template/style-6.php';
-                }
 
             endforeach; ?>
         </div>

@@ -107,58 +107,58 @@
 
 
 /*-------- Style 01 ------------*/
-.testimonial-style-1 {
+.uta-testimonial-style-1 {
   width: 100%;
   overflow: hidden;
 }
-.testimonial-item1 {
+.uta-testimonial-item1 {
   width: 95% !important;
   margin: 0 auto;
   overflow: hidden;
   margin: 10px;
   position: relative;
 }
-.testimonial-item1 .thumbnail {
+.uta-testimonial-item1 .uta-thumbnail {
   width: 150px;
   overflow: hidden;
   float: left;
   text-align: center;
   margin-right: 30px;
 }
-.testimonial-item1 .thumbnail img {
+.uta-testimonial-item1 .uta-thumbnail img {
   width: 90%;
   margin: 3%;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 0px #ccc;
 }
-.testimonial-item1 .thumbnail h2 {
+.uta-testimonial-item1 .uta-thumbnail h2 {
   margin-top: 14px;
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 3px;
 }
-.testimonial-item1 .thumbnail h5 {
+.uta-testimonial-item1 .uta-thumbnail h5 {
   color: #333;
   font-weight: 400;
   font-size: 14px;
 }
-.testimonial-item1 .content {
+.uta-testimonial-item1 .uta-content {
   box-shadow: 0px 0px 10px 0px #ccc;
   padding: 20px 22px;
   margin: 10px; overflow: hidden;
   background: #fff;
 }
-.testimonial-item1 .content .ratting {
+.uta-testimonial-item1 .uta-content .ratting {
   margin-bottom: 10px;
   font-size: 16px;
   color: #ff6a10;
 }
-.testimonial-item1 .content p {
+.uta-testimonial-item1 .uta-content p {
   font-size: 16px;
   line-height: 24px;
   color: #777;
 }
-.testimonial-item1 .content::after {
+.uta-testimonial-item1 .uta-content::after {
   content: "";
   clear: both;
   display: block;
@@ -177,13 +177,13 @@
 
 /*-------- Style 02 ------------*/
 
-.testimonial-style-2 {
+.uta-testimonial-style-2 {
   width: 100%;
-  .thumbnail{
+  .uta-thumbnail{
     width: 100px;
     margin: 0 auto;
   }
-  .content {
+  .uta-content {
     background: #fff;
     text-align: center;
     margin-top: -50px;
@@ -215,11 +215,11 @@
 
 /*-------- Style 03 ------------*/
 
-.testimonial-item3 {
+.uta-testimonial-item3 {
   width: 95% !important;
   margin: 2%;
 
-  .content {
+  .uta-content {
     width: 100%;
     background: #e0f0db;
     box-shadow: 0px 0px 10px 0px #bdc8a6;
@@ -247,7 +247,7 @@
     }
   }
 
-  .thumbnail {
+  .uta-thumbnail {
     overflow: hidden;
     width: 100%;
 
@@ -257,7 +257,9 @@
       float: left;
       margin-right: 17px;
     }
-
+    .thumbnail-content {
+        overflow: hidden;
+    }
     h2 {
       font-size: 22px;
       font-weight: 700;
@@ -280,13 +282,13 @@
 }
 
 
-.testimonial-style-1, .testimonial-style-2, .testimonial-style-3, .testimonial-style-4, .testimonial-style-5{
+.uta-testimonial-style-1, .uta-testimonial-style-2, .uta-testimonial-style-3, .uta-testimonial-style-4, .uta-testimonial-style-5{
   overflow: hidden;
 }
 
 /*-------- Style 04 ------------*/
 
-.testimonial-item4 {
+.uta-testimonial-item4 {
   width: 96% !important;
   overflow: hidden;
   margin: 2%;
@@ -296,7 +298,7 @@
   box-sizing: border-box;
   padding: 40px 20px;
 }
-.testimonial-item4 .content .thumbnail {
+.uta-testimonial-item4 .uta-content .uta-thumbnail {
   position: relative;
   width: 150px;
   height: 150px;
@@ -304,11 +306,11 @@
   margin-bottom: 15px;
   border-radius: 50%;
 }
-.testimonial-item4 .content .thumbnail img{
+.uta-testimonial-item4 .uta-content .uta-thumbnail img{
   width: 100%;
   border-radius: 50%;
 }
-.testimonial-item4 .content .thumbnail .icon {
+.uta-testimonial-item4 .uta-content .uta-thumbnail .icon {
   position: absolute;
   z-index: 20;
   background: #ff8080;
@@ -323,38 +325,38 @@
   color: #fff;
   top: 8px;
 }
-.testimonial-item4 .content h2 {
+.uta-testimonial-item4 .uta-content h2 {
   font-size: 20px;
   font-weight: 600;
 }
-.testimonial-item4 .content h5 {
+.uta-testimonial-item4 .uta-content h5 {
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 6px;
 }
-.testimonial-item4 .content p {
+.uta-testimonial-item4 .uta-content p {
   font-size: 15px;
   padding-top: 20px;
   line-height: 25px;
 }
-.testimonial-item4 .content .ratting span{
+.uta-testimonial-item4 .uta-content .ratting span{
   font-size: 16px;
   color: #ff6a10;
 }
 
 /*-------- Style 05 ------------*/
 
-.testimonial-item5 {
+.uta-testimonial-item5 {
   width: 96% !important;
   margin: 2%;
   overflow: hidden;
 }
-.testimonial-item5 .content {
+.uta-testimonial-item5 .uta-content {
   background: #6c0606;
   position: relative;
   padding: 30px 20px;
 }
-.testimonial-item5 .content::after {
+.uta-testimonial-item5 .uta-content::after {
   content: "";
   clear: both;
   display: block;
@@ -369,36 +371,40 @@
   margin: 0 auto;
   transform: rotate(47deg);
 }
-.testimonial-item5 .content p {
+.uta-testimonial-item5 .uta-content p {
   color: #fff;
   font-size: 18px;
   line-height: 26px;
 }
-.testimonial-item5 .thumbnail {
+.uta-testimonial-item5 .uta-thumbnail {
   width: 100%;
   background: #c2ddf4;
   padding: 20px;
   padding-top: 30px;
   overflow: hidden;
+  .uta-thumbnail-content-5{
+    overflow:hidden;
+  }
 }
-.testimonial-item5 .thumbnail img {
+.uta-testimonial-item5 .uta-thumbnail img {
   width: 90px;
   border-radius: 50%;
   float: left;
   overflow: hidden;
   margin-right: 15px;
+
 }
-.testimonial-item5 .thumbnail h2 {
+.uta-testimonial-item5 .uta-thumbnail h2 {
   font-size: 20px;
   margin-top: 9px;
   font-weight: 600;
 }
-.testimonial-item5 .thumbnail h5 {
+.uta-testimonial-item5 .uta-thumbnail h5 {
   font-weight: 400;
   margin-bottom: 6px;
   font-size: 14px;
 }
-.testimonial-item5 .thumbnail .ratting span{
+.uta-testimonial-item5 .uta-thumbnail .ratting span{
   font-size: 16px;
   color: #ff6a10;
 }
@@ -408,62 +414,41 @@
 .testimonial-style-6{
 
 }
-// .testimonial-item1{
-//   position: relative;
-// }
-// .thumbnail-content {
-//     overflow: hidden;
-//     width: auto;
-//     box-sizing: border-box;
-// }
-// .testimonial-item1 .thumbnail {
-//     width: 90px;
-//     float: left;
-//     overflow: hidden;
-//     padding-top: 35px;
-//     position: absolute;
-//     top: 2px;
-//     right: 22px;
-//     z-index: 999;
-// }
-// .testimonial-item1 .content {
-//     padding-right: 111px;
-// }
 /*------ Responsive Style -----------*/
 
 @media(max-width: 460px){
-  .testimonial-item2 .thumbnail {
+  .uta-testimonial-item2 .uta-thumbnail {
     width: 100%;
     margin-right: 0px;
     margin-bottom: 20px;
   }
-  .testimonial-item2 .thumbnail img {
+  .uta-testimonial-item2 .uta-thumbnail img {
     width: 150px;
     margin: 3% auto;
   }
-  .testimonial-item2 .content::after {
+  .uta-testimonial-item2 .uta-content::after {
     display: none;
   }
 }
 @media(max-width: 360px){
-  .testimonial-item1 .thumbnail {
+  .uta-testimonial-item1 .uta-thumbnail {
     float: inherit;
     padding-top: 0px;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 14px;
   }
-  .testimonial-item1 .content {
+  .uta-testimonial-item1 .uta-content {
     padding: 12px 16px;
     width: 96%;
     margin: 0 auto;
     box-sizing: border-box;
   }
-  .testimonial-item1 .content p {
+  .uta-testimonial-item1 .uta-content p {
     font-size: 15px;
     line-height: 22px;
   }
-  .testimonial-item3 .content {
+  .uta-testimonial-item3 .uta-content {
     padding: 16px 10px;
   }
 }

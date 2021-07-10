@@ -1,11 +1,11 @@
 <!-- Testimonial Style 3 -->
-<div class="testimonial-<?php echo esc_html($settings['uta_testimonial_style']);?>">
+<div class="uta-testimonial-<?php echo esc_html($settings['uta_testimonial_style']);?>">
     <!-- single -->
-    <div class="testimonial-item3">
-        <div class="content">
+    <div class="uta-testimonial-item3">
+        <div class="uta-content">
             <p <?php echo esc_html( $this->get_render_attribute_string( $testimonialText ) ); ?>><?php echo esc_html( $testimonial['feedback'] ); ?></p>
         </div>
-        <div class="thumbnail">
+        <div class="uta-thumbnail">
             <img src="<?php echo esc_url( $testimonial['image']['url'] ); ?>" alt="<?php echo esc_attr( $testimonial['name'] ); ?>">
             <div class="thumbnail-content">
                 <h2 <?php echo esc_html(  $this->get_render_attribute_string( $name ) ); ?>><?php echo esc_html( $testimonial['name'] ); ?></h2>
