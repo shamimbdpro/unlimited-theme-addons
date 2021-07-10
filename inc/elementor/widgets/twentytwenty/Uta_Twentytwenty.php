@@ -28,12 +28,12 @@ class Uta_Twentytwenty extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['twentytwenty', 'uta-counterup-style'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['twentytwenty', 'uta-counterup-style'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

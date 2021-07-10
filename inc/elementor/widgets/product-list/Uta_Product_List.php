@@ -32,12 +32,12 @@ class Uta_Product_List extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-product-list'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-product-list'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

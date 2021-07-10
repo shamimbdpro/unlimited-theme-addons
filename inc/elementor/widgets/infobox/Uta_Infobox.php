@@ -26,12 +26,12 @@ class Uta_Infobox extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-infobox'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-infobox'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

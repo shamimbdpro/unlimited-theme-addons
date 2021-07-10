@@ -27,12 +27,12 @@ class Uta_Blog extends Widget_Base
     * 
     * @return string
     */
-   public function get_style_depends()
-   {
-      $styles = ['uta-blog'];
+   // public function get_style_depends()
+   // {
+   //    $styles = ['uta-blog'];
 
-      return $styles;
-   }
+   //    return $styles;
+   // }
 
    /**
     * Widget script.

@@ -4,6 +4,10 @@
 # infobox
 --------------------------------------------------------------*/
 @charset "UTF-8";
+
+
+  /*-------- Style default ------------*/
+
 .uta-infobox-item i {
   font-size:30px;
 }
@@ -36,6 +40,9 @@
     font-weight: 700;
     margin-bottom: 10px;
 }
+
+  /*-------- Style 01 ------------*/
+
 .uta-infobox-item.style-01 {
     background: #583ccb;
     color: #fff;
@@ -74,13 +81,14 @@
     font-size: 22px;
     font-weight: 700;
     margin-bottom: 18px;
+    color:#fff
 }
 .uta-infobox-item.style-01 .content p{
 	font-size: 18px;
 }
-/*
- * Style 02
-*/
+
+  /*-------- Style 02 ------------*/
+
 .uta-infobox-item.style-02 {
     position: relative;
     width: 100%;
@@ -147,9 +155,9 @@
 .uta-infobox-item.style-02:hover:after{
 	height: 100%;
 }
-/*
- * Style 3
-*/
+
+ /*-------- Style 03 ------------*/
+
 .uta-infobox-item.style-03 {
     box-shadow: none;
     border: 2px dotted #FF9E98;
@@ -194,9 +202,9 @@
 .uta-infobox-item.style-03 .content p{
 	font-size: 16px;
 }
-/*
- * Style 4
-*/
+
+ /*-------- Style 04 ------------*/
+
 .uta-infobox-item.style-04 {
     background: #eaf5ff;
 }
@@ -233,9 +241,10 @@
     color: #fff;
     font-size: 35px;
 }
-/*
- * Style 05
-*/
+
+
+ /*-------- Style 05 ------------*/
+
 .uta-infobox-item.style-05 {
     border: 1px solid #23bb59;
     border-radius: 10px;
@@ -262,9 +271,10 @@
 .uta-infobox-item.style-05 .content p {
     font-size: 16px;
 }
-/*
- * Style 6
-*/
+
+ /*-------- Style 06 ------------*/
+
+
 .uta-infobox-item.style-06 {
     background: #333;
     color: #ddd;
@@ -300,6 +310,9 @@
 .uta-infobox-item.style-06 .content p {
     font-size: 16px;
 }
+
+ /*-------- Style 07 ------------*/
+
 .uta-infobox-item.style-07 {
     position: relative;
     border-radius: 10px;
@@ -315,7 +328,7 @@
     top: -42px;
     width: 90px;
     height: 90px;
-    background: radial-gradient(#07c18e, #00000026);
+    background: $brand-color;
     display: flex;
     justify-content: center;
     border-radius: 13px 12px 0px 10px;
@@ -324,13 +337,13 @@
     transition: all .3s ease-in-out;
 }
 .uta-infobox-item.style-07:hover .icon {
-    background: radial-gradient(#007757, #00000026);
+    background: $brand-hover-color;
 }
 .uta-infobox-item.style-07:hover .icon i{
     transform:scale(1.2);
 }
 .uta-infobox-item.style-07 .icon i {
-    color: #08ffdd;
+    color: #fff;
     font-size: 35px;
 }
 .uta-infobox-item.style-07 h4 {
@@ -341,9 +354,9 @@
 .uta-infobox-item.style-07 .content p {
     font-size: 16px;
 }
-/*
- * Style 09
-*/
+
+ /*-------- Style 08 ------------*/
+
 .uta-infobox-item.style-08 {
     box-shadow: 0 10px 60px 0 #00000014;
     position: relative;
@@ -391,9 +404,9 @@
 .uta-infobox-item.style-08:hover:after{
     width: 100%;
 }
-/*
- * Style 9
-*/
+
+ /*-------- Style 09 ------------*/
+
 .uta-infobox-item.style-09 {
     box-shadow: 0 10px 60px 0 #00000014;
     margin-top: 40px;
@@ -432,9 +445,9 @@
 .uta-infobox-item.style-09 .content p {
     font-size: 16px;
 }
-/*
- * Style 10
-*/
+
+ /*-------- Style 10 ------------*/
+
 .uta-infobox-item.style-10 {
     box-shadow: 0 10px 60px 0 #00000014;
     padding-top: 45px;
@@ -485,9 +498,9 @@
 .uta-infobox-item.style-10:hover .content p {
     color: #fff;
 }
-/*
- * Style 11
-*/
+
+ /*-------- Style 11 ------------*/
+
 .uta-infobox-item.style-11 {
     box-shadow: 0px 0px 10px #e4dede;
     margin-top: 20px;
@@ -518,9 +531,9 @@
 .uta-infobox-item.style-11 .content p{
     font-size: 16px;
 }
-/*
- * Style 12
-*/
+
+/*-------- Style 12 ------------*/
+
 .uta-infobox-item.style-12 {
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;

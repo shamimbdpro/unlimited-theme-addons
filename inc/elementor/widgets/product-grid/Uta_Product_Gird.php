@@ -31,12 +31,12 @@ class Uta_Product_Grid extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-product-grid'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-product-grid'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

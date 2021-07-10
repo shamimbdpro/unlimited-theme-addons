@@ -28,12 +28,12 @@ class Uta_Pricing extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-pricing'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-pricing'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.

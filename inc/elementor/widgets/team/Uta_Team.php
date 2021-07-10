@@ -26,12 +26,12 @@ class Uta_Team extends Widget_Base
      * 
      * @return string
      */
-    public function get_style_depends()
-    {
-        $styles = ['uta-team'];
+    // public function get_style_depends()
+    // {
+    //     $styles = ['uta-team'];
 
-        return $styles;
-    }
+    //     return $styles;
+    // }
 
     /**
      * Widget script.
