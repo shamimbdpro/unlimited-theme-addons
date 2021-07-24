@@ -9,7 +9,7 @@ Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Unlimited theme addons are very useful plugins to get amazing features for your website . It is a very essential addon for elementor if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
+Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 [Live Demo](http://codepopular.com/unlimited-theme-addons)
 
