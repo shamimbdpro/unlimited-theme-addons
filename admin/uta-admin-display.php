@@ -12,14 +12,15 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"> <span class="dashicons dashicons-pets"></span> Support</button>
             </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium" type="button" role="tab" aria-controls="premium" aria-selected="false"> <span class="dashicons dashicons-money-alt"></span> Try Pro with $4.99</button>
+            </li>
         
         </ul>
         <ul>
         </ul>
         <div class="tab-content bg-white" id="myTabContent">
-            <!-- <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <?php // include_once(UTA_PLUGIN_PATH . 'admin/template/home.php'); ?>
-            </div> -->
 
             <div class="tab-pane fade show active" id="widgets" role="tabpanel" aria-labelledby="profile-tab">
                 <?php include_once(UTA_PLUGIN_PATH . 'admin/template/widgets.php'); ?>
@@ -28,6 +29,11 @@
             <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
                 <?php include_once(UTA_PLUGIN_PATH . 'admin/template/support.php'); ?>
             </div>
+
+            <div class="tab-pane fade" id="premium" role="tabpanel" aria-labelledby="premium-tab">
+                <?php include_once(UTA_PLUGIN_PATH . 'admin/template/premium.php'); ?>
+            </div>
+
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@ Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -12,7 +12,7 @@ License: GPLv2 or later
 Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 
-### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $3.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
+### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $4.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
 
 Feel free to [email us](https://codepopular.com/contact-us/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
 
@@ -25,7 +25,7 @@ e.g.
 4. Go to "Theme Addons" menu and configure your settings
 5. On the other way you can Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
-### Elemento Widget Features
+== Features==
 - [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons come with multiple options to manage the product grid into your wordpress website.
 
 - [**WooCommerce Product List**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with different styles. Our plugin provides the opportunity to make a product list with elementor for your woocommerce store. You aren't required to have programming knowledge to make a product list for your WordPress website.
@@ -53,7 +53,7 @@ e.g.
 
 
 
-### [**Try Premium Version wtih $3.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
+### [**Try Premium Version wtih $4.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
 Unlimited Theme Addon offering paid version where you can build creative countdown timer with Elementor. Boost your store sale with countdown timer. Show the available offer time to your cusotmer with this plugin. We are still working to add more feature in premium version. don't miss out the chance to get it with very simple price.
 
 
@@ -94,6 +94,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.19 =
+* Plugin description issue fixed.
 
 = 1.0.18 =
 * Code standard checked.
