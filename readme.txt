@@ -1,30 +1,31 @@
-=== Unlimited Theme Addons For Elementor ===
+=== Unlimited Theme Addon For Elementor ===
 Contributors: codepopular, shamimtpi, bokhtyer
 Donate link: https://codepopular.com/product/unlimited-theme-addons/
-Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, builder, visual editor, wordpress page builder
+Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
-Tested up to: 5.7
-Stable tag: 1.0.17
+Tested up to: 5.8
+Stable tag: 1.0.18
 Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
 Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
-[Live Demo](http://codepopular.com/unlimited-theme-addons)
+
+### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $3.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
+
+Feel free to [email us](https://codepopular.com/contact-us/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
 
 == Installation ==
 Here are a few steps to describe how to install the plugin and get it working.
-
 e.g.
-
 1. Download and unzip the plugin
 2. Upload the entire "unlimited-theme-addons" directory to the `/wp-content/plugins/` directory
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. Go to "Theme Addons" menu and configure your settings
 5. On the other way you can Activate the plugin through the ‘Plugins Menu’ screen in WordPress
 
-== Features==
+### Elemento Widget Features
 - [**WooCommerce Product Grid**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-grid/) - Showcase your WooCommerce product as grid style. make different types of product grid with elementor plugin for your website. The elementor product will be mobile responsive. It will be helpful for your customer to get a quick add to cart for your store product. The unlimited theme addons come with multiple options to manage the product grid into your wordpress website.
 
 - [**WooCommerce Product List**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with different styles. Our plugin provides the opportunity to make a product list with elementor for your woocommerce store. You aren't required to have programming knowledge to make a product list for your WordPress website.
@@ -52,13 +53,25 @@ e.g.
 
 
 
+### [**Try Premium Version wtih $3.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
+Unlimited Theme Addon offering paid version where you can build creative countdown timer with Elementor. Boost your store sale with countdown timer. Show the available offer time to your cusotmer with this plugin. We are still working to add more feature in premium version. don't miss out the chance to get it with very simple price.
+
+
+### [**Countdown Timer Pro Features**](https://codepopular.com/product/unlimited-theme-addons-pro/)
+* Creative countdown timer with high quality design
+* Multiple layouts & design
+* Set the countdown timer Posts / Pages 
+* No coding skill required
+* Customize everything
+* Fully Responsive
+
+
 ### **Why this plugin is SEO friendly**
 Unlimited Theme Addons is an SEO friendly plugin. We don't reload extra resources while using Elementor Widget. You can simply enable/disable widgets from Dashboard > Theme Option. CSS and JS will be loaded depending on what Widget are you using on your Website.
 
-
 ### **About the Author**
 
-Unlimited Theme Addons is the newest creation to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the hearts of its users with a staggering 5-star rating. The plugin is coded in a structured way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive features. You can get the largest number of addon styles for free here.
+Unlimited Theme Addon is the newest creation to the product line up of [CodePopular](https://codepopular.com/), it has already managed to win the hearts of its users with a staggering 5-star rating. The plugin is coded in a structured way so you don't require any major coding know-how and is completely cross-browser compatible with mobile responsive features. You can get the largest number of addon styles for free here.
 
 
 
@@ -81,6 +94,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.18 =
+* Testimonial updated.
 
 = 1.0.17 =
 * Testimonial updated.

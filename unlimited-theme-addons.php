@@ -3,7 +3,7 @@
 * Plugin Name: Unlimited Theme Addons
 * Plugin URI: https://codepopular.com/unlimited-theme-addons
 * Description: Unlimited theme addons is very useful plugin to get amazing features for your website . if you Looking to add extra functionality to the Elementor page builder then this plugin will be help for you.
-* Version: 1.0.17
+* Version: 1.0.18
 * Author: codepopular
 * Author URI: https://www.codepopular.com
 * Text Domain: unlimited-theme-addons
@@ -11,7 +11,7 @@
 * Domain Path: /languages
 * WP Requirement & Test
 * Requires at least: 4.0
-* Tested up to: 5.7
+* Tested up to: 5.8
 * Requires PHP: 5.6
 */
 
