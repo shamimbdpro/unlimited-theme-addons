@@ -2,23 +2,20 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 // Call to Action
 class Uta_Video extends Widget_Base
 {
 
-   public function get_name()
-   {
+   public function get_name() {
       return 'uta-video';
    }
 
-   public function get_title()
-   {
+   public function get_title() {
       return esc_html__('UTA Video', 'unlimited-theme-addons');
    }
 
-   public function get_icon()
-   {
+   public function get_icon() {
       return 'eicon-play';
    }
 
@@ -39,31 +36,28 @@ class Uta_Video extends Widget_Base
     * 
     * @return string
     */
-   public function get_script_depends()
-   {
-      $scripts = ['uta-magnific-popup', 'uta-main'];
+   public function get_script_depends() {
+      $scripts = [ 'uta-magnific-popup', 'uta-main' ];
 
       return $scripts;
    }
 
 
-   public function get_keywords()
-   {
+   public function get_keywords() {
       return [
-         'video',
-         'uta video',
-         'uta',
-         'video widget',
-         'widget',
-         'addons',
-         'video addons',
-         'unlimited theme addons',
+		  'video',
+		  'uta video',
+		  'uta',
+		  'video widget',
+		  'widget',
+		  'addons',
+		  'video addons',
+		  'unlimited theme addons',
       ];
    }
 
-   public function get_categories()
-   {
-      return ['uta-elements'];
+   public function get_categories() {
+      return [ 'uta-elements' ];
    }
 
    /**
@@ -73,54 +67,51 @@ class Uta_Video extends Widget_Base
     *
     * @return string support URL.
     */
-   public function get_custom_help_url()
-   {
+   public function get_custom_help_url() {
       return 'https://codepopular.com/contact/';
    }
 
-   protected function _register_controls()
-   {
+   protected function _register_controls() {
 
       $this->start_controls_section(
          'video_section',
          [
-            'label' => esc_html__('Video Image', 'unlimited-theme-addons'),
-            'type'  => Controls_Manager::SECTION,
+			 'label' => esc_html__('Video Image', 'unlimited-theme-addons'),
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
 
       $this->add_control(
          'image',
          [
-            'label'   => __('Choose Photo', 'unlimited-theme-addons'),
-            'type'    => \Elementor\Controls_Manager::MEDIA,
-            'default' => [
-               'url' => \Elementor\Utils::get_placeholder_image_src(),
-            ],
+			 'label'   => __('Choose Photo', 'unlimited-theme-addons'),
+			 'type'    => \Elementor\Controls_Manager::MEDIA,
+			 'default' => [
+				 'url' => \Elementor\Utils::get_placeholder_image_src(),
+			 ],
          ]
       );
 
       $this->add_control(
          'overlay',
          [
-            'label'   => __('Overlay', 'unlimited-theme-addons'),
-            'type'    => \Elementor\Controls_Manager::COLOR,
-            'default' => '#',
+			 'label'   => __('Overlay', 'unlimited-theme-addons'),
+			 'type'    => \Elementor\Controls_Manager::COLOR,
+			 'default' => '#',
          ]
       );
 
       $this->add_control(
          'play_button',
          [
-            'label' => __('Play Button URL', 'unlimited-theme-addons'),
-            'type'  => \Elementor\Controls_Manager::TEXT,
+			 'label' => __('Play Button URL', 'unlimited-theme-addons'),
+			 'type'  => \Elementor\Controls_Manager::TEXT,
          ]
       );
 
       $this->end_controls_section();
    }
-   protected function render($instance = [])
-   {
+   protected function render( $instance = [] ) {
 
       // get our input from the widget settings.
 

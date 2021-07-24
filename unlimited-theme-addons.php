@@ -19,7 +19,7 @@ define('UTA_PLUGIN_FILE', __FILE__);
 define('UTA_PLUGIN_BASENAME', plugin_basename(__FILE__));
 define('UTA_PLUGIN_PATH', trailingslashit(plugin_dir_path(__FILE__)));
 define('UTA_PLUGIN_URL', trailingslashit(plugins_url('/', __FILE__)));
-define('UTA_PLUGIN_VERSION', '1.0.17');
+define('UTA_PLUGIN_VERSION', '1.0.18');
 
 /**----------------------------------------------------------------*/
 /* Include all file

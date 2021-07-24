@@ -2,30 +2,26 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Title
 class Uta_Testimonials extends Widget_Base
 {
 
-    public function get_name()
-    {
+    public function get_name() {
         return 'uta-testimonial';
     }
 
-    public function get_title()
-    {
+    public function get_title() {
         return esc_html__('UTA Testimonials', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'eicon-testimonial';
     }
 
-    public function get_categories()
-    {
-        return ['uta-elements'];
+    public function get_categories() {
+        return [ 'uta-elements' ];
     }
 
     /**
@@ -45,9 +41,8 @@ class Uta_Testimonials extends Widget_Base
      * 
      * @return string
      */
-    public function get_script_depends()
-    {
-        $scripts = ['uta-slick', 'uta-main'];
+    public function get_script_depends() {
+        $scripts = [ 'uta-slick', 'uta-main' ];
 
         return $scripts;
     }
@@ -60,13 +55,11 @@ class Uta_Testimonials extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
 
         $this->start_controls_section(
             'testimonials_section',
@@ -198,7 +191,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5 ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -212,7 +205,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -237,7 +230,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default, .testimonial-item1, .testimonial-item2, .testimonial-item3, .testimonial-item4, .testimonial-item5' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -273,7 +266,7 @@ class Uta_Testimonials extends Widget_Base
                 'label'     => __('Content Box', 'unlimited-theme-addons'),
                 'tab'       => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_testimonial_style' => ['style-3', 'style-2', 'style-1', 'style-5'],
+                    'uta_testimonial_style' => [ 'style-3', 'style-2', 'style-1', 'style-5' ],
                 ],
             )
         );
@@ -285,7 +278,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -299,7 +292,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -324,7 +317,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-item1 .content, .testimonial-item2 .content, .testimonial-item3 .content, .testimonial-item5 .content, .testimonial-item1 .content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -357,7 +350,7 @@ class Uta_Testimonials extends Widget_Base
                 'label'     => __('Bootom Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'condition' => [
-                    'uta_testimonial_style' => ['style-5'],
+                    'uta_testimonial_style' => [ 'style-5' ],
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .testimonial-item5 .thumbnail' => 'background-color: {{VALUE}};',
@@ -383,7 +376,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail, .testimonial-item2 .thumbnail, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail, .testimonial-item5 .thumbnail img' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -408,7 +401,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default img, .testimonial-item1 .thumbnail img, .testimonial-item2 .thumbnail img, .testimonial-item3 .thumbnail img, .testimonial-item4 .content .thumbnail img, .testimonial-item5 .thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -454,7 +447,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default p, .testimonial-item1 .content p, .testimonial-item2 .content p, .testimonial-item3 .content p, .testimonial-item4 .content p, .testimonial-item5 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -498,7 +491,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default h5, .testimonial-item1 .content h2, .testimonial-item2 .thumbnail h2, .testimonial-item3 .thumbnail h2, .testimonial-item4 .content h2, .testimonial-item5 .thumbnail h2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -542,7 +535,7 @@ class Uta_Testimonials extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .testimonial-style-default span, .testimonial-item5 .thumbnail h5, .testimonial-item4 .content h5, .testimonial-item3 .thumbnail h5, .testimonial-item2 .thumbnail h5, .testimonial-item1 .content h5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -570,8 +563,7 @@ class Uta_Testimonials extends Widget_Base
         $this->end_controls_section();
     }
 
-    protected function render($instance = [])
-    {
+    protected function render( $instance = [] ) {
 
         // get our input from the widget settings.
 
@@ -583,34 +575,34 @@ class Uta_Testimonials extends Widget_Base
 
 
         <div class="uta-testimonials" data-slick='{"slidesToShow": <?php echo esc_html($uta_testimonial_slide_show); ?>,  "dots":<?php echo esc_html($uta_testimonial_dots); ?>}'>
-            <?php foreach ($settings['testimonial_count'] as $index => $testimonial) :
+            <?php foreach ( $settings['testimonial_count'] as $index => $testimonial ) :
                 $testimonialText = $this->get_repeater_setting_key('feedback', 'testimonial_count', $index);
                 $name = $this->get_repeater_setting_key('name', 'testimonial_count', $index);
                 $designation = $this->get_repeater_setting_key('designation', 'testimonial_count', $index);
                 $this->add_inline_editing_attributes($testimonialText, 'basic');
                 $this->add_inline_editing_attributes($name, 'basic');
                 $this->add_inline_editing_attributes($designation, 'basic');
-                if ('style-default' === $settings['uta_testimonial_style']) {
+                if ( 'style-default' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-default.php';
                 }
 
-                if ('style-1' === $settings['uta_testimonial_style']) {
+                if ( 'style-1' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-1.php';
                 }
 
-                if ('style-2' === $settings['uta_testimonial_style']) {
+                if ( 'style-2' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-2.php';
                 }
 
-                if ('style-3' === $settings['uta_testimonial_style']) {
+                if ( 'style-3' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-3.php';
                 }
 
-                if ('style-4' === $settings['uta_testimonial_style']) {
+                if ( 'style-4' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-4.php';
                 }
 
-                if ('style-5' === $settings['uta_testimonial_style']) {
+                if ( 'style-5' === $settings['uta_testimonial_style'] ) {
                     require (__DIR__) . '/template/style-5.php';
                 }
 

@@ -101,7 +101,7 @@ class Uta_Admin
             'uta_admin_ajax_object',
             array(
                 'uta_admin_ajax_url' => admin_url('admin-ajax.php'),
-                'nonce'               => $uta_admin_nonce,
+                'nonce'              => $uta_admin_nonce,
             )
         );
     }

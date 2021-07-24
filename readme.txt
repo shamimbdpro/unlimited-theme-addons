@@ -96,7 +96,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 == Changelog ==
 
 = 1.0.18 =
-* Testimonial updated.
+* Code standard checked.
+* Plugin description updated.
+* WordPress latest version 5.8 tested.
 
 = 1.0.17 =
 * Testimonial updated.

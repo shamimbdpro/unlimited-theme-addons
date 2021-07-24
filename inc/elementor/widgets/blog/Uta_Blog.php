@@ -2,23 +2,20 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 // blog
 class Uta_Blog extends Widget_Base
 {
 
-   public function get_name()
-   {
+   public function get_name() {
       return 'uta-blog';
    }
 
-   public function get_title()
-   {
+   public function get_title() {
       return esc_html__('UTA Blog', 'unlimited-theme-addons');
    }
 
-   public function get_icon()
-   {
+   public function get_icon() {
       return 'eicon-posts-carousel';
    }
 
@@ -39,31 +36,28 @@ class Uta_Blog extends Widget_Base
     * 
     * @return string
     */
-   public function get_script_depends()
-   {
+   public function get_script_depends() {
       $scripts = [];
 
       return $scripts;
    }
 
 
-   public function get_keywords()
-   {
+   public function get_keywords() {
       return [
-         'team',
-         'uta team',
-         'uta',
-         'team widget',
-         'widget',
-         'addons',
-         'team addons',
-         'unlimited theme addons',
+		  'team',
+		  'uta team',
+		  'uta',
+		  'team widget',
+		  'widget',
+		  'addons',
+		  'team addons',
+		  'unlimited theme addons',
       ];
    }
 
-   public function get_categories()
-   {
-      return ['uta-elements'];
+   public function get_categories() {
+      return [ 'uta-elements' ];
    }
 
 
@@ -74,69 +68,66 @@ class Uta_Blog extends Widget_Base
     *
     * @return string support URL.
     */
-   public function get_custom_help_url()
-   {
+   public function get_custom_help_url() {
       return 'https://codepopular.com/contact/';
    }
 
-   protected function _register_controls()
-   {
+   protected function _register_controls() {
       $this->start_controls_section(
          'blog_section',
          [
-            'label' => esc_html__('Blog', 'unlimited-theme-addons'),
-            'type'  => Controls_Manager::SECTION,
+			 'label' => esc_html__('Blog', 'unlimited-theme-addons'),
+			 'type'  => Controls_Manager::SECTION,
          ]
       );
       $this->add_control(
          'order',
          [
-            'label'   => __('Order', 'unlimited-theme-addons'),
-            'type'    => \Elementor\Controls_Manager::SELECT,
-            'default' => 'ASC',
-            'options' => [
-               'ASC'  => __('Ascending', 'unlimited-theme-addons'),
-               'DESC' => __('Descending', 'unlimited-theme-addons'),
-            ],
+			 'label'   => __('Order', 'unlimited-theme-addons'),
+			 'type'    => \Elementor\Controls_Manager::SELECT,
+			 'default' => 'ASC',
+			 'options' => [
+				 'ASC'  => __('Ascending', 'unlimited-theme-addons'),
+				 'DESC' => __('Descending', 'unlimited-theme-addons'),
+			 ],
          ]
       );
 
       $this->add_responsive_control(
          'uta_blog_grid_column',
          [
-            'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
-            'type'         => Controls_Manager::SELECT,
-            'default'      => '3',
-            'options'      => [
-               '1' => esc_html__('1', 'unlimited-theme-addons'),
-               '2' => esc_html__('2', 'unlimited-theme-addons'),
-               '3' => esc_html__('3', 'unlimited-theme-addons'),
-               '4' => esc_html__('4', 'unlimited-theme-addons'),
-               '5' => esc_html__('5', 'unlimited-theme-addons'),
-               '6' => esc_html__('6', 'unlimited-theme-addons'),
-            ],
-            'toggle'       => true,
-            'prefix_class' => 'uta-post-grid-column%s-',
+			 'label'        => esc_html__('Columns', 'unlimited-theme-addons'),
+			 'type'         => Controls_Manager::SELECT,
+			 'default'      => '3',
+			 'options'      => [
+				 '1' => esc_html__('1', 'unlimited-theme-addons'),
+				 '2' => esc_html__('2', 'unlimited-theme-addons'),
+				 '3' => esc_html__('3', 'unlimited-theme-addons'),
+				 '4' => esc_html__('4', 'unlimited-theme-addons'),
+				 '5' => esc_html__('5', 'unlimited-theme-addons'),
+				 '6' => esc_html__('6', 'unlimited-theme-addons'),
+			 ],
+			 'toggle'       => true,
+			 'prefix_class' => 'uta-post-grid-column%s-',
          ]
       );
 
       $this->add_control(
          'uta_blog_grid_per_page',
          [
-            'label'   => __('Post Count', 'unlimited-theme-addons'),
-            'type'    => Controls_Manager::NUMBER,
-            'default' => 3,
-            'min'     => 1,
-            'max'     => 1000,
-            'step'    => 1,
+			 'label'   => __('Post Count', 'unlimited-theme-addons'),
+			 'type'    => Controls_Manager::NUMBER,
+			 'default' => 3,
+			 'min'     => 1,
+			 'max'     => 1000,
+			 'step'    => 1,
          ]
       );
 
       $this->end_controls_section();
    }
 
-   protected function render($instance = [])
-   {
+   protected function render( $instance = [] ) {
 
       // get our input from the widget settings.
 
@@ -145,17 +136,17 @@ class Uta_Blog extends Widget_Base
       <div class="uta-blog">
          <?php
          $blog = new \WP_Query(array(
-            'post_type'           => 'post',
-            'posts_per_page'      => '' != $settings['uta_blog_grid_per_page'] ? $settings['uta_blog_grid_per_page'] : 3,
-            'ignore_sticky_posts' => true,
-            'order'               => $settings['order'],
+			 'post_type'           => 'post',
+			 'posts_per_page'      => '' != $settings['uta_blog_grid_per_page'] ? $settings['uta_blog_grid_per_page'] : 3,
+			 'ignore_sticky_posts' => true,
+			 'order'               => $settings['order'],
          ));
          /* Start the Loop */
-         while ($blog->have_posts()) : $blog->the_post(); ?>
+         while ( $blog->have_posts() ) : $blog->the_post(); ?>
             <!-- blog -->
             <div class="uta-blog-item">
                <div class="uta-blog-item-img">
-                  <?php if (has_post_thumbnail()) : ?>
+                  <?php if ( has_post_thumbnail() ) : ?>
                      <a href="<?php the_permalink(); ?>">
                         <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'uta-360-200')); ?>" alt="<?php the_title() ?>">
                      </a>

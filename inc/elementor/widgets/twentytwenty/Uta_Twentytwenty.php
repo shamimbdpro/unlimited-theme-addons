@@ -2,24 +2,21 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Title
 class Uta_Twentytwenty extends Widget_Base
 {
 
-    public function get_name()
-    {
+    public function get_name() {
         return 'uta-twentytwenty';
     }
 
-    public function get_title()
-    {
+    public function get_title() {
         return esc_html__('UTA Image Comparison', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'eicon-image-before-after';
     }
 
@@ -40,16 +37,14 @@ class Uta_Twentytwenty extends Widget_Base
      * 
      * @return string
      */
-    public function get_script_depends()
-    {
-        $scripts = ['uta-jquery-event-move', 'uta-twentytwenty', 'uta-main'];
+    public function get_script_depends() {
+        $scripts = [ 'uta-jquery-event-move', 'uta-twentytwenty', 'uta-main' ];
 
         return $scripts;
     }
 
 
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'title',
             'uta image before after',
@@ -62,9 +57,8 @@ class Uta_Twentytwenty extends Widget_Base
         ];
     }
 
-    public function get_categories()
-    {
-        return ['uta-elements'];
+    public function get_categories() {
+        return [ 'uta-elements' ];
     }
 
     /**
@@ -74,13 +68,11 @@ class Uta_Twentytwenty extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
 
         $this->start_controls_section(
             'uta_title_section',
@@ -174,8 +166,7 @@ class Uta_Twentytwenty extends Widget_Base
         $this->end_controls_section();
     }
 
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $element_id = $this->get_id();
         $direction = $settings['uta_twentytwenty_direction'];

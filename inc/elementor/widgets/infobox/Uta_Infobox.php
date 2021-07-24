@@ -2,22 +2,19 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 class Uta_Infobox extends Widget_Base
 {
 
-    public function get_name()
-    {
+    public function get_name() {
         return 'uta-info-box';
     }
 
-    public function get_title()
-    {
+    public function get_title() {
         return esc_html__('UTA Infobox', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'eicon-facebook-comments';
     }
 
@@ -38,16 +35,14 @@ class Uta_Infobox extends Widget_Base
      * 
      * @return string
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         $scripts = [];
 
         return $scripts;
     }
 
 
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'info box',
             'uta info',
@@ -59,9 +54,8 @@ class Uta_Infobox extends Widget_Base
         ];
     }
 
-    public function get_categories()
-    {
-        return ['uta-elements'];
+    public function get_categories() {
+        return [ 'uta-elements' ];
     }
 
     /**
@@ -71,13 +65,11 @@ class Uta_Infobox extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
         $this->start_controls_section(
             'service_section',
             [
@@ -160,7 +152,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -174,7 +166,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -199,7 +191,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -257,7 +249,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -311,7 +303,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -335,7 +327,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -389,7 +381,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
+                'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -428,8 +420,7 @@ class Uta_Infobox extends Widget_Base
     }
 
 
-    protected function render($instance = [])
-    {
+    protected function render( $instance = [] ) {
 
         // get our input from the widget settings.
 
@@ -439,45 +430,45 @@ class Uta_Infobox extends Widget_Base
         $this->add_inline_editing_attributes('text', 'basic');
         $this->add_inline_editing_attributes('icon', 'basic');
 
-        if ('style-default' === $settings['uta_infobox_style']) {
+        if ( 'style-default' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-default.php';
         }
 
-        if ('style-1' === $settings['uta_infobox_style']) {
+        if ( 'style-1' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-1.php';
         }
 
-        if ('style-2' === $settings['uta_infobox_style']) {
+        if ( 'style-2' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-2.php';
         }
-        if ('style-3' === $settings['uta_infobox_style']) {
+        if ( 'style-3' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-3.php';
         }
-        if ('style-4' === $settings['uta_infobox_style']) {
+        if ( 'style-4' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-4.php';
         }
-        if ('style-5' === $settings['uta_infobox_style']) {
+        if ( 'style-5' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-5.php';
         }
-        if ('style-6' === $settings['uta_infobox_style']) {
+        if ( 'style-6' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-6.php';
         }
-        if ('style-7' === $settings['uta_infobox_style']) {
+        if ( 'style-7' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-7.php';
         }
-        if ('style-8' === $settings['uta_infobox_style']) {
+        if ( 'style-8' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-8.php';
         }
-        if ('style-9' === $settings['uta_infobox_style']) {
+        if ( 'style-9' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-9.php';
         }
-        if ('style-10' === $settings['uta_infobox_style']) {
+        if ( 'style-10' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-10.php';
         }
-        if ('style-11' === $settings['uta_infobox_style']) {
+        if ( 'style-11' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-11.php';
         }
-        if ('style-12' === $settings['uta_infobox_style']) {
+        if ( 'style-12' === $settings['uta_infobox_style'] ) {
             require (__DIR__) . '/template/style-12.php';
         }
     }

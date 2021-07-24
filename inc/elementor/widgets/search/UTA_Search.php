@@ -2,24 +2,21 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Title
 class Uta_Search extends Widget_Base
 {
 
-    public function get_name()
-    {
+    public function get_name() {
         return 'uta-product-search';
     }
 
-    public function get_title()
-    {
+    public function get_title() {
         return esc_html__('UTA Product Search', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'eicon-search';
     }
 
@@ -41,8 +38,7 @@ class Uta_Search extends Widget_Base
      * 
      * @return string
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         $scripts = [];
 
         return $scripts;
@@ -50,9 +46,8 @@ class Uta_Search extends Widget_Base
 
 
 
-    public function get_categories()
-    {
-        return ['uta-elements'];
+    public function get_categories() {
+        return [ 'uta-elements' ];
     }
 
 
@@ -63,13 +58,11 @@ class Uta_Search extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
 
         $this->start_controls_section(
             'product_search_section',
@@ -93,14 +86,14 @@ class Uta_Search extends Widget_Base
             [
                 'label'           => __('Category Width', 'unlimited-theme-addons'),
                 'type'            => Controls_Manager::SLIDER,
-                'size_units'      => ['%'],
+                'size_units'      => [ '%' ],
                 'range'           => [
                     '%' => [
                         'min' => 0,
                         'max' => 100,
                     ],
                 ],
-                'devices'         => ['desktop', 'tablet', 'mobile'],
+                'devices'         => [ 'desktop', 'tablet', 'mobile' ],
                 'desktop_default' => [
                     'unit' => '%',
                     'size' => 20,
@@ -126,14 +119,14 @@ class Uta_Search extends Widget_Base
             [
                 'label'           => __('Search Bar Width', 'unlimited-theme-addons'),
                 'type'            => Controls_Manager::SLIDER,
-                'size_units'      => ['%'],
+                'size_units'      => [ '%' ],
                 'range'           => [
                     '%' => [
                         'min' => 0,
                         'max' => 100,
                     ],
                 ],
-                'devices'         => ['desktop', 'tablet', 'mobile'],
+                'devices'         => [ 'desktop', 'tablet', 'mobile' ],
                 'desktop_default' => [
                     'unit' => '%',
                     'size' => 80,
@@ -188,17 +181,16 @@ class Uta_Search extends Widget_Base
 
     }
 
-    protected function render($instance = [])
-    {
+    protected function render( $instance = [] ) {
 
         // get our input from the widget settings.
 
         $settings = $this->get_settings_for_display(); ?>
 
         <form method="GET" action="<?php echo esc_url(home_url('/')); ?>">
-            <?php if (class_exists('WooCommerce')) { ?>
+            <?php if ( class_exists('WooCommerce') ) { ?>
                 <?php
-                if (isset($_REQUEST['product_cat']) && !empty($_REQUEST['product_cat']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_REQUEST['product_cat'])))) {
+                if ( isset($_REQUEST['product_cat']) && ! empty($_REQUEST['product_cat']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_REQUEST['product_cat']))) ) {
                     $select_cat = wp_verify_nonce(sanitize_text_field(wp_unslash($_REQUEST['product_cat'])));
                 } else {
                     $select_cat = 0;
