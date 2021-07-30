@@ -14,7 +14,7 @@ Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder w
 
 ### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $4.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
 
-Feel free to [email us](https://codepopular.com/contact-us/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
+Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
 
 == Installation ==
 Here are a few steps to describe how to install the plugin and get it working.
