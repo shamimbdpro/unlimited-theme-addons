@@ -27,8 +27,11 @@ class Uta_Admin
         // Load css and js.
         add_action('admin_enqueue_scripts', array( $this, 'uta_admin_script_callback' ));
 
-        // Handle ajax form submission.
-        add_action('wp_ajax_uta_admin_ajax', array( $this, 'uta_admin_ajax_callback' ));
+        // Handle widget form submission.
+        add_action('wp_ajax_uta_admin_widgets_save', array( $this, 'uta_admin_widgets_save_callback' ));
+
+        // Handle addons form submission.
+        add_action('wp_ajax_uta_admin_addons_save', array( $this, 'uta_admin_addons_save_callback' ));
     }
 
     /**
@@ -108,8 +111,10 @@ class Uta_Admin
 
     /**
      * Handle admin ajax submission.
+     * 
+     * @return array
      */
-    function uta_admin_ajax_callback() {
+    function uta_admin_widgets_save_callback() {
 
         $widget_lists = isset($_POST['widget_lists']) ? sanitize_text_field(wp_unslash($_POST['widget_lists'])) : array();
         if ( $widget_lists ) {
@@ -130,6 +135,37 @@ class Uta_Admin
 
         wp_die();
     }
+
+
+
+    /**
+     * Hanle ajax form submission for adodns setitngs.
+     * 
+     * @return array
+     */
+    function uta_admin_addons_save_callback() {
+
+        $addon_lists = isset($_POST['addon_lists']) ? sanitize_text_field(wp_unslash($_POST['addon_lists'])) : array();
+        if ( $addon_lists ) {
+            
+            // Check valid request form user.
+            check_ajax_referer('uta-admin-js');
+
+            parse_str($addon_lists, $get_addon_lists);
+
+            foreach ( $get_addon_lists as $key => $value ) {
+                $data[ $key ] = $value;
+            }
+            update_option('unlimited_theme_addons_active_addons', $data);
+
+            $response['message'] = 'sucess';
+            wp_send_json_success($response);
+        }
+
+        wp_die();
+    }
+
+
 }
 
 

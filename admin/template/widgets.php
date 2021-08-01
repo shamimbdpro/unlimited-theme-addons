@@ -1,6 +1,7 @@
 <?php
 
 $widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get_option('unlimited_theme_addons_active_widgets') : array();
+
 $uta_widget_lists = array(
 
     // 1. Woocommerce product grid.
@@ -145,7 +146,7 @@ $uta_widget_lists = array(
 
 
 <div class="uta-widget-list">
-    <form action="" id="formData" method="post">
+    <form action="" id="saveWidget" method="post">
         <button type="button" class="btn btn-primary uta-action-btn">Save Changes</button>
         <button class="btn btn-primary uta-action-btn-loading" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

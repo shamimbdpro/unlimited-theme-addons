@@ -16,6 +16,7 @@ class Uta_Loader{
         include_once(dirname( __FILE__ ). '/Uta-i18n.php');
         include_once(dirname( __FILE__ ). '/codepopular-promotion.php');
         include_once(dirname( __FILE__ ). '/Uta-Helpers.php');
+        include_once(dirname( __FILE__ ). '/addons/uta-addons.php');
         include_once(dirname( __FILE__ ). '/Uta_Admin.php');
         include_once(dirname( __FILE__ ). '/elementor/elementor.php');
     }
