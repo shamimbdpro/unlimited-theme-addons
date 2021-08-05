@@ -34,6 +34,19 @@ class Uta_helpers{
         return $html;
     }
 
+    /**
+     * Check if the Woocommerce Installed.
+     * @access public
+     * @return bool
+     */
+    public function is_wc_install(){
+        if ( class_exists( 'WooCommerce' ) ) {
+            return true;
+        } else {
+           return false;
+        }
+    }
+
 }
 
 Uta_helpers::get_instance()->init();
