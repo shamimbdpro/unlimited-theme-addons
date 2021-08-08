@@ -4,7 +4,7 @@ Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -15,6 +15,8 @@ Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder w
 ### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $4.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
 
 Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
+
+### [Elementor](https://wordpress.org/plugins/elementor/) page builder is required for below features.
 
 == Installation ==
 Here are a few steps to describe how to install the plugin and get it working.
@@ -52,8 +54,13 @@ e.g.
 - [**Company Logo Slider**](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with a huge number of styles. This is the important elementor addons widget for our plugin cause we have set a huge number of styles for free for our customer.
 
 
+### Free Extension.
+- **Hide Admin Bar** - Unlimited Theme Addons allow you to hide admin bar for frontend. To hide admin bar first have to enable the extension from *Dashboard > Theme Addons > Addons*.
+- **Hide WooCommerce Price** - If you are using WooCommerce and want to hide price then this plugin for you. To hide price for WooCommerce first have to enable the extension from *Dashboard > Theme Addons > Addons*.
+- **WooCommerce Direct Checkout** - You can skip cart page and and redirect to checkout page after added to cart. To enable direct checkout you have to enable the extension from *Dashboard > Theme Addons > Addons*.
 
-### [**Try Premium Version wtih $4.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
+
+### [**Try Premium Version with $4.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
 Unlimited Theme Addon offering paid version where you can build creative countdown timer with Elementor. Boost your store sale with countdown timer. Show the available offer time to your cusotmer with this plugin. We are still working to add more feature in premium version. don't miss out the chance to get it with very simple price.
 
 
@@ -67,7 +74,7 @@ Unlimited Theme Addon offering paid version where you can build creative countdo
 
 
 ### **Why this plugin is SEO friendly**
-Unlimited Theme Addons is an SEO friendly plugin. We don't reload extra resources while using Elementor Widget. You can simply enable/disable widgets from Dashboard > Theme Option. CSS and JS will be loaded depending on what Widget are you using on your Website.
+Unlimited Theme Addons is an SEO friendly plugin. We don't reload extra resources while using Elementor Widget. You can simply enable/disable widgets from *Dashboard > Theme Addons*. CSS and JS will be loaded depending on what Widget are you using on your Website.
 
 ### **About the Author**
 
@@ -94,6 +101,11 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.20 =
+* Addons added for hide price.
+* Addons added for add to cart redirect to checkout.
+* Addons added for hide admin bar in frontend.
 
 = 1.0.19 =
 * Plugin description issue fixed.
