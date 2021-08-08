@@ -26,22 +26,22 @@ $uta_addon_lists = array(
 
 
     // 3. Hide WooCommerce Price.
-    array(
-        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
-        'description' => __('Remove Add to Cart button for every page on Woocommerce'),
-        'name' => 'hide-wc-add-to-cart',
-        'default' => array_key_exists('hide-wc-price', $get_addons_list) && 'off' == $get_addons_list['hide-wc-price'] || empty($get_addons_list['hide-wc-price']) ? 'off' : 'on',
-        'is_free' => 1,
-        'display' => Uta_helpers::get_instance()->is_wc_install(),
-    ),
+//    array(
+//        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
+//        'description' => __('Remove Add to Cart button for every page on Woocommerce'),
+//        'name' => 'wc-hide-add-to-cart',
+//        'default' => array_key_exists('wc-hide-add-to-cart', $get_addons_list) && 'off' == $get_addons_list['wc-hide-add-to-cart'] || empty($get_addons_list['wc-hide-add-to-cart']) ? 'off' : 'on',
+//        'is_free' => 1,
+//        'display' => Uta_helpers::get_instance()->is_wc_install(),
+//    ),
 
 
     // 3. Hide WooCommerce Price.
     array(
-        'title' => __('Add to Cart Redirect to Checkout', 'unlimited-theme-addons'),
+        'title' => __('WooCommerce Direct Checkout', 'unlimited-theme-addons'),
         'description' => __('Redirect to checkout page while click on add to cart button.'),
-        'name' => 'wc-redirect-to-checkout',
-        'default' => array_key_exists('hide-wc-price', $get_addons_list) && 'off' == $get_addons_list['hide-wc-price'] || empty($get_addons_list['hide-wc-price']) ? 'off' : 'on',
+        'name' => 'wc-direct-checkout',
+        'default' => array_key_exists('wc-direct-checkout', $get_addons_list) && 'off' == $get_addons_list['wc-direct-checkout'] || empty($get_addons_list['wc-direct-checkout']) ? 'off' : 'on',
         'is_free' => 1,
         'display' => Uta_helpers::get_instance()->is_wc_install(),
     ),
