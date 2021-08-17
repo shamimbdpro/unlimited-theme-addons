@@ -4,7 +4,7 @@ Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.0.20
+Stable tag: 1.0.21
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -101,6 +101,9 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.0.21 =
+* CSS loading issue fixed.
 
 = 1.0.20 =
 * Addons added for hide price.
