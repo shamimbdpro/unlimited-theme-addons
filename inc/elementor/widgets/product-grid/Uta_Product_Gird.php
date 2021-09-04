@@ -20,7 +20,7 @@ class Uta_Product_Grid extends Widget_Base
     }
 
     public function get_icon() {
-        return 'fa fa-th';
+        return 'eicon-gallery-grid';
     }
 
     /**

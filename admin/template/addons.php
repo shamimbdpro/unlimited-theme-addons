@@ -7,7 +7,6 @@ $uta_addon_lists = array(
     // 1. Hide Admin Bar.
     array(
         'title' => __('Hide Admin Bar in Frontend', 'unlimited-theme-addons'),
-        'description' => __('Hide admin bar in frontend while login user.'),
         'name' => 'hide-admin-bar',
         'default' => array_key_exists('hide-admin-bar', $get_addons_list) && 'off' == $get_addons_list['hide-admin-bar'] || empty($get_addons_list['hide-admin-bar']) ? 'off' : 'on',
         'is_free' => 1,
@@ -17,7 +16,6 @@ $uta_addon_lists = array(
     // 2. Hide WooCommerce Price.
     array(
         'title' => __('Hide WooCommerce Price', 'unlimited-theme-addons'),
-        'description' => __('Hide Woocommerce price for all pages.'),
         'name' => 'hide-wc-price',
         'default' => array_key_exists('hide-wc-price', $get_addons_list) && 'off' == $get_addons_list['hide-wc-price'] || empty($get_addons_list['hide-wc-price']) ? 'off' : 'on',
         'is_free' => 1,
@@ -25,7 +23,7 @@ $uta_addon_lists = array(
     ),
 
 
-    // 3. Hide WooCommerce Price.
+    // 3. Hide Add To Cart.
 //    array(
 //        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
 //        'description' => __('Remove Add to Cart button for every page on Woocommerce'),
@@ -64,13 +62,12 @@ $uta_addon_lists = array(
 
                 <?php if (true === $addon_list['display']) { ?>
 
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="uta-single-widget">
                             <?php if (0 == $addon_list['is_free']) { ?><span
                                     class="badge bg-primary">Upgrade Pro</span> <?php } ?>
                             <div class="widget-label">
                                 <h5><?php echo esc_html($addon_list['title']) //ignore:phpcs ;?></h5>
-                                <span><?php echo esc_html($addon_list['description']); //ignore:phpcs ?></span>
                             </div>
                             <div class="widget-witch">
                                 <div class="onoffswitch">

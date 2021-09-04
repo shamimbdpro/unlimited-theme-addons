@@ -40,7 +40,8 @@
 
 .uta-single-widget {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-direction: column-reverse;
     background: #fff;
     border: 1px solid #ccc;
     padding: 20px;
@@ -82,6 +83,7 @@ input[type=checkbox]:disabled {
     cursor: pointer;
     border: 2px solid #796EFF;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 
 .onoffswitch-inner {

@@ -47,6 +47,21 @@ class Uta_helpers{
         }
     }
 
+
+    /**
+     * Check if the premium plugin installed.
+     *
+     * @return bool
+     */
+    public static function is_uta_pro_installed(){
+
+        if( class_exists('Unlimited_Theme_Addons_Pro') ){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
 }
 
 Uta_helpers::get_instance()->init();

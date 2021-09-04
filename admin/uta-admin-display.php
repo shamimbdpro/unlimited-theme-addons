@@ -1,5 +1,5 @@
 <div class="uta-admin-wrapper wrap">
-    <h1>Unlimited Theme Addons</h1>
+    <h1>Unlimited Theme Addon</h1>
 
     <div class="uta-admin-content card-body mw-100">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -18,9 +18,11 @@
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"> <span class="dashicons dashicons-pets"></span> Support</button>
             </li>
 
+            <?php if( Uta_helpers::is_uta_pro_installed() == false ){?>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="premium-tab" data-bs-toggle="tab" data-bs-target="#premium" type="button" role="tab" aria-controls="premium" aria-selected="false"> <span class="dashicons dashicons-money-alt"></span> Try Pro with $4.99</button>
             </li>
+            <?php } ?>
         
         </ul>
         <ul>

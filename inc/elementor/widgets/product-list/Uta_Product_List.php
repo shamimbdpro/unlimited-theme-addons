@@ -21,7 +21,7 @@ class Uta_Product_List extends Widget_Base
     }
 
     public function get_icon() {
-        return 'fa fa-th-list';
+        return 'eicon-post-list';
     }
 
     /**

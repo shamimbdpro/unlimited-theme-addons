@@ -102,6 +102,10 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 
 == Changelog ==
 
+= 1.1.0 =
+* Infobox layout label fixed.
+* Block quote widget added.
+
 = 1.0.21 =
 * CSS loading issue fixed.
 

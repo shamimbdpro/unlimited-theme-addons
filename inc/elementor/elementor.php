@@ -84,6 +84,15 @@ class Unlimited_Theme_Addons
 
 
         //----------- Load Widget CSS ---------------//
+
+        // Accordion.
+        wp_register_style(
+            'uta-blockquote',
+            UTA_PLUGIN_URL . 'assets/frontend/css/blockquote.min.css',
+            array(),
+            UTA_PLUGIN_VERSION
+        );
+
         // Accordion. 
         wp_register_style(
             'uta-accordion',
@@ -286,6 +295,10 @@ class Unlimited_Theme_Addons
 
         $widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get_option('unlimited_theme_addons_active_widgets') : array();
 
+        if ( array_key_exists('blockquote', $widget_list) && 'off' !== $widget_list['blockquote'] || empty($widget_list['blockquote']) ) {
+            wp_enqueue_style('uta-blockquote');
+        }
+
         if ( array_key_exists('blog', $widget_list) && 'off' !== $widget_list['blog'] || empty($widget_list['blog']) ) {
             wp_enqueue_style('uta-blog');
         }
@@ -434,6 +447,13 @@ class Unlimited_Theme_Addons
             if ( array_key_exists('counter', $widget_list) && 'off' !== $widget_list['counter'] || empty($widget_list['counter']) ) {
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/counterup/Uta_counterup.php');
             }
+
+            // Counter Up
+            if ( array_key_exists('blockquote', $widget_list) && 'off' !== $widget_list['blockquote'] || empty($widget_list['blockquote']) ) {
+                include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/blockquote/Uta_Blockquote.php');
+            }
+
+
         }
     }
 

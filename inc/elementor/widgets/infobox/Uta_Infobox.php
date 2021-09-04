@@ -80,7 +80,7 @@ class Uta_Infobox extends Widget_Base
         $this->add_responsive_control(
             'uta_infobox_style',
             [
-                'label'   => esc_html__('Team Style', 'unlimited-theme-addons'),
+                'label'   => esc_html__('Layouts', 'unlimited-theme-addons'),
                 'type'    => \Elementor\Controls_Manager::SELECT,
                 'options' => [
                     'style-default' => esc_html__('Default', 'unlimited-theme-addons'),

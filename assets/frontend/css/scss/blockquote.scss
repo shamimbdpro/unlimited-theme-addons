@@ -1,0 +1,32 @@
+.uta-quote-default {
+  background: #7900ff;
+  position: relative;
+  padding: 50px;
+  box-sizing: border-box;
+
+  p {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+
+  i {
+    font-size: 50px;
+    position: absolute;
+    top: -26px;
+    color: #ff8484;
+  }
+
+  span {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .3px;
+    position: absolute;
+    bottom: 30px;
+    right: 50px;
+  }
+
+}
+
