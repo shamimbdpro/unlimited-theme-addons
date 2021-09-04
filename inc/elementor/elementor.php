@@ -384,9 +384,11 @@ class Unlimited_Theme_Addons
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/button/Uta_Button.php');
             }
 
+            include_once(UTA_PLUGIN_PATH . 'inc/elementor/Trait/Uta_theme_helper.php');
+
             // Product grid.
             if ( array_key_exists('woocommerce-product-grid', $widget_list) && 'off' !== $widget_list['woocommerce-product-grid'] || empty($widget_list['woocommerce-product-grid']) ) {
-                include_once(UTA_PLUGIN_PATH . 'inc/elementor/Trait/Uta_theme_helper.php');
+
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/product-grid/template/Product_Grid.php');
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/product-grid/Uta_Product_Gird.php');
             }

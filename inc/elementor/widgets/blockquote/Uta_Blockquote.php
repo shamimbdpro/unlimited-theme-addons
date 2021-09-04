@@ -108,6 +108,8 @@ class Uta_Blockquote extends Widget_Base
 
         // Register style controls.
         $this->uta_blockquote_style();
+        $this->uta_blockquote_icon_style();
+        $this->uta_blockquote_speaker_style();
 
     }
 
@@ -133,8 +135,8 @@ class Uta_Blockquote extends Widget_Base
                 'type' => \Elementor\Controls_Manager::SELECT,
                 'options' => [
                     'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                    'style-1' => esc_html__('Style-1', 'unlimited-theme-addons'),
-                    'style-2' => esc_html__('Style-2', 'unlimited-theme-addons'),
+                    'style-1' => esc_html__('Style-1 (Coming Soon)', 'unlimited-theme-addons'),
+                    'style-2' => esc_html__('Style-2 (Coming Soon)', 'unlimited-theme-addons'),
                 ],
 
                 'default' => 'style-default',
@@ -208,26 +210,40 @@ class Uta_Blockquote extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Background::get_type(),
             [
-                'name' => 'background',
-                'label' => __( 'Background', 'unlimited-theme-addons' ),
-                'types' => [ 'classic', 'gradient'],
+                'name' => 'blockquote_bg',
+                'label' => __('Background', 'unlimited-theme-addons'),
+                'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .uta-blockquote',
             ]
         );
 
 
-
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
-                'name' => 'number_typography',
+                'name' => 'blockquote_typography',
                 'label' => __('Typography', 'unlimited-theme-addons'),
                 'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .uta-blockquote p',
             ]
         );
+
         $this->add_responsive_control(
-            'uta_flip_num_padding',
+            'blockquote_Text_color',
+            [
+                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#fff',
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote p' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+
+        $this->add_responsive_control(
+            'blockquote_padding',
             [
                 'label' => __('Padding', 'unlimited-theme-addons-pro'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -238,7 +254,7 @@ class Uta_Blockquote extends Widget_Base
             ]
         );
         $this->add_responsive_control(
-            'uta_flip_num_margin',
+            'blockquote_margin',
             [
                 'label' => __('Margin', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -251,13 +267,174 @@ class Uta_Blockquote extends Widget_Base
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
-                'name' => 'border',
+                'name' => 'blockquote_border',
                 'label' => esc_html__('Border', 'unlimited-theme-addons'),
                 'selector' => '{{WRAPPER}} .uta-blockquote',
             ]
         );
 
         $this->end_controls_section();
+    }
+
+
+    /**
+     * Blockquote icon style.
+     *
+     * @return mixed.
+     */
+    public function uta_blockquote_icon_style()
+    {
+
+        $this->start_controls_section(
+            'uta_blockquote_icon_style',
+            [
+                'label' => __('Blockquote Icon Style', 'unlimited-theme-addons'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blockquote_Icon_color',
+            [
+                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#FB6813D6',
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote i' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+        $this->add_responsive_control(
+            'blockquote_icon_padding',
+            [
+                'label' => __('Padding', 'unlimited-theme-addons-pro'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blockquote_icon_margin',
+            [
+                'label' => __('Margin', 'unlimited-theme-addons'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'blockquote_icon_font_size',
+            [
+                'label' => __('Icon Font Size', 'unlimited-theme-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => 'px',
+                'range' => [
+                    'px' => [
+                        'min' => 10,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+
+                ],
+                'default' => [
+                    'size' => 50,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote i' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
+    }
+
+
+    /*
+    * Quote Speaker Style.
+    */
+    public function uta_blockquote_speaker_style()
+    {
+
+
+        $this->start_controls_section(
+            'uta_blockquote_speaker_style',
+            [
+                'label' => __('Blockquote Speaker Style', 'unlimited-theme-addons'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'blockquote_speaker_color',
+            [
+                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'type' => \Elementor\Controls_Manager::COLOR,
+                'default' => '#fff',
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote span' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+        $this->add_responsive_control(
+            'blockquote_speaker_padding',
+            [
+                'label' => __('Padding', 'unlimited-theme-addons-pro'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'blockquote_speaker_margin',
+            [
+                'label' => __('Margin', 'unlimited-theme-addons'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'blockquote_speaker_font_size',
+            [
+                'label' => __('Speaker Font Size', 'unlimited-theme-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => 'px',
+                'range' => [
+                    'px' => [
+                        'min' => 10,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+
+                ],
+                'default' => [
+                    'size' => 16,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .uta-blockquote span' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+
     }
 
 

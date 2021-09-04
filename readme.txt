@@ -1,10 +1,10 @@
-=== Unlimited Theme Addon For Elementor ===
+=== Unlimited Theme Addon For Elementor and WooCommerce ===
 Contributors: codepopular, shamimtpi, bokhtyer
 Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.0.21
+Stable tag: 1.1.0
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -52,6 +52,8 @@ e.g.
 - [**Before After Image Comparison**](https://www.codepopular.com/unlimited-theme-addons/elementor-before-after-comparison) - Design elementor before after comparison slider with fancy style. Make the image comparison slider horizontal and vertical.
 
 - [**Company Logo Slider**](https://www.codepopular.com/unlimited-theme-addons/elementor-company-logo-slider) - Show elementor company logo slider with a huge number of styles. This is the important elementor addons widget for our plugin cause we have set a huge number of styles for free for our customer.
+
+- [**Blockquote**](https://www.codepopular.com/unlimited-theme-addons/blockquote/) - Show responsive blockquote.
 
 
 ### Free Extension.
