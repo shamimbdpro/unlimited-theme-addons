@@ -96,7 +96,7 @@ class Unlimited_Theme_Addons
         // Accordion. 
         wp_register_style(
             'uta-accordion',
-            UTA_PLUGIN_URL . 'assets/frontend/css/accordian.min.css',
+            UTA_PLUGIN_URL . 'assets/frontend/css/accordion.min.css',
             array(),
             UTA_PLUGIN_VERSION
         );
@@ -295,6 +295,10 @@ class Unlimited_Theme_Addons
 
         $widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get_option('unlimited_theme_addons_active_widgets') : array();
 
+        if ( array_key_exists('accordion', $widget_list) && 'off' !== $widget_list['accordion'] || empty($widget_list['accordion']) ) {
+            wp_enqueue_style('uta-accordion');
+        }
+
         if ( array_key_exists('blockquote', $widget_list) && 'off' !== $widget_list['blockquote'] || empty($widget_list['blockquote']) ) {
             wp_enqueue_style('uta-blockquote');
         }
@@ -373,6 +377,12 @@ class Unlimited_Theme_Addons
         // We check if the Elementor plugin has been installed / activated.
         if ( defined('ELEMENTOR_PATH') && class_exists('Elementor\Widget_Base') ) {
             $widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get_option('unlimited_theme_addons_active_widgets') : array();
+
+            // Accordion.
+            if ( array_key_exists('accordion', $widget_list) && 'off' !== $widget_list['accordion'] || empty($widget_list['accordion']) ) {
+                include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/accordion/Uta_Accordion.php');
+            }
+
 
             // Blog.
             if ( array_key_exists('blog', $widget_list) && 'off' !== $widget_list['blog'] || empty($widget_list['blog']) ) {

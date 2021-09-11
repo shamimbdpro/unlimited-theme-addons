@@ -76,12 +76,31 @@
 
     };
 
+    // Accordion.
+    var utaAccordion = function ($scope, $) {
+        $('.uta-accordion > li').click(function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active").find(".accordion-body").slideUp();
+            } else {
+                $(".uta-accordion > li.active .accordion-body").slideUp();
+                $(".uta-accordion > li.active").removeClass("active");
+                $(this).addClass("active").find(".accordion-body").slideDown();
+            }
+            return false;
+        });
+
+    };
+
 
   $(window).on('elementor/frontend/init', function () {
-      
+
         elementorFrontend.hooks.addAction('frontend/element_ready/uta-counter-up.default', utaCounterHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/uta-accordion.default', utaAccordion);
       
     });
+
+
 
 
 })(jQuery);

@@ -132,6 +132,14 @@ $uta_widget_lists = array(
         'is_free'     => Uta_helpers::is_uta_pro_installed(),
     ),
 
+    // 17. Accordion.
+    array(
+        'title'       => __('Accordion', 'unlimited-theme-addons'),
+        'name'        => 'accordion',
+        'default'     => array_key_exists('accordion', $widget_list) && 'off' == $widget_list['accordion'] ? 'off' : 'on',
+        'is_free'     => true,
+    ),
+
 );
 
 
