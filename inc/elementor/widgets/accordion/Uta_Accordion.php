@@ -2,6 +2,9 @@
 
 namespace Elementor;
 
+use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
+use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
+
 if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Button
@@ -71,11 +74,32 @@ class Uta_Accordion extends Widget_Base
     return 'https://codepopular.com/contact/';
   }
 
+    /**
+     * Accordion widget controls.
+     *
+     * @access protected.
+     *
+     * @return void.
+     */
   protected function _register_controls() {
+       /*----- Widget Controls -------*/
         $this->uta_accordion_controls();
+
+        /*---- Widget Style ---------*/
+       $this->section_acc_style();
+       $this->section_acc_title_style();
+       $this->section_acc_icon_style();
+       $this->section_acc_content_style();
 
   }
 
+    /**
+     * Register accordion controls.
+     *
+     * @access protected.
+     *
+     * @return mixed.
+     */
   protected function uta_accordion_controls(){
       $this->start_controls_section(
           'uta_acc_control_section',
@@ -202,11 +226,315 @@ class Uta_Accordion extends Widget_Base
           ]
       );
 
-
-
       $this->end_controls_section();
   }
 
+    /**
+     * Register accordion style.
+     *
+     * @access protected.
+     *
+     * @return array|mixed
+     */
+  protected function section_acc_style(){
+
+      $this->start_controls_section(
+          'section_acc_style',
+          [
+              'label' => esc_html__( 'Accordion', 'elementor' ),
+              'tab' => Controls_Manager::TAB_STYLE,
+          ]
+      );
+
+      $this->add_control(
+          'border_width',
+          [
+              'label' => esc_html__( 'Border Width', 'elementor' ),
+              'type' => Controls_Manager::SLIDER,
+              'range' => [
+                  'px' => [
+                      'min' => 0,
+                      'max' => 10,
+                  ],
+              ],
+              'selectors' => [
+                  '{{WRAPPER}} .elementor-accordion-item' => 'border-width: {{SIZE}}{{UNIT}};',
+                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-content' => 'border-width: {{SIZE}}{{UNIT}};',
+                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-title.elementor-active' => 'border-width: {{SIZE}}{{UNIT}};',
+              ],
+          ]
+      );
+
+      $this->add_control(
+          'border_color',
+          [
+              'label' => esc_html__( 'Border Color', 'elementor' ),
+              'type' => Controls_Manager::COLOR,
+              'selectors' => [
+                  '{{WRAPPER}} .elementor-accordion-item' => 'border-color: {{VALUE}};',
+                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-content' => 'border-top-color: {{VALUE}};',
+                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-title.elementor-active' => 'border-bottom-color: {{VALUE}};',
+              ],
+          ]
+      );
+
+      $this->end_controls_section();
+
+
+  }
+
+
+    /**
+     * Section accordion title style.
+     *
+     * @access protected.
+     */
+    protected function section_acc_title_style(){
+        $this->start_controls_section(
+            'acc_toggle_style_title',
+            [
+                'label' => esc_html__( 'Title', 'elementor' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'title_background',
+            [
+                'label' => esc_html__( 'Background', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-title' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'title_color',
+            [
+                'label' => esc_html__( 'Color', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-accordion-icon, {{WRAPPER}} .elementor-accordion-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                ],
+                'global' => [
+                    'default' => Global_Colors::COLOR_PRIMARY,
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'tab_active_color',
+            [
+                'label' => esc_html__( 'Active Color', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-active .elementor-accordion-icon, {{WRAPPER}} .elementor-active .elementor-accordion-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-active .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                ],
+                'global' => [
+                    'default' => Global_Colors::COLOR_ACCENT,
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'title_typography',
+                'selector' => '{{WRAPPER}} .elementor-accordion-title',
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name' => 'title_shadow',
+                'selector' => '{{WRAPPER}} .elementor-accordion-title',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'title_padding',
+            [
+                'label' => esc_html__( 'Padding', 'elementor' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+    /**
+     * Section accordion icon style.
+     *
+     * @access protected.
+     */
+    protected function section_acc_icon_style(){
+        $this->start_controls_section(
+            'section_acc_icon_style',
+            [
+                'label' => esc_html__( 'Icon', 'elementor' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+//                'condition' => [
+//                    'selected_icon[value]!' => '',
+//                ],
+            ]
+        );
+
+        $this->add_control(
+            'icon_align',
+            [
+                'label' => esc_html__( 'Alignment', 'elementor' ),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__( 'Start', 'elementor' ),
+                        'icon' => 'eicon-h-align-left',
+                    ],
+                    'right' => [
+                        'title' => esc_html__( 'End', 'elementor' ),
+                        'icon' => 'eicon-h-align-right',
+                    ],
+                ],
+                'default' => is_rtl() ? 'right' : 'left',
+                'toggle' => false,
+            ]
+        );
+
+        $this->add_control(
+            'icon_color',
+            [
+                'label' => esc_html__( 'Color', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-title .elementor-accordion-icon i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-tab-title .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'icon_active_color',
+            [
+                'label' => esc_html__( 'Active Color', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-title.elementor-active .elementor-accordion-icon i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-tab-title.elementor-active .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'icon_space',
+            [
+                'label' => esc_html__( 'Spacing', 'elementor' ),
+                'type' => Controls_Manager::SLIDER,
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-accordion-icon.elementor-accordion-icon-left' => 'margin-right: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .elementor-accordion-icon.elementor-accordion-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+
+    /**
+     * Section accordion icon style.
+     *
+     * @access protected.
+     *
+     * @return void.
+     */
+    protected function section_acc_content_style(){
+        $this->start_controls_section(
+            'section_acc_content_style',
+            [
+                'label' => esc_html__( 'Content', 'elementor' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'content_background_color',
+            [
+                'label' => esc_html__( 'Background', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-content' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'content_color',
+            [
+                'label' => esc_html__( 'Color', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-content' => 'color: {{VALUE}};',
+                ],
+                'global' => [
+                    'default' => Global_Colors::COLOR_TEXT,
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'content_typography',
+                'selector' => '{{WRAPPER}} .elementor-tab-content',
+                'global' => [
+                    'default' => Global_Typography::TYPOGRAPHY_TEXT,
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Text_Shadow::get_type(),
+            [
+                'name' => 'content_shadow',
+                'selector' => '{{WRAPPER}} .elementor-tab-content',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'content_padding',
+            [
+                'label' => esc_html__( 'Padding', 'elementor' ),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} .elementor-tab-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();
+    }
+
+
+    /**
+     * @param array $instance
+     */
    protected function render( $instance = [] ) {
  
       // get our input from the widget settings.
