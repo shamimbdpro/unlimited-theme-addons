@@ -55,6 +55,14 @@ ul.uta-accordion {
       color:#fff;
     }
 
+    .accordion-heading.icon-left h3 {
+      justify-content: left;
+    }
+
+    .accordion-heading.icon-left h3 .accordion-icon{
+        margin-right:20px;
+    }
+
     .accordion-icon{
       .active-icon{
         display: none;

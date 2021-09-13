@@ -249,34 +249,43 @@ class Uta_Accordion extends Widget_Base
       $this->add_control(
           'border_width',
           [
-              'label' => esc_html__( 'Border Width', 'elementor' ),
+              'label' => esc_html__( 'Item Specing', 'elementor' ),
               'type' => Controls_Manager::SLIDER,
               'range' => [
                   'px' => [
                       'min' => 0,
-                      'max' => 10,
+                      'max' => 150,
                   ],
               ],
               'selectors' => [
-                  '{{WRAPPER}} .elementor-accordion-item' => 'border-width: {{SIZE}}{{UNIT}};',
-                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-content' => 'border-width: {{SIZE}}{{UNIT}};',
-                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-title.elementor-active' => 'border-width: {{SIZE}}{{UNIT}};',
+                  '{{WRAPPER}} ul.uta-accordion li' => 'margin: {{SIZE}}{{UNIT}} auto;',
               ],
           ]
       );
 
-      $this->add_control(
-          'border_color',
+      $this->add_group_control(
+          \Elementor\Group_Control_Border::get_type(),
           [
-              'label' => esc_html__( 'Border Color', 'elementor' ),
-              'type' => Controls_Manager::COLOR,
-              'selectors' => [
-                  '{{WRAPPER}} .elementor-accordion-item' => 'border-color: {{VALUE}};',
-                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-content' => 'border-top-color: {{VALUE}};',
-                  '{{WRAPPER}} .elementor-accordion-item .elementor-tab-title.elementor-active' => 'border-bottom-color: {{VALUE}};',
+              'name'     => 'accordion_border',
+              'label'    => esc_html__('Border', 'unlimited-theme-addons'),
+              'selector' => '{{WRAPPER}} ul.uta-accordion li',
+          ]
+      );
+
+
+      $this->add_control(
+          'accordion_border_radius',
+          [
+              'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
+              'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+              'size_units' => [ 'px', '%', 'em' ],
+              'selectors'  => [
+                  '{{WRAPPER}} ul.uta-accordion li' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
               ],
           ]
       );
+
+
 
       $this->end_controls_section();
 
@@ -304,7 +313,18 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Background', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-title' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'title_active_background',
+            [
+                'label' => esc_html__( 'Active Background', 'elementor' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -315,12 +335,10 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Color', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-accordion-icon, {{WRAPPER}} .elementor-accordion-title' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading svg' => 'fill: {{VALUE}};',
                 ],
-                'global' => [
-                    'default' => Global_Colors::COLOR_PRIMARY,
-                ],
+                'default' => '#fff',
             ]
         );
 
@@ -330,8 +348,8 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Active Color', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-active .elementor-accordion-icon, {{WRAPPER}} .elementor-active .elementor-accordion-title' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-active .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active h3 svg' => 'fill: {{VALUE}};',
                 ],
                 'global' => [
                     'default' => Global_Colors::COLOR_ACCENT,
@@ -339,22 +357,52 @@ class Uta_Accordion extends Widget_Base
             ]
         );
 
+
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'selector' => '{{WRAPPER}} .elementor-accordion-title',
+                'selector' => '{{WRAPPER}} ul.uta-accordion li h3',
                 'global' => [
                     'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
                 ],
             ]
         );
 
+        /*
+        * Border
+       */
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name'     => 'title_border',
+                'label'    => esc_html__('Border', 'unlimited-theme-addons'),
+                'selector' => '{{WRAPPER}} ul.uta-accordion li .accordion-heading',
+            ]
+        );
+
+        /*
+         * Border radius.
+        */
+        $this->add_control(
+            'title_border_radius',
+            [
+                'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
+                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', '%', 'em' ],
+                'selectors'  => [
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+
         $this->add_group_control(
             Group_Control_Text_Shadow::get_type(),
             [
                 'name' => 'title_shadow',
-                'selector' => '{{WRAPPER}} .elementor-accordion-title',
+                'selector' => '{{WRAPPER}} ul.uta-accordion li .accordion-heading',
             ]
         );
 
@@ -365,7 +413,7 @@ class Uta_Accordion extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-title' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -384,9 +432,9 @@ class Uta_Accordion extends Widget_Base
             [
                 'label' => esc_html__( 'Icon', 'elementor' ),
                 'tab' => Controls_Manager::TAB_STYLE,
-//                'condition' => [
-//                    'selected_icon[value]!' => '',
-//                ],
+                'condition' => [
+                    'uta_acc_selected_icon[value]!' => '',
+                ],
             ]
         );
 
@@ -396,16 +444,16 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Alignment', 'elementor' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
-                    'left' => [
+                    'icon-left' => [
                         'title' => esc_html__( 'Start', 'elementor' ),
                         'icon' => 'eicon-h-align-left',
                     ],
-                    'right' => [
+                    'icon-right' => [
                         'title' => esc_html__( 'End', 'elementor' ),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => is_rtl() ? 'right' : 'left',
+                'default' => is_rtl() ? 'icon-right' : 'icon-left',
                 'toggle' => false,
             ]
         );
@@ -416,8 +464,8 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Color', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-title .elementor-accordion-icon i:before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-tab-title .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li h3 i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li h3 svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );
@@ -428,8 +476,8 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Active Color', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-title.elementor-active .elementor-accordion-icon i:before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-tab-title.elementor-active .elementor-accordion-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active h3 i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active h3 svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );
@@ -446,8 +494,8 @@ class Uta_Accordion extends Widget_Base
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-accordion-icon.elementor-accordion-icon-left' => 'margin-right: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}} .elementor-accordion-icon.elementor-accordion-icon-right' => 'margin-left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .accordion-heading.icon-right h3 .accordion-icon' => 'margin-left: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .accordion-heading.icon-left h3 .accordion-icon' => 'margin-right: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -478,7 +526,7 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Background', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-content' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-accordion .accordion-body' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -489,7 +537,7 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Color', 'elementor' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-content' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-accordion .accordion-body' => 'color: {{VALUE}};',
                 ],
                 'global' => [
                     'default' => Global_Colors::COLOR_TEXT,
@@ -501,7 +549,8 @@ class Uta_Accordion extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'content_typography',
-                'selector' => '{{WRAPPER}} .elementor-tab-content',
+                'selector' =>
+                    '{{WRAPPER}} .uta-accordion .accordion-body p',
                 'global' => [
                     'default' => Global_Typography::TYPOGRAPHY_TEXT,
                 ],
@@ -512,7 +561,7 @@ class Uta_Accordion extends Widget_Base
             Group_Control_Text_Shadow::get_type(),
             [
                 'name' => 'content_shadow',
-                'selector' => '{{WRAPPER}} .elementor-tab-content',
+                'selector' => '{{WRAPPER}} .uta-accordion .accordion-body',
             ]
         );
 
@@ -523,7 +572,7 @@ class Uta_Accordion extends Widget_Base
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-tab-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-accordion .accordion-body' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );

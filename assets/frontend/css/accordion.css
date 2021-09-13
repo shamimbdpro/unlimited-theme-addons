@@ -37,6 +37,10 @@ ul.uta-accordion {
       letter-spacing: 0.01em;
       cursor: pointer;
       color: #fff; }
+    ul.uta-accordion li .accordion-heading.icon-left h3 {
+      justify-content: left; }
+    ul.uta-accordion li .accordion-heading.icon-left h3 .accordion-icon {
+      margin-right: 20px; }
     ul.uta-accordion li .accordion-icon .active-icon {
       display: none; }
     ul.uta-accordion li div.accordion-body {
