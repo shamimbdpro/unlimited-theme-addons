@@ -43,17 +43,17 @@ ul.uta-accordion {
       margin-right: 20px; }
     ul.uta-accordion li .accordion-icon .active-icon {
       display: none; }
-    ul.uta-accordion li div.accordion-body {
+    ul.uta-accordion li .accordion-body {
       position: relative;
       display: none;
       width: 100%;
       height: auto;
       background: #fff;
       margin: 0;
-      padding: 20;
+      padding: 20px;
       cursor: pointer;
       color: #333; }
-      ul.uta-accordion li div.accordion-body p {
+      ul.uta-accordion li .accordion-body p {
         position: relative;
         display: block;
         font-weight: 300;

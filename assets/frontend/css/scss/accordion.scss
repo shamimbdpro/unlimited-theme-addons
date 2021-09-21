@@ -69,14 +69,14 @@ ul.uta-accordion {
       }
     }
 
-    div.accordion-body {
+    .accordion-body {
       position: relative;
       display: none;
       width: 100%;
       height: auto;
       background:#fff;
       margin: 0;
-      padding: 20;
+      padding: 20px;
       cursor: pointer;
       color:#333;
 
@@ -91,5 +91,8 @@ ul.uta-accordion {
         font-size: 14px;
       }
     }
+
+
+
   }
 }

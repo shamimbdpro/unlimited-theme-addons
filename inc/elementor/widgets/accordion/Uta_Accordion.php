@@ -86,16 +86,16 @@ class Uta_Accordion extends Widget_Base
         $this->uta_accordion_controls();
 
         /*---- Widget Style ---------*/
-       $this->section_acc_style();
-       $this->section_acc_title_style();
-       $this->section_acc_icon_style();
-       $this->section_acc_content_style();
+       $this->uta_accordion_style__global();
+       $this->uta_accordion_style__title();
+       $this->uta_accordion_style__icon();
+       $this->uta_accordion_style__content();
 
   }
 
-    /**
-     * Register accordion controls.
-     *
+    /**-----------------------------------------------------
+    /*	Register Accordion Controls.
+    /*-----------------------------------------------------
      * @access protected.
      *
      * @return mixed.
@@ -110,7 +110,7 @@ class Uta_Accordion extends Widget_Base
       );
 
       $this->add_responsive_control(
-          'uta_acc_layouts',
+          'accordion__layouts',
           [
               'label'   => esc_html__('Layouts', 'unlimited-theme-addons'),
               'type'    => \Elementor\Controls_Manager::SELECT,
@@ -125,7 +125,7 @@ class Uta_Accordion extends Widget_Base
       $uta_accordion_repeater = new Repeater();
 
       $uta_accordion_repeater->add_control(
-          'uta_acc_title',
+          'accordion__title',
           [
               'label' => esc_html__( 'Title & Description', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::TEXT,
@@ -138,38 +138,142 @@ class Uta_Accordion extends Widget_Base
       );
 
       $uta_accordion_repeater->add_control(
-          'uta_acc_content',
+          'content_type',
+          [
+              'label'                 => esc_html__( 'Content Type', 'unlimited-theme-addons' ),
+              'type'                  => Controls_Manager::SELECT,
+              'label_block'           => false,
+              'options'               => [
+                  'content'   => __( 'Content', 'unlimited-theme-addons' ),
+                  'image'     => __( 'Image', 'unlimited-theme-addons' ),
+                  'section'   => __( 'Saved Section', 'unlimited-theme-addons' ),
+                  'widget'    => __( 'Saved Widget', 'unlimited-theme-addons' ),
+                  'template'  => __( 'Saved Page Template', 'unlimited-theme-addons' ),
+              ],
+              'default'               => 'content',
+          ]
+      );
+
+      $uta_accordion_repeater->add_control(
+          'accordion__content',
           [
               'label' => esc_html__( 'Content', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::WYSIWYG,
               'default' => esc_html__( 'Accordion content', 'unlimited-theme-addons' ),
               'show_label' => false,
+              'condition'             => [
+                  'content_type'  => 'content',
+              ],
+          ]
+      );
+
+      $uta_accordion_repeater->add_control(
+          'saved_widget',
+          [
+              'label'                 => __( 'Choose Widget', 'unlimited-theme-addons' ),
+              'type'                  => 'uta-query',
+              'label_block'           => false,
+              'multiple'              => false,
+              'query_type'            => 'templates-widget',
+              'conditions'        => [
+                  'terms' => [
+                      [
+                          'name'      => 'content_type',
+                          'operator'  => '==',
+                          'value'     => 'widget',
+                      ],
+                  ],
+              ],
+          ]
+      );
+
+      $uta_accordion_repeater->add_control(
+          'saved_section',
+          [
+              'label'                 => __( 'Choose Section', 'unlimited-theme-addons' ),
+              'type'                  => 'uta-query',
+              'label_block'           => false,
+              'multiple'              => false,
+              'query_type'            => 'templates-section',
+              'conditions'        => [
+                  'terms' => [
+                      [
+                          'name'      => 'content_type',
+                          'operator'  => '==',
+                          'value'     => 'section',
+                      ],
+                  ],
+              ],
+          ]
+      );
+
+      $uta_accordion_repeater->add_control(
+          'templates',
+          [
+              'label'                 => __( 'Choose Template', 'unlimited-theme-addons' ),
+              'type'                  => 'uta-query',
+              'label_block'           => false,
+              'multiple'              => false,
+              'query_type'            => 'templates-page',
+              'conditions'        => [
+                  'terms' => [
+                      [
+                          'name'      => 'content_type',
+                          'operator'  => '==',
+                          'value'     => 'template',
+                      ],
+                  ],
+              ],
+          ]
+      );
+
+      $uta_accordion_repeater->add_control(
+          'image',
+          [
+              'label'                 => __( 'Image', 'unlimited-theme-addons' ),
+              'type'                  => Controls_Manager::MEDIA,
+              'dynamic'               => [
+                  'active'   => true,
+              ],
+              'default'               => [
+                  'url' => Utils::get_placeholder_image_src(),
+              ],
+              'conditions'            => [
+                  'terms' => [
+                      [
+                          'name'      => 'content_type',
+                          'operator'  => '==',
+                          'value'     => 'image',
+                      ],
+                  ],
+              ],
           ]
       );
 
       $this->add_control(
-          'uta_acc_tabs',
+          'accordion__tabs',
           [
               'label' => esc_html__( 'Accordion Items', 'elementor' ),
               'type' => Controls_Manager::REPEATER,
               'fields' => $uta_accordion_repeater->get_controls(),
               'default' => [
                   [
-                      'uta_acc_title' => esc_html__( 'How much does a website cost?', 'unlimited-theme-addons' ),
-                      'uta_acc_content' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'unlimited-theme-addons' ),
+                      'accordion__title' => esc_html__( 'How much does a website cost?', 'unlimited-theme-addons' ),
+                      'accordion__content' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'unlimited-theme-addons' ),
                   ],
                   [
-                      'uta_acc_title' => esc_html__( 'How to use Unlimited Theme Addon?', 'unlimited-theme-addons' ),
-                      'uta_acc_content' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'unlimited-theme-addons' ),
+                      'accordion__title' => esc_html__( 'How to use Unlimited Theme Addon?', 'unlimited-theme-addons' ),
+                      'accordion__content' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'unlimited-theme-addons' ),
                   ],
               ],
-              'title_field' => '{{{ uta_acc_title }}}',
+              'title_field' => '{{{ accordion__title }}}',
+
           ]
       );
 
 
       $this->add_control(
-          'uta_acc_selected_icon',
+          'accordion__selected_icon',
           [
               'label' => esc_html__( 'Icon', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::ICONS,
@@ -197,7 +301,7 @@ class Uta_Accordion extends Widget_Base
       );
 
       $this->add_control(
-          'uta_acc_selected_active_icon',
+          'accordion__selected_active_icon',
           [
               'label' => esc_html__( 'Active Icon', 'elementor' ),
               'type' => Controls_Manager::ICONS,
@@ -221,25 +325,37 @@ class Uta_Accordion extends Widget_Base
               'skin' => 'inline',
               'label_block' => false,
               'condition' => [
-                  'uta_acc_selected_icon[value]!' => '',
+                  'accordion__selected_icon[value]!' => '',
               ],
+          ]
+      );
+
+      $this->add_control(
+          'toggle_speed',
+          [
+              'label'                 => esc_html__( 'Toggle Speed (ms)', 'unlimited-theme-addons' ),
+              'type'                  => Controls_Manager::NUMBER,
+              'label_block'           => false,
+              'default'               => 300,
+              'frontend_available'    => true,
           ]
       );
 
       $this->end_controls_section();
   }
 
-    /**
-     * Register accordion style.
+    /**-----------------------------------------------------
+    /*	Accordion Style
+    /*-----------------------------------------------------
      *
      * @access protected.
      *
      * @return array|mixed
      */
-  protected function section_acc_style(){
+  protected function uta_accordion_style__global(){
 
       $this->start_controls_section(
-          'section_acc_style',
+          'uta_accordion_style__global',
           [
               'label' => esc_html__( 'Accordion', 'elementor' ),
               'tab' => Controls_Manager::TAB_STYLE,
@@ -249,7 +365,7 @@ class Uta_Accordion extends Widget_Base
       $this->add_control(
           'border_width',
           [
-              'label' => esc_html__( 'Item Specing', 'elementor' ),
+              'label' => esc_html__( 'Item Spacing', 'elementor' ),
               'type' => Controls_Manager::SLIDER,
               'range' => [
                   'px' => [
@@ -274,7 +390,7 @@ class Uta_Accordion extends Widget_Base
 
 
       $this->add_control(
-          'accordion_border_radius',
+          'border_radius',
           [
               'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
               'type'       => \Elementor\Controls_Manager::DIMENSIONS,
@@ -293,14 +409,15 @@ class Uta_Accordion extends Widget_Base
   }
 
 
-    /**
-     * Section accordion title style.
+    /**-----------------------------------------------------
+    /*	Accordion Style For -- Title
+    /*-----------------------------------------------------
      *
      * @access protected.
      */
-    protected function section_acc_title_style(){
+    protected function uta_accordion_style__title(){
         $this->start_controls_section(
-            'acc_toggle_style_title',
+            'uta_accordion_style__title',
             [
                 'label' => esc_html__( 'Title', 'elementor' ),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -421,19 +538,20 @@ class Uta_Accordion extends Widget_Base
         $this->end_controls_section();
     }
 
-    /**
-     * Section accordion icon style.
+    /**-----------------------------------------------------
+    /*	Accordion Style For -- Icon
+    /*-----------------------------------------------------
      *
      * @access protected.
      */
-    protected function section_acc_icon_style(){
+    protected function uta_accordion_style__icon(){
         $this->start_controls_section(
-            'section_acc_icon_style',
+            'uta_accordion_style__icon',
             [
                 'label' => esc_html__( 'Icon', 'elementor' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'uta_acc_selected_icon[value]!' => '',
+                    'accordion__selected_icon[value]!' => '',
                 ],
             ]
         );
@@ -504,16 +622,18 @@ class Uta_Accordion extends Widget_Base
     }
 
 
-    /**
-     * Section accordion icon style.
+    /**-----------------------------------------------------
+    /*	Accordion Style For -- Content
+    /*-----------------------------------------------------
      *
      * @access protected.
      *
      * @return void.
+     *
      */
-    protected function section_acc_content_style(){
+    protected function uta_accordion_style__content(){
         $this->start_controls_section(
-            'section_acc_content_style',
+            'uta_accordion_style__content',
             [
                 'label' => esc_html__( 'Content', 'elementor' ),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -581,6 +701,61 @@ class Uta_Accordion extends Widget_Base
     }
 
 
+
+    /**
+     * Render accordion content.
+     *
+     * @since 1.1.0
+     */
+    protected function uta_accordion_contents( $acc_tab ) {
+        $settings     = $this->get_settings_for_display();
+        $content_type = $acc_tab['content_type'];
+        $output       = '';
+
+        switch ( $content_type ) {
+            case 'content':
+                $output = do_shortcode( $acc_tab['accordion__content'] );
+                break;
+
+            case 'image':
+
+              //  $image_url = Group_Control_Image_Size::get_attachment_image_src( $acc_tab['image']['id'], null, $acc_tab );
+
+              //  if ( ! $image_url ) {
+                    $image_url = $acc_tab['image']['url'];
+              //  }
+
+                $image_html = '<div class="uta-accordion-image">';
+
+                $image_html .= '<img src="' . esc_url( $image_url ) . '" alt="' . esc_attr( Control_Media::get_image_alt( $acc_tab['image'] ) ) . '">';
+
+                $image_html .= '</div>';
+
+                $output = $image_html;
+                break;
+
+            case 'section':
+                $output = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $acc_tab['saved_section'] );
+                break;
+
+            case 'template':
+                $output = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $acc_tab['templates'] );
+                break;
+
+            case 'widget':
+                $output = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $acc_tab['saved_widget'] );
+                break;
+
+            default:
+                return;
+        }
+
+        return $output;
+    }
+
+    
+
+
     /**
      * @param array $instance
      */
@@ -595,7 +770,7 @@ class Uta_Accordion extends Widget_Base
 
 
        // Counter Up style 1.
-       if ( 'layout-default' === $settings['uta_acc_layouts'] ) {
+       if ( 'layout-default' === $settings['accordion__layouts'] ) {
            require (__DIR__) . '/template/layout-default.php';
        }
 

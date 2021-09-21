@@ -28,8 +28,18 @@ class Unlimited_Theme_Addons
         );
     }
 
+    public function register_controls() {
+
+        // Include Controls
+        require UTA_PLUGIN_PATH . 'inc/elementor/query.php';
+
+        // Register Controls
+        \Elementor\Plugin::instance()->controls_manager->register_control( 'uta-query', new Control_Query() );
+    }
+
     public function register_hooks() {
         add_action('elementor/elements/categories_registered', array( $this, 'uta_add_elementor_widget_categories' ));
+        add_action( 'elementor/controls/controls_registered', [ $this, 'register_controls' ] );
         add_action('elementor/widgets/widgets_registered', array( $this, 'widgets_registered' ));
         add_action('wp_enqueue_scripts', array( $this, 'load_css_and_js' ));
         if ( is_admin() ) {

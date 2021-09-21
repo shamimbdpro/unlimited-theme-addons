@@ -78,15 +78,25 @@
 
     // Accordion.
     var utaAccordion = function ($scope, $) {
-        $('.uta-accordion > li').click(function() {
+
+        $('.uta-accordion li').click(function(e) {
+            e.preventDefault();
+
+            let toggleSpeed = $(this).data('speed');
+
             if ($(this).hasClass("active")) {
-                $(this).removeClass("active").find(".accordion-body").slideUp();
+
+                $(this).removeClass("active").find(".accordion-body").slideUp(toggleSpeed);
+
             } else {
-                $(".uta-accordion > li.active .accordion-body").slideUp();
-                $(".uta-accordion > li.active").removeClass("active");
-                $(this).addClass("active").find(".accordion-body").slideDown();
+                $(".uta-accordion li.active .accordion-body").slideUp(toggleSpeed);
+                $(".uta-accordion li.active").removeClass("active");
+                $(this).addClass("active").find(".accordion-body").slideDown(toggleSpeed);
+
             }
-            return false;
+
+         e.stopImmediatePropagation();
+
         });
 
     };
