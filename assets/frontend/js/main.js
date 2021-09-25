@@ -79,18 +79,21 @@
     // Accordion.
     var utaAccordion = function ($scope, $) {
 
+        $(".uta-accordion li.active .accordion-body").slideDown(100);
         $('.uta-accordion li').click(function(e) {
             e.preventDefault();
+
+           let dataID = $(this).parent().attr('id');
 
             let toggleSpeed = $(this).data('speed');
 
             if ($(this).hasClass("active")) {
 
-                $(this).removeClass("active").find(".accordion-body").slideUp(toggleSpeed);
+                $("#"+dataID+" li").removeClass("active").find(".accordion-body").slideUp(toggleSpeed);
 
             } else {
-                $(".uta-accordion li.active .accordion-body").slideUp(toggleSpeed);
-                $(".uta-accordion li.active").removeClass("active");
+                $("#"+dataID+" li.active .accordion-body").slideUp(toggleSpeed);
+                $("#"+dataID+" li.active").removeClass("active");
                 $(this).addClass("active").find(".accordion-body").slideDown(toggleSpeed);
 
             }

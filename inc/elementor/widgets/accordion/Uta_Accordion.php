@@ -116,7 +116,6 @@ class Uta_Accordion extends Widget_Base
               'type'    => \Elementor\Controls_Manager::SELECT,
               'options' => [
                   'layout-default' => esc_html__('Default', 'unlimited-theme-addons'),
-                  'layout-1' => esc_html__('Layout 1', 'unlimited-theme-addons'),
               ],
               'default' => 'layout-default',
           ]
@@ -341,6 +340,19 @@ class Uta_Accordion extends Widget_Base
           ]
       );
 
+      $this->add_control(
+          'active_first_child',
+          [
+              'label'        => __('Open First Item by Default', 'unlimited-theme-addons'),
+              'type'         => Controls_Manager::SWITCHER,
+              'label_on'     => __('Yes', 'unlimited-theme-addons'),
+              'label_off'    => __('No', 'unlimited-theme-addons'),
+              'return_value' => 'yes',
+              'default'      => 'yes',
+          ]
+      );
+
+
       $this->end_controls_section();
   }
 
@@ -393,7 +405,7 @@ class Uta_Accordion extends Widget_Base
           'border_radius',
           [
               'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
-              'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+              'type'       => Controls_Manager::DIMENSIONS,
               'size_units' => [ 'px', '%', 'em' ],
               'selectors'  => [
                   '{{WRAPPER}} ul.uta-accordion li' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -571,7 +583,7 @@ class Uta_Accordion extends Widget_Base
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => is_rtl() ? 'icon-right' : 'icon-left',
+                'default' =>'icon-right',
                 'toggle' => false,
             ]
         );
