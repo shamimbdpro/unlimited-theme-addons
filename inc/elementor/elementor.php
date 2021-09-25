@@ -473,10 +473,8 @@ class Unlimited_Theme_Addons
             // Counter Up
             if ( array_key_exists('blockquote', $widget_list) && 'off' !== $widget_list['blockquote'] || empty($widget_list['blockquote']) ) {
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/blockquote/Uta_Blockquote.php');
-            }
-
-
-        }
+            }        
+}
     }
 
     public function load_wc_hooks() {

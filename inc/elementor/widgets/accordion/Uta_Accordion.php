@@ -41,7 +41,7 @@ class Uta_Accordion extends Widget_Base
    * @return string
    */
   public function get_script_depends() {
-    $scripts = ['uta-main'];
+    $scripts = [ 'uta-main' ];
 
     return $scripts;
   }
@@ -94,7 +94,7 @@ class Uta_Accordion extends Widget_Base
   }
 
     /**-----------------------------------------------------
-    /*	Register Accordion Controls.
+    /*  Register Accordion Controls.
     /*-----------------------------------------------------
      * @access protected.
      *
@@ -145,9 +145,9 @@ class Uta_Accordion extends Widget_Base
               'options'               => [
                   'content'   => __( 'Content', 'unlimited-theme-addons' ),
                   'image'     => __( 'Image', 'unlimited-theme-addons' ),
-                  'section'   => __( 'Saved Section', 'unlimited-theme-addons' ),
-                  'widget'    => __( 'Saved Widget', 'unlimited-theme-addons' ),
-                  'template'  => __( 'Saved Page Template', 'unlimited-theme-addons' ),
+//                  'section'   => __( 'Saved Section', 'unlimited-theme-addons' ),
+//                  'widget'    => __( 'Saved Widget', 'unlimited-theme-addons' ),
+//                  'template'  => __( 'Saved Page Template', 'unlimited-theme-addons' ),
               ],
               'default'               => 'content',
           ]
@@ -252,7 +252,7 @@ class Uta_Accordion extends Widget_Base
       $this->add_control(
           'accordion__tabs',
           [
-              'label' => esc_html__( 'Accordion Items', 'elementor' ),
+              'label' => esc_html__( 'Accordion Items', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::REPEATER,
               'fields' => $uta_accordion_repeater->get_controls(),
               'default' => [
@@ -302,7 +302,7 @@ class Uta_Accordion extends Widget_Base
       $this->add_control(
           'accordion__selected_active_icon',
           [
-              'label' => esc_html__( 'Active Icon', 'elementor' ),
+              'label' => esc_html__( 'Active Icon', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::ICONS,
               'fa4compatibility' => 'icon_active',
               'default' => [
@@ -357,19 +357,19 @@ class Uta_Accordion extends Widget_Base
   }
 
     /**-----------------------------------------------------
-    /*	Accordion Style
+    /*  Accordion Style
     /*-----------------------------------------------------
      *
      * @access protected.
      *
      * @return array|mixed
      */
-  protected function uta_accordion_style__global(){
+  protected function uta_accordion_style__global() {
 
       $this->start_controls_section(
           'uta_accordion_style__global',
           [
-              'label' => esc_html__( 'Accordion', 'elementor' ),
+              'label' => esc_html__( 'Accordion', 'unlimited-theme-addons' ),
               'tab' => Controls_Manager::TAB_STYLE,
           ]
       );
@@ -377,7 +377,7 @@ class Uta_Accordion extends Widget_Base
       $this->add_control(
           'border_width',
           [
-              'label' => esc_html__( 'Item Spacing', 'elementor' ),
+              'label' => esc_html__( 'Item Spacing', 'unlimited-theme-addons' ),
               'type' => Controls_Manager::SLIDER,
               'range' => [
                   'px' => [
@@ -422,7 +422,7 @@ class Uta_Accordion extends Widget_Base
 
 
     /**-----------------------------------------------------
-    /*	Accordion Style For -- Title
+    /*  Accordion Style For -- Title
     /*-----------------------------------------------------
      *
      * @access protected.
@@ -431,7 +431,7 @@ class Uta_Accordion extends Widget_Base
         $this->start_controls_section(
             'uta_accordion_style__title',
             [
-                'label' => esc_html__( 'Title', 'elementor' ),
+                'label' => esc_html__( 'Title', 'unlimited-theme-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -439,7 +439,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'title_background',
             [
-                'label' => esc_html__( 'Background', 'elementor' ),
+                'label' => esc_html__( 'Background', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li .accordion-heading' => 'background-color: {{VALUE}};',
@@ -450,7 +450,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'title_active_background',
             [
-                'label' => esc_html__( 'Active Background', 'elementor' ),
+                'label' => esc_html__( 'Active Background', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading' => 'background-color: {{VALUE}};',
@@ -461,7 +461,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'title_color',
             [
-                'label' => esc_html__( 'Color', 'elementor' ),
+                'label' => esc_html__( 'Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li h3' => 'color: {{VALUE}};',
@@ -474,7 +474,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'tab_active_color',
             [
-                'label' => esc_html__( 'Active Color', 'elementor' ),
+                'label' => esc_html__( 'Active Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li.active h3' => 'color: {{VALUE}};',
@@ -538,7 +538,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_responsive_control(
             'title_padding',
             [
-                'label' => esc_html__( 'Padding', 'elementor' ),
+                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -551,7 +551,7 @@ class Uta_Accordion extends Widget_Base
     }
 
     /**-----------------------------------------------------
-    /*	Accordion Style For -- Icon
+    /*  Accordion Style For -- Icon
     /*-----------------------------------------------------
      *
      * @access protected.
@@ -560,7 +560,7 @@ class Uta_Accordion extends Widget_Base
         $this->start_controls_section(
             'uta_accordion_style__icon',
             [
-                'label' => esc_html__( 'Icon', 'elementor' ),
+                'label' => esc_html__( 'Icon', 'unlimited-theme-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'accordion__selected_icon[value]!' => '',
@@ -571,19 +571,19 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'icon_align',
             [
-                'label' => esc_html__( 'Alignment', 'elementor' ),
+                'label' => esc_html__( 'Alignment', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'icon-left' => [
-                        'title' => esc_html__( 'Start', 'elementor' ),
+                        'title' => esc_html__( 'Start', 'unlimited-theme-addons' ),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'icon-right' => [
-                        'title' => esc_html__( 'End', 'elementor' ),
+                        'title' => esc_html__( 'End', 'unlimited-theme-addons' ),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' =>'icon-right',
+                'default' => 'icon-right',
                 'toggle' => false,
             ]
         );
@@ -591,7 +591,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'icon_color',
             [
-                'label' => esc_html__( 'Color', 'elementor' ),
+                'label' => esc_html__( 'Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li h3 i:before' => 'color: {{VALUE}};',
@@ -603,7 +603,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'icon_active_color',
             [
-                'label' => esc_html__( 'Active Color', 'elementor' ),
+                'label' => esc_html__( 'Active Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} ul.uta-accordion li.active h3 i:before' => 'color: {{VALUE}};',
@@ -615,7 +615,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_responsive_control(
             'icon_space',
             [
-                'label' => esc_html__( 'Spacing', 'elementor' ),
+                'label' => esc_html__( 'Spacing', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -635,7 +635,7 @@ class Uta_Accordion extends Widget_Base
 
 
     /**-----------------------------------------------------
-    /*	Accordion Style For -- Content
+    /*  Accordion Style For -- Content
     /*-----------------------------------------------------
      *
      * @access protected.
@@ -647,7 +647,7 @@ class Uta_Accordion extends Widget_Base
         $this->start_controls_section(
             'uta_accordion_style__content',
             [
-                'label' => esc_html__( 'Content', 'elementor' ),
+                'label' => esc_html__( 'Content', 'unlimited-theme-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -655,7 +655,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'content_background_color',
             [
-                'label' => esc_html__( 'Background', 'elementor' ),
+                'label' => esc_html__( 'Background', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .uta-accordion .accordion-body' => 'background-color: {{VALUE}};',
@@ -666,7 +666,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_control(
             'content_color',
             [
-                'label' => esc_html__( 'Color', 'elementor' ),
+                'label' => esc_html__( 'Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .uta-accordion .accordion-body' => 'color: {{VALUE}};',
@@ -700,7 +700,7 @@ class Uta_Accordion extends Widget_Base
         $this->add_responsive_control(
             'content_padding',
             [
-                'label' => esc_html__( 'Padding', 'elementor' ),
+                'label' => esc_html__( 'Padding', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
@@ -730,7 +730,6 @@ class Uta_Accordion extends Widget_Base
                 break;
 
             case 'image':
-
               //  $image_url = Group_Control_Image_Size::get_attachment_image_src( $acc_tab['image']['id'], null, $acc_tab );
 
               //  if ( ! $image_url ) {

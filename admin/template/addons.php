@@ -1,6 +1,6 @@
 <?php
 
-$get_addons_list = get_option('unlimited_theme_addons_active_addons') == !'' ? get_option('unlimited_theme_addons_active_addons') : array();
+$get_addons_list = get_option('unlimited_theme_addons_active_addons') == ! '' ? get_option('unlimited_theme_addons_active_addons') : array();
 
 $uta_addon_lists = array(
 
@@ -24,25 +24,35 @@ $uta_addon_lists = array(
 
 
     // 3. Hide Add To Cart.
-//    array(
-//        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
-//        'description' => __('Remove Add to Cart button for every page on Woocommerce'),
-//        'name' => 'wc-hide-add-to-cart',
-//        'default' => array_key_exists('wc-hide-add-to-cart', $get_addons_list) && 'off' == $get_addons_list['wc-hide-add-to-cart'] || empty($get_addons_list['wc-hide-add-to-cart']) ? 'off' : 'on',
-//        'is_free' => 1,
-//        'display' => Uta_helpers::get_instance()->is_wc_install(),
-//    ),
+	//    array(
+	//        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
+	//        'name' => 'wc-hide-add-to-cart',
+	//        'default' => array_key_exists('wc-hide-add-to-cart', $get_addons_list) && 'off' == $get_addons_list['wc-hide-add-to-cart'] || empty($get_addons_list['wc-hide-add-to-cart']) ? 'off' : 'on',
+	//        'is_free' => 1,
+	//        'display' => Uta_helpers::get_instance()->is_wc_install(),
+	//    ),
 
 
     // 3. Hide WooCommerce Price.
     array(
         'title' => __('WooCommerce Direct Checkout', 'unlimited-theme-addons'),
-        'description' => __('Redirect to checkout page while click on add to cart button.'),
         'name' => 'wc-direct-checkout',
         'default' => array_key_exists('wc-direct-checkout', $get_addons_list) && 'off' == $get_addons_list['wc-direct-checkout'] || empty($get_addons_list['wc-direct-checkout']) ? 'off' : 'on',
         'is_free' => 1,
         'display' => Uta_helpers::get_instance()->is_wc_install(),
     ),
+
+
+    // 4. Hide WooCommerce Related Products.
+    array(
+        'title' => __('WC Hide Related Product', 'unlimited-theme-addons'),
+        'name' => 'wc-hide-related-product',
+        'default' => array_key_exists('wc-hide-related-product', $get_addons_list) && 'off' == $get_addons_list['wc-hide-related-product'] || empty($get_addons_list['wc-hide-related-product']) ? 'off' : 'on',
+        'is_free' => 1,
+        'display' => Uta_helpers::get_instance()->is_wc_install(),
+    ),
+
+
 
 
 );
@@ -58,13 +68,13 @@ $uta_addon_lists = array(
             Savings...
         </button>
         <div class="row">
-            <?php foreach ($uta_addon_lists as $addon_list) { ?>
+            <?php foreach ( $uta_addon_lists as $addon_list ) { ?>
 
-                <?php if (true === $addon_list['display']) { ?>
+                <?php if ( true === $addon_list['display'] ) { ?>
 
                     <div class="col-md-3">
                         <div class="uta-single-widget">
-                            <?php if (0 == $addon_list['is_free']) { ?><span
+                            <?php if ( 0 == $addon_list['is_free'] ) { ?><span
                                     class="badge bg-primary">Upgrade Pro</span> <?php } ?>
                             <div class="widget-label">
                                 <h5><?php echo esc_html($addon_list['title']) //ignore:phpcs ;?></h5>

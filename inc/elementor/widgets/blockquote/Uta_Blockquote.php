@@ -2,7 +2,7 @@
 
 namespace Elementor;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 class Uta_Blockquote extends Widget_Base
 {
 
@@ -11,8 +11,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'uta-blockquote';
     }
 
@@ -21,13 +20,11 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string
      */
-    public function get_title()
-    {
+    public function get_title() {
         return esc_html__('UTA Blockquote', 'unlimited-theme-addons');
     }
 
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'eicon-blockquote';
     }
 
@@ -48,8 +45,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         $scripts = [];
 
         return $scripts;
@@ -60,8 +56,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return array|string[]
      */
-    public function get_keywords()
-    {
+    public function get_keywords() {
         return [
             'quote box',
             'uta quote',
@@ -78,9 +73,8 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return array|string[]
      */
-    public function get_categories()
-    {
-        return ['uta-elements'];
+    public function get_categories() {
+        return [ 'uta-elements' ];
     }
 
     /**
@@ -90,8 +84,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://codepopular.com/contact/';
     }
 
@@ -100,8 +93,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string|array
      */
-    protected function _register_controls()
-    {
+    protected function _register_controls() {
 
         // Register content controls.
         $this->uta_blockquote_controls();
@@ -119,8 +111,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string|array
      */
-    public function uta_blockquote_controls()
-    {
+    public function uta_blockquote_controls() {
         $this->start_controls_section(
             'uta_quote_section',
             [
@@ -162,7 +153,7 @@ class Uta_Blockquote extends Widget_Base
                 'default' => __('Title', 'unlimited-theme-addons'),
                 'label_block' => true,
                 'condition' => [
-                    'layouts' => ['style-1', 'style-2'],
+                    'layouts' => [ 'style-1', 'style-2' ],
                 ],
             ]
         );
@@ -197,8 +188,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string|mixed
      */
-    public function uta_blockquote_style()
-    {
+    public function uta_blockquote_style() {
         $this->start_controls_section(
             'uta_blockquote_option_style',
             [
@@ -212,7 +202,7 @@ class Uta_Blockquote extends Widget_Base
             [
                 'name' => 'blockquote_bg',
                 'label' => __('Background', 'unlimited-theme-addons'),
-                'types' => ['classic', 'gradient'],
+                'types' => [ 'classic', 'gradient' ],
                 'selector' => '{{WRAPPER}} .uta-blockquote',
             ]
         );
@@ -231,7 +221,7 @@ class Uta_Blockquote extends Widget_Base
         $this->add_responsive_control(
             'blockquote_Text_color',
             [
-                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'label' => __('Color', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#fff',
                 'selectors' => [
@@ -245,9 +235,9 @@ class Uta_Blockquote extends Widget_Base
         $this->add_responsive_control(
             'blockquote_padding',
             [
-                'label' => __('Padding', 'unlimited-theme-addons-pro'),
+                'label' => __('Padding', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -258,7 +248,7 @@ class Uta_Blockquote extends Widget_Base
             [
                 'label' => __('Margin', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -282,8 +272,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return mixed.
      */
-    public function uta_blockquote_icon_style()
-    {
+    public function uta_blockquote_icon_style() {
 
         $this->start_controls_section(
             'uta_blockquote_icon_style',
@@ -296,7 +285,7 @@ class Uta_Blockquote extends Widget_Base
         $this->add_responsive_control(
             'blockquote_Icon_color',
             [
-                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'label' => __('Color', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#FB6813D6',
                 'selectors' => [
@@ -309,9 +298,9 @@ class Uta_Blockquote extends Widget_Base
         $this->add_responsive_control(
             'blockquote_icon_padding',
             [
-                'label' => __('Padding', 'unlimited-theme-addons-pro'),
+                'label' => __('Padding', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -323,7 +312,7 @@ class Uta_Blockquote extends Widget_Base
             [
                 'label' => __('Margin', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -361,8 +350,7 @@ class Uta_Blockquote extends Widget_Base
     /*
     * Quote Speaker Style.
     */
-    public function uta_blockquote_speaker_style()
-    {
+    public function uta_blockquote_speaker_style() {
 
 
         $this->start_controls_section(
@@ -376,7 +364,7 @@ class Uta_Blockquote extends Widget_Base
         $this->add_control(
             'blockquote_speaker_color',
             [
-                'label' => __('Color', 'unlimited-theme-addons-pro'),
+                'label' => __('Color', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#fff',
                 'selectors' => [
@@ -389,9 +377,9 @@ class Uta_Blockquote extends Widget_Base
         $this->add_responsive_control(
             'blockquote_speaker_padding',
             [
-                'label' => __('Padding', 'unlimited-theme-addons-pro'),
+                'label' => __('Padding', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -403,7 +391,7 @@ class Uta_Blockquote extends Widget_Base
             [
                 'label' => __('Margin', 'unlimited-theme-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
+                'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} .uta-blockquote span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -438,8 +426,7 @@ class Uta_Blockquote extends Widget_Base
     }
 
 
-    protected function render($instance = [])
-    {
+    protected function render( $instance = [] ) {
 
         // get our input from the widget settings.
 
@@ -450,15 +437,15 @@ class Uta_Blockquote extends Widget_Base
         $this->add_inline_editing_attributes('quote_text', 'basic');
         $this->add_inline_editing_attributes('quote_speaker_name', 'basic');
 
-        if ('style-default' === $settings['layouts']) {
+        if ( 'style-default' === $settings['layouts'] ) {
             require (__DIR__) . '/template/style-default.php';
         }
 
-        if ('style-1' === $settings['layouts']) {
+        if ( 'style-1' === $settings['layouts'] ) {
             require (__DIR__) . '/template/style-1.php';
         }
 
-        if ('style-2' === $settings['layouts']) {
+        if ( 'style-2' === $settings['layouts'] ) {
             require (__DIR__) . '/template/style-2.php';
         }
 

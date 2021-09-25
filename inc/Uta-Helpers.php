@@ -55,9 +55,9 @@ class Uta_helpers{
      */
     public static function is_uta_pro_installed(){
 
-        if( class_exists('Unlimited_Theme_Addons_Pro') ){
+        if ( class_exists('Unlimited_Theme_Addons_Pro') ) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }

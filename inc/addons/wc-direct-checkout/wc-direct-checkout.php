@@ -5,4 +5,4 @@ function lw_add_to_cart_redirect() {
     return wc_get_checkout_url();
 }
 
-?>
+
