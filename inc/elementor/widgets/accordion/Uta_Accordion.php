@@ -464,25 +464,23 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} ul.uta-accordion li h3' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading h3 svg' => 'fill: {{VALUE}};',
                 ],
                 'default' => '#fff',
             ]
         );
 
         $this->add_control(
-            'tab_active_color',
+            'title_active_color',
             [
                 'label' => esc_html__( 'Active Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} ul.uta-accordion li.active h3' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} ul.uta-accordion li.active h3 svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading h3 svg' => 'fill: {{VALUE}};',
                 ],
-                'global' => [
-                    'default' => Global_Colors::COLOR_ACCENT,
-                ],
+                'default' => '#fff',
             ]
         );
 
@@ -491,7 +489,7 @@ class Uta_Accordion extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'title_typography',
-                'selector' => '{{WRAPPER}} ul.uta-accordion li h3',
+                'selector' => '{{WRAPPER}} ul.uta-accordion li .accordion-heading h3',
                 'global' => [
                     'default' => Global_Typography::TYPOGRAPHY_PRIMARY,
                 ],
@@ -594,8 +592,8 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} ul.uta-accordion li h3 i:before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} ul.uta-accordion li h3 svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading h3 i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li .accordion-heading h3 svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );
@@ -606,8 +604,8 @@ class Uta_Accordion extends Widget_Base
                 'label' => esc_html__( 'Active Color', 'unlimited-theme-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} ul.uta-accordion li.active h3 i:before' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} ul.uta-accordion li.active h3 svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading h3 i:before' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} ul.uta-accordion li.active .accordion-heading h3 svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );

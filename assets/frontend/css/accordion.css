@@ -26,17 +26,17 @@ ul.uta-accordion {
       transition: all .3s; }
       ul.uta-accordion li .accordion-heading:hover {
         background-color: #9c41ff; }
-    ul.uta-accordion li h3 {
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      height: auto;
-      margin: 0;
-      font-size: 15px;
-      letter-spacing: 0.01em;
-      cursor: pointer;
-      color: #fff; }
+      ul.uta-accordion li .accordion-heading h3 {
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+        cursor: pointer;
+        color: #fff; }
     ul.uta-accordion li .accordion-heading.icon-left h3 {
       justify-content: left; }
     ul.uta-accordion li .accordion-heading.icon-left h3 .accordion-icon {

@@ -22,7 +22,7 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 	function codepopular_dashboard_widget_render() {
 
 		// Enter the name of your blog here followed by /wp-json/wp/v2/posts and add filters like this one that limits the result to 2 posts.
-		$response = wp_remote_get( 'https://codepopular.com/wp-json/wp/v2/posts?per_page=5' );
+		$response = wp_remote_get( 'https://codepopular.com/wp-json/wp/v2/posts?per_page=5&categories=19' );
 
 		// Exit if error.
 		if ( is_wp_error( $response ) ) {
