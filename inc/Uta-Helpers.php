@@ -16,6 +16,9 @@ class Uta_helpers{
      * Initialize global hooks.
      */
     public function init(){
+        // Add plugin option name in admin top bar.
+        add_action('admin_bar_menu', [ $this, 'uta_admin_top_bar_option' ], 2000);
+        // WooCommerce rating mockup.
         add_filter( 'woocommerce_product_get_rating_html', [ $this, 'uta_ratings_markup' ] , 10, 3 );
     }
 
@@ -61,6 +64,18 @@ class Uta_helpers{
             return false;
         }
     }
+
+
+    /**
+     * Unlimited theme addons admin top bar option.
+     * @return void.
+     */
+    public function uta_admin_top_bar_option() {
+        global $wp_admin_bar;
+        $menu_id = 'unlimited-theme-addons';
+        $wp_admin_bar->add_menu(array('id' => $menu_id, 'title' => __('Theme Addons'), 'href' => admin_url() .'/admin.php?page=unlimited-theme-addons'));
+    }
+
 
 }
 

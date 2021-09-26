@@ -1,20 +1,20 @@
 === Unlimited Theme Addon For Elementor and WooCommerce ===
 Contributors: codepopular, shamimtpi, bokhtyer
 Donate link: https://codepopular.com/product/unlimited-theme-addons/
-Tags: elementor, elements, addons, elementor addon, elementor widget, elementor form, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
+Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Ehance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
+Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 
 ### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $4.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
 
-Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are relaible and hgihly skilled on Elementor addons developent.
+Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are reliable and hgihly skilled on Elementor addons development.
 
 ### [Elementor](https://wordpress.org/plugins/elementor/) page builder is required for below features.
 
@@ -33,6 +33,9 @@ e.g.
 - [**WooCommerce Product List**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-list/) - Showcase Woocommerce Product as list style with different styles. Our plugin provides the opportunity to make a product list with elementor for your woocommerce store. You aren't required to have programming knowledge to make a product list for your WordPress website.
 
 - [**WooCommerce Product Search**](https://www.codepopular.com/unlimited-theme-addons/woocommerce-product-search/) - Make Woocommerce product search with category in elementor addons. If you are looking to search your woocommerce product with elementor addons plugin then we can help you with that to make it easy. Our plugin has a widget to set product search options. you can set the elementor search addons with product category. it will help to find out the products for your customer.
+
+- [**Accordion**](https://www.codepopular.com/unlimited-theme-addons/elementor-accordion/) - Create beautiful accordion/FAQ using elementor. You can set your accordion icon according to your need. The plugin accordion compatible for maximum browser. Easy to use and mobile responsive.
+
 - [**Title**](https://www.codepopular.com/unlimited-theme-addons/elementor-title/) - Make section title, block title, premium section title. No skill required to do this thing. just make different types of product title with unlimited theme addons plugins.
 
 - [**Video**](https://www.codepopular.com/unlimited-theme-addons/elementor-video/) - Make popup videos with elementor in different types of layouts.
@@ -60,10 +63,11 @@ e.g.
 - **Hide Admin Bar** - Unlimited Theme Addons allow you to hide admin bar for frontend. To hide admin bar first have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **Hide WooCommerce Price** - If you are using WooCommerce and want to hide price then this plugin for you. To hide price for WooCommerce first have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **WooCommerce Direct Checkout** - You can skip cart page and and redirect to checkout page after added to cart. To enable direct checkout you have to enable the extension from *Dashboard > Theme Addons > Addons*.
+- **WooCommerce Hide Related Products** - You can disable or remove woocommerce related product from your website by enabling this addons. To hide the WooCommerce related product you have to enable the extension from *Dashboard > Theme Addons > Addons*.
 
 
 ### [**Try Premium Version with $4.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
-Unlimited Theme Addon offering paid version where you can build creative countdown timer with Elementor. Boost your store sale with countdown timer. Show the available offer time to your cusotmer with this plugin. We are still working to add more feature in premium version. don't miss out the chance to get it with very simple price.
+Unlimited Theme Addon offering paid version where you can build creative countdown timer with Elementor. Boost your store sale with countdown timer. Show the available offer time to your customer with this plugin. We are still working to add more feature in premium version. don't miss out the chance to get it with very simple price.
 
 
 ### [**Countdown Timer Pro Features**](https://codepopular.com/product/unlimited-theme-addons-pro/)
@@ -90,8 +94,16 @@ Unlimited Theme Addon is the newest creation to the product line up of [CodePopu
 
 No, We have provided minified css to optimize your website.
 
-= How can I discuss the plugin issues? =
+= How to remove Related Product in WooCommerce? =
+Its easy. Just click on theme addons on admin top bar > Navigate to addons > Enable the addons.
 
+= How to hide admin bar in frontend? =
+To hide the admin bar just click on Theme Addons > Addons > Then enable the addons.
+
+= How to hide price in WooCommmerce? =
+To hide the WooCommerce price just click on Theme Addons > Then click on Addons > Then enable the addons from there.
+
+= How can I discuss the plugin issues? =
 You're more than welcome! we are ready to solve your issue. you can ask the query here.
 https://wordpress.org/support/plugin/unlimited-theme-addons
 
@@ -103,6 +115,11 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.1.1 =
+* Accordion elementor widget added.
+* WooCommerce hide related product addons added.
+
 
 = 1.1.0 =
 * Infobox layout label fixed.
@@ -130,7 +147,7 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 * infobox style updated.
 
 = 1.0.16 =
-* CSS and JS seperatly loaded depending on Widget.
+* CSS and JS separately loaded depending on Widget.
 * Slick slider issue fixed.
 
 = 1.0.15 =
