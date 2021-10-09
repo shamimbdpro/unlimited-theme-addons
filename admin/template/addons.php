@@ -53,6 +53,16 @@ $uta_addon_lists = array(
     ),
 
 
+	// 5. Disable Gutenberg.
+	  array(
+		  'title' => __('Disable Gutenberg', 'unlimited-theme-addons'),
+		  'name' => 'disable-gutenberg',
+		  'default' => array_key_exists('disable-gutenberg', $get_addons_list) && 'off' == $get_addons_list['disable-gutenberg'] || empty($get_addons_list['disable-gutenberg']) ? 'off' : 'on',
+		  'is_free' => 1,
+		  'display' => true,
+	  ),
+
+
 
 
 );

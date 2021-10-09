@@ -73,7 +73,11 @@ class Uta_helpers{
     public function uta_admin_top_bar_option() {
         global $wp_admin_bar;
         $menu_id = 'unlimited-theme-addons';
-        $wp_admin_bar->add_menu(array('id' => $menu_id, 'title' => __('Theme Addons'), 'href' => admin_url() .'/admin.php?page=unlimited-theme-addons'));
+        $wp_admin_bar->add_menu(array(
+			'id' => $menu_id,
+			'title' => __('Theme Addons'),
+			'href' => admin_url() .'/admin.php?page=unlimited-theme-addons',
+		));
     }
 
 

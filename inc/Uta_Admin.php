@@ -158,7 +158,7 @@ class Uta_Admin
             }
             update_option('unlimited_theme_addons_active_addons', $data);
 
-            $response['message'] = 'sucess';
+            $response['message'] = 'success';
             wp_send_json_success($response);
         }
 

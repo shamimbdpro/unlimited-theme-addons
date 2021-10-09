@@ -29,4 +29,10 @@ if ( array_key_exists('wc-hide-related-product', $addons_list) && 'off' !== $add
 }
 
 
+// 5. Disable Gutenberg.
+if ( array_key_exists('disable-gutenberg', $addons_list) && 'off' !== $addons_list['disable-gutenberg'] ) {
+    include_once(UTA_PLUGIN_PATH . 'inc/addons/disable-gutenberg/disable-gutenberg.php');
+}
+
+
 

@@ -4,7 +4,7 @@ Donate link: https://codepopular.com/product/unlimited-theme-addons/
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.8
-Stable tag: 1.1.1
+Stable tag: 1.1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -64,6 +64,7 @@ e.g.
 - **Hide WooCommerce Price** - If you are using WooCommerce and want to hide price then this plugin for you. To hide price for WooCommerce first have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **WooCommerce Direct Checkout** - You can skip cart page and and redirect to checkout page after added to cart. To enable direct checkout you have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **WooCommerce Hide Related Products** - You can disable or remove woocommerce related product from your website by enabling this addons. To hide the WooCommerce related product you have to enable the extension from *Dashboard > Theme Addons > Addons*.
+- **Disable Gutenberg** - Enable classic editor and disable gutenberg from your dashboard. To enable the extension navigate to *Dashboard > Theme Addons > Addons*.
 
 
 ### [**Try Premium Version with $4.99**](https://codepopular.com/product/unlimited-theme-addons-pro/)
@@ -115,6 +116,17 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 5. Before after compare
 
 == Changelog ==
+
+= 1.1.3 =
+* Addons added to disable gutenberg and enable classic editor.
+
+= 1.1.2 =
+* Readme.txt updated.
+
+= 1.1.1 =
+* Accordion elementor widget added.
+* WooCommerce hide related product addons added.
+
 
 = 1.1.1 =
 * Accordion elementor widget added.
