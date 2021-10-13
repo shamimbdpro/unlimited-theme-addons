@@ -98,10 +98,10 @@ Unlimited Theme Addon is the newest creation to the product line up of [CodePopu
 
 No, We have provided minified css to optimize your website.
 
-### How to remove Related Product in WooCommerce?
+## How to remove Related Product in WooCommerce?
 Its easy. Just click on theme addons on admin top bar > Navigate to addons > Enable the addons.
 
-### How to hide admin bar in frontend?
+## How to hide admin bar in frontend?
 To hide the admin bar just click on Theme Addons > Addons > Then enable the addons.
 
 ## How to hide price in WooCommmerce?
