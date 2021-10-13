@@ -8,7 +8,7 @@ Stable tag: 1.1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 
-##Description
+## Description
 Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
 
 
@@ -17,6 +17,9 @@ Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder 
 Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are reliable and hgihly skilled on Elementor addons development.
 
 ### [Elementor](https://wordpress.org/plugins/elementor/) page builder is required for below features.
+
+## Download
+### [Download Now](https://downloads.wordpress.org/plugin/unlimited-theme-addons.zip)
 
 ## Installation
 Here are a few steps to describe how to install the plugin and get it working.
@@ -91,128 +94,21 @@ Unlimited Theme Addon is the newest creation to the product line up of [CodePopu
 
 ## Frequently Asked Questions
 
-= Do WordPress Plugins Affect Site Speed? =
+## Do WordPress Plugins Affect Site Speed?
 
 No, We have provided minified css to optimize your website.
 
-= How to remove Related Product in WooCommerce? =
+### How to remove Related Product in WooCommerce?
 Its easy. Just click on theme addons on admin top bar > Navigate to addons > Enable the addons.
 
-= How to hide admin bar in frontend? =
+### How to hide admin bar in frontend?
 To hide the admin bar just click on Theme Addons > Addons > Then enable the addons.
 
-= How to hide price in WooCommmerce? =
+## How to hide price in WooCommmerce?
 To hide the WooCommerce price just click on Theme Addons > Then click on Addons > Then enable the addons from there.
 
-= How can I discuss the plugin issues? =
+## How can I discuss the plugin issues?
 You're more than welcome! we are ready to solve your issue. you can ask the query here.
 https://wordpress.org/support/plugin/unlimited-theme-addons
 
-== Screenshots ==
-1. Latest Blog
-2. Product Grid
-3. Product List
-4. Testimonial
-5. Before after compare
-
-== Changelog ==
-
-= 1.1.3 =
-* Addons added to disable gutenberg and enable classic editor.
-
-= 1.1.2 =
-* Readme.txt updated.
-
-= 1.1.1 =
-* Accordion elementor widget added.
-* WooCommerce hide related product addons added.
-
-
-= 1.1.1 =
-* Accordion elementor widget added.
-* WooCommerce hide related product addons added.
-
-
-= 1.1.0 =
-* Infobox layout label fixed.
-* Block quote widget added.
-
-= 1.0.21 =
-* CSS loading issue fixed.
-
-= 1.0.20 =
-* Addons added for hide price.
-* Addons added for add to cart redirect to checkout.
-* Addons added for hide admin bar in frontend.
-
-= 1.0.19 =
-* Plugin description issue fixed.
-
-= 1.0.18 =
-* Code standard checked.
-* Plugin description updated.
-* WordPress latest version 5.8 tested.
-
-= 1.0.17 =
-* Testimonial updated.
-* Elementor dynamic style fixed.
-* infobox style updated.
-
-= 1.0.16 =
-* CSS and JS separately loaded depending on Widget.
-* Slick slider issue fixed.
-
-= 1.0.15 =
-* Counter up widget added.
-* PHP issue fixed.
-* Admin page added to manage widget.
-
-= 1.0.14 =
-* Multiple button style added.
-
-= 1.0.13 =
-* Multiple Team style added.
-* Multiple Pricing style added.
-* Company Logo Slider Added.
-
-= 1.0.12 =
-* 12 type of style added for infobox.
-
-= 1.0.11 =
-* Product Search Bar Fixed.
-* Testimonial Updated.
-
-= 1.0.9 =
-* Woocommerce Product Search Added.
-
-= 1.0.8 =
-* WordPress latest version( 5.7 ) tested.
-
-= 1.0.7=
-* Product list widget fixed.
-* Title widget fixed.
-* WordPress latest Version Tested.
-* Woocommerce latest version( 4.9.2 ) tested.
-
-= 1.0.6=
-* Option added to change before after comparison label.
-* Woocommerce latest version( 4.9 ) tested.
-
-= 1.0.5=
-* Product grid updated.
-* Product list added.
-* Tested up to 5.6.
-* Ratings added in testimonial.
-
-= 1.0.4=
-* Before after image comparison added
-
-= 0.0.3 =
-*Css Issue Fixed*
-
-= 0.0.2 =
-*Css Issue Fixed*
-
-= 0.0.1 =
-*initial release*
 
