@@ -1,0 +1,32 @@
+.uta-quote-default {
+  background: #7900ff;
+  position: relative;
+  padding: 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-quote-default p {
+  font-size: 18px;
+  line-height: 30px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.uta-quote-default i {
+  font-size: 50px;
+  position: absolute;
+  top: -26px;
+  color: #ff8484;
+}
+
+.uta-quote-default span {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: .3px;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+/*# sourceMappingURL=blockquote.css.map */

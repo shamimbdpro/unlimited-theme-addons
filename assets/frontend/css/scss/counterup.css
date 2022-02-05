@@ -1,0 +1,125 @@
+/*--------------------------------------------------------------
+# Counter Up.
+--------------------------------------------------------------*/
+.uta-counter-item {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 10px 0px #ccc;
+          box-shadow: 0px 0px 10px 0px #ccc;
+  padding: 50px 30px;
+  overflow: hidden;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-counter-item .icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background: linear-gradient(140deg, #D87FF6 0%, #7383FF 100%);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+  color: #fff;
+}
+
+.uta-counter-item h2 {
+  font-size: 43px;
+  margin-bottom: 8px;
+}
+
+/*Style 01*/
+.uta-counter-item-01 .icon {
+  float: left;
+}
+
+.uta-counter-item-01 .content {
+  overflow: hidden;
+}
+
+/*Style 02*/
+.uta-counter-item-02 {
+  padding: 30px;
+  background: #131867;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.uta-counter-item-02 .icon {
+  float: left;
+  border-radius: 0px;
+  width: 60px;
+  height: 60px;
+  background: #3E3A7C;
+}
+
+.uta-counter-item-02 .content {
+  overflow: hidden;
+}
+
+.uta-counter-item-02 .content p {
+  color: #fff;
+}
+
+/*
+ * Style 3
+*/
+.uta-counter-item-03 {
+  position: relative;
+  overflow: hidden;
+}
+
+.uta-counter-item-03::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 5px;
+  background: linear-gradient(140deg, #D87FF6 0%, #7383FF 100%);
+  bottom: 0;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  left: 50%;
+  right: 50%;
+}
+
+.uta-counter-item-03:hover:after {
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+
+@media (max-width: 360px) {
+  .uta-counter-item-01 .icon {
+    float: inline-end;
+    margin: 0 auto;
+  }
+  .uta-counter-item-01 .content {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 20px;
+  }
+  .uta-counter-item-02 .icon {
+    float: inline-end;
+    margin: 0 auto;
+  }
+  .uta-counter-item-02 .content {
+    overflow: hidden;
+    width: 100%;
+    padding-top: 20px;
+  }
+}
+/*# sourceMappingURL=counterup.css.map */

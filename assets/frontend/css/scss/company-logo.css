@@ -1,0 +1,447 @@
+/*--------------------------------------------------------------
+## Unlimited theme addons - Company Logo.
+--------------------------------------------------------------*/
+.uta-company-logo ul {
+  margin: 0;
+  padding: 0;
+}
+
+.uta-company-logo li {
+  list-style: none;
+}
+
+.uta-company-logo .slick-prev:before, .uta-company-logo .slick-next:before {
+  font-size: 20px;
+}
+
+.uta-company-logo .slick-dots li button:before {
+  font-size: 26px;
+}
+
+.uta-company-logo .slick-arrow {
+  background: #333;
+}
+
+.uta-company-logo .slick-prev.slick-arrow {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.uta-company-logo .slick-next.slick-arrow {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.uta-company-logo .slick-next:focus, .uta-company-logo .slick-next:hover, .uta-company-logo .slick-prev:focus, .uta-company-logo .slick-prev:hover {
+  color: #fff !important;
+  outline: 0;
+  background: #333;
+}
+
+/*-------- Style default ------------*/
+.uta-company-logo-style-default .uta-company-logo-item-single {
+  border-style: solid;
+  border-width: 0px 0px 0px 0px;
+  background-color: #ffffff;
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-default .uta-company-logo-item-single img {
+  width: 85%;
+  margin: 0 auto;
+  opacity: .5;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-default .uta-company-logo-item-single img:hover {
+  opacity: 1;
+}
+
+/*-------- Style 01 ------------*/
+.uta-company-logo-style-1 .uta-company-logo-item-single {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  margin: 5px 10px;
+}
+
+.uta-company-logo-style-1 .uta-company-logo-item-single img {
+  width: 70%;
+  margin: 0 auto;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-1 .uta-company-logo-item-single img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/*-------- Style 02 ------------*/
+.uta-company-logo-style-2 .uta-company-logo-single-full {
+  background-color: transparent;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1;
+}
+
+.uta-company-logo-style-2 .uta-company-logo-single-full .uta-partner-overly {
+  position: absolute;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.uta-company-logo-style-2 .uta-company-logo-single-full:hover .uta-partner-overly {
+  top: 0;
+}
+
+.uta-company-logo-style-2 .uta-company-logo-single-full img {
+  display: initial;
+}
+
+/*-------- Style 03 ------------*/
+.uta-company-logo-style-3 .uta-company-logo-single-full {
+  text-align: center;
+}
+
+.uta-company-logo-style-3 .uta-company-logo-single-full img {
+  display: initial;
+}
+
+.uta-company-logo-style-3 .uta-company-logo-single-full {
+  text-align: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-3 .uta-company-logo-single-full:hover {
+  background: #ddd;
+}
+
+/*-------- Style 04 ------------*/
+.uta-company-logo-style-4 .uta-company-logo-single {
+  width: 20%;
+  float: left;
+  text-align: center;
+  border: 1px solid #333;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: none;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+
+.uta-company-logo-style-4 .uta-company-logo-single::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #26915e;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+}
+
+.uta-company-logo-style-4 .uta-company-logo-single:hover:after {
+  opacity: 1;
+}
+
+.uta-company-logo-style-4 .uta-company-logo-single:last-child {
+  border-right: 1px solid #333;
+}
+
+.uta-company-logo-style-4 .uta-company-logo-single img {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-4 .uta-company-logo-single:hover img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/*-------- Style 05 ------------*/
+.uta-company-logo-style-5 .uta-company-logo-single {
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+}
+
+.uta-company-logo-style-5 .uta-company-logo-single-full {
+  text-align: center;
+  position: relative;
+  border: 5px solid #bfc0c1;
+}
+
+.uta-company-logo-style-5 .uta-company-logo-single-full::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #bfc0c1;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.uta-company-logo-style-5 .uta-company-logo-single-full:hover::after {
+  height: 0px;
+}
+
+.uta-company-logo-style-5 .uta-company-logo-single-full img {
+  width: 94%;
+  margin: 0 auto;
+}
+
+/*-------- Style 06 ------------*/
+.uta-company-logo-style-6 .uta-company-logo-single {
+  padding: 10px;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full {
+  background: #d2d2d2;
+  position: relative;
+  padding: 20px 0px;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full img {
+  width: auto;
+  margin: 0 auto;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full .overly {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ff9090;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+  bottom: 0;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  opacity: 0;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full:hover .overly {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full .overly h2 {
+  color: #423434;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.uta-company-logo-style-6 .uta-company-logo-single-full {
+  overflow: hidden;
+}
+
+/*-------- Style 07 ------------*/
+.uta-company-logo-style-7 .uta-company-logo-single {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-company-logo-style-7 .uta-company-logo-single-full {
+  border: 1px solid #ccc;
+  text-align: center;
+  padding: 40px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.uta-company-logo-style-7 .uta-company-logo-single-full img {
+  display: initial;
+}
+
+.uta-company-logo-style-7 .uta-company-logo-single-full .uta-partner-overly {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.uta-company-logo-style-7 .uta-company-logo-single-full:hover .uta-partner-overly {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+/*-------- Style 08 ------------*/
+.uta-company-logo-style-8 .uta-company-logo-single {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-company-logo-style-8 .uta-company-logo-single-full {
+  border: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0px;
+}
+
+.uta-company-logo-style-8 .uta-company-logo-single-full img {
+  margin: 0 auto;
+}
+
+.uta-company-logo-style-8 .uta-company-logo-single-full .uta-partner-overly {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #18191a;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.uta-company-logo-style-8 .uta-company-logo-single-full:hover .uta-partner-overly {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
+/*-------- Style 09 ------------*/
+.uta-company-logo-style-9 .uta-company-logo-single {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-company-logo-style-9 .uta-company-logo-single-full img {
+  width: 100%;
+}
+
+.uta-company-logo-style-9 .uta-company-logo-single-full {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 30px;
+  border: 1px solid #ddd;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: hidden;
+}
+
+.uta-company-logo-style-9 .uta-company-logo-single-full:hover {
+  border: 7px solid #333;
+}
+
+/*-------- Style 10 ------------*/
+.uta-company-logo-style-10 .uta-company-logo-single {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uta-company-logo-style-10 .uta-company-logo-single-full {
+  background: #666;
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.uta-company-logo-style-10 .uta-company-logo-single-full img {
+  margin: 0 auto;
+}
+/*# sourceMappingURL=company-logo.css.map */
