@@ -10,10 +10,7 @@
     margin-right: -10px;
 }
 .uta-blog-item {
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
     transition: 0.3s;
     border-radius: 6px;
     overflow: hidden;
@@ -49,7 +46,6 @@ ul.uta-blog-item-meta li{
 
   span{
     background: rgba(0, 0, 0, 0.50);
-    -webkit-box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     box-shadow: 0px 10px 30px 0px rgba(54, 56, 110, 0.15);
     position: absolute;
     left: 10px;
@@ -159,7 +155,6 @@ ul.uta-blog-item-meta li{
 }
 .uta-blog-item-style-1 .thumbnail img{
   width: 100%;
-  -webkit-transition:all .3s ease-in-out;
   transition: all .3s ease-in-out;
 }
 .uta-blog-item-style-1:hover .thumbnail img{
@@ -235,7 +230,6 @@ ul{
   font-size: 16px;
 }
 .uta-blog-item-style.uta-blog-item-style-1 .content .read-more a i{
-  -webkit-transition:all .3s ease-in-out;
   transform: all .3s ease-in-out;
 }
 .uta-blog-item-style.uta-blog-item-style-1 .content .read-more a:hover{
@@ -245,7 +239,6 @@ ul{
   padding-left: 7px;
 }
 a{
-  -webkit-transition:all .3s ease-in-out;
   transform: all .3s ease-in-out;
 }
 
@@ -367,7 +360,6 @@ a{
 .uta-blog-item-style.uta-blog-item-style-3 .overly h3 a:hover{
   color: #f38080;
 }
-.uta-blog-item-style.uta-blog-item-style-3 .overly .meta{}
 .uta-blog-item-style.uta-blog-item-style-3 .overly .meta span{
   color: #f38080;
   font-size: 16px;
@@ -533,7 +525,6 @@ a{
     height: 100%;
     display: flex;
     justify-content: center;
-    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     align-items: center;
     opacity: 0;
@@ -548,7 +539,6 @@ a{
     align-items: center;
     font-size: 20px;
     border-radius: 50%;
-  -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .uta_blog_list_style-1 .list-blog-thumbnail .overly a:hover{
@@ -583,7 +573,6 @@ a{
     border-radius: 50%;
     background: #f5a227;
     font-size: 15px;
-    -webkit-transition: all.3s ease-in-out;
     transition: all .3s ease-in-out;
     color: #fff;
 }
@@ -610,7 +599,6 @@ a{
     height: 100%;
     display: flex;
     justify-content: center;
-    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     align-items: center;
     opacity: 0;
@@ -625,7 +613,6 @@ a{
     align-items: center;
     font-size: 20px;
     border-radius: 50%;
-  -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
 }
 .uta_blog_list_style-2 .list-blog-thumbnail .overly a:hover{
@@ -660,7 +647,6 @@ a{
     border-radius: 50%;
     background: #f5a227;
     font-size: 15px;
-    -webkit-transition: all.3s ease-in-out;
     transition: all .3s ease-in-out;
     color: #fff;
 }

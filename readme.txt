@@ -1,10 +1,10 @@
 === Unlimited Theme Addon For Elementor and WooCommerce ===
-Contributors: codepopular, shamimtpi, bokhtyer
-Donate link: https://codepopular.com/product/unlimited-theme-addons/
+Contributors: codepopular, shamimtpi
+Donate link: https://ko-fi.com/codepopular
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.9
-Stable tag: 1.1.4
+Stable tag: 1.1.5
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -114,11 +114,14 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 3. Product List
 4. Testimonial
 5. Before after compare
-
+6. Team Member
 == Changelog ==
 
+= 1.1.5 =
+* Team Member Design Updated.
+
 = 1.1.4 =
-* Latest Version(5.9) Compatibility Checke.
+* Latest Version(5.9) Compatibility Check.
 
 = 1.1.3 =
 * Addons added to disable gutenberg and enable classic editor.

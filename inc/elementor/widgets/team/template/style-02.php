@@ -1,22 +1,35 @@
 <div class="team-style-2">
-    <div class="team-img-2">
-    <?php echo wp_get_attachment_image($settings['image']['id'], 'full');?>
+    <?php echo wp_get_attachment_image($settings['image']['id'], 'full'); ?>
+    <div class="team-style-2-overly-top">
+        <div class="team-style-2-overly-top-full">
+            <h3 <?php echo esc_html($this->get_render_attribute_string('name')); ?>><?php echo esc_html($settings['name']); ?></h3>
+            <h5 <?php echo esc_html($this->get_render_attribute_string('designation')); ?>><?php echo esc_html($settings['designation']); ?></h5>
+            <ul>
+                <?php foreach ( $settings['social_media'] as $single_social ) {
+
+                    if ( ! empty($single_social['social_url']['url']) ) {
+                        $this->add_link_attributes('social_url', $single_social['social_url']);
+                    }
+
+                ?>
+                    <li>
+                        <a <?php echo $this->get_render_attribute_string('social_url'); //phpcs:ignore ?>>
+                            <?php \Elementor\Icons_Manager::render_icon($single_social['social_icon'], [ 'aria-hidden' => 'true' ]); ?>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
     </div>
-    <div class="team-style-2-overly">
-        <div class="team-style-2-overly-full">
-            <h3 <?php echo esc_html(  $this->get_render_attribute_string( 'name' ) ); ?>><?php echo esc_html( $settings['name'] ); ?></h3>
-            <p <?php echo esc_html( $this->get_render_attribute_string( 'designation' ) ); ?>><?php echo esc_html( $settings['designation'] ); ?></p>
-            <div class="social">
-                <ul>
-                    <?php foreach ( $settings['social_media'] as $single_social ) { ?>
+    <div class="team-style-2-social-bottom">
+        <ul>
+            <?php foreach ( $settings['social_media'] as $single_social ) { ?>
                 <li>
-                    <a href="<?php echo esc_attr( $single_social['social_url'] ) ?>">
-                        <?php \Elementor\Icons_Manager::render_icon( $single_social['social_icon'], [ 'aria-hidden' => 'true' ] );?>
+                    <a <?php echo $this->get_render_attribute_string('social_url'); //phpcs:ignore ?>>
+                        <?php \Elementor\Icons_Manager::render_icon($single_social['social_icon'], [ 'aria-hidden' => 'true' ]); ?>
                     </a>
                 </li>
-                <?php } ?>
-                </ul>
-            </div>
-        </div>
+            <?php } ?>
+        </ul>
     </div>
 </div>
