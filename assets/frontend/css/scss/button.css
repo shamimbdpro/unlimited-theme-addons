@@ -1,0 +1,679 @@
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+.uta-btn {
+  border: none;
+  color: #ffffff;
+  display: inline-block;
+  padding: 15px 50px;
+  border-radius: 50px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+  background: #065FD4;
+}
+
+.uta-btn:hover {
+  color: #ffffff;
+}
+
+.uta-btn i {
+  margin-right: 20px;
+}
+
+.uta-btn.shadow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 7px 10px 6px rgba(0, 0, 0, 0.08);
+}
+
+.uta-play-btn > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  border-radius: inherit;
+  border-color: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.uta-play-btn-txt {
+  font-weight: 700;
+  color: #000;
+}
+
+.uta-play-btn-icon {
+  border-radius: 50%;
+  margin-top: -5%;
+  margin-bottom: -5%;
+  letter-spacing: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 20px;
+  width: 3.5em;
+  height: 3.5em;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin-left: 0;
+  margin-right: 20px;
+  border: none;
+  color: #fff;
+}
+
+.uta-btn.bordered {
+  background: #fff;
+  border: 2px solid;
+}
+
+.uta-btn.bordered:hover {
+  color: #333;
+}
+
+@-webkit-keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@keyframes rotate-90 {
+  0% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.uta-button-1 {
+  display: inline-block;
+  padding: 18px 42px;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-bg-two {
+  background-color: #ff7900;
+}
+
+.uta-button-1::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+  border-style: solid;
+  border-width: 80px 100px;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.btn-bg-two::before {
+  border-color: #cd10e7;
+}
+
+.uta-button-1:hover::before {
+  border-color: #0f0c0a;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  opacity: 1;
+}
+
+.uta-button-1:hover {
+  color: #fff !important;
+}
+
+/*
+ * Button 2
+*/
+.uta-button-2 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-2::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #02327b;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-2:hover {
+  color: #fff;
+}
+
+.uta-button-2:hover::after {
+  width: 100%;
+}
+
+/*
+ * Button 3
+*/
+.uta-button-3 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-3::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #02327b;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-3:hover {
+  color: #fff;
+}
+
+.uta-button-3:hover::after {
+  width: 100%;
+}
+
+/*
+ * Button 4
+*/
+.uta-button-4 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-4::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: #02327b;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-4:hover {
+  color: #fff;
+}
+
+.uta-button-4:hover::after {
+  height: 100%;
+}
+
+/*
+ * Button 4
+*/
+.uta-button-5 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-5::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  background: #02327b;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-5:hover {
+  color: #fff;
+}
+
+.uta-button-5:hover::after {
+  height: 100%;
+}
+
+/*
+ * Button 4
+*/
+.uta-button-6 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-6::before {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0%;
+  background: #02327b;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-6:after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0%;
+  background: #02327b;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-6:hover:before {
+  width: 50%;
+}
+
+.uta-button-6:hover:after {
+  width: 50%;
+}
+
+.uta-button-6:hover {
+  color: #fff;
+}
+
+/*
+ * Button 4
+*/
+.uta-button-7 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-7::before {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0%;
+  background: #02327b;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-7::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  background: #02327b;
+  top: 0;
+  right: 50%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-7:hover:before {
+  width: 50%;
+}
+
+.uta-button-7:hover:after {
+  width: 50%;
+}
+
+.uta-button-7:hover {
+  color: #fff;
+}
+
+/*
+ * Button 8
+*/
+.uta-button-8 {
+  padding: 20px 40px;
+  display: inline-block;
+  background: #640dbb;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-8::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #02327b;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.uta-button-8:hover {
+  color: #fff;
+}
+
+.uta-button-8:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+.button-area-9 {
+  overflow: hidden;
+}
+
+.button-9 {
+  z-index: 1;
+  font-weight: 600;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 15px 30px 16px;
+  line-height: 1;
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  text-align: center;
+  background-color: #ff2a60;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.button-9 span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(transparent));
+  background: linear-gradient(top, #ffffff, transparent);
+  -webkit-animation: top 2s linear infinite;
+  animation: top 2s linear infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.button-9 span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(transparent));
+  background: linear-gradient(bottom, #ffffff, transparent);
+  -webkit-animation: bottom 2s linear infinite;
+  animation: bottom 2s linear infinite;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.button-9::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, right top, left top, from(#ffffff), to(transparent));
+  background: linear-gradient(right, #ffffff, transparent);
+  -webkit-animation: right 2s linear infinite;
+  animation: right 2s linear infinite;
+}
+
+.button-9::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(transparent));
+  background: linear-gradient(left, #ffffff, transparent);
+  -webkit-animation: left 2s linear infinite;
+  animation: left 2s linear infinite;
+}
+
+.button-9:hover {
+  background-color: #ff5a00;
+  color: #ffffff;
+}
+
+@-webkit-keyframes left {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes left {
+  0% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes right {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes top {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes top {
+  0% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes bottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  100% {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+/*# sourceMappingURL=button.css.map */

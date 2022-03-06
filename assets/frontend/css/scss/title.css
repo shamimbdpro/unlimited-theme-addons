@@ -1,0 +1,272 @@
+/*--------------------------------------------------------------
+# Section title.
+--------------------------------------------------------------*/
+.section-title h1 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 1px;
+}
+
+.uta_s_h {
+  text-align: center;
+}
+
+.uta-section-headding-1 {
+  max-width: 991px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.uta-section-headding-1 h2 {
+  color: #333;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.uta-section-headding-1 .underline {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #e85c41;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.uta-section-headding-1 .underline::before {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 50px;
+  height: 2px;
+  background: #30343d;
+  position: absolute;
+  left: 15px;
+  top: 4px;
+}
+
+.uta-section-headding-1 .underline:after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  width: 50px;
+  height: 2px;
+  background: #30343d;
+  position: absolute;
+  right: 15px;
+  top: 4px;
+}
+
+.uta-section-headding-1 p {
+  color: #333;
+}
+
+/*
+ * Style 2
+*/
+.uta-section-headding-2 {
+  width: 100%;
+  overflow: hidden;
+}
+
+.uta-section-headding-2 h4 {
+  letter-spacing: .7px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.uta-section-headding-2 span {
+  display: inline-block;
+  position: relative;
+}
+
+.uta-section-headding-2 span i {
+  color: #dca52e;
+}
+
+.uta-section-headding-2 span:after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #dca52e;
+  right: -50px;
+  top: 47%;
+}
+
+.uta-section-headding-2 span::before {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #dca52e;
+  left: -50px;
+  top: 47%;
+}
+
+/*
+ * Style 3
+*/
+.uta-section-headding-3 h2 {
+  position: relative;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+
+.uta-section-headding-3 h2::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #E39803;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 2px;
+}
+
+.uta-section-headding-3 h2::before {
+  content: "";
+  color: beige;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 20px;
+  height: 8px;
+  background: #56b665;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.uta-section-headding-3 p {
+  line-height: 27px;
+  font-size: 17px;
+}
+
+/*
+ * Style 4
+*/
+.uta-section-headding-4 h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.uta-section-headding-4 h2 span {
+  color: #ff6130;
+}
+
+.uta-section-headding-4 p {
+  font-size: 14px;
+}
+
+/*
+ * Style 5
+*/
+.uta-section-headding-05 {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.uta-section-headding-05 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.uta-section-headding-05 p {
+  width: 94%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+@media (max-width: 767px) {
+  .uta-section-headding-05 p {
+    width: 100%;
+  }
+}
+
+.uta-section-headding-05 .title-divider {
+  width: 150px;
+  height: 2px;
+  background: #fff;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+}
+
+.uta-section-headding-05 .title-divider::after {
+  content: "";
+  clear: both;
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #09b9bb;
+  border-radius: 50%;
+  left: 0;
+  right: 0;
+  top: -7px;
+  margin: 0 auto;
+  border: 4px solid #fff;
+}
+
+.uta-section-headding-05 .title-divider.white {
+  background: #09b9bb;
+}
+
+.uta-section-headding-05 .title-divider.white:after {
+  border: 4px solid #09b9bb;
+  background: #fff;
+}
+
+/*
+ * Style 6
+*/
+.uta-section-headding-6 h2 {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #82B60B;
+  display: inline;
+  padding: 3px 20px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.uta-section-headding-6 h3 {
+  font-size: 35px;
+  font-weight: 700;
+  margin-top: 13px;
+  margin-bottom: 5px;
+}
+
+.uta-section-headding-6 p {
+  font-size: 18px;
+}
+/*# sourceMappingURL=title.css.map */
