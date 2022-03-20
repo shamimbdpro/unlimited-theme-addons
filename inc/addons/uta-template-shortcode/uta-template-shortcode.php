@@ -50,8 +50,8 @@ class Uta_Template_Shortcode
             'name_admin_bar'        => __('UTA Templates', 'unlimited-theme-addons'),
             'archives'              => __('List Archives', 'unlimited-theme-addons'),
             'parent_item_colon'     => __('Parent List:', 'unlimited-theme-addons'),
-            'all_items'             => __('All UTA Templates', 'unlimited-theme-addons'),
-            'add_new_item'          => __('Add New UTA Template', 'unlimited-theme-addons'),
+            'all_items'             => __('All Templates', 'unlimited-theme-addons'),
+            'add_new_item'          => __('Add New Template', 'unlimited-theme-addons'),
             'add_new'               => __('Add New', 'unlimited-theme-addons'),
             'new_item'              => __('New UTA Template', 'unlimited-theme-addons'),
             'edit_item'             => __('Edit UTA Template', 'unlimited-theme-addons'),
@@ -174,12 +174,27 @@ class Uta_Template_Shortcode
     }
 
 
+    /**
+     * Add shortcode box inside the page.
+     * 
+     * Shortcode for inside the page so that user can get PHP or normal shortcode.
+     *
+     * @return void
+     */
     public function uta_template_add_meta_boxes(){
         add_meta_box('uta-shortcode-box','Unlimited Theme Addons Template Shortcode',[$this, 'uta_template_add_meta_boxes_content'],'uta_template','side','high');  
     }
 
 
 
+    /**
+     * Shortcode box content
+     * 
+     * Add content for shortcode box inside the custom post type pages.
+     *
+     * @param object $post
+     * @return void
+     */
     function uta_template_add_meta_boxes_content($post){  ?>
         <h4 style="margin-bottom:5px;">Shortcode</h4>
         <input type='text' class='widefat' value='[UTA_SHORTCODE id="<?php echo esc_attr($post->ID); ?>"]' readonly="">
