@@ -175,7 +175,7 @@ class Uta_Template_Shortcode
 
 
     public function uta_template_add_meta_boxes(){
-        add_meta_box('uta-shortcode-box','Unlimited Theme Addons Shortcode Template',[$this, 'uta_template_add_meta_boxes_content'],'uta_template','side','high');  
+        add_meta_box('uta-shortcode-box','Unlimited Theme Addons Template Shortcode',[$this, 'uta_template_add_meta_boxes_content'],'uta_template','side','high');  
     }
 
 
@@ -184,7 +184,7 @@ class Uta_Template_Shortcode
         <h4 style="margin-bottom:5px;">Shortcode</h4>
         <input type='text' class='widefat' value='[UTA_SHORTCODE id="<?php echo esc_attr($post->ID); ?>"]' readonly="">
     
-        <h4 style="margin-bottom:5px;">php Code</h4>
+        <h4 style="margin-bottom:5px;">PHP Code</h4>
         <input type='text' class='widefat' value="&lt;?php echo do_shortcode('[UTA_SHORTCDE id=&quot;<?php echo esc_attr($post->ID); ?>&quot;]'); ?&gt;" readonly="">
         <?php
     }
