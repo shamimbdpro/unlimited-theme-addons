@@ -4,7 +4,16 @@ $get_addons_list = get_option('unlimited_theme_addons_active_addons') == ! '' ? 
 
 $uta_addon_lists = array(
 
-    // 1. Hide Admin Bar.
+    // Enable Shortcode.
+    array(
+        'title' => __('Enable Shortcode', 'unlimited-theme-addons'),
+        'name' => 'uta-template-shortcode',
+        'default' => array_key_exists('uta-template-shortcode', $get_addons_list) && 'off' == $get_addons_list['uta-template-shortcode'] || empty($get_addons_list['uta-template-shortcode']) ? 'off' : 'on',
+        'is_free' => 1,
+        'display' => true,
+    ),
+
+    // Hide Admin Bar.
     array(
         'title' => __('Hide Admin Bar in Frontend', 'unlimited-theme-addons'),
         'name' => 'hide-admin-bar',
@@ -13,7 +22,7 @@ $uta_addon_lists = array(
         'display' => true,
     ),
 
-    // 2. Hide WooCommerce Price.
+    // Hide WooCommerce Price.
     array(
         'title' => __('Hide WooCommerce Price', 'unlimited-theme-addons'),
         'name' => 'hide-wc-price',
@@ -23,7 +32,7 @@ $uta_addon_lists = array(
     ),
 
 
-    // 3. Hide Add To Cart.
+    // Hide Add To Cart.
 	//    array(
 	//        'title' => __('Hide Add to Cart for WooCommerce', 'unlimited-theme-addons'),
 	//        'name' => 'wc-hide-add-to-cart',
@@ -33,7 +42,7 @@ $uta_addon_lists = array(
 	//    ),
 
 
-    // 3. Hide WooCommerce Price.
+    // Hide WooCommerce Price.
     array(
         'title' => __('WooCommerce Direct Checkout', 'unlimited-theme-addons'),
         'name' => 'wc-direct-checkout',
@@ -43,7 +52,7 @@ $uta_addon_lists = array(
     ),
 
 
-    // 4. Hide WooCommerce Related Products.
+    // Hide WooCommerce Related Products.
     array(
         'title' => __('WC Hide Related Product', 'unlimited-theme-addons'),
         'name' => 'wc-hide-related-product',
@@ -53,7 +62,7 @@ $uta_addon_lists = array(
     ),
 
 
-	// 5. Disable Gutenberg.
+	// Disable Gutenberg.
 	  array(
 		  'title' => __('Disable Gutenberg', 'unlimited-theme-addons'),
 		  'name' => 'disable-gutenberg',
