@@ -27,7 +27,7 @@ class Uta_Template_Shortcode
         add_action('elementor/init', [$this, 'uta_template_add_elementor_support']);
         add_filter('manage_uta_template_posts_columns', array($this, 'uta_template_shortcode_column_title'));
         add_action('manage_uta_template_posts_custom_column', array($this, 'uta_template_shortcode_column_content'), 10, 2);
-        add_shortcode("UTA_SHORTCODE", [$this, 'uta_template_render_shortcode']);
+        add_shortcode("uta-shortcode", [$this, 'uta_template_render_shortcode']);
         add_action("add_meta_boxes", [$this, 'uta_template_add_meta_boxes']);
     }
 
@@ -44,10 +44,10 @@ class Uta_Template_Shortcode
     {
 
         $labels = array(
-            'name'                  => _x('UTA Templates', 'Post Type General Name', 'unlimited-theme-addons'),
-            'singular_name'         => _x('UTA Template', 'Post Type Singular Name', 'unlimited-theme-addons'),
-            'menu_name'             => __('UTA Templates', 'unlimited-theme-addons'),
-            'name_admin_bar'        => __('UTA Templates', 'unlimited-theme-addons'),
+            'name'                  => _x('Template Kit', 'Post Type General Name', 'unlimited-theme-addons'),
+            'singular_name'         => _x('Template Kit', 'Post Type Singular Name', 'unlimited-theme-addons'),
+            'menu_name'             => __('Template Kit', 'unlimited-theme-addons'),
+            'name_admin_bar'        => __('Template Kit', 'unlimited-theme-addons'),
             'archives'              => __('List Archives', 'unlimited-theme-addons'),
             'parent_item_colon'     => __('Parent List:', 'unlimited-theme-addons'),
             'all_items'             => __('All Templates', 'unlimited-theme-addons'),
@@ -121,7 +121,7 @@ class Uta_Template_Shortcode
     {
         if ($column_name == 'shortcode') {
 
-            echo esc_html('[UTA_SHORTCODE id="' . $post_ID . '"]');
+            echo esc_html('[uta-shortcode id="' . $post_ID . '"]');
         }
     }
 
@@ -197,10 +197,10 @@ class Uta_Template_Shortcode
      */
     function uta_template_add_meta_boxes_content($post){  ?>
         <h4 style="margin-bottom:5px;">Shortcode</h4>
-        <input type='text' class='widefat' value='[UTA_SHORTCODE id="<?php echo esc_attr($post->ID); ?>"]' readonly="">
+        <input type='text' class='widefat' value='[uta-shortcode id="<?php echo esc_attr($post->ID); ?>"]' readonly="">
     
         <h4 style="margin-bottom:5px;">PHP Code</h4>
-        <input type='text' class='widefat' value="&lt;?php echo do_shortcode('[UTA_SHORTCDE id=&quot;<?php echo esc_attr($post->ID); ?>&quot;]'); ?&gt;" readonly="">
+        <input type='text' class='widefat' value="&lt;?php echo do_shortcode('[uta-shortcode id=&quot;<?php echo esc_attr($post->ID); ?>&quot;]'); ?&gt;" readonly="">
         <?php
     }
 
