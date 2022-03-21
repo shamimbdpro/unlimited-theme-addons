@@ -11,6 +11,7 @@
 	<exclude-pattern>*/vendor/*</exclude-pattern>
 	<exclude-pattern>*/languages/*</exclude-pattern>
 	<exclude-pattern>*/assets*</exclude-pattern>
+	<exclude-pattern>*/freemius*</exclude-pattern>
 
 
 	<!-- Show progress, show the error codes for each message (source). -->
@@ -26,7 +27,7 @@
 	<config name="minimum_supported_wp_version" value="5.0" /> <!-- Minimum WP Version -->
 	<config name="testVersion" value="5.6" /> <!-- Minimum PHP Version -->
 	<config name="text_domain" value="unlimited-theme-addons"/>
-	<config name="installed_paths" value="C:\laragon\www\wpcs" />
+	<config name="installed_paths" value="G:\laragon\www\wpcs" />
 
 	<!-- Rules -->
 

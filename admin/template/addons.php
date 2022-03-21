@@ -6,7 +6,7 @@ $uta_addon_lists = array(
 
     // Enable Shortcode.
     array(
-        'title' => __('Enable Shortcode', 'unlimited-theme-addons'),
+        'title' => __('Enable Template Kit', 'unlimited-theme-addons'),
         'name' => 'uta-template-shortcode',
         'default' => array_key_exists('uta-template-shortcode', $get_addons_list) && 'off' == $get_addons_list['uta-template-shortcode'] || empty($get_addons_list['uta-template-shortcode']) ? 'off' : 'on',
         'is_free' => 1,
