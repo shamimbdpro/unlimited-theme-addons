@@ -25,6 +25,8 @@ class Uta_Template_Shortcode
         add_action('elementor/init', [ $this, 'uta_template_add_elementor_support' ]);
         add_filter('manage_uta_template_posts_columns', array( $this, 'uta_template_shortcode_column_title' ));
         add_action('manage_uta_template_posts_custom_column', array( $this, 'uta_template_shortcode_column_content' ), 10, 2);
+        add_filter('manage_elementor_library_posts_columns', array( $this, 'manage_elementor_library_posts_columns_title' ));
+        add_action('manage_elementor_library_posts_custom_column', array( $this, 'manage_elementor_library_posts_custom_column_content' ), 10, 2);
         add_shortcode("uta-template", [ $this, 'uta_template_render_shortcode' ]);
         add_action("add_meta_boxes", [ $this, 'uta_template_add_meta_boxes' ]);
     }
@@ -87,6 +89,36 @@ class Uta_Template_Shortcode
     public function uta_template_add_elementor_support() {
 
         add_post_type_support('uta_template', 'elementor');
+    }
+
+
+    /**
+     * Custom post type column.
+     * 
+     * Add column in custom post type.
+     *
+     * @param string $defaults
+     * @return void
+     */
+    public  function manage_elementor_library_posts_columns_title( $defaults ) {
+        $defaults['shortcode']  = 'Shortcode';
+        return $defaults;
+    }
+
+    /**
+     * Custom column content
+     * 
+     * Add content for cusotm column in shortcode.
+     *
+     * @param string $column_name
+     * @param int $post_ID
+     * @return void
+     */
+    public function manage_elementor_library_posts_custom_column_content( $column_name, $post_ID ) {
+        if ( 'shortcode' == $column_name ) {
+
+            echo esc_html('[uta-template id="' . $post_ID . '"]');
+        }
     }
 
 
