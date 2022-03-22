@@ -91,37 +91,7 @@ class Uta_Template_Shortcode
         add_post_type_support('uta_template', 'elementor');
     }
 
-
-    /**
-     * Custom post type column.
-     * 
-     * Add column in custom post type.
-     *
-     * @param string $defaults
-     * @return void
-     */
-    public  function manage_elementor_library_posts_columns_title( $defaults ) {
-        $defaults['shortcode']  = 'Shortcode';
-        return $defaults;
-    }
-
-    /**
-     * Custom column content
-     * 
-     * Add content for cusotm column in shortcode.
-     *
-     * @param string $column_name
-     * @param int $post_ID
-     * @return void
-     */
-    public function manage_elementor_library_posts_custom_column_content( $column_name, $post_ID ) {
-        if ( 'shortcode' == $column_name ) {
-
-            echo esc_html('[uta-template id="' . $post_ID . '"]');
-        }
-    }
-
-
+    
     /**
      * Custom post type column.
      * 
@@ -131,7 +101,7 @@ class Uta_Template_Shortcode
      * @return void
      */
     public  function uta_template_shortcode_column_title( $defaults ) {
-        $defaults['shortcode']  = 'Shortcode';
+        $defaults['uta-template-shortcode']  = 'Shortcode';
         return $defaults;
     }
 
@@ -145,7 +115,37 @@ class Uta_Template_Shortcode
      * @return void
      */
     public function uta_template_shortcode_column_content( $column_name, $post_ID ) {
-        if ( 'shortcode' == $column_name ) {
+
+        if ( 'uta-template-shortcode' == $column_name ) {
+            echo esc_html('[uta-template id="' . $post_ID . '"]');
+        }
+    }
+
+
+    /**
+     * Custom post type column.
+     * 
+     * Add column in custom post type.
+     *
+     * @param string $defaults
+     * @return void
+     */
+    public  function manage_elementor_library_posts_columns_title( $defaults ) {
+        $defaults['uta-template-shortcode']  = 'Shortcode';
+        return $defaults;
+    }
+
+    /**
+     * Custom column content
+     * 
+     * Add content for cusotm column in shortcode.
+     *
+     * @param string $column_name
+     * @param int $post_ID
+     * @return void
+     */
+    public function manage_elementor_library_posts_custom_column_content( $column_name, $post_ID ) {
+        if ( 'uta-template-shortcode' == $column_name ) {
 
             echo esc_html('[uta-template id="' . $post_ID . '"]');
         }
