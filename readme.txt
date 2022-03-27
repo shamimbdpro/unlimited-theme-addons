@@ -4,12 +4,12 @@ Donate link: https://ko-fi.com/codepopular
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
 Tested up to: 5.9
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 Requires PHP: 5.6
 License: GPLv2 or later
 
 == Description ==
-Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next step. It is a very essential addon for elementor. if you Looking to add extra functionality to the Elementor page builder then this plugin will be helpful for you. Talented developers have helped grow Elementor even further. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly increase your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to enhance your business to the next level with this plugin.
+Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next level. It is a very essential addon for elementor. if you are Looking to add extra functionality to the Elementor page builder then this plugin will be more effective for you. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to boost your business to the next level with this plugin. You can get Elementor Pro features in free while using the plugin. Elementor template shortcode and custom Template kit is available in free.
 
 
 ### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Buy Pro with $4.99](https://codepopular.com/product/unlimited-theme-addons-pro/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
@@ -60,6 +60,8 @@ e.g.
 
 
 ### Free Extension.
+- **Elementor Template Shortcode** - Elementor Paid version feature is now free into our plugin. You can't get shortcode features without purchasing pro version of ELementor. So without purchasing Pro version of ELementor you can get shortcode features by enabling shortcode addons. To enable the extension from *Dashboard > Theme Addons > Addons*.
+- **Template Kit** - You can make your template reusable in every page by adding shortcode. To enable the extension from *Dashboard > Theme Addons > Addons*.
 - **Hide Admin Bar** - Unlimited Theme Addons allow you to hide admin bar for frontend. To hide admin bar first have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **Hide WooCommerce Price** - If you are using WooCommerce and want to hide price then this plugin for you. To hide price for WooCommerce first have to enable the extension from *Dashboard > Theme Addons > Addons*.
 - **WooCommerce Direct Checkout** - You can skip cart page and and redirect to checkout page after added to cart. To enable direct checkout you have to enable the extension from *Dashboard > Theme Addons > Addons*.
@@ -109,13 +111,20 @@ You're more than welcome! we are ready to solve your issue. you can ask the quer
 https://wordpress.org/support/plugin/unlimited-theme-addons
 
 == Screenshots ==
-1. Latest Blog
-2. Product Grid
-3. Product List
-4. Testimonial
-5. Before after compare
-6. Team Member
+1. Plugin Dasbhoard.
+2. Elementor Template Shortcode.
+3. Template Kit Shortcode.
+4. Testimonial.
+5. Before after compare.
+6. Team Member.
+7. Product List.
+8. Product Grid.
+
+
 == Changelog ==
+
+= 1.1.7 =
+* Shortcode Added For Elementor Template.
 
 = 1.1.6 =
 * Template kit added with shortcode.

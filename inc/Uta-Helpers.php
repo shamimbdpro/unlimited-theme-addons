@@ -75,7 +75,7 @@ class Uta_helpers{
         $menu_id = 'unlimited-theme-addons';
         $wp_admin_bar->add_menu(array(
 			'id' => $menu_id,
-			'title' => __('Theme Addons'),
+			'title' => __('Theme Addons', 'unlimited-theme-addons'),
 			'href' => admin_url() .'/admin.php?page=unlimited-theme-addons',
 		));
     }
