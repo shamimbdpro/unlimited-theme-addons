@@ -69,7 +69,7 @@ class Uta_Infobox extends Widget_Base
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
         $this->start_controls_section(
             'service_section',
             [
@@ -154,7 +154,9 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item, 
+                    {{WRAPPER}} .uta-infobox-item.style-04, 
+                    {{WRAPPER}} .uta-infobox-item.style-06' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -168,7 +170,9 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item, 
+                    {{WRAPPER}} .uta-infobox-item.style-04, 
+                    {{WRAPPER}} .uta-infobox-item.style-06' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -180,7 +184,10 @@ class Uta_Infobox extends Widget_Base
             [
                 'name'     => 'uta_info_item_border',
                 'label'    => esc_html__('Border', 'unlimited-theme-addons'),
-                'selector' => '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06',
+                'selector' => 
+                    '{{WRAPPER}} .uta-infobox-item, 
+                     {{WRAPPER}} .uta-infobox-item.style-04, 
+                     {{WRAPPER}} .uta-infobox-item.style-06',
             ]
         );
         /*
@@ -193,7 +200,9 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item, 
+                    {{WRAPPER}} .uta-infobox-item.style-04, 
+                    {{WRAPPER}} .uta-infobox-item.style-06' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -205,7 +214,10 @@ class Uta_Infobox extends Widget_Base
             [
                 'name'     => 'uta_info_box_shadow',
                 'label'    => __('Box Shadow', 'unlimited-theme-addons'),
-                'selector' => '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06',
+                'selector' => 
+                    '{{WRAPPER}} .uta-infobox-item, 
+                    {{WRAPPER}} .uta-infobox-item.style-04, 
+                    {{WRAPPER}} .uta-infobox-item.style-06',
             ]
         );
 
@@ -215,7 +227,9 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item, .uta-infobox-item.style-04, .uta-infobox-item.style-06' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item, 
+                    {{WRAPPER}} .uta-infobox-item.style-04, 
+                    {{WRAPPER}} .uta-infobox-item.style-06' => 'background-color: {{VALUE}};',
                 ],
             )
         );
@@ -225,7 +239,10 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Hover Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item:hover, .uta-infobox-item.style-04:hover, .uta-infobox-item.style-06:hover, .uta-infobox-item.style-02:after' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item:hover, 
+                    {{WRAPPER}} .uta-infobox-item.style-04:hover, 
+                    {{WRAPPER}} .uta-infobox-item.style-06:hover, 
+                    {{WRAPPER}} .uta-infobox-item.style-02:after' => 'background-color: {{VALUE}};',
                 ],
             )
         );
@@ -251,7 +268,19 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item i, 
+                     {{WRAPPER}} .uta-infobox-item.style-01 .icon, 
+                     {{WRAPPER}} .uta-infobox-item.style-02 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-03 .icon, 
+                     {{WRAPPER}} .uta-infobox-item.style-04 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-05 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-06 .icon, 
+                     {{WRAPPER}} .uta-infobox-item.style-07 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-08 .icon, 
+                     {{WRAPPER}} .uta-infobox-item.style-09 .icon, 
+                     {{WRAPPER}} .uta-infobox-item.style-10 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-11 .icon,
+                     {{WRAPPER}} .uta-infobox-item.style-12 .icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -261,7 +290,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon i, .uta-infobox-item.style-02 .icon i, .uta-infobox-item.style-03 .icon i, .uta-infobox-item.style-04 .icon i, .uta-infobox-item.style-05 .icon i, .uta-infobox-item.style-06 .icon i, .uta-infobox-item.style-07 .icon i, .uta-infobox-item.style-08 .icon i, .uta-infobox-item.style-09 .icon i, .uta-infobox-item.style-10 .icon i, .uta-infobox-item.style-11 .icon i, .uta-infobox-item.style-12 .icon i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item i, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-09 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .icon i' => 'color: {{VALUE}};',
                 ],
             )
         );
@@ -271,7 +312,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item i, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-09 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .icon i' => 'background-color: {{VALUE}};',
                 ],
             )
         );
@@ -281,7 +334,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Hover Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item:hover i, .uta-infobox-item.style-01:hover .icon i, .uta-infobox-item.style-02 .icon:hover i, .uta-infobox-item.style-03:hover .icon i, .uta-infobox-item.style-04:hover .icon i, .uta-infobox-item.style-05:hover .icon i, .uta-infobox-item.style-06:hover .icon i, .uta-infobox-item.style-07:hover .icon i, .uta-infobox-item.style-08:hover .icon i, .uta-infobox-item.style-09:hover .icon i, .uta-infobox-item.style-10:hover .icon i, .uta-infobox-item.style-11:hover .icon i, .uta-infobox-item.style-12:hover .icon i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item:hover i, 
+                    {{WRAPPER}} .uta-infobox-item.style-01:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .icon:hover i, 
+                    {{WRAPPER}} .uta-infobox-item.style-03:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-04:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-05:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-06:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-07:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-09:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-10:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-11:hover .icon i, 
+                    {{WRAPPER}} .uta-infobox-item.style-12:hover .icon i' => 'color: {{VALUE}};',
                 ],
             )
         );
@@ -291,7 +356,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Hover Background', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item:hover i, .uta-infobox-item.style-01:hover .icon, .uta-infobox-item.style-02:hover .icon, .uta-infobox-item.style-03:hover .icon, .uta-infobox-item.style-04:hover .icon, .uta-infobox-item.style-05:hover .icon, .uta-infobox-item.style-06:hover .icon, .uta-infobox-item.style-07:hover .icon, .uta-infobox-item.style-08:hover .icon, .uta-infobox-item.style-09:hover .icon, .uta-infobox-item.style-10:hover .icon, .uta-infobox-item.style-11:hover .icon, .uta-infobox-item.style-12:hover .icon i' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item:hover i, 
+                    {{WRAPPER}} .uta-infobox-item.style-01:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-02:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-03:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-04:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-05:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-06:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-07:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-09:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-10:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-11:hover .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-12:hover .icon i' => 'background-color: {{VALUE}};',
                 ],
             )
         );
@@ -305,7 +382,19 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item i, .uta-infobox-item.style-01 .icon, .uta-infobox-item.style-02 .icon, .uta-infobox-item.style-03 .icon, .uta-infobox-item.style-04 .icon, .uta-infobox-item.style-05 .icon, .uta-infobox-item.style-06 .icon, .uta-infobox-item.style-07 .icon, .uta-infobox-item.style-08 .icon, .uta-infobox-item.style-09 .icon, .uta-infobox-item.style-10 .icon, .uta-infobox-item.style-11 .icon, .uta-infobox-item.style-12 .icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item i, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-09 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .icon, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -323,13 +412,25 @@ class Uta_Infobox extends Widget_Base
          * Padding 
         */
         $this->add_responsive_control(
-            'uta_info_titleg_padding',
+            'uta_info_title_padding',
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content h4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -339,7 +440,20 @@ class Uta_Infobox extends Widget_Base
                 'name'     => 'info_title_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
                 'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector' => '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4',
+                'selector' => 
+                    '{{WRAPPER}} .uta-infobox-item h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content h4',
             ]
         );
         $this->add_control(
@@ -348,7 +462,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item h4, .uta-infobox-item.style-01 .content h4, .uta-infobox-item.style-02 .content h4, .uta-infobox-item.style-03 .content h4, .uta-infobox-item.style-04 .content h4, .uta-infobox-item.style-05 .content h4, .uta-infobox-item.style-06 .content h4, .uta-infobox-item.style-07 h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-08 .content h4, .uta-infobox-item.style-10 .content h4, .uta-infobox-item.style-11 .content h4, .uta-infobox-item.style-12 .content h4' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content h4' => 'color: {{VALUE}};',
                 ],
             )
         );
@@ -358,7 +484,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Hover Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item h4:hover, .uta-infobox-item.style-01:hover .content h4, .uta-infobox-item.style-02:hover .content h4, .uta-infobox-item.style-03:hover .content h4, .uta-infobox-item.style-04:hover .content h4, .uta-infobox-item.style-05:hover .content h4, .uta-infobox-item.style-06:hover .content h4, .uta-infobox-item.style-07:hover h4, .uta-infobox-item.style-08:hover .content h4, .uta-infobox-item.style-08:hover .content h4, .uta-infobox-item.style-10:hover .content h4, .uta-infobox-item.style-11:hover .content h4, .uta-infobox-item.style-12:hover .content h4' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item h4:hover, 
+                    {{WRAPPER}} .uta-infobox-item.style-01:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-02:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-03:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-04:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-05:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-06:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-07:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-10:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-11:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-12:hover .content h4' => 'color: {{VALUE}};',
                 ],
             )
         );
@@ -383,7 +521,19 @@ class Uta_Infobox extends Widget_Base
                 'type'       => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
-                    '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .uta-infobox-item p, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -393,7 +543,20 @@ class Uta_Infobox extends Widget_Base
                 'name'     => 'info_content_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
                 'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector' => '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p',
+                'selector' => 
+                    '{{WRAPPER}} .uta-infobox-item p, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content p',
             ]
         );
         $this->add_control(
@@ -402,7 +565,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item p, .uta-infobox-item.style-01 .content p, .uta-infobox-item.style-02 .content p, .uta-infobox-item.style-03 .content p, .uta-infobox-item.style-04 .content p, .uta-infobox-item.style-05 .content p, .uta-infobox-item.style-06 .content p, .uta-infobox-item.style-07 p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-08 .content p, .uta-infobox-item.style-10 .content p, .uta-infobox-item.style-11 .content p, .uta-infobox-item.style-12 .content p' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item p, 
+                    {{WRAPPER}} .uta-infobox-item.style-01 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-02 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-03 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-04 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-05 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-06 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-07 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-10 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-11 .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-12 .content p' => 'color: {{VALUE}};',
                 ],
             )
         );
@@ -412,7 +587,19 @@ class Uta_Infobox extends Widget_Base
                 'label'     => __('Hover Color', 'unlimited-theme-addons'),
                 'type'      => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .uta-infobox-item p:hover, .uta-infobox-item.style-01:hover .content p, .uta-infobox-item.style-02:hover .content p, .uta-infobox-item.style-03:hover .content p, .uta-infobox-item.style-04:hover .content p, .uta-infobox-item.style-05:hover .content p, .uta-infobox-item.style-06:hover .content p, .uta-infobox-item.style-07:hover p, .uta-infobox-item.style-08:hover .content h4, .uta-infobox-item.style-08:hover .content p, .uta-infobox-item.style-10:hover .content p, .uta-infobox-item.style-11:hover .content p, .uta-infobox-item.style-12:hover .content p' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .uta-infobox-item p:hover, 
+                    {{WRAPPER}} .uta-infobox-item.style-01:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-02:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-03:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-04:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-05:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-06:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-07:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .content h4, 
+                    {{WRAPPER}} .uta-infobox-item.style-08:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-10:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-11:hover .content p, 
+                    {{WRAPPER}} .uta-infobox-item.style-12:hover .content p' => 'color: {{VALUE}};',
                 ],
             )
         );

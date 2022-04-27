@@ -93,7 +93,7 @@ class Uta_Blockquote extends Widget_Base
      *
      * @return string|array
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         // Register content controls.
         $this->uta_blockquote_controls();

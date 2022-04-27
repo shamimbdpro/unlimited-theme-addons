@@ -102,7 +102,7 @@ class Uta_CounterUP extends Widget_Base
      * Start widget control.
      * @return mixed
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
         /**
          * Start logo section.

@@ -62,7 +62,7 @@ class Uta_Search extends Widget_Base
         return 'https://codepopular.com/contact/';
     }
 
-    protected function _register_controls() {
+    protected function register_controls() {
 
         $this->start_controls_section(
             'product_search_section',

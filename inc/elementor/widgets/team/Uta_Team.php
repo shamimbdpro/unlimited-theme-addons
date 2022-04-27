@@ -108,7 +108,7 @@ class Uta_Team extends Widget_Base
      *
      * @return void
      */
-    protected function _register_controls() {
+    protected function register_controls() {
 
 
         $this->uta_team_controls();
