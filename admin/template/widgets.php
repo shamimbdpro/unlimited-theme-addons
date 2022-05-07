@@ -4,7 +4,7 @@ $widget_list = get_option('unlimited_theme_addons_active_widgets') == ! '' ? get
 
 $uta_widget_lists = array(
 
-    // 1. Woocommerce product grid.
+    // Woocommerce product grid.
     array(
         'title'       => __('WooCommerce Product Grid', 'unlimited-theme-addons'),
         'name'        => 'woocommerce-product-grid',
@@ -12,7 +12,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 2. Woocommerce Product List.
+    // Woocommerce Product List.
     array(
         'title'       => __('WooCommerce Product List', 'unlimited-theme-addons'),
         'name'        => 'woocommerce-product-list',
@@ -20,7 +20,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 3. Woocommerce Product Search.
+    // Woocommerce Product Search.
     array(
         'title'       => __('WooCommerce Product Search', 'unlimited-theme-addons'),
         'name'        => 'woocommerce-product-search',
@@ -28,7 +28,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 4. Section Title.
+    // Section Title.
     array(
         'title'       => __('Section Title', 'unlimited-theme-addons'),
         'name'        => 'section-title',
@@ -36,7 +36,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 5. Team.
+    // Team.
     array(
         'title'       => __('Team', 'unlimited-theme-addons'),
         'name'        => 'team',
@@ -44,7 +44,15 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 6. Testimonial.
+    // Team Member Carousel.
+    array(
+        'title'       => __('Team Member Carousel', 'unlimited-theme-addons'),
+        'name'        => 'team-member-carousel',
+        'default'     => array_key_exists('team-member-carousel', $widget_list) && 'off' == $widget_list['team'] ? 'off' : 'on',
+        'is_free'     => Uta_helpers::is_uta_pro_installed(),
+    ),
+
+    // Testimonial.
     array(
         'title'       => __('Testimonial', 'unlimited-theme-addons'),
         'name'        => 'testimonial',
@@ -52,7 +60,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 7. Video.
+    // Video.
     array(
         'title'       => __('Video', 'unlimited-theme-addons'),
         'name'        => 'video',
@@ -60,7 +68,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 8. Image Comparison.
+    // Image Comparison.
     array(
         'title'       => __('Image Comparison', 'unlimited-theme-addons'),
         'name'        => 'image-comparison',
@@ -68,7 +76,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 9. Button.
+    // Button.
     array(
         'title'       => __('Button', 'unlimited-theme-addons'),
         'name'        => 'button',
@@ -76,7 +84,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 10. Infobox.
+    // Infobox.
     array(
         'title'       => __('Infobox', 'unlimited-theme-addons'),
         'name'        => 'infobox',
@@ -84,7 +92,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 11. Blog.
+    // Blog.
     array(
         'title'       => __('Blog', 'unlimited-theme-addons'),
         'name'        => 'blog',
@@ -92,7 +100,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 12. Company Logo.
+    // Company Logo.
     array(
         'title'       => __('Company Logo', 'unlimited-theme-addons'),
         'name'        => 'company-logo',
@@ -100,7 +108,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 13. Pricing.
+    // Pricing.
     array(
         'title'       => __('Pricing', 'unlimited-theme-addons'),
         'name'        => 'pricing',
@@ -108,7 +116,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 14. Counter Up.
+    // Counter Up.
     array(
         'title'       => __('Counter Up', 'unlimited-theme-addons'),
         'name'        => 'counter',
@@ -116,7 +124,7 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-    // 15. Block Quote.
+    // Block Quote.
     array(
         'title'       => __('Blockquote', 'unlimited-theme-addons'),
         'name'        => 'blockquote',
@@ -124,15 +132,15 @@ $uta_widget_lists = array(
         'is_free'     => true,
     ),
 
-	// 16. Woocommerce Product Carousel.
+	// Woocommerce Product Carousel.
     array(
-        'title'       => __('Countdown Pro', 'unlimited-theme-addons'),
-        'name'        => 'countdown-pro',
-        'default'     => array_key_exists('counter', $widget_list) && 'off' == $widget_list['counter'] ? 'off' : 'on',
+        'title'       => __('Countdown', 'unlimited-theme-addons'),
+        'name'        => 'countdown',
+        'default'     => array_key_exists('countdown', $widget_list) && 'off' == $widget_list['countdown'] ? 'off' : 'on',
         'is_free'     => Uta_helpers::is_uta_pro_installed(),
     ),
 
-    // 17. Accordion.
+    // Accordion.
     array(
         'title'       => __('Accordion', 'unlimited-theme-addons'),
         'name'        => 'accordion',
