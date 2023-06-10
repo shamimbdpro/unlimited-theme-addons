@@ -3,8 +3,8 @@ Contributors: codepopular, shamimtpi
 Donate link: https://ko-fi.com/codepopular
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
-Tested up to: 5.9
-Stable tag: 1.1.8
+Tested up to: 6.2
+Stable tag: 1.1.9
 Requires PHP: 5.6
 License: GPLv2 or later
 
