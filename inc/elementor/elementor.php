@@ -270,7 +270,7 @@ class Unlimited_Theme_Addons
         // Counter
         wp_register_script(
             'uta-jquery-appear',
-            'https://codepopular.com/demo/template/ultraline-it-business-template/assets/js/jquery.appear.min.js',
+            UTA_PLUGIN_URL . 'assets/frontend/js/library/counterup/jquery.appear.min.js',
             array( 'jquery' ),
             UTA_PLUGIN_VERSION,
             true
