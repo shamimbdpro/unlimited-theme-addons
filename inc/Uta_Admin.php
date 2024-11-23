@@ -24,6 +24,9 @@ class Uta_Admin
         // Create admin menu.
         add_action('admin_menu', [ $this, 'register_admin_menu_callback' ]);
 
+        // Plugin Action Links.
+        add_filter('plugin_action_links_' . UTA_PLUGIN_BASENAME, array( $this, 'uta_plugin_action_links_callback' ));
+
         // Load css and js.
         add_action('admin_enqueue_scripts', array( $this, 'uta_admin_script_callback' ));
 
@@ -57,7 +60,7 @@ class Uta_Admin
 
     /**
      * Admin menu page callback.
-     * 
+     *
      * @return mixed
      */
     public function uta_admin_page_callback() {
@@ -70,7 +73,7 @@ class Uta_Admin
 
     /**
      * Remove admin notices in admin page.
-     * 
+     *
      * @return array|mixed.
      */
     public function uta_remove_admin_action() {
@@ -80,7 +83,7 @@ class Uta_Admin
 
     /**
      * load admin style and script.
-     * 
+     *
      * @return string.
      */
     public function uta_admin_script_callback() {
@@ -111,14 +114,14 @@ class Uta_Admin
 
     /**
      * Handle admin ajax submission.
-     * 
+     *
      * @return array
      */
     function uta_admin_widgets_save_callback() {
 
         $widget_lists = isset($_POST['widget_lists']) ? sanitize_text_field(wp_unslash($_POST['widget_lists'])) : array();
         if ( $widget_lists ) {
-            
+
             // Check valid request form user.
             check_ajax_referer('uta-admin-js');
 
@@ -140,14 +143,14 @@ class Uta_Admin
 
     /**
      * Hanle ajax form submission for adodns setitngs.
-     * 
+     *
      * @return array
      */
     function uta_admin_addons_save_callback() {
 
         $addon_lists = isset($_POST['addon_lists']) ? sanitize_text_field(wp_unslash($_POST['addon_lists'])) : array();
         if ( $addon_lists ) {
-            
+
             // Check valid request form user.
             check_ajax_referer('uta-admin-js');
 
@@ -163,6 +166,19 @@ class Uta_Admin
         }
 
         wp_die();
+    }
+
+    /**
+     * Add plugin action links.
+     *
+     * @param $links
+     * @return array
+     */
+    public function uta_plugin_action_links_callback($links)
+    {
+        $actionLink = '<a href="' . admin_url('admin.php?page=unlimited-theme-addons') . '">' . esc_html__('Settings', 'unlimited-theme-addons') . '</a>';
+        array_unshift($links, $actionLink);
+        return $links;
     }
 
 

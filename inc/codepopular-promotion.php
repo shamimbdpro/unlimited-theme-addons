@@ -21,6 +21,22 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 	 */
 	function codepopular_dashboard_widget_render() {
 
+        // Fetch the JSON data
+        $response = wp_remote_get('https://raw.githubusercontent.com/shamimbdpro/promotion/main/promotion.json', array('timeout' => 10));
+
+        // Decode the JSON response
+        $data = json_decode(wp_remote_retrieve_body($response), true);
+
+        if (isset($data['active']) && $data['active'] === 'yes'){
+            ?>
+            <div class="codepopular-pro-widget">
+                <a href="<?php echo esc_url($data['link']);?>?utm_source=uta_dashboard_feed_banner" target="_blank">
+                    <img src="<?php echo esc_url($data['square_banner'])?>" alt="CodePopular" style="width: 100%;"/>
+                </a>
+            </div>
+            <?php
+        }
+
 		// Enter the name of your blog here followed by /wp-json/wp/v2/posts and add filters like this one that limits the result to 2 posts.
 		$response = wp_remote_get( 'https://codepopular.com/wp-json/wp/v2/posts?per_page=5&categories=19' );
 
@@ -44,14 +60,14 @@ if ( ! function_exists( 'codepopular_dashboard_widget_render' ) ) {
 			// For each post.
 			foreach ( $posts as $post ) {
 				$fordate = gmdate( 'M j, Y', strtotime( $post->modified ) ); ?>
-				<p class="codepopular-blog-feeds"> <a style="text-decoration: none;font-weight: bold" href="<?php echo esc_url( $post->link ); ?>?utm_source=unlimited-theme-addons" target=_balnk><?php echo esc_html( $post->title->rendered ); ?></a> - <?php echo esc_html( $fordate ); ?></p>
+				<p class="codepopular-blog-feeds"> <a style="text-decoration: none;font-weight: bold" href="<?php echo esc_url( $post->link ); ?>?utm_source=uta_dashboard_feed" target=_balnk><?php echo esc_html( $post->title->rendered ); ?></a> - <?php echo esc_html( $fordate ); ?></p>
 				<span><?php echo wp_trim_words( $post->content->rendered, 25, '...' );  //phpcs:ignore ?></span>
 				<?php
 			}
 			?>
 			<hr>
-			<p> <a style="text-decoration: none;font-weight: bold" href="<?php echo esc_url( 'https://codepopular.com/blog/' ); ?>?utm_source=unlimited-theme-addons" target=_balnk><?php echo esc_html__( 'Get more WordPress tips & news on our blog...', 'unlimited-theme-addons' ); ?></a></p>
-			<a style="text-decoration: none; font-weight: bold; color: #fff; border: 1px solid #ccc; padding: 6px 10px; border-radius: 4px; background: #39b54a; " href="<?php echo esc_url_raw('https://codepopular.com/contact?utm_source=wp_dashboard&utm_medium=blog_feed');?>?utm_source=unlimited-theme-addons" target="_balnk"><?php echo esc_html('Talk with WordPress Expert');?></a>
+			<p> <a style="text-decoration: none;font-weight: bold" href="<?php echo esc_url( 'https://codepopular.com/blog?utm_source=uta_dashboard_feed' ); ?>" target=_balnk><?php echo esc_html__( 'Get more WordPress tips & news on our blog...', 'unlimited-theme-addons' ); ?></a></p>
+			<a style="text-decoration: none; font-weight: bold; color: #fff; border: 1px solid #ccc; padding: 6px 10px; border-radius: 4px; background: #39b54a; " href="<?php echo esc_url_raw('https://codepopular.com/contact?utm_source=uta_dashboard_feed&utm_medium=dashboard_feed');?>" target="_balnk"><?php echo esc_html('Talk with WordPress Expert');?></a>
 			<?php
 		}
 	}
