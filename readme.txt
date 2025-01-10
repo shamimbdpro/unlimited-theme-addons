@@ -1,10 +1,10 @@
 === Unlimited Theme Addon For Elementor and WooCommerce ===
-Contributors: codepopular, shamimtpi
+Contributors: codepopular, shamimtpi, rajubdpro
 Donate link: https://ko-fi.com/codepopular
 Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
 Requires at least: 4.0
-Tested up to: 6.2
-Stable tag: 1.1.9
+Tested up to: 6.7
+Stable tag: 1.2.1
 Requires PHP: 5.6
 License: GPLv2 or later
 
@@ -109,6 +109,17 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 
 
 == Changelog ==
+
+
+= 1.2.1 =
+* Warning fixed.
+* Plugin settings button added.
+* Appsero SDK Updated.
+* WordPress latest version 6.7 tested.
+
+= 1.2.0 =
+* Counter Up issue fixed.
+* WordPress latest version 6.4 tested.
 
 = 1.1.8 =
 * Infobox issue fixed.
