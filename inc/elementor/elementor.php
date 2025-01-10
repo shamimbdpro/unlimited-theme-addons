@@ -39,15 +39,33 @@ class Unlimited_Theme_Addons
 
     public function register_hooks() {
         add_action('elementor/elements/categories_registered', array( $this, 'uta_add_elementor_widget_categories' ));
-        add_action( 'elementor/controls/controls_registered', [ $this, 'register_controls' ] );
+        add_action('elementor/controls/controls_registered', [ $this, 'register_controls' ]);
         add_action('elementor/widgets/widgets_registered', array( $this, 'widgets_registered' ));
         add_action('wp_enqueue_scripts', array( $this, 'load_css_and_js' ));
+    
         if ( is_admin() ) {
+            // Check if the request contains the 'action' parameter and verify the nonce
             if ( ! empty($_REQUEST['action']) && 'elementor' === $_REQUEST['action'] ) {
-                add_action('init', [ $this, 'load_wc_hooks' ], 5);
+                if ( isset($_REQUEST['_wpnonce']) ) {
+                    // Unslash and sanitize the nonce before verification
+                    $nonce = sanitize_text_field( wp_unslash( $_REQUEST['_wpnonce'] ) );
+    
+                    if ( wp_verify_nonce( $nonce, 'elementor_action_nonce' ) ) {
+                        add_action('init', [ $this, 'load_wc_hooks' ], 5);
+                    } else {
+                        // Handle the error or deny access with escaped output
+                        wp_die(esc_html__('Invalid request. Nonce verification failed.', 'unlimited-theme-addons'));
+                    }
+                } else {
+                    // Handle the missing nonce case
+                    wp_die(esc_html__('Nonce is missing.', 'unlimited-theme-addons'));
+                }
             }
         }
     }
+    
+    
+    
 
     public function load_css_and_js() {
 

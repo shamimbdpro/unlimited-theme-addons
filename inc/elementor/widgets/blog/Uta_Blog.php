@@ -145,14 +145,24 @@ class Uta_Blog extends Widget_Base
          while ( $blog->have_posts() ) : $blog->the_post(); ?>
             <!-- blog -->
             <div class="uta-blog-item">
-               <div class="uta-blog-item-img">
-                  <?php if ( has_post_thumbnail() ) : ?>
-                     <a href="<?php the_permalink(); ?>">
-                        <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'uta-360-200')); ?>" alt="<?php the_title() ?>">
-                     </a>
-                     <span><?php the_category(',') ?></span>
-                  <?php endif ?>
-               </div>
+            <div class="uta-blog-item-img">
+    <?php if ( has_post_thumbnail() ) : ?>
+        <a href="<?php the_permalink(); ?>">
+            <?php 
+                // Get the attachment ID for the post thumbnail
+                $attachment_id = get_post_thumbnail_id( get_the_ID() );
+
+                // Use wp_get_attachment_image() to output the image
+                echo wp_get_attachment_image( $attachment_id, 'uta-360-200', false, array(
+                    'alt' => get_the_title(),
+                    'class' => 'post-thumbnail', // Optional: Add a class if needed
+                ));
+            ?>
+        </a>
+        <span><?php the_category(', ') ?></span>
+    <?php endif ?>
+</div>
+
 
                <div class="uta-blog-item-content">
                   <a href="<?php the_permalink() ?>">

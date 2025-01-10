@@ -727,21 +727,24 @@ class Uta_Accordion extends Widget_Base
                 $output = do_shortcode( $acc_tab['accordion__content'] );
                 break;
 
-            case 'image':
-              //  $image_url = Group_Control_Image_Size::get_attachment_image_src( $acc_tab['image']['id'], null, $acc_tab );
-
-              //  if ( ! $image_url ) {
-                    $image_url = $acc_tab['image']['url'];
-              //  }
-
-                $image_html = '<div class="uta-accordion-image">';
-
-                $image_html .= '<img src="' . esc_url( $image_url ) . '" alt="' . esc_attr( Control_Media::get_image_alt( $acc_tab['image'] ) ) . '">';
-
-                $image_html .= '</div>';
-
-                $output = $image_html;
-                break;
+                case 'image':
+                    // Get the attachment ID for the image URL
+                    $attachment_id = attachment_url_to_postid($acc_tab['image']['url']);
+                
+                    // Use wp_get_attachment_image() to output the image
+                    $image_html = '<div class="uta-accordion-image">';
+                
+                    // Use wp_get_attachment_image() to display the image
+                    $image_html .= wp_get_attachment_image($attachment_id, 'full', false, array(
+                        'alt' => esc_attr(Control_Media::get_image_alt($acc_tab['image'])),
+                        'class' => 'accordion-image', // Optional: Add a class if needed
+                    ));
+                
+                    $image_html .= '</div>';
+                
+                    $output = $image_html;
+                    break;
+                
 
             case 'section':
                 $output = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $acc_tab['saved_section'] );
