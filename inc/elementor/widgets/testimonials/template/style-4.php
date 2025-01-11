@@ -5,15 +5,14 @@
         <div class="uta-content">
             <div class="uta-thumbnail">
                 <?php if ( ! empty( $testimonial['image']['id'] ) ) : ?>
-                    <?php 
+                    <?php
                         // Use wp_get_attachment_image() to display the image
-                        echo wp_get_attachment_image( 
+                        echo wp_get_attachment_image(
                             $testimonial['image']['id'], // Image ID
                             'full', // Image size (can be changed to 'thumbnail', 'medium', etc.)
                             false, // No need for the 'icon' argument
                             [
                                 'alt' => esc_attr( $testimonial['name'] ), // Alt text for the image
-                                'class' => 'uta-thumbnail-img' // Optional: add a custom class for styling
                             ]
                         );
                     ?>
@@ -22,7 +21,7 @@
                     <i class="fas fa-quote-right"></i>
                 </div>
             </div>
-            
+
             <h2 <?php echo esc_html( $this->get_render_attribute_string( $name ) ); ?>>
                 <?php echo esc_html( $testimonial['name'] ); ?>
             </h2>

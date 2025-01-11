@@ -4,15 +4,14 @@
     <div class="uta-testimonial-item2">
         <div class="uta-thumbnail">
             <?php if ( ! empty( $testimonial['image']['id'] ) ) : ?>
-                <?php 
+                <?php
                     // Use wp_get_attachment_image() to display the image
-                    echo wp_get_attachment_image( 
+                    echo wp_get_attachment_image(
                         $testimonial['image']['id'], // Image ID
                         'full', // Image size (can be changed to 'thumbnail', 'medium', etc.)
                         false, // No need for the 'icon' argument
                         [
                             'alt' => esc_attr( $testimonial['name'] ), // Alt text for the image
-                            'class' => 'uta-thumbnail-img' // Optional: add a custom class for styling
                         ]
                     );
                 ?>

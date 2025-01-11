@@ -25,7 +25,7 @@ class Uta_Accordion extends Widget_Base
 
   /**
    * Widget CSS.
-   * 
+   *
    * @return string
    */
   // public function get_style_depends()
@@ -37,7 +37,7 @@ class Uta_Accordion extends Widget_Base
 
   /**
    * Widget script.
-   * 
+   *
    * @return string
    */
   public function get_script_depends() {
@@ -730,21 +730,20 @@ class Uta_Accordion extends Widget_Base
                 case 'image':
                     // Get the attachment ID for the image URL
                     $attachment_id = attachment_url_to_postid($acc_tab['image']['url']);
-                
+
                     // Use wp_get_attachment_image() to output the image
                     $image_html = '<div class="uta-accordion-image">';
-                
+
                     // Use wp_get_attachment_image() to display the image
                     $image_html .= wp_get_attachment_image($attachment_id, 'full', false, array(
                         'alt' => esc_attr(Control_Media::get_image_alt($acc_tab['image'])),
-                        'class' => 'accordion-image', // Optional: Add a class if needed
                     ));
-                
+
                     $image_html .= '</div>';
-                
+
                     $output = $image_html;
                     break;
-                
+
 
             case 'section':
                 $output = \Elementor\Plugin::$instance->frontend->get_builder_content_for_display( $acc_tab['saved_section'] );
@@ -765,16 +764,16 @@ class Uta_Accordion extends Widget_Base
         return $output;
     }
 
-    
+
 
 
     /**
      * @param array $instance
      */
    protected function render( $instance = [] ) {
- 
+
       // get our input from the widget settings.
-       
+
       $settings = $this->get_settings_for_display();
 
       //Inline Editing
@@ -787,7 +786,7 @@ class Uta_Accordion extends Widget_Base
        }
 
    }
- 
+
 }
 
 Plugin::instance()->widgets_manager->register_widget_type( new Uta_Accordion() );

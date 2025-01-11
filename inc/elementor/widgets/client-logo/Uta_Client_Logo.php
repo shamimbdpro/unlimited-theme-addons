@@ -14,7 +14,8 @@ class Uta_Company_Logo extends Widget_Base
      * Widget name.
      * @return string
      */
-    public function get_name() {
+    public function get_name(): string
+    {
         return 'uta-company-logo';
     }
 
@@ -22,7 +23,8 @@ class Uta_Company_Logo extends Widget_Base
      * Widget title.
      * @return string
      */
-    public function get_title() {
+    public function get_title(): string
+    {
         return esc_html__( 'UTA Company Logo', 'unlimited-theme-addons' );
     }
 
@@ -30,36 +32,38 @@ class Uta_Company_Logo extends Widget_Base
      * Widget icon.
      * @return string
      */
-    public function get_icon() {
+    public function get_icon(): string
+    {
         return 'eicon-logo';
     }
 
     /**
      * Widget CSS.
-     * 
+     *
      * @return string
      */
     // public function get_style_depends() {
     //     $styles = ['slick-theme', 'slick', 'uta-company-logo'];
-      
+
     //     return $styles;
     // }
-      
+
     /**
      * Widget script.
-     * 
-     * @return string
-    */ 
-    public function get_script_depends() {
-        $scripts = [ 'uta-slick', 'uta-main' ];
-        return $scripts;
+     *
+     * @return string[]
+     */
+    public function get_script_depends(): array
+    {
+        return [ 'uta-slick', 'uta-main' ];
     }
 
     /**
      * Widget keywords.
      * @return array|string[]
      */
-    public function get_keywords() {
+    public function get_keywords(): array
+    {
         return [
             'uta company logo',
             'uta company logo',
@@ -76,7 +80,8 @@ class Uta_Company_Logo extends Widget_Base
      * Widget Category.
      * @return array|string[]
      */
-    public function get_categories() {
+    public function get_categories(): array
+    {
         return [ 'uta-elements' ];
     }
 
@@ -330,7 +335,7 @@ class Uta_Company_Logo extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_control(
             'uta_client_logo_padding',
@@ -344,7 +349,7 @@ class Uta_Company_Logo extends Widget_Base
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_control(
             'uta_client_logo_margin',
@@ -358,7 +363,7 @@ class Uta_Company_Logo extends Widget_Base
             ]
         );
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -497,69 +502,25 @@ class Uta_Company_Logo extends Widget_Base
 
              // Normal Image.
             $uta_company_logo_url = ! empty($logo['uta_company_logo_website_link']['url']) ? $logo['uta_company_logo_website_link']['url'] : '';
-            $uta_company_logo_alt = \Elementor\Control_Media::get_image_alt($logo['uta_company_logo_image_normal']);
+            $uta_company_logo_alt = Control_Media::get_image_alt($logo['uta_company_logo_image_normal']);
 
             // Hover Image.
             $uta_company_logo_hover_img = ! empty($logo['uta_company_logo_image_hover']['url']) ? $logo['uta_company_logo_image_hover']['url'] : '';
-            $uta_company_logo_hover_alt = \Elementor\Control_Media::get_image_alt($logo['uta_company_logo_image_hover']);
+            $uta_company_logo_hover_alt = Control_Media::get_image_alt($logo['uta_company_logo_image_hover']);
 
             $uta_company_logo_url_is_external = ! empty($logo['uta_company_logo_website_link']['is_external']) && 'on' === $logo['uta_company_logo_website_link']['is_external'] ? '_blank' : '';
 
-             // Company logo style default.
-            if ( 'style-default' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-default.php';
-            }
+                // Check if the style setting exists and matches the expected format.
+                $style = $settings['uta_company_logo_style'] ?? '';
+                $file_path = __DIR__ . '/template/' . $style . '.php';
 
-            // Company logo style 1.
-            if ( 'style-1' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-1.php';
-            }
-
-            // Company logo style 2.
-            if ( 'style-2' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-2.php';
-            }
-
-            // Company logo style 3.
-            if ( 'style-3' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-3.php';
-            }
-
-            // Company logo style 4.
-            if ( 'style-4' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-4.php';
-            }
-
-            // Company logo style 5.
-            if ( 'style-5' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-5.php';
-            }
-
-            // Company logo style 6.
-            if ( 'style-6' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-6.php';
-            }
-
-            // Company logo style 7.
-            if ( 'style-7' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-7.php';
-            }
-
-            // Company logo style 8.
-            if ( 'style-8' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-8.php';
-            }
-
-
-            // Company logo style 9.
-            if ( 'style-9' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-9.php';
-            }
-
-            // Company logo style 10.
-            if ( 'style-10' === $settings['uta_company_logo_style'] ) {
-                require (__DIR__) . '/template/style-10.php';
-            }
+                if (preg_match('/^style-(default|\d+)$/', $style) && file_exists($file_path)) {
+                    require $file_path;
+                } else {
+                    // Optionally handle invalid or missing styles here.
+                    // For example, load a default template or log an error.
+                    require __DIR__ . '/template/style-default.php';
+                }
 
             endforeach;  ?>
 

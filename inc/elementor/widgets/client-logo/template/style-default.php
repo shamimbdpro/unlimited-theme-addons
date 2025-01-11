@@ -7,7 +7,6 @@
             // Use wp_get_attachment_image() to output the image
             echo wp_get_attachment_image($attachment_id, 'full', false, array(
                 'alt' => esc_attr($uta_company_logo_alt),
-                'class' => 'company-logo-image', // Optional: Add a class if needed
             ));
         ?>
     </a>

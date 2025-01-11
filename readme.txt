@@ -4,7 +4,7 @@ Donate link: https://ko-fi.com/codepopular
 Tags: elementor, elementor addon, elementor widget, woocommerce elementor, addons
 Requires at least: 4.0
 Tested up to: 6.7
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 Requires PHP: 5.6
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -113,6 +113,15 @@ https://wordpress.org/support/plugin/unlimited-theme-addons
 
 == Changelog ==
 
+
+= 1.2.3 =
+* Security improved.
+
+= 1.2.2 =
+* Elementor template shortcode protected by permission.
+* Elementor latest version compatible.
+* Code optimized.
+* Security improved.
 
 = 1.2.1 =
 * Warning fixed.

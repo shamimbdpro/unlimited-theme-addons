@@ -117,7 +117,7 @@ class Uta_Template_Shortcode
     public function uta_template_shortcode_column_content( $column_name, $post_ID ) {
         // Check user permissions
         if ( 'uta-template-shortcode' === $column_name ) {
-            if ( current_user_can( 'edit_others_posts', $post_ID ) ) { // Allow only users who can edit this post
+            if ( current_user_can( 'edit_post', $post_ID ) ) { // Allow only users who can edit this post
                 echo esc_html( '[uta-template id="' . intval( $post_ID ) . '"]' );
             } else {
                 // Optionally display a placeholder or message for unauthorized users

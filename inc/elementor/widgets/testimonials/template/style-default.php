@@ -3,11 +3,10 @@
         <div class="col-sm-9 text-center">
             <!-- Check if image ID exists and use wp_get_attachment_image() -->
             <?php if ( ! empty( $testimonial['image']['id'] ) ) : ?>
-                <?php 
+                <?php
                     // Get the image ID from the testimonial array and display it using wp_get_attachment_image()
                     echo wp_get_attachment_image( $testimonial['image']['id'], 'full', false, [
                         'alt' => esc_attr( $testimonial['name'] ),
-                        'class' => 'testimonial-image' // Optional: add custom class for styling
                     ]);
                 ?>
             <?php endif; ?>
