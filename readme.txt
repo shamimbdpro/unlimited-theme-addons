@@ -1,12 +1,15 @@
-=== Unlimited Theme Addon For Elementor and WooCommerce ===
+=== Unlimited Theme Addon For Elementor ===
 Contributors: codepopular, shamimtpi, rajubdpro
 Donate link: https://ko-fi.com/codepopular
-Tags: elementor, elements, addons, elementor addon, elementor widget, elementor faq, woocommerce elementor, page builder, product grid, countdown timer, wordpress page builder
+Tags: elementor, elementor addon, elementor widget, woocommerce elementor, addons
 Requires at least: 4.0
 Tested up to: 6.7
 Stable tag: 1.2.1
 Requires PHP: 5.6
-License: GPLv2 or later
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+Short Description: Add essential Elementor addons to boost your website functionality with product grids, lists, and WooCommerce features.
 
 == Description ==
 Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next level. It is a very essential addon for elementor. if you are Looking to add extra functionality to the Elementor page builder then this plugin will be more effective for you. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to boost your business to the next level with this plugin. You can get Elementor Pro features in free while using the plugin. Elementor template shortcode and custom Template kit is available in free.

@@ -103,7 +103,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Accordion. 
+        // Accordion.
         wp_register_style(
             'uta-accordion',
             UTA_PLUGIN_URL . 'assets/frontend/css/accordion.min.css',
@@ -128,7 +128,7 @@ class Unlimited_Theme_Addons
         );
 
 
-        // Counter Up. 
+        // Counter Up.
         wp_register_style(
             'uta-odometer',
             UTA_PLUGIN_URL . 'assets/frontend/css/library/odometer.min.css',
@@ -137,7 +137,7 @@ class Unlimited_Theme_Addons
         );
 
 
-        // Counter Up. 
+        // Counter Up.
         wp_register_style(
             'uta-counter-up',
             UTA_PLUGIN_URL . 'assets/frontend/css/counterup.min.css',
@@ -145,9 +145,9 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-       
 
-        // Infobox. 
+
+        // Infobox.
         wp_register_style(
             'uta-infobox',
             UTA_PLUGIN_URL . 'assets/frontend/css/infobox.min.css',
@@ -155,7 +155,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Post. 
+        // Post.
         wp_register_style(
             'uta-blog',
             UTA_PLUGIN_URL . 'assets/frontend/css/post.min.css',
@@ -163,7 +163,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Pricing. 
+        // Pricing.
         wp_register_style(
             'uta-pricing',
             UTA_PLUGIN_URL . 'assets/frontend/css/pricing.min.css',
@@ -171,7 +171,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Product Grid. 
+        // Product Grid.
         wp_register_style(
             'uta-product-grid',
             UTA_PLUGIN_URL . 'assets/frontend/css/product-grid.css',
@@ -179,7 +179,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Product List. 
+        // Product List.
         wp_register_style(
             'uta-product-list',
             UTA_PLUGIN_URL . 'assets/frontend/css/product-list.min.css',
@@ -187,7 +187,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Search. 
+        // Search.
         wp_register_style(
             'uta-product-search',
             UTA_PLUGIN_URL . 'assets/frontend/css/search.min.css',
@@ -195,7 +195,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Tab. 
+        // Tab.
         wp_register_style(
             'uta-tab',
             UTA_PLUGIN_URL . 'assets/frontend/css/tab.min.css',
@@ -203,7 +203,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Team. 
+        // Team.
         wp_register_style(
             'uta-team',
             UTA_PLUGIN_URL . 'assets/frontend/css/team.min.css',
@@ -211,7 +211,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Testimonial. 
+        // Testimonial.
         wp_register_style(
             'uta-testimonial',
             UTA_PLUGIN_URL . 'assets/frontend/css/testimonial.min.css',
@@ -219,7 +219,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Section Title. 
+        // Section Title.
         wp_register_style(
             'uta-title',
             UTA_PLUGIN_URL . 'assets/frontend/css/title.min.css',
@@ -227,7 +227,7 @@ class Unlimited_Theme_Addons
             UTA_PLUGIN_VERSION
         );
 
-        // Video. 
+        // Video.
         wp_register_style(
             'uta-video',
             UTA_PLUGIN_URL . 'assets/frontend/css/video.min.css',
@@ -473,8 +473,8 @@ class Unlimited_Theme_Addons
             // Counter Up
             if ( array_key_exists('blockquote', $widget_list) && 'off' !== $widget_list['blockquote'] || empty($widget_list['blockquote']) ) {
                 include_once(UTA_PLUGIN_PATH . 'inc/elementor/widgets/blockquote/Uta_Blockquote.php');
-            }        
-}
+            }
+        }
     }
 
     public function load_wc_hooks() {

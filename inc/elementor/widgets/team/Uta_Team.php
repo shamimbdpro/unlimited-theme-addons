@@ -12,42 +12,45 @@ class Uta_Team extends Widget_Base
 
     /**
      * Widget Name.
-     * 
+     *
      * @access public
      *
      * @return string
      */
-    public function get_name() {
+    public function get_name(): string
+    {
         return 'uta-team';
     }
 
     /**
      * Get Widget Title
-     * 
+     *
      * @access public
      *
      * @return string
      */
-    public function get_title() {
+    public function get_title(): string
+    {
         return esc_html__('UTA Team', 'unlimited-theme-addons');
     }
 
     /**
      * Get Widget Icon
-     * 
+     *
      * @access public
      *
-     * @return void
+     * @return string
      */
-    public function get_icon() {
+    public function get_icon(): string
+    {
         return 'eicon-person';
     }
 
     /**
      * Widget script.
-     * 
+     *
      * @access public
-     * 
+     *
      * @return string
      */
     public function get_script_depends() {
@@ -59,12 +62,13 @@ class Uta_Team extends Widget_Base
 
     /**
      * Get Widget Search Keyword.
-     * 
+     *
      * @access public
      *
-     * @return void
+     * @return string[]
      */
-    public function get_keywords() {
+    public function get_keywords(): array
+    {
         return [
             'team',
             'uta team',
@@ -79,12 +83,13 @@ class Uta_Team extends Widget_Base
 
     /**
      * Widget Category.
-     * 
+     *
      * @access public
      *
-     * @return void
+     * @return string[]
      */
-    public function get_categories() {
+    public function get_categories(): array
+    {
         return [ 'uta-elements' ];
     }
 
@@ -96,14 +101,15 @@ class Uta_Team extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url() {
+    public function get_custom_help_url(): string
+    {
         return 'https://codepopular.com/contact/';
     }
 
 
     /**
      * Register Widget Controls.
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -128,7 +134,7 @@ class Uta_Team extends Widget_Base
 
     /**
      * Register Team Controls.
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -364,7 +370,7 @@ class Uta_Team extends Widget_Base
 
     /**
      * Widget Team Style
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -380,7 +386,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Style Padding 
+        // Team Style Padding
 
         $this->add_responsive_control(
             'uta_team_padding',
@@ -405,7 +411,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Style Margin 
+        // Team Style Margin
 
         $this->add_responsive_control(
             'uta_team_margin',
@@ -479,7 +485,7 @@ class Uta_Team extends Widget_Base
         );
 
 
-        // Animate Border 
+        // Animate Border
 
         $this->add_control(
             'uta_team_animate_border_color',
@@ -496,7 +502,7 @@ class Uta_Team extends Widget_Base
         );
 
 
-        // Animate Border Height 
+        // Animate Border Height
 
         $this->add_control(
             'uta_team_animate_border_animated_height',
@@ -514,7 +520,7 @@ class Uta_Team extends Widget_Base
         );
 
 
-        // Tab 
+        // Tab
 
         $this->start_controls_tabs(
             'uta_tram_style_tabs'
@@ -529,7 +535,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Style Background 
+        // Team Style Background
 
         $this->add_control(
             'uta_team_background',
@@ -592,7 +598,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Hover Background 
+        // Team Hover Background
 
         $this->add_control(
             'uta_tam_active_background',
@@ -646,7 +652,7 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Content Style
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -665,7 +671,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Style Padding 
+        // Team Style Padding
 
         $this->add_responsive_control(
             'uta_team_content_padding',
@@ -680,7 +686,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Style Margin 
+        // Team Style Margin
 
         $this->add_responsive_control(
             'uta_team_content_margin',
@@ -722,10 +728,10 @@ class Uta_Team extends Widget_Base
                 ],
             ]
         );
-     
 
 
-        // Tab 
+
+        // Tab
 
         $this->start_controls_tabs(
             'uta_content_style_tabs'
@@ -740,7 +746,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Style Background 
+        // Team Style Background
 
         $this->add_control(
             'uta_team_content_background',
@@ -754,7 +760,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-    
+
         $this->end_controls_tab();
 
 
@@ -766,7 +772,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Content Hover Background 
+        // Team Content Hover Background
 
         $this->add_control(
             'uta_team_content_hover_bg',
@@ -779,7 +785,7 @@ class Uta_Team extends Widget_Base
                 ],
             )
         );
-      
+
         $this->end_controls_tab();
         $this->end_controls_tabs();
         $this->end_controls_section();
@@ -788,14 +794,14 @@ class Uta_Team extends Widget_Base
 
     /**
      * Widget Name Style.
-     * 
+     *
      * @access protected
      *
      * @return void
      */
     public function uta_team_name_style() {
 
-        // Tab Name Style 
+        // Tab Name Style
 
         $this->start_controls_section(
             'name_style',
@@ -809,7 +815,6 @@ class Uta_Team extends Widget_Base
             [
                 'name'     => 'name_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '
                     {{WRAPPER}} .team-style-default-content h3,
                     {{WRAPPER}} .team-style-1-content h4,
@@ -827,7 +832,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Name Margin 
+        // Team Name Margin
 
         $this->add_responsive_control(
             'uta_team_name_margin',
@@ -853,7 +858,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Name Padding 
+        // Team Name Padding
 
         $this->add_responsive_control(
             'uta_team_name_padding',
@@ -879,7 +884,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Name Color 
+        // Team Name Color
 
         $this->add_control(
             'uta_team_name_color',
@@ -904,7 +909,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Name Hover Color 
+        // Team Name Hover Color
 
         $this->add_control(
             'uta_team_name_hover_color',
@@ -934,7 +939,7 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Position Style.
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -949,14 +954,13 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Position Typography 
+        // Team Position Typography
 
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name'     => 'team_position_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '
                     {{WRAPPER}} .team-style-default-content h5,
                     {{WRAPPER}} .team-style-1-content p,
@@ -973,7 +977,7 @@ class Uta_Team extends Widget_Base
             ],
         );
 
-        // Team Designation Margin 
+        // Team Designation Margin
 
         $this->add_responsive_control(
             'uta_team_position_margin',
@@ -998,7 +1002,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Designation Padding 
+        // Team Designation Padding
 
         $this->add_responsive_control(
             'uta_team_position_padding',
@@ -1023,7 +1027,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Designation Color 
+        // Team Designation Color
 
         $this->add_control(
             'uta_team_position_color',
@@ -1047,7 +1051,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Designation Hover Color 
+        // Team Designation Hover Color
 
         $this->add_control(
             'uta_team_position_hover_color',
@@ -1095,14 +1099,13 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Description Typography 
+        // Team Description Typography
 
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name'      => 'team_desc_typography',
                 'label'     => __('Typography', 'unlimited-theme-addons'),
-                'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector'  => '
                     {{WRAPPER}} .team-style-3-content p,
                     {{WRAPPER}} .team-style-7-content p,
@@ -1113,7 +1116,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Description Margin 
+        // Team Description Margin
 
         $this->add_responsive_control(
             'uta_team_desc_margin',
@@ -1133,7 +1136,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Description Margin 
+        // Team Description Margin
 
         $this->add_responsive_control(
             'uta_team_desc_padding',
@@ -1152,7 +1155,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Description color 
+        // Team Description color
 
         $this->add_control(
             'uta_team_desc_color',
@@ -1170,7 +1173,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Description Hover Color 
+        // Team Description Hover Color
 
         $this->add_control(
             'uta_team_desc_hover_color',
@@ -1194,8 +1197,8 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Email Style.
-     * 
-     * @access protected 
+     *
+     * @access protected
      *
      * @return void
      */
@@ -1216,12 +1219,11 @@ class Uta_Team extends Widget_Base
             [
                 'name'     => 'uta_team_email_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .team-style-10-content .team-email',
             ]
         );
 
-        // Team Name Margin 
+        // Team Name Margin
 
         $this->add_responsive_control(
             'uta_team_email_margin',
@@ -1235,7 +1237,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Name Padding 
+        // Team Name Padding
 
         $this->add_responsive_control(
             'uta_team_email_padding',
@@ -1249,7 +1251,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Email Color 
+        // Team Email Color
 
         $this->add_control(
             'uta_team_email_color',
@@ -1262,7 +1264,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Name Hover Color 
+        // Team Name Hover Color
 
         $this->add_control(
             'uta_team_email_hover_color',
@@ -1282,8 +1284,8 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Phone.
-     * 
-     * @access protected 
+     *
+     * @access protected
      *
      * @return void
      */
@@ -1307,12 +1309,11 @@ class Uta_Team extends Widget_Base
             [
                 'name'     => 'uta_team_phone_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .team-style-10-content .team-phone',
             ]
         );
 
-        // Team Phone Margin 
+        // Team Phone Margin
 
         $this->add_responsive_control(
             'uta_team_phone_margin',
@@ -1326,7 +1327,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Phone Padding 
+        // Team Phone Padding
 
         $this->add_responsive_control(
             'uta_team_phone_padding',
@@ -1340,7 +1341,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Phone Color 
+        // Team Phone Color
 
         $this->add_control(
             'uta_team_phone_color',
@@ -1353,7 +1354,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Phone Hover Color 
+        // Team Phone Hover Color
 
         $this->add_control(
             'uta_team_phone_hover_color',
@@ -1371,7 +1372,7 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Social Style.
-     * 
+     *
      * @access protected
      *
      * @return void
@@ -1388,7 +1389,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Social Icon Margin 
+        // Team Social Icon Margin
 
         $this->add_responsive_control(
             'uta_team_social_icon_margin',
@@ -1416,7 +1417,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Social Icon Padding 
+        // Team Social Icon Padding
 
         $this->add_responsive_control(
             'uta_team_social_icon_padding',
@@ -1442,7 +1443,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Social Icon Width 
+        // Team Social Icon Width
 
         $this->add_control(
             'uta_team_icon_width',
@@ -1468,7 +1469,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Social Icon Height 
+        // Team Social Icon Height
 
         $this->add_control(
             'uta_team_icon_height',
@@ -1493,7 +1494,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Social Icon Color 
+        // Team Social Icon Color
 
         $this->start_controls_tabs(
             'uta_social_style_tabs'
@@ -1531,7 +1532,7 @@ class Uta_Team extends Widget_Base
         );
 
 
-        // Social Icon Area Background 
+        // Social Icon Area Background
 
         $this->add_control(
             'uta_social_area_background',
@@ -1555,7 +1556,7 @@ class Uta_Team extends Widget_Base
 
 
 
-        // Social Icon Background Color 
+        // Social Icon Background Color
 
         $this->add_control(
             'uta_social_icon_background',
@@ -1582,7 +1583,7 @@ class Uta_Team extends Widget_Base
 
 
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -1634,7 +1635,7 @@ class Uta_Team extends Widget_Base
 
         $this->end_controls_tab();
 
-        // Social Hover Tab 
+        // Social Hover Tab
 
         $this->start_controls_tab(
             'uta_social_team_hover_tab',
@@ -1643,7 +1644,7 @@ class Uta_Team extends Widget_Base
             ]
         );
 
-        // Team Social Hover Color 
+        // Team Social Hover Color
 
         $this->add_control(
             'social_hover_color',
@@ -1693,7 +1694,7 @@ class Uta_Team extends Widget_Base
             )
         );
 
-        // Team Hover Border 
+        // Team Hover Border
 
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -1752,14 +1753,14 @@ class Uta_Team extends Widget_Base
 
     /**
      * Team Overlay Style.
-     * 
+     *
      * @access protected
      *
      * @return void
      */
     public function uta_team_overlay_style() {
 
-        // Team Overlay Background 
+        // Team Overlay Background
 
         $this->start_controls_section(
             'team_overly_background',

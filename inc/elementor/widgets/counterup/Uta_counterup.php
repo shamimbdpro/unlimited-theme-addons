@@ -2,8 +2,6 @@
 
 namespace Elementor;
 
-use \Elementor\Core\Schemes\Typography;
-
 if ( ! defined('ABSPATH')) exit; // Exit if accessed directly
 
 /**
@@ -17,7 +15,8 @@ class Uta_CounterUP extends Widget_Base
      * Widget name.
      * @return string
      */
-    public function get_name() {
+    public function get_name(): string
+    {
         return 'uta-counter-up';
     }
 
@@ -25,7 +24,8 @@ class Uta_CounterUP extends Widget_Base
      * Widget title.
      * @return string
      */
-    public function get_title() {
+    public function get_title(): string
+    {
         return esc_html__('UTA Counter Up', 'unlimited-theme-addons');
     }
 
@@ -33,13 +33,14 @@ class Uta_CounterUP extends Widget_Base
      * Widget icon.
      * @return string
      */
-    public function get_icon() {
+    public function get_icon(): string
+    {
         return 'eicon-logo';
     }
 
     /**
      * Widget CSS.
-     * 
+     *
      * @return string
      */
     // public function get_style_depends()
@@ -51,13 +52,11 @@ class Uta_CounterUP extends Widget_Base
 
     /**
      * Widget script.
-     * 
-     * @return string
+     *
+     * @return string[]
      */
     public function get_script_depends() {
-        $scripts = [ 'uta-jquery-appear', 'uta-odometer', 'uta-main' ];
-
-        return $scripts;
+        return [ 'uta-jquery-appear', 'uta-odometer', 'uta-main' ];
     }
 
 
@@ -65,7 +64,8 @@ class Uta_CounterUP extends Widget_Base
      * Widget keywords.
      * @return array|string[]
      */
-    public function get_keywords() {
+    public function get_keywords(): array
+    {
         return [
             'uta counter up',
             'uta counter up',
@@ -82,7 +82,8 @@ class Uta_CounterUP extends Widget_Base
      * Widget Category.
      * @return array|string[]
      */
-    public function get_categories() {
+    public function get_categories(): array
+    {
         return [ 'uta-elements' ];
     }
 
@@ -93,7 +94,8 @@ class Uta_CounterUP extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url() {
+    public function get_custom_help_url(): string
+    {
         return 'https://codepopular.com/contact/';
     }
 
@@ -120,7 +122,7 @@ class Uta_CounterUP extends Widget_Base
             'uta_counter_up_style',
             [
                 'label'   => esc_html__('Countr Up Style', 'unlimited-theme-addons'),
-                'type'    => \Elementor\Controls_Manager::SELECT,
+                'type'    => Controls_Manager::SELECT,
                 'options' => [
                     'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
                     'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
@@ -186,7 +188,7 @@ class Uta_CounterUP extends Widget_Base
             'counter_up_icon',
             [
                 'label'        => __('Icon', 'unlimited-theme-addons'),
-                'type'         => \Elementor\Controls_Manager::SWITCHER,
+                'type'         => Controls_Manager::SWITCHER,
                 'label_on'     => __('Yes', 'unlimited-theme-addons'),
                 'label_off'    => __('No', 'unlimited-theme-addons'),
                 'return_value' => 'yes',
@@ -219,13 +221,13 @@ class Uta_CounterUP extends Widget_Base
         );
 
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_counterup_box_padding',
             [
                 'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -233,13 +235,13 @@ class Uta_CounterUP extends Widget_Base
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_counterup_box_margin',
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -261,7 +263,7 @@ class Uta_CounterUP extends Widget_Base
 
 
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -290,7 +292,7 @@ class Uta_CounterUP extends Widget_Base
             'uta_counter_up_border_radious',
             [
                 'label'      => esc_html__('Border Radius', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -364,13 +366,13 @@ class Uta_CounterUP extends Widget_Base
             )
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_counterup_box_icon_margin',
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item .icon' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -392,18 +394,17 @@ class Uta_CounterUP extends Widget_Base
             [
                 'name'     => 'counterup_title_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => Typography::TYPOGRAPHY_2,
                 'selector' => '{{WRAPPER}} .uta-counter-item h2',
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_counterup_box_title_margin',
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -436,18 +437,17 @@ class Uta_CounterUP extends Widget_Base
             [
                 'name'     => 'counterup_cont_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => Typography::TYPOGRAPHY_2,
                 'selector' => '{{WRAPPER}} .uta-counter-item p',
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_counterup_box_content_margin',
             [
                 'label'      => esc_html__('Margin', 'unlimited-theme-addons'),
-                'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+                'type'       => Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', '%', 'em' ],
                 'selectors'  => [
                     '{{WRAPPER}} .uta-counter-item p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',

@@ -22,7 +22,7 @@ class Uta_Button extends Widget_Base
 
   /**
    * Widget CSS.
-   * 
+   *
    * @return string
    */
   // public function get_style_depends()
@@ -34,17 +34,17 @@ class Uta_Button extends Widget_Base
 
   /**
    * Widget script.
-   * 
-   * @return string
+   *
+   * @return array
    */
-  public function get_script_depends() {
-    $scripts = [];
-
-    return $scripts;
+  public function get_script_depends(): array
+  {
+      return [];
   }
 
 
-  public function get_keywords() {
+  public function get_keywords(): array
+  {
     return [
 		'button',
 		'uta button',
@@ -56,7 +56,8 @@ class Uta_Button extends Widget_Base
     ];
   }
 
-  public function get_categories() {
+  public function get_categories(): array
+  {
     return [ 'uta-elements' ];
   }
 
@@ -67,7 +68,8 @@ class Uta_Button extends Widget_Base
    *
    * @return string support URL.
    */
-  public function get_custom_help_url() {
+  public function get_custom_help_url(): string
+  {
     return 'https://codepopular.com/contact/';
   }
 
@@ -85,7 +87,7 @@ class Uta_Button extends Widget_Base
       'uta_button_style',
       [
 		  'label'   => esc_html__('Button Style', 'unlimited-theme-addons'),
-		  'type'    => \Elementor\Controls_Manager::SELECT,
+		  'type'    => Controls_Manager::SELECT,
 		  'options' => [
 			  'style-default' => esc_html__('Default', 'unlimited-theme-addons'),
 			  'style-1'       => esc_html__('Style-1', 'unlimited-theme-addons'),
@@ -106,7 +108,7 @@ class Uta_Button extends Widget_Base
       'button_text',
       [
 		  'label'   => __('Button Text', 'unlimited-theme-addons'),
-		  'type'    => \Elementor\Controls_Manager::TEXT,
+		  'type'    => Controls_Manager::TEXT,
 		  'default' => __('Raed More', 'unlimited-theme-addons'),
       ]
     );
@@ -115,7 +117,7 @@ class Uta_Button extends Widget_Base
       'button_icon',
       [
 		  'label'        => __('Icon', 'unlimited-theme-addons'),
-		  'type'         => \Elementor\Controls_Manager::SWITCHER,
+		  'type'         => Controls_Manager::SWITCHER,
 		  'label_on'     => __('Yes', 'unlimited-theme-addons'),
 		  'label_off'    => __('No', 'unlimited-theme-addons'),
 		  'return_value' => 'yes',
@@ -140,7 +142,7 @@ class Uta_Button extends Widget_Base
       'button_url',
       [
 		  'label'   => __('Button URL', 'unlimited-theme-addons'),
-		  'type'    => \Elementor\Controls_Manager::TEXT,
+		  'type'    => Controls_Manager::TEXT,
 		  'default' => '#',
       ]
     );
@@ -149,7 +151,7 @@ class Uta_Button extends Widget_Base
       'popup',
       [
 		  'label'        => __('Popup Video', 'unlimited-theme-addons'),
-		  'type'         => \Elementor\Controls_Manager::SWITCHER,
+		  'type'         => Controls_Manager::SWITCHER,
 		  'label_on'     => __('Yes', 'unlimited-theme-addons'),
 		  'label_off'    => __('No', 'unlimited-theme-addons'),
 		  'return_value' => 'yes',
@@ -161,7 +163,7 @@ class Uta_Button extends Widget_Base
       'align',
       [
 		  'label'   => __('Alignment', 'unlimited-theme-addons'),
-		  'type'    => \Elementor\Controls_Manager::CHOOSE,
+		  'type'    => Controls_Manager::CHOOSE,
 		  'options' => [
 			  'left'   => [
 				  'title' => __('Left', 'unlimited-theme-addons'),
@@ -186,7 +188,7 @@ class Uta_Button extends Widget_Base
       'drop_shadow',
       [
 		  'label'        => __('Drop Shadow', 'unlimited-theme-addons'),
-		  'type'         => \Elementor\Controls_Manager::SWITCHER,
+		  'type'         => Controls_Manager::SWITCHER,
 		  'label_on'     => __('Show', 'unlimited-theme-addons'),
 		  'label_off'    => __('Hide', 'unlimited-theme-addons'),
 		  'return_value' => 'yes',
@@ -204,14 +206,13 @@ class Uta_Button extends Widget_Base
 		  'tab'   => Controls_Manager::TAB_STYLE,
       )
     );
-    /*
-         * Padding 
-        */
+
+    // Button padding
     $this->add_responsive_control(
       'uta_button_padding',
       [
 		  'label'      => esc_html__('Padding', 'unlimited-theme-addons'),
-		  'type'       => \Elementor\Controls_Manager::DIMENSIONS,
+		  'type'       => Controls_Manager::DIMENSIONS,
 		  'size_units' => [ 'px', '%', 'em' ],
 		  'selectors'  => [
 			  '{{WRAPPER}} .uta-btn'      => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -228,26 +229,25 @@ class Uta_Button extends Widget_Base
       ]
     );
 
-    // Button Typography Default
-    $this->add_group_control(
-      Group_Control_Typography::get_type(),
-      [
-		  'name'      => 'uta_button_typography',
-		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-		  'selector'  => '{{WRAPPER}} .uta-btn',
-		  'condition' => [
-			  'uta_button_style' => [ 'style-default' ],
-		  ],
-      ]
-    );
+      // Button Typography Default
+      $this->add_group_control(
+          Group_Control_Typography::get_type(),
+          [
+              'name'      => 'uta_button_typography',
+              'label'     => __('Typography', 'unlimited-theme-addons'),
+              'selector'  => '{{WRAPPER}} .uta-btn',
+              'condition' => [
+                  'uta_button_style' => [ 'style-default' ],
+              ],
+          ]
+      );
+
     // Button Typography 1
     $this->add_group_control(
       Group_Control_Typography::get_type(),
       [
 		  'name'      => 'uta_button_1_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-1',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-1' ],
@@ -260,7 +260,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_2_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-2',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-2' ],
@@ -273,7 +272,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_3_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-3',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-3' ],
@@ -286,8 +284,7 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_4_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-		  'selector'  => '{{WRAPPER}} .uta-button-4',
+          'selector'  => '{{WRAPPER}} .uta-button-4',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-4' ],
 		  ],
@@ -299,8 +296,7 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_5_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-		  'selector'  => '{{WRAPPER}} .uta-button-5',
+          'selector'  => '{{WRAPPER}} .uta-button-5',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-5' ],
 		  ],
@@ -312,7 +308,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_6_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-6',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-6' ],
@@ -325,7 +320,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_7_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-7',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-7' ],
@@ -338,7 +332,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_8_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-8',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-8' ],
@@ -351,7 +344,6 @@ class Uta_Button extends Widget_Base
       [
 		  'name'      => 'uta_button_9_typography',
 		  'label'     => __('Typography', 'unlimited-theme-addons'),
-		  'scheme'    => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 		  'selector'  => '{{WRAPPER}} .uta-button-9',
 		  'condition' => [
 			  'uta_button_style' => [ 'style-9' ],
@@ -360,7 +352,7 @@ class Uta_Button extends Widget_Base
     );
 
     /*
-         * Tab 
+         * Tab
         */
     $this->start_controls_tabs(
       'uta_button_style_tabs'
@@ -404,10 +396,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -449,10 +441,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item1_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -494,10 +486,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item2_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -540,10 +532,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item3_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -585,10 +577,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item4_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -629,10 +621,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item5_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -674,10 +666,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item6_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -718,10 +710,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item7_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -762,10 +754,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item8_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -806,10 +798,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item9_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -860,10 +852,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button__hover_item_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -905,10 +897,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item1hover_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -950,10 +942,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_buttonhover_item2_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -996,10 +988,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item3_hover_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1041,10 +1033,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_hover_item4_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1085,10 +1077,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_hover_item5_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1160,10 +1152,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_hover_item7_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1204,10 +1196,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_hover_item8_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1248,10 +1240,10 @@ class Uta_Button extends Widget_Base
       )
     );
     /*
-         * Border 
+         * Border
         */
     $this->add_group_control(
-      \Elementor\Group_Control_Border::get_type(),
+      Group_Control_Border::get_type(),
       [
 		  'name'      => 'uta_button_item9_hover_border',
 		  'label'     => esc_html__('Border', 'unlimited-theme-addons'),
@@ -1270,9 +1262,9 @@ class Uta_Button extends Widget_Base
   }
 
    protected function render( $instance = [] ) {
- 
+
       // get our input from the widget settings.
-       
+
       $settings = $this->get_settings_for_display();
 
       //Inline Editing
@@ -1339,11 +1331,11 @@ class Uta_Button extends Widget_Base
 
       ?>
       </div>
-       
+
 
       <?php
    }
- 
+
 }
 
 Plugin::instance()->widgets_manager->register_widget_type( new Uta_Button() );

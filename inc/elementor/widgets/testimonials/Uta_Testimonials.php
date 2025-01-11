@@ -26,7 +26,7 @@ class Uta_Testimonials extends Widget_Base
 
     /**
      * Widget CSS.
-     * 
+     *
      * @return string
      */
     // public function get_style_depends()
@@ -38,7 +38,7 @@ class Uta_Testimonials extends Widget_Base
 
     /**
      * Widget script.
-     * 
+     *
      * @return string
      */
     public function get_script_depends() {
@@ -184,7 +184,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_testimonial_padding',
@@ -198,7 +198,7 @@ class Uta_Testimonials extends Widget_Base
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_testimonial_margin',
@@ -212,7 +212,7 @@ class Uta_Testimonials extends Widget_Base
             ]
         );
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -271,7 +271,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_testimonial_content_padding',
@@ -285,7 +285,7 @@ class Uta_Testimonials extends Widget_Base
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_testimonial_content_margin',
@@ -299,7 +299,7 @@ class Uta_Testimonials extends Widget_Base
             ]
         );
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -369,7 +369,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_testimonial_image_margin',
@@ -383,7 +383,7 @@ class Uta_Testimonials extends Widget_Base
             ]
         );
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
@@ -440,7 +440,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_testimonial_p_content_padding',
@@ -458,7 +458,6 @@ class Uta_Testimonials extends Widget_Base
             [
                 'name'     => 'testimonial_content_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .testimonial-style-default p, .testimonial-item1 .content p, .testimonial-item2 .content p, .testimonial-item3 .content p, .testimonial-item4 .content p, .testimonial-item5 .content p',
             ]
         );
@@ -484,7 +483,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_testimonial_name_padding',
@@ -502,7 +501,6 @@ class Uta_Testimonials extends Widget_Base
             [
                 'name'     => 'testimonial_name_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .testimonial-style-default h5, .testimonial-item1 .content h2, .testimonial-item2 .thumbnail h2, .testimonial-item3 .thumbnail h2, .testimonial-item4 .content h2, .testimonial-item5 .thumbnail h2',
             ]
         );
@@ -528,7 +526,7 @@ class Uta_Testimonials extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_testimonial_designation_padding',
@@ -546,7 +544,6 @@ class Uta_Testimonials extends Widget_Base
             [
                 'name'     => 'testimonial_designation_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .testimonial-style-default span, .testimonial-item5 .thumbnail h5, .testimonial-item4 .content h5, .testimonial-item3 .thumbnail h5, .testimonial-item2 .thumbnail h5, .testimonial-item1 .content h5',
             ]
         );

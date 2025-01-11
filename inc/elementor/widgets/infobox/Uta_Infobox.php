@@ -20,7 +20,7 @@ class Uta_Infobox extends Widget_Base
 
     /**
      * Widget CSS.
-     * 
+     *
      * @return string
      */
     // public function get_style_depends()
@@ -32,7 +32,7 @@ class Uta_Infobox extends Widget_Base
 
     /**
      * Widget script.
-     * 
+     *
      * @return string
      */
     public function get_script_depends() {
@@ -145,7 +145,7 @@ class Uta_Infobox extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_info_padding',
@@ -161,7 +161,7 @@ class Uta_Infobox extends Widget_Base
             ]
         );
         /*
-         * Margin 
+         * Margin
         */
         $this->add_responsive_control(
             'uta_info_margin',
@@ -177,14 +177,14 @@ class Uta_Infobox extends Widget_Base
             ]
         );
         /*
-         * Border 
+         * Border
         */
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name'     => 'uta_info_item_border',
                 'label'    => esc_html__('Border', 'unlimited-theme-addons'),
-                'selector' => 
+                'selector' =>
                     '{{WRAPPER}} .uta-infobox-item, 
                      {{WRAPPER}} .uta-infobox-item.style-04, 
                      {{WRAPPER}} .uta-infobox-item.style-06',
@@ -214,7 +214,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'name'     => 'uta_info_box_shadow',
                 'label'    => __('Box Shadow', 'unlimited-theme-addons'),
-                'selector' => 
+                'selector' =>
                     '{{WRAPPER}} .uta-infobox-item, 
                     {{WRAPPER}} .uta-infobox-item.style-04, 
                     {{WRAPPER}} .uta-infobox-item.style-06',
@@ -259,7 +259,7 @@ class Uta_Infobox extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_icon_padding',
@@ -409,7 +409,7 @@ class Uta_Infobox extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_info_title_padding',
@@ -439,8 +439,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'name'     => 'info_title_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector' => 
+                'selector' =>
                     '{{WRAPPER}} .uta-infobox-item h4, 
                     {{WRAPPER}} .uta-infobox-item.style-01 .content h4, 
                     {{WRAPPER}} .uta-infobox-item.style-02 .content h4, 
@@ -512,7 +511,7 @@ class Uta_Infobox extends Widget_Base
             )
         );
         /*
-         * Padding 
+         * Padding
         */
         $this->add_responsive_control(
             'uta_info_content_padding',
@@ -542,8 +541,7 @@ class Uta_Infobox extends Widget_Base
             [
                 'name'     => 'info_content_typography',
                 'label'    => __('Typography', 'unlimited-theme-addons'),
-                'scheme'   => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
-                'selector' => 
+                'selector' =>
                     '{{WRAPPER}} .uta-infobox-item p, 
                     {{WRAPPER}} .uta-infobox-item.style-01 .content p, 
                     {{WRAPPER}} .uta-infobox-item.style-02 .content p, 

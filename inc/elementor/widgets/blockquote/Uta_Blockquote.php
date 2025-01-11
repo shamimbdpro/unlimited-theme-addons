@@ -213,7 +213,6 @@ class Uta_Blockquote extends Widget_Base
             [
                 'name' => 'blockquote_typography',
                 'label' => __('Typography', 'unlimited-theme-addons'),
-                'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
                 'selector' => '{{WRAPPER}} .uta-blockquote p',
             ]
         );

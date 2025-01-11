@@ -7,7 +7,7 @@
 * Author: codepopular
 * Author URI: https://www.codepopular.com
 * Text Domain: unlimited-theme-addons
-* License: GPL/GNU.
+* License: GPL-2.0-or-later
 * Domain Path: /languages
 * WP Requirement & Test
 * Requires at least: 4.0
