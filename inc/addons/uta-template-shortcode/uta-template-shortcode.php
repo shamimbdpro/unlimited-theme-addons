@@ -35,7 +35,7 @@ class Uta_Template_Shortcode
 
     /**
      * Register Custom Post
-     * 
+     *
      * Register custo post type for template shortcode which allow to get shortcode each created item.
      *
      * @return void
@@ -81,7 +81,7 @@ class Uta_Template_Shortcode
 
     /**
      * Add elementor support.
-     * 
+     *
      * Add elementor support for template post type.
      *
      * @return void
@@ -91,10 +91,10 @@ class Uta_Template_Shortcode
         add_post_type_support('uta_template', 'elementor');
     }
 
-    
+
     /**
      * Custom post type column.
-     * 
+     *
      * Add column in custom post type.
      *
      * @param string $defaults
@@ -107,24 +107,29 @@ class Uta_Template_Shortcode
 
     /**
      * Custom column content
-     * 
-     * Add content for cusotm column in shortcode.
+     *
+     * Add content for custom column in shortcode.
      *
      * @param string $column_name
      * @param int $post_ID
      * @return void
      */
     public function uta_template_shortcode_column_content( $column_name, $post_ID ) {
-
-        if ( 'uta-template-shortcode' == $column_name ) {
-            echo esc_html('[uta-template id="' . $post_ID . '"]');
+        // Check user permissions
+        if ( 'uta-template-shortcode' === $column_name ) {
+            if ( current_user_can( 'edit_others_posts', $post_ID ) ) { // Allow only users who can edit this post
+                echo esc_html( '[uta-template id="' . intval( $post_ID ) . '"]' );
+            } else {
+                // Optionally display a placeholder or message for unauthorized users
+                echo esc_html__( 'Restricted', 'unlimited-theme-addons' );
+            }
         }
     }
 
 
     /**
      * Custom post type column.
-     * 
+     *
      * Add column in custom post type.
      *
      * @param string $defaults
@@ -137,7 +142,7 @@ class Uta_Template_Shortcode
 
     /**
      * Custom column content
-     * 
+     *
      * Add content for cusotm column in shortcode.
      *
      * @param string $column_name
@@ -146,7 +151,10 @@ class Uta_Template_Shortcode
      */
     public function manage_elementor_library_posts_custom_column_content( $column_name, $post_ID ) {
         if ( 'uta-template-shortcode' == $column_name ) {
-
+            if ( ! current_user_can( 'edit_others_posts', $post_ID ) ) {
+                echo esc_html__( 'Restricted', 'unlimited-theme-addons' );
+                return;
+            }
             echo esc_html('[uta-template id="' . $post_ID . '"]');
         }
     }
@@ -154,11 +162,11 @@ class Uta_Template_Shortcode
 
     /**
      * Render shortcode content
-     * 
+     *
      * Get page content by applying shortcode.
      *
      * @param [type] $atts
-     * @return void
+     * @return string
      */
     public function uta_template_render_shortcode( $atts ) {
 
@@ -190,7 +198,7 @@ class Uta_Template_Shortcode
 
             if ( ! empty($the_content) ) {
                 $response = $the_content;
-            }        
+            }
 }
 
         return $response;
@@ -200,30 +208,30 @@ class Uta_Template_Shortcode
 
     /**
      * Add shortcode box inside the page.
-     * 
+     *
      * Shortcode for inside the page so that user can get PHP or normal shortcode.
      *
      * @return void
      */
     public function uta_template_add_meta_boxes(){
-        add_meta_box('uta-shortcode-box','Unlimited Theme Addons Template Shortcode',[ $this, 'uta_template_add_meta_boxes_content' ],'uta_template','side','high');  
+        add_meta_box('uta-shortcode-box','Unlimited Theme Addons Template Shortcode',[ $this, 'uta_template_add_meta_boxes_content' ],'uta_template','side','high');
     }
 
 
 
     /**
      * Shortcode box content
-     * 
+     *
      * Add content for shortcode box inside the custom post type pages.
      *
      * @param object $post
      * @return void
      */
     function uta_template_add_meta_boxes_content( $post ) {  ?>
-        <h4 style="margin-bottom:5px;">Shortcode</h4>
+        <h4 style="margin-bottom:5px;"><?php esc_html_e('Shortcode', 'unlimited-theme-addons');?></h4>
         <input type='text' class='widefat' value='[uta-template id="<?php echo esc_attr($post->ID); ?>"]' readonly="">
-    
-        <h4 style="margin-bottom:5px;">PHP Code</h4>
+
+        <h4 style="margin-bottom:5px;"><?php esc_html_e('PHP Code', 'unlimited-theme-addons');?></h4>
         <input type='text' class='widefat' value="&lt;?php echo do_shortcode('[uta-template id=&quot;<?php echo esc_attr($post->ID); ?>&quot;]'); ?&gt;" readonly="">
         <?php
     }

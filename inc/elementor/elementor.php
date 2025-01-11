@@ -22,7 +22,7 @@ class Unlimited_Theme_Addons
         $elements_manager->add_category(
             'uta-elements',
             [
-                'title' => esc_html__('uta Elements', 'unlimited-theme-addons'),
+                'title' => esc_html__('UTA Elements', 'unlimited-theme-addons'),
                 'icon'  => 'fa fa-plug',
             ]
         );
