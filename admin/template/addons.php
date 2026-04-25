@@ -80,42 +80,47 @@ $uta_addon_lists = array(
 
 
 <div class="uta-widget-list">
-    <form action="" id="saveAddons" method="post">
-        <button type="button" class="btn btn-primary uta-action-btn">Save Changes</button>
-        <button class="btn btn-primary uta-action-btn-loading" type="button" disabled>
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Savings...
-        </button>
-        <div class="row">
-            <?php foreach ( $uta_addon_lists as $addon_list ) { ?>
-
-                <?php if ( true === $addon_list['display'] ) { ?>
-
-                    <div class="col-md-3">
-                        <div class="uta-single-widget">
-                            <?php if ( 0 == $addon_list['is_free'] ) { ?><span
-                                    class="badge bg-primary">Upgrade Pro</span> <?php } ?>
-                            <div class="widget-label">
-                                <h5><?php echo esc_html($addon_list['title']) //ignore:phpcs ;?></h5>
-                            </div>
-                            <div class="widget-witch">
-                                <div class="onoffswitch">
-                                    <input type="checkbox" name="<?php echo esc_html($addon_list['name']); ?>"
-                                           class="onoffswitch-checkbox"
-                                           id="<?php echo esc_html($addon_list['name']); ?>"
-                                           tabindex="0" <?php echo 'on' == $addon_list['default'] && 1 == $addon_list['is_free'] ? 'checked' : ''; ?> <?php echo 0 == $addon_list['is_free'] ? 'disabled' : ''; ?>>
-                                    <label class="onoffswitch-label" for="<?php echo esc_html($addon_list['name']); ?>">
-                                        <span class="onoffswitch-inner"></span>
-                                        <span class="onoffswitch-switch"></span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php } ?>
-            <?php } ?>
-
-        </div>
-    </form>
+	<form action="" id="saveAddons" method="post">
+		<div class="uta-form-toolbar">
+			<div class="uta-form-toolbar__text">
+				<h2 class="uta-form-toolbar__title"><?php esc_html_e( 'Addons', 'unlimited-theme-addons' ); ?></h2>
+				<p class="uta-form-toolbar__desc"><?php esc_html_e( 'Optional site-wide features: templates, WooCommerce helpers, editor tweaks, and more.', 'unlimited-theme-addons' ); ?></p>
+			</div>
+			<div class="uta-form-toolbar__actions">
+				<button type="button" class="btn btn-primary uta-action-btn"><?php esc_html_e( 'Save changes', 'unlimited-theme-addons' ); ?></button>
+				<button class="btn btn-primary uta-action-btn-loading" type="button" disabled>
+					<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+					<?php esc_html_e( 'Saving…', 'unlimited-theme-addons' ); ?>
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<?php foreach ( $uta_addon_lists as $addon_list ) { ?>
+				<?php if ( true === $addon_list['display'] ) { ?>
+					<div class="col-md-3">
+						<div class="uta-single-widget">
+							<?php if ( 0 === (int) $addon_list['is_free'] ) { ?>
+								<span class="badge bg-primary"><?php esc_html_e( 'Upgrade Pro', 'unlimited-theme-addons' ); ?></span>
+							<?php } ?>
+							<div class="widget-label">
+								<h5><?php echo esc_html( $addon_list['title'] ); ?></h5>
+							</div>
+							<div class="uta-widget-switch-row">
+								<div class="onoffswitch">
+									<input type="checkbox" name="<?php echo esc_attr( $addon_list['name'] ); ?>"
+										class="onoffswitch-checkbox"
+										id="<?php echo esc_attr( $addon_list['name'] ); ?>"
+										tabindex="0" <?php echo ( 'on' === $addon_list['default'] && 1 === (int) $addon_list['is_free'] ) ? 'checked' : ''; ?> <?php echo 0 === (int) $addon_list['is_free'] ? 'disabled' : ''; ?>>
+									<label class="onoffswitch-label" for="<?php echo esc_attr( $addon_list['name'] ); ?>">
+										<span class="onoffswitch-inner"></span>
+										<span class="onoffswitch-switch"></span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				<?php } ?>
+			<?php } ?>
+		</div>
+	</form>
 </div>

@@ -65,7 +65,7 @@ class Uta_Infobox extends Widget_Base
      *
      * @return string support URL.
      */
-    public function get_custom_help_url() {
+    public function get_help_url() {
         return 'https://codepopular.com/contact/';
     }
 

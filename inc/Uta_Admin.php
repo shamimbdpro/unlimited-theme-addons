@@ -27,8 +27,11 @@ class Uta_Admin
         // Plugin Action Links.
         add_filter('plugin_action_links_' . UTA_PLUGIN_BASENAME, array( $this, 'uta_plugin_action_links_callback' ));
 
-        // Load css and js.
+        // Register admin assets (localized data attaches to the script handle).
         add_action('admin_enqueue_scripts', array( $this, 'uta_admin_script_callback' ));
+
+        // Enqueue before admin-header so CSS/JS load in head/footer correctly.
+        add_action('load-toplevel_page_unlimited-theme-addons', array( $this, 'uta_admin_enqueue_page_assets' ));
 
         // Handle widget form submission.
         add_action('wp_ajax_uta_admin_widgets_save', array( $this, 'uta_admin_widgets_save_callback' ));
@@ -63,12 +66,25 @@ class Uta_Admin
      *
      * @return mixed
      */
-    public function uta_admin_page_callback() {
+    /**
+     * Enqueue styles and scripts for the settings screen (runs before admin-header).
+     *
+     * @return void
+     */
+    public function uta_admin_enqueue_page_assets() {
         wp_enqueue_style('uta-bootstrap');
         wp_enqueue_style('uta-admin-style');
         wp_enqueue_script('uta-bootstrap-script');
         wp_enqueue_script('uta-admin-js');
-        include_once(UTA_PLUGIN_PATH . 'admin/uta-admin-display.php');
+    }
+
+    /**
+     * Render settings page markup.
+     *
+     * @return void
+     */
+    public function uta_admin_page_callback() {
+        include_once UTA_PLUGIN_PATH . 'admin/uta-admin-display.php';
     }
 
     /**
@@ -108,6 +124,10 @@ class Uta_Admin
             array(
                 'uta_admin_ajax_url' => admin_url('admin-ajax.php'),
                 'nonce'              => $uta_admin_nonce,
+                'i18n'               => array(
+                    'saveSuccess' => esc_html__('Settings saved successfully.', 'unlimited-theme-addons'),
+                    'saveError'   => esc_html__('Could not save settings. Please try again.', 'unlimited-theme-addons'),
+                ),
             )
         );
     }
@@ -132,7 +152,7 @@ class Uta_Admin
             }
             update_option('unlimited_theme_addons_active_widgets', $data);
 
-            $response['message'] = 'sucess';
+            $response['message'] = 'success';
             wp_send_json_success($response);
         }
 
@@ -176,8 +196,15 @@ class Uta_Admin
      */
     public function uta_plugin_action_links_callback($links)
     {
-        $actionLink = '<a href="' . admin_url('admin.php?page=unlimited-theme-addons') . '">' . esc_html__('Settings', 'unlimited-theme-addons') . '</a>';
-        array_unshift($links, $actionLink);
+        $actionLink = '<a href="' . esc_url( admin_url( 'admin.php?page=unlimited-theme-addons' ) ) . '">' . esc_html__( 'Settings', 'unlimited-theme-addons' ) . '</a>';
+        array_unshift( $links, $actionLink );
+
+        $links[] = '<a href="' . esc_url( Uta_helpers::get_live_demo_url( 'plugins_screen_live_demo' ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Live Demo', 'unlimited-theme-addons' ) . '</a>';
+
+        if ( ! Uta_helpers::is_uta_pro_installed() ) {
+            $links[] = '<a href="' . esc_url( Uta_helpers::get_pro_product_url( 'plugins_screen_upgrade' ) ) . '" target="_blank" rel="noopener noreferrer">' . esc_html__( 'Upgrade to Pro', 'unlimited-theme-addons' ) . '</a>';
+        }
+
         return $links;
     }
 

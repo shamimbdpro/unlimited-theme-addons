@@ -68,7 +68,7 @@ class Uta_Button extends Widget_Base
    *
    * @return string support URL.
    */
-  public function get_custom_help_url(): string
+  public function get_help_url(): string
   {
     return 'https://codepopular.com/contact/';
   }

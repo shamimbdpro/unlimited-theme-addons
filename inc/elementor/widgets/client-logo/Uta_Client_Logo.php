@@ -86,6 +86,15 @@ class Uta_Company_Logo extends Widget_Base
     }
 
     /**
+     * Elementor "Need Help" link (widgets in `namespace Elementor` must override get_help_url(), not get_custom_help_url()).
+     *
+     * @return string
+     */
+    public function get_help_url(): string {
+        return 'https://codepopular.com/contact/';
+    }
+
+    /**
      * Start widget control.
      * @return mixed
      */

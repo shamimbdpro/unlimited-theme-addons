@@ -155,33 +155,42 @@ $uta_widget_lists = array(
 
 
 <div class="uta-widget-list">
-    <form action="" id="saveWidget" method="post">
-        <button type="button" class="btn btn-primary uta-action-btn">Save Changes</button>
-        <button class="btn btn-primary uta-action-btn-loading" type="button" disabled>
-            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-            Savings...
-        </button>
-        <div class="row">
-            <?php foreach ( $uta_widget_lists as $widget ) { ?>
-                <div class="col-md-3">
-                    <div class="uta-single-widget">
-                        <?php if ( false == $widget['is_free'] ) { ?><span class="badge bg-primary">Upgrade Pro</span> <?php  } ?>
-                        <div class="widget-label">
-                            <h5><?php echo esc_html($widget['title']) //ignore:phpcs ;?></h5>
-                        </div>
-                        <div class="widget-witch">
-                            <div class="onoffswitch">
-                                <input type="checkbox" name="<?php echo esc_html( $widget['name'] ); ?>" class="onoffswitch-checkbox" id="<?php echo esc_html( $widget['name'] ); ?>" tabindex="0" <?php echo 'on' == $widget['default'] && 1 == $widget['is_free'] ? 'checked' : ''; ?> <?php echo 0 == $widget['is_free'] ? 'disabled' : ''; ?>>
-                                <label class="onoffswitch-label" for="<?php echo esc_html( $widget['name'] ); ?>">
-                                    <span class="onoffswitch-inner"></span>
-                                    <span class="onoffswitch-switch"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            <?php } ?>
-
-        </div>
-    </form>
+	<form action="" id="saveWidget" method="post">
+		<div class="uta-form-toolbar">
+			<div class="uta-form-toolbar__text">
+				<h2 class="uta-form-toolbar__title"><?php esc_html_e( 'Elementor widgets', 'unlimited-theme-addons' ); ?></h2>
+				<p class="uta-form-toolbar__desc"><?php esc_html_e( 'Turn widgets on or off. Disabled widgets stay out of the Elementor panel.', 'unlimited-theme-addons' ); ?></p>
+			</div>
+			<div class="uta-form-toolbar__actions">
+				<button type="button" class="btn btn-primary uta-action-btn"><?php esc_html_e( 'Save changes', 'unlimited-theme-addons' ); ?></button>
+				<button class="btn btn-primary uta-action-btn-loading" type="button" disabled>
+					<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+					<?php esc_html_e( 'Saving…', 'unlimited-theme-addons' ); ?>
+				</button>
+			</div>
+		</div>
+		<div class="row">
+			<?php foreach ( $uta_widget_lists as $widget ) { ?>
+				<div class="col-md-3">
+					<div class="uta-single-widget">
+						<?php if ( false === $widget['is_free'] ) { ?>
+							<span class="badge bg-primary"><?php esc_html_e( 'Upgrade Pro', 'unlimited-theme-addons' ); ?></span>
+						<?php } ?>
+						<div class="widget-label">
+							<h5><?php echo esc_html( $widget['title'] ); ?></h5>
+						</div>
+						<div class="uta-widget-switch-row">
+							<div class="onoffswitch">
+								<input type="checkbox" name="<?php echo esc_attr( $widget['name'] ); ?>" class="onoffswitch-checkbox" id="<?php echo esc_attr( $widget['name'] ); ?>" tabindex="0" <?php echo ( 'on' === $widget['default'] && 1 === (int) $widget['is_free'] ) ? 'checked' : ''; ?> <?php echo 0 === (int) $widget['is_free'] ? 'disabled' : ''; ?>>
+								<label class="onoffswitch-label" for="<?php echo esc_attr( $widget['name'] ); ?>">
+									<span class="onoffswitch-inner"></span>
+									<span class="onoffswitch-switch"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			<?php } ?>
+		</div>
+	</form>
 </div>

@@ -12,7 +12,7 @@ License: GPLv2 or later
 Enhance your [Elementor](https://wordpress.org/plugins/elementor/) page builder widgets and take your website functionality to the next level. It is a very essential addon for elementor. if you are Looking to add extra functionality to the Elementor page builder then this plugin will be more effective for you. Explore the most invaluable third party add-ons for Elementor. Using unlimited theme addons you can quickly enhance your website performance. You can easily make a woocommerce product grid and product list using this plugin. We are trying to boost your business to the next level with this plugin. You can get Elementor Pro features in free while using the plugin. Elementor template shortcode and custom Template kit is available in free.
 
 
-### [View Demo](http://codepopular.com/unlimited-theme-addons) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
+### [View Demo](https://unlimited-theme-addons.com/) | [Free Support](https://wordpress.org/support/plugin/unlimited-theme-addons/) | [Add a Review](https://wordpress.org/support/plugin/unlimited-theme-addons/reviews/#new-post)
 
 Feel free to [email us](https://codepopular.com/contact/) if you need to develop any custom widget for elementor. We are reliable and hgihly skilled on Elementor addons development.
 

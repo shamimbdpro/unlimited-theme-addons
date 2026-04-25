@@ -65,6 +65,40 @@ class Uta_helpers{
         }
     }
 
+    /**
+     * Product page URL for Unlimited Theme Addons Pro (UTM for upgrade / buy flows).
+     *
+     * @param string $utm_content Optional segment, e.g. settings_premium_card, plugins_screen_upgrade.
+     * @return string Escaping should use esc_url() at output.
+     */
+    public static function get_pro_product_url( $utm_content = 'buy_pro_button' ) {
+        $base = 'https://codepopular.com/product/unlimited-theme-addons/';
+        $args = array(
+            'utm_source'   => 'upgrade_to_pro_button',
+            'utm_medium'   => 'wp_admin',
+            'utm_campaign' => 'unlimited_theme_addons',
+            'utm_content'  => sanitize_key( (string) $utm_content ),
+        );
+        return add_query_arg( $args, $base );
+    }
+
+    /**
+     * Live demo URL for Unlimited Theme Addons (UTM for marketing attribution).
+     *
+     * @param string $utm_content Optional segment, e.g. settings_premium_live_demo, plugins_screen_live_demo.
+     * @return string Escaping should use esc_url() at output.
+     */
+    public static function get_live_demo_url( $utm_content = 'live_demo_button' ) {
+        $base = 'https://unlimited-theme-addons.com/';
+        $args = array(
+            'utm_source'   => 'live_demo_button',
+            'utm_medium'   => 'wp_admin',
+            'utm_campaign' => 'unlimited_theme_addons',
+            'utm_content'  => sanitize_key( (string) $utm_content ),
+        );
+        return add_query_arg( $args, $base );
+    }
+
 
     /**
      * Unlimited theme addons admin top bar option.
